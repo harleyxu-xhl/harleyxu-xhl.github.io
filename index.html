@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cooldown: phone temperature monitor for Android</title>
+  <meta name="description" content="Cooldown shows your phone's battery temperature, alerts you when it overheats, and tells you what is heating it up. Free on Google Play, along with Wattlab, Angora, Pipit and Somna.">
+  <link rel="canonical" href="https://harleyxu-xhl.github.io/">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f8fbfe" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#101820" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://harleyxu-xhl.github.io/">
+  <meta property="og:title" content="Cooldown: know why your phone gets hot">
+  <meta property="og:description" content="Battery temperature, overheating alerts and practical ways to cool your phone down. Free on Google Play.">
+  <meta property="og:image" content="https://harleyxu-xhl.github.io/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="/assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/site.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Cooldown: Phone Temperature",
+    "operatingSystem": "Android",
+    "applicationCategory": "UtilitiesApplication",
+    "description": "Phone temperature and battery temperature monitor with overheating alerts and cooling tips.",
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.harley.cooldown",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top wrap">
+    <nav class="apps-nav" aria-label="Apps">
+      <a href="#cooldown" aria-current="page">Cooldown</a>
+      <a href="#wattlab">Wattlab</a>
+      <a href="#angora">Angora</a>
+      <a href="#pipit">Pipit</a>
+      <a href="#somna">Somna</a>
+    </nav>
+    <a class="top-mail" href="mailto:tamariskx@gmail.com">Contact</a>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" id="cooldown" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="app-id">
+          <img src="/assets/img/icon-cooldown.webp" width="160" height="160" alt="">
+          <span><b>Cooldown</b><small>Phone temperature for Android</small></span>
+        </p>
+        <h1 id="hero-title">Know why your phone gets hot.</h1>
+        <p class="lede">Cooldown shows your battery temperature, alerts you when your phone overheats, and tells you what is heating it up. <span class="nowrap">Low-temperature mode</span> can also dim the screen for you.</p>
+        <div class="cta">
+          <a class="play" href="https://play.google.com/store/apps/details?id=com.harley.cooldown&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dhomepage%26utm_campaign%3Dhero"><img src="/assets/img/google-play-badge.png" width="564" height="168" alt="Get Cooldown on Google Play"></a>
+          <p class="fine">Free. Pro is a one-time purchase, not a subscription.</p>
+        </div>
+      </div>
+      <figure class="hero-device">
+        <div class="phone">
+          <img src="/assets/img/cooldown-overview.webp" width="720" height="1540" fetchpriority="high" alt="Cooldown overview: the battery is at 30.9°C, status Normal, with Low-temperature mode and heat alerts turned on">
+        </div>
+      </figure>
+    </section>
+
+    <section class="heat wrap" aria-labelledby="heat-title">
+      <div class="heat-copy">
+        <h2 id="heat-title">How hot is too hot?</h2>
+        <p>Phones warm up when they charge, stream or run games, and some warmth is normal. Cooldown puts every battery reading on one scale, and alerts you when it reaches your alert threshold, 42°C by default.</p>
+      </div>
+
+      <figure class="scale" id="scale">
+        <div class="scale-track" aria-hidden="true">
+          <div class="needle" data-level="hot">
+            <div class="needle-tag"><b class="needle-val">42.3°C</b><span class="needle-level">Overheated</span></div>
+            <i class="needle-line"></i>
+          </div>
+          <div class="ticks"></div>
+          <div class="zones"><i></i><i></i><i></i><i></i></div>
+          <div class="nums"><span style="left:0">30</span><span style="left:25%">35</span><span style="left:50%">40</span><span style="left:75%">45</span><span style="left:100%">50°C</span></div>
+        </div>
+        <ul class="zone-names" aria-hidden="true">
+          <li>Normal</li><li>Warm</li><li>Overheated</li><li>Critical</li>
+        </ul>
+        <figcaption class="sr-only">A battery temperature scale from 30 to 50°C, divided into Cooldown's four levels: Normal, Warm, Overheated and Critical. A reading of 42.3°C falls in Overheated.</figcaption>
+      </figure>
+
+      <figure class="notice" id="alert" aria-label="Example Cooldown heat alert">
+        <div class="notice-head">
+          <span class="notice-icon" aria-hidden="true"><svg viewBox="0 0 256 256"><path fill="currentColor" d="M160,146.08V40a32,32,0,0,0-64,0V146.08a56,56,0,1,0,64,0ZM128,24a16,16,0,0,1,16,16v64H112V40A16,16,0,0,1,128,24Z"/></svg></span>
+          <span>Cooldown · now</span>
+        </div>
+        <p class="notice-title">High temperature detected</p>
+        <p class="notice-text">Battery 42.3°C · Pause gaming, camera, navigation, or hotspot use.</p>
+        <p class="notice-actions" aria-hidden="true"><span>Display</span><span>Battery saver</span></p>
+      </figure>
+    </section>
+
+    <section class="screens wrap" aria-labelledby="screens-title">
+      <h2 id="screens-title">Check it at a glance, or look back later.</h2>
+      <div class="shots">
+        <figure class="shot">
+          <div class="shot-frame"><img src="/assets/img/cooldown-widget.webp" width="720" height="1540" loading="lazy" alt="Home screen with Cooldown widgets reading 28.0°C, 38.4°C and 42.3°C"></div>
+          <h3>On your home screen</h3>
+          <p>The widget shows the latest reading, so you can check it without opening the app.</p>
+        </figure>
+        <figure class="shot">
+          <div class="shot-frame"><img src="/assets/img/cooldown-insights.webp" width="720" height="1540" loading="lazy" alt="Temperature insights for the last 24 hours: minimum 27.9°C, maximum 42.2°C, average 34.8°C"></div>
+          <h3>The last 24 hours and 7 days</h3>
+          <p>Minimum, maximum and average temperature, and how long your phone stayed above your alert threshold.</p>
+        </figure>
+        <figure class="shot">
+          <div class="shot-frame"><img src="/assets/img/cooldown-events.webp" width="720" height="1540" loading="lazy" alt="Heating events with how much the temperature rose, and charging sessions with their peak temperature"></div>
+          <h3>Heating events and charging</h3>
+          <p>When your phone heated up, how fast it rose, and how hot each charge got.</p>
+        </figure>
+      </div>
+      <p class="fine">Insights are part of Pro, or watch an optional ad to unlock them for 24 hours. Screens show example data.</p>
+    </section>
+
+    <section class="honest wrap" aria-labelledby="honest-title">
+      <div class="honest-copy">
+        <h2 id="honest-title">No fake cooling.</h2>
+        <ul class="nots">
+          <li>It doesn't claim to cool your phone instantly.</li>
+          <li>It doesn't force-stop apps or lock CPU and GPU speeds.</li>
+          <li>It doesn't need root or read private system files.</li>
+        </ul>
+        <p>Cooldown shows what is really heating your phone, and how to cool it down safely. Readings come from Android itself, so the available sensors vary by device.</p>
+      </div>
+      <div class="pro">
+        <h3>Monitoring and alerts are free.</h3>
+        <p>Pro is a one-time purchase, not a subscription. It removes ads and adds temperature insights, detailed heat-risk signals, a custom alert threshold, color themes and transparent widgets.</p>
+        <a class="play" href="https://play.google.com/store/apps/details?id=com.harley.cooldown&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dhomepage%26utm_campaign%3Dpro"><img src="/assets/img/google-play-badge.png" width="564" height="168" loading="lazy" alt="Get Cooldown on Google Play"></a>
+      </div>
+    </section>
+
+    <section class="more wrap" aria-labelledby="more-title">
+      <h2 id="more-title">More apps</h2>
+      <ul class="apps">
+        <li class="app" id="wattlab">
+          <img src="/assets/img/icon-wattlab.webp" width="160" height="160" loading="lazy" alt="">
+          <div>
+            <h3>Wattlab</h3>
+            <p class="kind">Charging speed test</p>
+            <p class="what">See the real watts going into your battery, find out why a charge is slow, and rank your chargers and cables.</p>
+            <a class="go" href="https://play.google.com/store/apps/details?id=com.harley.wattlab&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dhomepage%26utm_campaign%3Dmore_apps">Get it on Google Play<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          </div>
+        </li>
+        <li class="app" id="angora">
+          <img src="/assets/img/icon-angora.webp" width="160" height="160" loading="lazy" alt="">
+          <div>
+            <h3>Angora</h3>
+            <p class="kind">Duplicate file finder</p>
+            <p class="what">Find duplicate and large files, see what fills your storage, and free up space safely, with nothing deleted until you confirm.</p>
+            <a class="go" href="https://play.google.com/store/apps/details?id=com.harley.angora&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dhomepage%26utm_campaign%3Dmore_apps">Get it on Google Play<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          </div>
+        </li>
+        <li class="app" id="pipit">
+          <img src="/assets/img/icon-pipit.webp" width="160" height="160" loading="lazy" alt="">
+          <div>
+            <h3>Pipit</h3>
+            <p class="kind">Photo resizer in KB</p>
+            <p class="what">Resize photos and signatures to the exact file size a form asks for, like 20 KB, 50 KB or 100 KB.</p>
+            <a class="go" href="https://play.google.com/store/apps/details?id=com.harley.pipit&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dhomepage%26utm_campaign%3Dmore_apps">Get it on Google Play<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          </div>
+        </li>
+        <li class="app" id="somna">
+          <img src="/assets/img/icon-somna.webp" width="160" height="160" loading="lazy" alt="">
+          <div>
+            <h3>Somna</h3>
+            <p class="kind">Sleep diary and CBT-I</p>
+            <p class="what">A sleep diary with a 6-week program based on cognitive behavioral therapy for insomnia.</p>
+            <a class="go" href="https://play.google.com/store/apps/details?id=com.harley.somna&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dhomepage%26utm_campaign%3Dmore_apps">Get it on Google Play<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="foot wrap">
+    <p><b>Contact</b><a href="mailto:tamariskx@gmail.com">tamariskx@gmail.com</a></p>
+    <p><b>Privacy</b><a href="/cooldown-website/privacy.html">Cooldown</a>, <a href="/wattlab-website/privacy.html">Wattlab</a>, <a href="/angora-website/privacy.html">Angora</a>, <a href="/pipit-website/privacy.html">Pipit</a>, <a href="/somna-website/privacy.html">Somna</a></p>
+    <p><a href="https://play.google.com/store/apps/developer?id=rclaxihy">All apps on Google Play</a></p>
+    <p class="fine">Google Play and the Google Play logo are trademarks of Google LLC.</p>
+  </footer>
+
+  <script>
+    (() => {
+      // The needle starts at the reading shown on the phone above and climbs to the alert, once.
+      const scale = document.getElementById("scale");
+      const alert = document.getElementById("alert");
+      if (!("IntersectionObserver" in window) || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      const needle = scale.querySelector(".needle");
+      const value = scale.querySelector(".needle-val");
+      const level = scale.querySelector(".needle-level");
+      const from = 30.9, to = 42.3, min = 30, max = 50;
+      const levels = [[38, "normal", "Normal"], [42, "warm", "Warm"], [46, "hot", "Overheated"], [Infinity, "hot", "Critical"]];
+      const show = (c) => {
+        const [, key, name] = levels.find(([limit]) => c < limit);
+        needle.style.setProperty("--t", ((c - min) / (max - min)).toFixed(4));
+        needle.dataset.level = key;
+        value.textContent = c.toFixed(1) + "°C";
+        level.textContent = name;
+      };
+      show(from);
+      alert.dataset.hidden = "";
+      new IntersectionObserver((entries, observer) => {
+        if (!entries[0].isIntersecting) return;
+        observer.disconnect();
+        const start = performance.now(), duration = 1700;
+        const step = (now) => {
+          const p = Math.min(1, (now - start) / duration);
+          show(from + (to - from) * (1 - Math.pow(1 - p, 4)));
+          if (p < 1) requestAnimationFrame(step);
+          else setTimeout(() => alert.removeAttribute("data-hidden"), 150);
+        };
+        requestAnimationFrame(step);
+      }, { threshold: 0.6 }).observe(scale);
+    })();
+  </script>
+</body>
+</html>
