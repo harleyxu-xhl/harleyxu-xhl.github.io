@@ -381,6 +381,87 @@ p { margin: 0; }
   }
 }
 
+/* ---------- Reviews ---------- */
+.reviews { padding-bottom: var(--section); }
+
+.reviews-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px 24px;
+  padding-top: var(--section);
+  border-top: 1px solid var(--line);
+}
+.reviews-head p { margin-top: 16px; color: var(--ink-2); text-wrap: balance; }
+
+.pager { display: none; flex: none; gap: 10px; }
+.pager button {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: none;
+  color: var(--ink);
+  cursor: pointer;
+  transition: transform 0.14s var(--ease-out), background-color 0.14s var(--ease-out), opacity 0.14s;
+}
+.pager button:active:not([aria-disabled="true"]) { transform: scale(0.94); }
+.pager button[aria-disabled="true"] { opacity: 0.32; cursor: default; }
+.pager svg { width: 20px; height: 20px; }
+
+@media (hover: hover) {
+  .pager button:hover:not([aria-disabled="true"]) { background: var(--card); }
+}
+
+/* Buttons wherever there is a mouse or room for them; phones swipe. */
+@media (min-width: 820px), (pointer: fine) {
+  .pager { display: flex; }
+}
+
+/* The reel runs to the window's edges, and its first review lines up with the page column. */
+.reel {
+  --edge: max(var(--gutter), (100% - var(--wrap)) / 2);
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: min(84%, 420px);
+  margin: 44px 0 0;
+  padding: 0 var(--edge) 6px;
+  list-style: none;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--edge);
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+}
+.reel::-webkit-scrollbar { display: none; }
+
+.review {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 28px;
+  padding-right: clamp(24px, 3vw, 40px);
+  scroll-snap-align: start;
+}
+.review + .review { padding-left: clamp(24px, 3vw, 40px); border-left: 1px solid var(--line); }
+.review blockquote { margin: 0; }
+.review blockquote p {
+  font-size: clamp(1.25rem, 1.05rem + 0.8vw, 1.625rem);
+  line-height: 1.24;
+  font-weight: 500;
+  font-stretch: 106%;
+  letter-spacing: -0.014em;
+  text-indent: -0.4em;
+}
+.review-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; font-size: 0.875rem; color: var(--ink-2); }
+.review-meta span { white-space: nowrap; }
+
+.stars { display: block; flex: none; width: 82px; height: 14px; color: var(--ink); }
+
 /* ---------- Honest + Pro ---------- */
 .honest {
   display: grid;

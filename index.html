@@ -125,6 +125,30 @@
       <p class="fine">Insights are part of Pro, or watch an optional ad to unlock them for 24 hours. Screens show example data.</p>
     </section>
 
+    <section class="reviews" aria-labelledby="reviews-title">
+      <svg hidden><symbol id="five-stars" viewBox="0 0 140 24"><path fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M12,1.7L14.94,8.85L22.65,9.44L16.76,14.45L18.58,21.96L12,17.9L5.42,21.96L7.24,14.45L1.35,9.44L9.06,8.85ZM41,1.7L43.94,8.85L51.65,9.44L45.76,14.45L47.58,21.96L41,17.9L34.42,21.96L36.24,14.45L30.35,9.44L38.06,8.85ZM70,1.7L72.94,8.85L80.65,9.44L74.76,14.45L76.58,21.96L70,17.9L63.42,21.96L65.24,14.45L59.35,9.44L67.06,8.85ZM99,1.7L101.94,8.85L109.65,9.44L103.76,14.45L105.58,21.96L99,17.9L92.42,21.96L94.24,14.45L88.35,9.44L96.06,8.85ZM128,1.7L130.94,8.85L138.65,9.44L132.76,14.45L134.58,21.96L128,17.9L121.42,21.96L123.24,14.45L117.35,9.44L125.06,8.85Z"/></symbol></svg>
+      <div class="reviews-head wrap">
+        <div>
+          <h2 id="reviews-title">In their own words.</h2>
+          <p>Five-star reviews from Google&nbsp;Play, quoted as written.</p>
+        </div>
+        <div class="pager">
+          <button type="button" class="prev" aria-label="Previous reviews" aria-controls="reviews-list"><svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"/></svg></button>
+          <button type="button" class="next" aria-label="Next reviews" aria-controls="reviews-list"><svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></button>
+        </div>
+      </div>
+      <ol class="reel" id="reviews-list" tabindex="0" aria-label="Reviews">
+        <li class="review"><blockquote><p>“I wasn’t sure it even existed, but this is the very app that I’d been searching for (I’m so happy I found it!) This app suits my needs.”</p></blockquote><div class="review-meta"><svg class="stars" role="img" aria-label="5 out of 5 stars"><use href="#five-stars"/></svg><span>Google&nbsp;Play · Oct 2026</span></div></li>
+        <li class="review"><blockquote><p>“tbh this is a great app and also gives me a heat notification and also tells me that is it a safe temp or a risky temp”</p></blockquote><div class="review-meta"><svg class="stars" role="img" aria-label="5 out of 5 stars"><use href="#five-stars"/></svg><span>Google&nbsp;Play · Sep 2026</span></div></li>
+        <li class="review"><blockquote><p>“amazing it told me my app temperature was at 43 and the app send me a warning after”</p></blockquote><div class="review-meta"><svg class="stars" role="img" aria-label="5 out of 5 stars"><use href="#five-stars"/></svg><span>Google&nbsp;Play · Aug 2026</span></div></li>
+        <li class="review"><blockquote><p>“very accurate and extremely helpful i would suggest all to have this installed on there devices”</p></blockquote><div class="review-meta"><svg class="stars" role="img" aria-label="5 out of 5 stars"><use href="#five-stars"/></svg><span>Google&nbsp;Play · Sep 2026</span></div></li>
+        <li class="review"><blockquote><p>“Amazing, it alerts, as well as tell me, away to keep my phone from heating up!”</p></blockquote><div class="review-meta"><svg class="stars" role="img" aria-label="5 out of 5 stars"><use href="#five-stars"/></svg><span>Google&nbsp;Play · Aug 2026</span></div></li>
+        <li class="review"><blockquote><p>“Brother this is the best app worth the download it is best over any application for temperature measure in play store no bugs no nothing just straight talk”</p></blockquote><div class="review-meta"><svg class="stars" role="img" aria-label="5 out of 5 stars"><use href="#five-stars"/></svg><span>Google&nbsp;Play · Oct 2026</span></div></li>
+        <li class="review"><blockquote><p>“Pretty good idea on this app very insightful I like it very much”</p></blockquote><div class="review-meta"><svg class="stars" role="img" aria-label="5 out of 5 stars"><use href="#five-stars"/></svg><span>Google&nbsp;Play · Sep 2026</span></div></li>
+        <li class="review"><blockquote><p>“helped me to manage my phone health”</p></blockquote><div class="review-meta"><svg class="stars" role="img" aria-label="5 out of 5 stars"><use href="#five-stars"/></svg><span>Google&nbsp;Play · Oct 2026</span></div></li>
+      </ol>
+    </section>
+
     <section class="honest wrap" aria-labelledby="honest-title">
       <div class="honest-copy">
         <h2 id="honest-title">No fake cooling.</h2>
@@ -224,6 +248,32 @@
         };
         requestAnimationFrame(step);
       }, { threshold: 0.6 }).observe(scale);
+    })();
+
+    (() => {
+      // Previous and next move the reel by as many reviews as fit; keyboard presses and reduced motion jump instead of gliding.
+      const reel = document.getElementById("reviews-list");
+      const prev = document.querySelector(".pager .prev");
+      const next = document.querySelector(".pager .next");
+      const reduce = matchMedia("(prefers-reduced-motion: reduce)");
+      const update = () => {
+        prev.setAttribute("aria-disabled", reel.scrollLeft < 4);
+        next.setAttribute("aria-disabled", reel.scrollLeft + reel.clientWidth > reel.scrollWidth - 4);
+      };
+      const go = (dir) => (event) => {
+        if (event.currentTarget.getAttribute("aria-disabled") === "true") return;
+        const [first, second] = reel.children;
+        const step = second.offsetLeft - first.offsetLeft;
+        const style = getComputedStyle(reel);
+        const room = reel.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight);
+        const count = Math.max(1, Math.floor(room / step));
+        reel.scrollBy({ left: dir * count * step, behavior: event.detail === 0 || reduce.matches ? "auto" : "smooth" });
+      };
+      prev.addEventListener("click", go(-1));
+      next.addEventListener("click", go(1));
+      reel.addEventListener("scroll", update, { passive: true });
+      addEventListener("resize", update, { passive: true });
+      update();
     })();
   </script>
 </body>
