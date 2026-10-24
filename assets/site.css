@@ -163,6 +163,11 @@ p { margin: 0; }
 .play img { width: auto; height: 54px; }
 .play:active { transform: scale(0.97); }
 
+/* The download count matches Google Play's public figure; update it when Play moves to the next step. */
+.cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; }
+.count b { display: block; font-size: 1.625rem; line-height: 1.05; font-weight: 600; font-stretch: 108%; letter-spacing: -0.01em; font-variant-numeric: tabular-nums; }
+.count span { display: block; margin-top: 2px; font-size: 0.875rem; color: var(--ink-2); }
+
 .cta .fine { margin-top: 14px; }
 
 .hero-device { margin: 0; justify-self: center; align-self: end; }
