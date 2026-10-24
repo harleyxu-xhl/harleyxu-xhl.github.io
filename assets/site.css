@@ -382,7 +382,7 @@ p { margin: 0; }
 }
 
 /* ---------- Reviews ---------- */
-.reviews { padding-bottom: var(--section); }
+.reviews { padding-block: var(--section); border-top: 1px solid var(--line); }
 
 .reviews-head {
   display: flex;
@@ -390,8 +390,6 @@ p { margin: 0; }
   align-items: end;
   justify-content: space-between;
   gap: 20px 24px;
-  padding-top: var(--section);
-  border-top: 1px solid var(--line);
 }
 .reviews-head p { margin-top: 16px; color: var(--ink-2); text-wrap: balance; }
 
@@ -422,32 +420,38 @@ p { margin: 0; }
   .pager { display: flex; }
 }
 
-/* The reel runs to the window's edges, and its first review lines up with the page column. */
+/* The reel stays inside the page column: one review and a peek on phones, two, then three side by side. */
 .reel {
-  --edge: max(var(--gutter), (100% - var(--wrap)) / 2);
+  --gap: clamp(28px, 4vw, 56px);
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: min(84%, 420px);
+  grid-auto-columns: 86%;
+  column-gap: var(--gap);
   margin: 44px 0 0;
-  padding: 0 var(--edge) 6px;
+  padding: 0 0 6px;
   list-style: none;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  scroll-padding-inline: var(--edge);
   overscroll-behavior-x: contain;
   scrollbar-width: none;
 }
 .reel::-webkit-scrollbar { display: none; }
+
+@media (min-width: 640px) {
+  .reel { grid-auto-columns: calc((100% - var(--gap)) / 2); }
+}
+
+@media (min-width: 1000px) {
+  .reel { grid-auto-columns: calc((100% - 2 * var(--gap)) / 3); }
+}
 
 .review {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 28px;
-  padding-right: clamp(24px, 3vw, 40px);
   scroll-snap-align: start;
 }
-.review + .review { padding-left: clamp(24px, 3vw, 40px); border-left: 1px solid var(--line); }
 .review blockquote { margin: 0; }
 .review blockquote p {
   font-size: clamp(1.25rem, 1.05rem + 0.8vw, 1.625rem);
@@ -455,7 +459,6 @@ p { margin: 0; }
   font-weight: 500;
   font-stretch: 106%;
   letter-spacing: -0.014em;
-  text-indent: -0.4em;
 }
 .review-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; font-size: 0.875rem; color: var(--ink-2); }
 .review-meta span { white-space: nowrap; }

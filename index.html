@@ -125,9 +125,9 @@
       <p class="fine">Insights are part of Pro, or watch an optional ad to unlock them for 24 hours. Screens show example data.</p>
     </section>
 
-    <section class="reviews" aria-labelledby="reviews-title">
+    <section class="reviews wrap" aria-labelledby="reviews-title">
       <svg hidden><symbol id="five-stars" viewBox="0 0 140 24"><path fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M12,1.7L14.94,8.85L22.65,9.44L16.76,14.45L18.58,21.96L12,17.9L5.42,21.96L7.24,14.45L1.35,9.44L9.06,8.85ZM41,1.7L43.94,8.85L51.65,9.44L45.76,14.45L47.58,21.96L41,17.9L34.42,21.96L36.24,14.45L30.35,9.44L38.06,8.85ZM70,1.7L72.94,8.85L80.65,9.44L74.76,14.45L76.58,21.96L70,17.9L63.42,21.96L65.24,14.45L59.35,9.44L67.06,8.85ZM99,1.7L101.94,8.85L109.65,9.44L103.76,14.45L105.58,21.96L99,17.9L92.42,21.96L94.24,14.45L88.35,9.44L96.06,8.85ZM128,1.7L130.94,8.85L138.65,9.44L132.76,14.45L134.58,21.96L128,17.9L121.42,21.96L123.24,14.45L117.35,9.44L125.06,8.85Z"/></symbol></svg>
-      <div class="reviews-head wrap">
+      <div class="reviews-head">
         <div>
           <h2 id="reviews-title">In their own words.</h2>
           <p>Five-star reviews from Google&nbsp;Play, quoted as written.</p>
@@ -251,26 +251,46 @@
     })();
 
     (() => {
-      // Previous and next move the reel by as many reviews as fit; keyboard presses and reduced motion jump instead of gliding.
+      // The reel advances one review every few seconds and rewinds at the end. It pauses while hovered or focused,
+      // and stops for good once someone scrolls it or uses the buttons. Reduced motion turns it off.
       const reel = document.getElementById("reviews-list");
       const prev = document.querySelector(".pager .prev");
       const next = document.querySelector(".pager .next");
       const reduce = matchMedia("(prefers-reduced-motion: reduce)");
+      const step = () => reel.children[1].offsetLeft - reel.children[0].offsetLeft;
+      const atEnd = () => reel.scrollLeft + reel.clientWidth > reel.scrollWidth - 4;
+      const glide = (instant) => (instant || reduce.matches ? "auto" : "smooth");
       const update = () => {
         prev.setAttribute("aria-disabled", reel.scrollLeft < 4);
-        next.setAttribute("aria-disabled", reel.scrollLeft + reel.clientWidth > reel.scrollWidth - 4);
+        next.setAttribute("aria-disabled", atEnd());
       };
+      let auto = !reduce.matches, held = false, seen = false;
+      const stop = () => { auto = false; };
+
+      // Previous and next move by as many reviews as fit; keyboard presses jump instead of gliding.
       const go = (dir) => (event) => {
+        stop();
         if (event.currentTarget.getAttribute("aria-disabled") === "true") return;
-        const [first, second] = reel.children;
-        const step = second.offsetLeft - first.offsetLeft;
-        const style = getComputedStyle(reel);
-        const room = reel.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight);
-        const count = Math.max(1, Math.floor(room / step));
-        reel.scrollBy({ left: dir * count * step, behavior: event.detail === 0 || reduce.matches ? "auto" : "smooth" });
+        const count = Math.max(1, Math.round(reel.clientWidth / step()));
+        reel.scrollBy({ left: dir * count * step(), behavior: glide(event.detail === 0) });
       };
       prev.addEventListener("click", go(-1));
       next.addEventListener("click", go(1));
+
+      setInterval(() => {
+        if (!auto || held || !seen || document.hidden) return;
+        if (atEnd()) reel.scrollTo({ left: 0, behavior: glide() });
+        else reel.scrollBy({ left: step(), behavior: glide() });
+      }, 4500);
+      if ("IntersectionObserver" in window) {
+        new IntersectionObserver((entries) => { seen = entries[0].isIntersecting; }, { threshold: 0.5 }).observe(reel);
+      }
+      reel.addEventListener("pointerenter", () => { held = true; });
+      reel.addEventListener("pointerleave", () => { held = false; });
+      reel.addEventListener("focusin", () => { held = true; });
+      reel.addEventListener("focusout", () => { held = false; });
+      for (const type of ["pointerdown", "wheel", "touchstart", "keydown"]) reel.addEventListener(type, stop, { passive: true });
+
       reel.addEventListener("scroll", update, { passive: true });
       addEventListener("resize", update, { passive: true });
       update();
