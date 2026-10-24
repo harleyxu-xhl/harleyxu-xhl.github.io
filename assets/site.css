@@ -441,6 +441,7 @@ p { margin: 0; }
   font-weight: 600;
   text-decoration: none;
 }
+.soon { display: flex; align-items: center; min-height: 44px; margin-top: 6px; font-weight: 500; color: var(--ink-2); }
 .go svg { width: 16px; height: 16px; flex: none; transition: transform 0.16s var(--ease-out); }
 .go:active svg { transform: translate(1px, -1px) scale(0.9); }
 
