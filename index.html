@@ -252,7 +252,7 @@
 
     (() => {
       // The reel advances one review every few seconds and rewinds at the end. It pauses while hovered or focused,
-      // and stops for good once someone scrolls it or uses the buttons. Reduced motion turns it off.
+      // and stops for good once someone scrolls it sideways or uses the buttons. Reduced motion jumps instead of gliding.
       const reel = document.getElementById("reviews-list");
       const prev = document.querySelector(".pager .prev");
       const next = document.querySelector(".pager .next");
@@ -264,7 +264,7 @@
         prev.setAttribute("aria-disabled", reel.scrollLeft < 4);
         next.setAttribute("aria-disabled", atEnd());
       };
-      let auto = !reduce.matches, held = false, seen = false;
+      let auto = true, held = false, seen = false;
       const stop = () => { auto = false; };
 
       // Previous and next move by as many reviews as fit; keyboard presses jump instead of gliding.
@@ -289,7 +289,9 @@
       reel.addEventListener("pointerleave", () => { held = false; });
       reel.addEventListener("focusin", () => { held = true; });
       reel.addEventListener("focusout", () => { held = false; });
-      for (const type of ["pointerdown", "wheel", "touchstart", "keydown"]) reel.addEventListener(type, stop, { passive: true });
+      for (const type of ["pointerdown", "touchstart", "keydown"]) reel.addEventListener(type, stop, { passive: true });
+      // A vertical wheel over the reel is the page scrolling past it, not someone taking over the reel.
+      reel.addEventListener("wheel", (event) => { if (Math.abs(event.deltaX) > Math.abs(event.deltaY)) stop(); }, { passive: true });
 
       reel.addEventListener("scroll", update, { passive: true });
       addEventListener("resize", update, { passive: true });
