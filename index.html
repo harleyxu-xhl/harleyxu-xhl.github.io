@@ -61,7 +61,7 @@
         <div class="cta">
           <div class="cta-row">
             <a class="play" href="https://play.google.com/store/apps/details?id=com.harley.cooldown&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dhomepage%26utm_campaign%3Dhero"><img src="/assets/img/google-play-badge.png" width="564" height="168" alt="Get Cooldown on Google Play"></a>
-            <p class="count"><b>50K+</b><span>downloads on Google&nbsp;Play</span></p>
+            <p class="count"><b>50K+</b><span>downloads<span class="on-play"> on Google&nbsp;Play</span></span></p>
           </div>
           <p class="fine">Free. Pro is a one-time purchase, not a subscription.</p>
         </div>
@@ -73,37 +73,37 @@
       </figure>
     </section>
 
-    <section class="heat wrap" aria-labelledby="heat-title">
-      <div class="heat-copy">
-        <h2 id="heat-title">How hot is too hot?</h2>
-        <p>Phones warm up when they charge, stream or run games, and some warmth is normal. Cooldown puts every battery reading on one scale, and alerts you when it reaches your alert threshold, 42°C by default.</p>
-      </div>
+    <section class="heat" aria-labelledby="heat-title">
+      <div class="heat-in wrap">
+        <div class="heat-copy">
+          <h2 id="heat-title">How hot is too hot?</h2>
+          <p>Phones warm up when they charge, stream or run games, and some warmth is normal. Cooldown puts every battery reading on one scale, and alerts you when it reaches your alert threshold, 42°C by default.</p>
+        </div>
 
-      <figure class="scale" id="scale">
-        <div class="scale-track" aria-hidden="true">
-          <div class="needle" data-level="hot">
-            <div class="needle-tag"><b class="needle-val">42.3°C</b><span class="needle-level">Overheated</span></div>
-            <i class="needle-line"></i>
+        <figure class="scale" id="scale" data-level="hot">
+          <p class="readout" aria-hidden="true"><b class="needle-val">42.3°C</b><span class="needle-level">Overheated</span></p>
+          <div class="scale-track" aria-hidden="true">
+            <div class="needle"><i class="needle-line"></i></div>
+            <div class="ticks"></div>
+            <div class="zones"><i></i><i></i><i></i><i></i></div>
+            <div class="nums"><span style="left:0">30</span><span style="left:25%">35</span><span style="left:50%">40</span><span style="left:75%">45</span><span style="left:100%">50°C</span></div>
           </div>
-          <div class="ticks"></div>
-          <div class="zones"><i></i><i></i><i></i><i></i></div>
-          <div class="nums"><span style="left:0">30</span><span style="left:25%">35</span><span style="left:50%">40</span><span style="left:75%">45</span><span style="left:100%">50°C</span></div>
-        </div>
-        <ul class="zone-names" aria-hidden="true">
-          <li>Normal</li><li>Warm</li><li>Overheated</li><li>Critical</li>
-        </ul>
-        <figcaption class="sr-only">A battery temperature scale from 30 to 50°C, divided into Cooldown's four levels: Normal, Warm, Overheated and Critical. A reading of 42.3°C falls in Overheated.</figcaption>
-      </figure>
+          <ul class="zone-names" aria-hidden="true">
+            <li>Normal</li><li>Warm</li><li>Overheated</li><li>Critical</li>
+          </ul>
+          <figcaption class="sr-only">A battery temperature scale from 30 to 50°C, divided into Cooldown's four levels: Normal, Warm, Overheated and Critical. A reading of 42.3°C falls in Overheated.</figcaption>
+        </figure>
 
-      <figure class="notice" id="alert" aria-label="Example Cooldown heat alert">
-        <div class="notice-head">
-          <span class="notice-icon" aria-hidden="true"><svg viewBox="0 0 256 256"><path fill="currentColor" d="M160,146.08V40a32,32,0,0,0-64,0V146.08a56,56,0,1,0,64,0ZM128,24a16,16,0,0,1,16,16v64H112V40A16,16,0,0,1,128,24Z"/></svg></span>
-          <span>Cooldown · now</span>
-        </div>
-        <p class="notice-title">High temperature detected</p>
-        <p class="notice-text">Battery 42.3°C · Pause gaming, camera, navigation, or hotspot use.</p>
-        <p class="notice-actions" aria-hidden="true"><span>Display</span><span>Battery saver</span></p>
-      </figure>
+        <figure class="notice" id="alert" aria-label="Example Cooldown heat alert">
+          <div class="notice-head">
+            <span class="notice-icon" aria-hidden="true"><svg viewBox="0 0 256 256"><path fill="currentColor" d="M160,146.08V40a32,32,0,0,0-64,0V146.08a56,56,0,1,0,64,0ZM128,24a16,16,0,0,1,16,16v64H112V40A16,16,0,0,1,128,24Z"/></svg></span>
+            <span>Cooldown · now</span>
+          </div>
+          <p class="notice-title">High temperature detected</p>
+          <p class="notice-text">Battery 42.3°C · Pause gaming, camera, navigation, or hotspot use.</p>
+          <p class="notice-actions" aria-hidden="true"><span>Display</span><span>Battery saver</span></p>
+        </figure>
+      </div>
     </section>
 
     <section class="screens wrap" aria-labelledby="screens-title">
@@ -129,7 +129,7 @@
     </section>
 
     <section class="reviews wrap" aria-labelledby="reviews-title">
-      <svg hidden><symbol id="five-stars" viewBox="0 0 140 24"><path fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M12,1.7L14.94,8.85L22.65,9.44L16.76,14.45L18.58,21.96L12,17.9L5.42,21.96L7.24,14.45L1.35,9.44L9.06,8.85ZM41,1.7L43.94,8.85L51.65,9.44L45.76,14.45L47.58,21.96L41,17.9L34.42,21.96L36.24,14.45L30.35,9.44L38.06,8.85ZM70,1.7L72.94,8.85L80.65,9.44L74.76,14.45L76.58,21.96L70,17.9L63.42,21.96L65.24,14.45L59.35,9.44L67.06,8.85ZM99,1.7L101.94,8.85L109.65,9.44L103.76,14.45L105.58,21.96L99,17.9L92.42,21.96L94.24,14.45L88.35,9.44L96.06,8.85ZM128,1.7L130.94,8.85L138.65,9.44L132.76,14.45L134.58,21.96L128,17.9L121.42,21.96L123.24,14.45L117.35,9.44L125.06,8.85Z"/></symbol></svg>
+      <svg class="sprite" aria-hidden="true"><symbol id="five-stars" viewBox="0 0 140 24"><path fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M12,1.7L14.94,8.85L22.65,9.44L16.76,14.45L18.58,21.96L12,17.9L5.42,21.96L7.24,14.45L1.35,9.44L9.06,8.85ZM41,1.7L43.94,8.85L51.65,9.44L45.76,14.45L47.58,21.96L41,17.9L34.42,21.96L36.24,14.45L30.35,9.44L38.06,8.85ZM70,1.7L72.94,8.85L80.65,9.44L74.76,14.45L76.58,21.96L70,17.9L63.42,21.96L65.24,14.45L59.35,9.44L67.06,8.85ZM99,1.7L101.94,8.85L109.65,9.44L103.76,14.45L105.58,21.96L99,17.9L92.42,21.96L94.24,14.45L88.35,9.44L96.06,8.85ZM128,1.7L130.94,8.85L138.65,9.44L132.76,14.45L134.58,21.96L128,17.9L121.42,21.96L123.24,14.45L117.35,9.44L125.06,8.85Z"/></symbol></svg>
       <div class="reviews-head">
         <div>
           <h2 id="reviews-title">In their own words.</h2>
@@ -153,8 +153,8 @@
     </section>
 
     <section class="honest wrap" aria-labelledby="honest-title">
+      <h2 id="honest-title">No fake cooling.</h2>
       <div class="honest-copy">
-        <h2 id="honest-title">No fake cooling.</h2>
         <ul class="nots">
           <li>It doesn't claim to cool your phone instantly.</li>
           <li>It doesn't force-stop apps or lock CPU and GPU speeds.</li>
@@ -221,7 +221,7 @@
 
   <script>
     (() => {
-      // The needle starts at the reading shown on the phone above and climbs to the alert, once.
+      // The reading starts at the one shown on the phone above and climbs to the alert, once.
       const scale = document.getElementById("scale");
       const alert = document.getElementById("alert");
       if (!("IntersectionObserver" in window) || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -233,7 +233,7 @@
       const show = (c) => {
         const [, key, name] = levels.find(([limit]) => c < limit);
         needle.style.setProperty("--t", ((c - min) / (max - min)).toFixed(4));
-        needle.dataset.level = key;
+        scale.dataset.level = key;
         value.textContent = c.toFixed(1) + "°C";
         level.textContent = name;
       };
