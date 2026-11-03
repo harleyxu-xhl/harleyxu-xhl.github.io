@@ -1,0 +1,91 @@
+{
+ "title": "Cooldown: pemantau suhu HP untuk Android",
+ "description": "Cooldown menampilkan suhu baterai HP Anda, memberi peringatan saat HP terlalu panas, dan memberi tahu apa yang membuatnya panas. Gratis di Google Play, bersama Angora, Pipit, dan Somna.",
+ "og_title": "Cooldown: ketahui kenapa HP Anda panas",
+ "og_description": "Suhu baterai, peringatan HP terlalu panas, dan cara praktis mendinginkan HP. Gratis di Google Play.",
+ "og_free": "Gratis di Google Play",
+ "ld_description": "Pemantau suhu HP dan suhu baterai dengan peringatan panas berlebih dan tips mendinginkan HP.",
+ "skip": "Langsung ke konten",
+ "nav_label": "Aplikasi",
+ "contact": "Kontak",
+ "language": "Bahasa",
+ "tagline": "Suhu HP untuk Android",
+ "h1": "Ketahui kenapa HP Anda panas.",
+ "lede": "Cooldown menampilkan suhu baterai, memberi peringatan saat HP Anda terlalu panas, dan memberi tahu apa yang membuatnya panas. <span class=\"nowrap\">Mode Suhu Rendah</span> juga bisa meredupkan layar untuk Anda.",
+ "badge_alt": "Dapatkan Cooldown di Google Play",
+ "downloads": "unduhan",
+ "on_play": " di Google&nbsp;Play",
+ "free_note": "Gratis. Pro adalah pembelian sekali bayar, bukan langganan.",
+ "hero_alt": "Ringkasan Cooldown: baterai {t_hero}, status Normal, dengan Mode Suhu Rendah dan peringatan panas aktif",
+ "heat_title": "Seberapa panas yang terlalu panas?",
+ "heat_body": "HP menjadi hangat saat mengisi daya, streaming, atau bermain game, dan sedikit hangat itu normal. Cooldown menempatkan setiap pembacaan baterai pada satu skala, dan memberi peringatan saat suhu mencapai batas peringatan Anda, {threshold} secara default.",
+ "levels": [
+  "Normal",
+  "Hangat",
+  "Terlalu panas",
+  "Kritis"
+ ],
+ "scale_caption": "Skala suhu baterai dari 30 hingga 50°C, dibagi menjadi empat level Cooldown: Normal, Hangat, Terlalu panas, dan Kritis. Pembacaan {t_alert} masuk level Terlalu panas.",
+ "notice_label": "Contoh peringatan panas Cooldown",
+ "now": "sekarang",
+ "notice_title": "Suhu tinggi terdeteksi",
+ "notice_text": "Baterai {t_alert} · Jeda game, kamera, navigasi, atau hotspot.",
+ "action_display": "Layar",
+ "action_saver": "Penghemat baterai",
+ "screens_title": "Cek sekilas, atau lihat riwayatnya nanti.",
+ "shot": {
+  "widget_alt": "Layar utama dengan widget Cooldown yang menunjukkan {w1}, {w2}, dan {t_alert}",
+  "widget_title": "Di layar utama Anda",
+  "widget_body": "Widget menampilkan pembacaan terbaru, jadi Anda bisa mengeceknya tanpa membuka aplikasi.",
+  "insights_alt": "Analisis suhu 24 jam terakhir: minimum {min}, maksimum {max}, rata-rata {avg}",
+  "insights_title": "24 jam dan 7 hari terakhir",
+  "insights_body": "Suhu minimum, maksimum, dan rata-rata, serta berapa lama HP Anda berada di atas batas peringatan.",
+  "events_alt": "Kejadian memanas beserta kenaikan suhunya, dan sesi pengisian daya beserta suhu puncaknya",
+  "events_title": "Kejadian memanas dan pengisian daya",
+  "events_body": "Kapan HP Anda memanas, seberapa cepat suhunya naik, dan seberapa panas setiap pengisian daya."
+ },
+ "screens_note": "Analisis suhu adalah bagian dari Pro, atau tonton iklan opsional untuk membukanya selama 24 jam. Layar menampilkan contoh data.",
+ "reviews_title": "Kata mereka sendiri.",
+ "reviews_sub": "Ulasan bintang lima dari Google&nbsp;Play, dikutip apa adanya dalam bahasa Inggris.",
+ "prev": "Ulasan sebelumnya",
+ "next": "Ulasan berikutnya",
+ "reviews_label": "Ulasan",
+ "stars": "5 dari 5 bintang",
+ "months": {
+  "2026-08": "Agu 2026",
+  "2026-09": "Sep 2026",
+  "2026-10": "Okt 2026",
+  "2026-11": "Nov 2026"
+ },
+ "honest_title": "Tanpa pendinginan palsu.",
+ "nots": [
+  "Tidak mengklaim bisa mendinginkan HP secara instan.",
+  "Tidak menutup paksa aplikasi atau mengunci kecepatan CPU dan GPU.",
+  "Tidak perlu root dan tidak membaca file sistem pribadi."
+ ],
+ "honest_body": "Cooldown menunjukkan apa yang sebenarnya membuat HP Anda panas, dan cara mendinginkannya dengan aman. Pembacaan berasal dari Android sendiri, jadi sensor yang tersedia berbeda di tiap perangkat.",
+ "pro_title": "Pemantauan dan peringatan gratis.",
+ "pro_body": "Pro adalah pembelian sekali bayar, bukan langganan. Pro menghapus iklan dan menambahkan analisis suhu, sinyal risiko panas yang terperinci, batas peringatan khusus, tema warna, dan widget transparan.",
+ "more_title": "Aplikasi lainnya",
+ "get_it": "Dapatkan di Google Play",
+ "soon": "Segera hadir di Google Play",
+ "angora": {
+  "kind": "Pencari file duplikat",
+  "what": "Temukan file duplikat dan file besar, lihat apa yang memenuhi penyimpanan Anda, dan kosongkan ruang dengan aman. Tidak ada yang dihapus sebelum Anda konfirmasi."
+ },
+ "pipit": {
+  "kind": "Pengecil foto dalam KB",
+  "what": "Ubah ukuran foto dan tanda tangan sesuai ukuran file yang diminta formulir, seperti 20 KB, 50 KB, atau 100 KB."
+ },
+ "somna": {
+  "kind": "Buku harian tidur dan CBT-I",
+  "what": "Buku harian tidur dengan program 6 minggu berdasarkan terapi perilaku kognitif untuk insomnia."
+ },
+ "wattlab": {
+  "kind": "Tes kecepatan pengisian daya",
+  "what": "Lihat watt sebenarnya yang masuk ke baterai, cari tahu kenapa pengisian daya lambat, dan bandingkan charger serta kabel Anda."
+ },
+ "privacy": "Privasi",
+ "all_apps": "Semua aplikasi di Google Play",
+ "trademark": "Google Play dan logo Google Play adalah merek dagang Google LLC."
+}

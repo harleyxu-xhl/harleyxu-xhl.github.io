@@ -1,0 +1,91 @@
+{
+ "title": "Cooldown：Android 手机温度监测",
+ "description": "Cooldown 显示手机电池温度，过热时提醒你，并告诉你是什么让手机发热。在 Google Play 免费下载，同系列还有 Angora、Pipit 和 Somna。",
+ "og_title": "Cooldown：知道手机为什么发烫",
+ "og_description": "电池温度、过热提醒，以及让手机降温的实用方法。在 Google Play 免费下载。",
+ "og_free": "Google Play 免费下载",
+ "ld_description": "手机与电池温度监测应用，提供过热提醒和降温建议。",
+ "skip": "跳到正文",
+ "nav_label": "应用",
+ "contact": "联系",
+ "language": "语言",
+ "tagline": "Android 手机温度监测",
+ "h1": "知道手机为什么发烫。",
+ "lede": "Cooldown 显示电池温度，手机过热时提醒你，并告诉你是什么让它发热。<span class=\"nowrap\">低温维持</span>还能自动帮你调低屏幕亮度。",
+ "badge_alt": "在 Google Play 下载 Cooldown",
+ "downloads": "次下载",
+ "on_play": "（Google&nbsp;Play）",
+ "free_note": "免费。Pro 为一次性买断，不是订阅。",
+ "hero_alt": "Cooldown 概览：电池温度 {t_hero}，状态正常，已开启低温维持和高温提醒",
+ "heat_title": "多热才算太热？",
+ "heat_body": "手机在充电、看视频或玩游戏时会变热，一定程度的发热是正常的。Cooldown 把每次电池读数放在同一把标尺上，达到你的提醒阈值（默认 {threshold}）时提醒你。",
+ "levels": [
+  "正常",
+  "偏热",
+  "过热",
+  "危险"
+ ],
+ "scale_caption": "30 至 50°C 的电池温度标尺，分为 Cooldown 的四个等级：正常、偏热、过热和危险。{t_alert} 属于过热。",
+ "notice_label": "Cooldown 高温提醒示例",
+ "now": "现在",
+ "notice_title": "检测到高温",
+ "notice_text": "电池 {t_alert} · 请暂停游戏、相机、导航或热点。",
+ "action_display": "显示",
+ "action_saver": "省电",
+ "screens_title": "一眼看清，也能回头细看。",
+ "shot": {
+  "widget_alt": "主屏幕上的 Cooldown 小组件，分别显示 {w1}、{w2} 和 {t_alert}",
+  "widget_title": "就在主屏幕上",
+  "widget_body": "小组件显示最新读数，不用打开应用就能查看。",
+  "insights_alt": "过去 24 小时的温度洞察：最低 {min}，最高 {max}，平均 {avg}",
+  "insights_title": "过去 24 小时和 7 天",
+  "insights_body": "最低、最高和平均温度，以及手机超过提醒阈值的时长。",
+  "events_alt": "明显升温事件及每次升高的温度，充电记录及每次的峰值温度",
+  "events_title": "升温事件与充电",
+  "events_body": "手机什么时候变热、升温有多快，以及每次充电热到什么程度。"
+ },
+ "screens_note": "温度洞察属于 Pro，也可以观看一段可选广告，免费使用 24 小时。截图为示例数据。",
+ "reviews_title": "用户原话。",
+ "reviews_sub": "来自 Google&nbsp;Play 的五星评价，按英文原文引用。",
+ "prev": "上一组评价",
+ "next": "下一组评价",
+ "reviews_label": "评价",
+ "stars": "5 星（满分 5 星）",
+ "months": {
+  "2026-08": "2026年8月",
+  "2026-09": "2026年9月",
+  "2026-10": "2026年10月",
+  "2026-11": "2026年11月"
+ },
+ "honest_title": "不搞虚假降温。",
+ "nots": [
+  "不声称能让手机瞬间降温。",
+  "不强行关闭应用，也不锁定 CPU 和 GPU 频率。",
+  "不需要 root，也不读取系统私有文件。"
+ ],
+ "honest_body": "Cooldown 告诉你手机真正的发热原因，以及如何安全地降温。读数来自 Android 系统本身，所以可用的传感器因设备而异。",
+ "pro_title": "监测和提醒都免费。",
+ "pro_body": "Pro 为一次性买断，不是订阅。它会移除广告，并增加温度洞察、详细的高温风险信号、自定义提醒阈值、主题配色和透明桌面小组件。",
+ "more_title": "更多应用",
+ "get_it": "在 Google Play 下载",
+ "soon": "即将上架 Google Play",
+ "angora": {
+  "kind": "重复文件查找",
+  "what": "找出重复文件和大文件，看清存储空间被什么占用，安全地释放空间。你确认之前不会删除任何文件。"
+ },
+ "pipit": {
+  "kind": "照片压缩到指定 KB",
+  "what": "把照片和签名调整到表单要求的精确大小，比如 20 KB、50 KB 或 100 KB。"
+ },
+ "somna": {
+  "kind": "睡眠日记与 CBT-I",
+  "what": "一款睡眠日记，附带基于失眠认知行为疗法的 6 周课程。"
+ },
+ "wattlab": {
+  "kind": "充电速度测试",
+  "what": "查看真正进入电池的功率，找出充电慢的原因，并给你的充电器和数据线排个名。"
+ },
+ "privacy": "隐私政策",
+ "all_apps": "Google Play 上的全部应用",
+ "trademark": "Google Play 和 Google Play 徽标是 Google LLC 的商标。"
+}

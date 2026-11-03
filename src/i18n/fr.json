@@ -1,0 +1,91 @@
+{
+ "title": "Cooldown : température du téléphone pour Android",
+ "description": "Cooldown affiche la température de la batterie de votre téléphone, vous alerte en cas de surchauffe et vous dit ce qui le fait chauffer. Gratuit sur Google Play, tout comme Angora, Pipit et Somna.",
+ "og_title": "Cooldown : comprenez pourquoi votre téléphone chauffe",
+ "og_description": "Température de la batterie, alertes de surchauffe et conseils pratiques pour refroidir votre téléphone. Gratuit sur Google Play.",
+ "og_free": "Gratuit sur Google Play",
+ "ld_description": "Moniteur de température du téléphone et de la batterie, avec alertes de surchauffe et conseils pour le refroidir.",
+ "skip": "Aller au contenu",
+ "nav_label": "Applications",
+ "contact": "Contact",
+ "language": "Langue",
+ "tagline": "Température du téléphone pour Android",
+ "h1": "Comprenez pourquoi votre téléphone chauffe.",
+ "lede": "Cooldown affiche la température de la batterie, vous alerte quand votre téléphone surchauffe et vous dit ce qui le fait chauffer. Le <span class=\"nowrap\">Mode basse température</span> peut aussi baisser la luminosité de l’écran pour vous.",
+ "badge_alt": "Télécharger Cooldown sur Google Play",
+ "downloads": "téléchargements",
+ "on_play": " sur Google&nbsp;Play",
+ "free_note": "Gratuit. Pro est un achat unique, pas un abonnement.",
+ "hero_alt": "Aperçu de Cooldown : la batterie est à {t_hero}, état Normal, avec le Mode basse température et les alertes de chaleur activés",
+ "heat_title": "À partir de quand est-ce trop chaud ?",
+ "heat_body": "Un téléphone chauffe quand il charge, diffuse une vidéo ou fait tourner un jeu, et un peu de chaleur est normal. Cooldown place chaque relevé de la batterie sur une même échelle et vous alerte quand il atteint votre seuil d’alerte, {threshold} par défaut.",
+ "levels": [
+  "Normal",
+  "Chaud",
+  "Surchauffe",
+  "Critique"
+ ],
+ "scale_caption": "Une échelle de température de la batterie de 30 à 50°C, divisée en quatre niveaux Cooldown : Normal, Chaud, Surchauffe et Critique. Un relevé de {t_alert} se situe en Surchauffe.",
+ "notice_label": "Exemple d’alerte de chaleur Cooldown",
+ "now": "maintenant",
+ "notice_title": "Température élevée détectée",
+ "notice_text": "Batterie {t_alert} · Mettez en pause les jeux, l’appareil photo, la navigation ou le partage de connexion.",
+ "action_display": "Écran",
+ "action_saver": "Économiseur",
+ "screens_title": "Un coup d’œil suffit, et l’historique reste là.",
+ "shot": {
+  "widget_alt": "Écran d’accueil avec des widgets Cooldown affichant {w1}, {w2} et {t_alert}",
+  "widget_title": "Sur votre écran d’accueil",
+  "widget_body": "Le widget affiche le dernier relevé, pour le consulter sans ouvrir l’application.",
+  "insights_alt": "Tendances de température des dernières 24 heures : minimum {min}, maximum {max}, moyenne {avg}",
+  "insights_title": "Les dernières 24 heures et 7 jours",
+  "insights_body": "Température minimale, maximale et moyenne, et le temps passé par votre téléphone au-dessus de votre seuil d’alerte.",
+  "events_alt": "Épisodes de chauffe avec la hausse de température, et recharges avec leur température maximale",
+  "events_title": "Épisodes de chauffe et recharges",
+  "events_body": "Quand votre téléphone a chauffé, à quelle vitesse la température est montée, et jusqu’où chaque recharge l’a fait chauffer."
+ },
+ "screens_note": "Les tendances font partie de Pro, ou regardez une publicité facultative pour les débloquer pendant 24 heures. Les écrans montrent des données d’exemple.",
+ "reviews_title": "Avec leurs propres mots.",
+ "reviews_sub": "Avis cinq étoiles de Google&nbsp;Play, cités tels quels, en anglais.",
+ "prev": "Avis précédents",
+ "next": "Avis suivants",
+ "reviews_label": "Avis",
+ "stars": "5 étoiles sur 5",
+ "months": {
+  "2026-08": "août 2026",
+  "2026-09": "sept. 2026",
+  "2026-10": "oct. 2026",
+  "2026-11": "nov. 2026"
+ },
+ "honest_title": "Pas de faux refroidissement.",
+ "nots": [
+  "Il ne prétend pas refroidir votre téléphone instantanément.",
+  "Il ne force pas l’arrêt des applications et ne bride ni le CPU ni le GPU.",
+  "Il n’a pas besoin du root et ne lit pas les fichiers système privés."
+ ],
+ "honest_body": "Cooldown montre ce qui fait vraiment chauffer votre téléphone, et comment le refroidir en toute sécurité. Les relevés viennent d’Android lui-même, donc les capteurs disponibles varient selon l’appareil.",
+ "pro_title": "La surveillance et les alertes sont gratuites.",
+ "pro_body": "Pro est un achat unique, pas un abonnement. Il supprime les publicités et ajoute les tendances de température, des signaux détaillés du risque de chaleur, un seuil d’alerte personnalisé, des thèmes de couleur et des widgets transparents.",
+ "more_title": "Autres applications",
+ "get_it": "Disponible sur Google Play",
+ "soon": "Bientôt sur Google Play",
+ "angora": {
+  "kind": "Détecteur de fichiers en double",
+  "what": "Trouvez les fichiers en double et volumineux, voyez ce qui remplit votre stockage et libérez de l’espace en toute sécurité : rien n’est supprimé sans votre confirmation."
+ },
+ "pipit": {
+  "kind": "Réduire une photo en Ko",
+  "what": "Redimensionnez photos et signatures à la taille exacte demandée par un formulaire, comme 20 Ko, 50 Ko ou 100 Ko."
+ },
+ "somna": {
+  "kind": "Journal du sommeil et TCC-I",
+  "what": "Un journal du sommeil avec un programme de 6 semaines fondé sur la thérapie cognitivo-comportementale de l’insomnie."
+ },
+ "wattlab": {
+  "kind": "Test de vitesse de charge",
+  "what": "Voyez les watts réels qui entrent dans votre batterie, découvrez pourquoi une charge est lente et classez vos chargeurs et câbles."
+ },
+ "privacy": "Confidentialité",
+ "all_apps": "Toutes les applications sur Google Play",
+ "trademark": "Google Play et le logo Google Play sont des marques de Google LLC."
+}

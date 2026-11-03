@@ -1,0 +1,91 @@
+{
+ "title": "Cooldown: Android용 휴대폰 온도 모니터",
+ "description": "Cooldown은 휴대폰 배터리 온도를 보여 주고, 과열되면 알려 주며, 무엇 때문에 뜨거워지는지 알려 줍니다. Google Play에서 무료이며 Angora, Pipit, Somna도 있습니다.",
+ "og_title": "Cooldown: 휴대폰이 뜨거워지는 이유를 알아보세요",
+ "og_description": "배터리 온도, 과열 알림, 휴대폰 온도를 낮추는 실용적인 방법. Google Play에서 무료.",
+ "og_free": "Google Play에서 무료",
+ "ld_description": "과열 알림과 온도를 낮추는 팁을 제공하는 휴대폰·배터리 온도 모니터.",
+ "skip": "본문으로 건너뛰기",
+ "nav_label": "앱",
+ "contact": "문의",
+ "language": "언어",
+ "tagline": "Android용 휴대폰 온도",
+ "h1": "휴대폰이 뜨거워지는 이유를 알아보세요.",
+ "lede": "Cooldown은 배터리 온도를 보여 주고, 휴대폰이 과열되면 알려 주며, 무엇 때문에 뜨거워지는지 알려 줍니다. <span class=\"nowrap\">저온 모드</span>를 켜면 화면 밝기도 대신 낮춰 줍니다.",
+ "badge_alt": "Google Play에서 Cooldown 다운로드",
+ "downloads": "다운로드",
+ "on_play": " (Google&nbsp;Play)",
+ "free_note": "무료. Pro는 구독이 아닌 1회 구매입니다.",
+ "hero_alt": "Cooldown 개요: 배터리 {t_hero}, 상태 정상, 저온 모드와 발열 알림 켜짐",
+ "heat_title": "얼마나 뜨거우면 너무 뜨거운 걸까요?",
+ "heat_body": "휴대폰은 충전하거나 영상을 보거나 게임을 할 때 따뜻해지며, 어느 정도의 열은 정상입니다. Cooldown은 모든 배터리 측정값을 하나의 척도로 보여 주고, 알림 기준 온도(기본값 {threshold})에 도달하면 알려 줍니다.",
+ "levels": [
+  "정상",
+  "따뜻함",
+  "과열",
+  "위험"
+ ],
+ "scale_caption": "30~50°C 배터리 온도 척도로, Cooldown의 네 단계인 정상, 따뜻함, 과열, 위험으로 나뉩니다. {t_alert}는 과열에 해당합니다.",
+ "notice_label": "Cooldown 발열 알림 예시",
+ "now": "지금",
+ "notice_title": "고온 감지",
+ "notice_text": "배터리 {t_alert} · 게임, 카메라, 내비게이션, 핫스팟 사용을 멈추세요.",
+ "action_display": "디스플레이",
+ "action_saver": "절전 모드",
+ "screens_title": "한눈에 확인하고, 나중에 다시 살펴보세요.",
+ "shot": {
+  "widget_alt": "{w1}, {w2}, {t_alert}를 표시하는 Cooldown 위젯이 있는 홈 화면",
+  "widget_title": "홈 화면에서",
+  "widget_body": "위젯에 최신 측정값이 표시되어 앱을 열지 않고도 확인할 수 있습니다.",
+  "insights_alt": "최근 24시간 온도 추세: 최저 {min}, 최고 {max}, 평균 {avg}",
+  "insights_title": "최근 24시간과 7일",
+  "insights_body": "최저·최고·평균 온도와 휴대폰이 알림 기준 온도를 넘은 시간.",
+  "events_alt": "온도가 얼마나 올랐는지 보여 주는 발열 이벤트와 최고 온도가 표시된 충전 기록",
+  "events_title": "발열 이벤트와 충전",
+  "events_body": "휴대폰이 언제 뜨거워졌는지, 온도가 얼마나 빨리 올랐는지, 충전할 때마다 얼마나 뜨거워졌는지."
+ },
+ "screens_note": "온도 추세는 Pro 기능이며, 선택형 광고를 보면 24시간 동안 이용할 수 있습니다. 화면은 예시 데이터입니다.",
+ "reviews_title": "사용자들의 이야기.",
+ "reviews_sub": "Google&nbsp;Play의 별 5개 리뷰를 영어 원문 그대로 옮겼습니다.",
+ "prev": "이전 리뷰",
+ "next": "다음 리뷰",
+ "reviews_label": "리뷰",
+ "stars": "별 5개 중 5개",
+ "months": {
+  "2026-08": "2026년 8월",
+  "2026-09": "2026년 9월",
+  "2026-10": "2026년 10월",
+  "2026-11": "2026년 11월"
+ },
+ "honest_title": "가짜 냉각은 없습니다.",
+ "nots": [
+  "휴대폰을 즉시 식혀 준다고 주장하지 않습니다.",
+  "앱을 강제 종료하거나 CPU·GPU 속도를 고정하지 않습니다.",
+  "루팅이 필요 없고 비공개 시스템 파일을 읽지 않습니다."
+ ],
+ "honest_body": "Cooldown은 무엇이 실제로 휴대폰을 뜨겁게 하는지, 그리고 안전하게 온도를 낮추는 방법을 보여 줍니다. 측정값은 Android에서 직접 가져오므로 사용할 수 있는 센서는 기기마다 다릅니다.",
+ "pro_title": "모니터링과 알림은 무료입니다.",
+ "pro_body": "Pro는 구독이 아닌 1회 구매입니다. 광고가 사라지고 온도 추세, 자세한 발열 위험 신호, 알림 기준 온도 직접 설정, 색상 테마, 투명 위젯이 추가됩니다.",
+ "more_title": "다른 앱",
+ "get_it": "Google Play에서 다운로드",
+ "soon": "Google Play 출시 예정",
+ "angora": {
+  "kind": "중복 파일 찾기",
+  "what": "중복 파일과 큰 파일을 찾고, 무엇이 저장 공간을 차지하는지 확인하고, 안전하게 공간을 확보하세요. 확인하기 전에는 아무것도 삭제되지 않습니다."
+ },
+ "pipit": {
+  "kind": "사진 KB 용량 줄이기",
+  "what": "사진과 서명을 양식이 요구하는 정확한 파일 크기(20 KB, 50 KB, 100 KB 등)로 줄여 줍니다."
+ },
+ "somna": {
+  "kind": "수면 일기와 CBT-I",
+  "what": "불면증 인지행동치료(CBT-I)를 바탕으로 한 6주 프로그램이 담긴 수면 일기."
+ },
+ "wattlab": {
+  "kind": "충전 속도 테스트",
+  "what": "배터리에 실제로 들어가는 와트를 확인하고, 충전이 느린 이유를 알아보고, 충전기와 케이블 순위를 매겨 보세요."
+ },
+ "privacy": "개인정보처리방침",
+ "all_apps": "Google Play의 모든 앱",
+ "trademark": "Google Play 및 Google Play 로고는 Google LLC의 상표입니다."
+}

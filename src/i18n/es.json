@@ -1,0 +1,98 @@
+{
+ "title": "Cooldown: monitor de temperatura del celular para Android",
+ "description": "Cooldown muestra la temperatura de la batería de tu celular, te avisa cuando se sobrecalienta y te dice qué lo está calentando. Gratis en Google Play, junto con Angora, Pipit y Somna.",
+ "og_title": "Cooldown: descubre por qué se calienta tu celular",
+ "og_description": "Temperatura de la batería, alertas de sobrecalentamiento y formas prácticas de enfriar tu celular. Gratis en Google Play.",
+ "og_free": "Gratis en Google Play",
+ "ld_description": "Monitor de temperatura del celular y de la batería con alertas de sobrecalentamiento y consejos para enfriarlo.",
+ "skip": "Ir al contenido",
+ "nav_label": "Apps",
+ "contact": "Contacto",
+ "language": "Idioma",
+ "tagline": "Temperatura del celular para Android",
+ "h1": "Descubre por qué se calienta tu celular.",
+ "lede": "Cooldown muestra la temperatura de la batería, te avisa cuando tu celular se sobrecalienta y te dice qué lo está calentando. El <span class=\"nowrap\">Modo baja temperatura</span> también puede atenuar la pantalla por ti.",
+ "badge_alt": "Descarga Cooldown en Google Play",
+ "downloads": "descargas",
+ "on_play": " en Google&nbsp;Play",
+ "free_note": "Gratis. Pro es un pago único, no una suscripción.",
+ "hero_alt": "Resumen de Cooldown: la batería está a {t_hero}, estado Normal, con el Modo baja temperatura y las alertas de calor activados",
+ "heat_title": "¿Cuánto calor es demasiado?",
+ "heat_body": "Los celulares se calientan al cargar, al ver videos o al jugar, y algo de calor es normal. Cooldown ubica cada lectura de la batería en una sola escala y te avisa cuando llega a tu umbral de alerta, {threshold} de forma predeterminada.",
+ "levels": [
+  "Normal",
+  "Tibio",
+  "Sobrecalentado",
+  "Crítico"
+ ],
+ "scale_caption": "Una escala de temperatura de la batería de 30 a 50°C, dividida en los cuatro niveles de Cooldown: Normal, Tibio, Sobrecalentado y Crítico. Una lectura de {t_alert} cae en Sobrecalentado.",
+ "notice_label": "Ejemplo de alerta de calor de Cooldown",
+ "now": "ahora",
+ "notice_title": "Se detectó alta temperatura",
+ "notice_text": "Batería {t_alert} · Pausa juegos, cámara, navegación o hotspot.",
+ "action_display": "Pantalla",
+ "action_saver": "Ahorro de batería",
+ "screens_title": "Revísalo de un vistazo o consulta el historial después.",
+ "shot": {
+  "widget_alt": "Pantalla de inicio con widgets de Cooldown que marcan {w1}, {w2} y {t_alert}",
+  "widget_title": "En tu pantalla de inicio",
+  "widget_body": "El widget muestra la última lectura, así puedes revisarla sin abrir la app.",
+  "insights_alt": "Análisis de temperatura de las últimas 24 horas: mínima {min}, máxima {max}, promedio {avg}",
+  "insights_title": "Las últimas 24 horas y 7 días",
+  "insights_body": "Temperatura mínima, máxima y promedio, y cuánto tiempo pasó tu celular por encima de tu umbral de alerta.",
+  "events_alt": "Episodios de calentamiento con cuánto subió la temperatura, y sesiones de carga con su temperatura máxima",
+  "events_title": "Calentamiento y carga",
+  "events_body": "Cuándo se calentó tu celular, qué tan rápido subió la temperatura y cuánto se calentó en cada carga."
+ },
+ "screens_note": "El análisis es parte de Pro, o mira un anuncio opcional para desbloquearlo por 24 horas. Las pantallas muestran datos de ejemplo.",
+ "reviews_title": "En sus propias palabras.",
+ "reviews_sub": "Reseñas de cinco estrellas de Google&nbsp;Play, citadas tal como se escribieron, la mayoría en inglés.",
+ "prev": "Reseñas anteriores",
+ "next": "Reseñas siguientes",
+ "reviews_label": "Reseñas",
+ "stars": "5 de 5 estrellas",
+ "months": {
+  "2026-08": "ago 2026",
+  "2026-09": "sept 2026",
+  "2026-10": "oct 2026",
+  "2026-11": "nov 2026"
+ },
+ "extra_reviews": [
+  {
+   "text": "Excelente app para monitorear la temperatura de tu equipo, te da las recomendaciones de que hacer para que baje",
+   "month": "2026-10",
+   "lang": "es"
+  }
+ ],
+ "honest_title": "Sin enfriamiento falso.",
+ "nots": [
+  "No promete enfriar tu celular al instante.",
+  "No fuerza el cierre de apps ni bloquea la velocidad de la CPU o la GPU.",
+  "No necesita root ni lee archivos privados del sistema."
+ ],
+ "honest_body": "Cooldown muestra lo que de verdad está calentando tu celular y cómo enfriarlo de forma segura. Las lecturas vienen del propio Android, así que los sensores disponibles varían según el dispositivo.",
+ "pro_title": "El monitoreo y las alertas son gratis.",
+ "pro_body": "Pro es un pago único, no una suscripción. Quita los anuncios y agrega el análisis de temperatura, señales detalladas del riesgo de calor, un umbral de alerta personalizado, temas de color y widgets transparentes.",
+ "more_title": "Más apps",
+ "get_it": "Descárgala en Google Play",
+ "soon": "Próximamente en Google Play",
+ "angora": {
+  "kind": "Buscador de archivos duplicados",
+  "what": "Encuentra archivos duplicados y grandes, mira qué llena tu almacenamiento y libera espacio con seguridad: no se borra nada hasta que lo confirmes."
+ },
+ "pipit": {
+  "kind": "Reductor de fotos en KB",
+  "what": "Ajusta fotos y firmas al tamaño exacto que pide un formulario, como 20 KB, 50 KB o 100 KB."
+ },
+ "somna": {
+  "kind": "Diario de sueño y TCC-I",
+  "what": "Un diario de sueño con un programa de 6 semanas basado en la terapia cognitivo-conductual para el insomnio."
+ },
+ "wattlab": {
+  "kind": "Prueba de velocidad de carga",
+  "what": "Mira los watts reales que entran a tu batería, descubre por qué una carga es lenta y compara tus cargadores y cables."
+ },
+ "privacy": "Privacidad",
+ "all_apps": "Todas las apps en Google Play",
+ "trademark": "Google Play y el logotipo de Google Play son marcas comerciales de Google LLC."
+}

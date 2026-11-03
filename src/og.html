@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+  /* The 1200 x 630 share card: app name, the page's headline, and the top of the overview screen. Always light. */
+  :root { color-scheme: light; --paper: #f8fbfe; --ink: #1b2833; --ink-2: #4b5b69; --line: rgb(27 40 51 / 0.12); --device: #0c1318; }
+  html { font-size: 16px; }
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; background: var(--paper); color: var(--ink); }
+  .card { position: relative; width: 1200px; height: 630px; }
+  .id { position: absolute; left: 84px; top: 96px; display: flex; align-items: center; gap: 18px; }
+  .id img { width: 72px; height: 72px; border-radius: 17px; }
+  .id b { display: block; font-size: 27px; line-height: 1.2; font-weight: 600; font-stretch: 108%; }
+  .id small { display: block; font-size: 20px; color: var(--ink-2); }
+  h1 { position: absolute; left: 84px; top: 208px; width: 610px; font-size: 76px; line-height: 0.98; text-wrap: balance; }
+  .free { position: absolute; left: 84px; font-size: 22px; color: var(--ink-2); }
+  .phone { position: absolute; left: 762px; top: 84px; width: 318px; height: 479px; padding: 9px 9px 0; border-radius: 46px 46px 0 0; background: var(--device); overflow: hidden; box-shadow: 0 28px 56px -18px rgb(16 24 32 / 0.3); clip-path: inset(-60px -60px 0 -60px); }
+  .phone img { width: 100%; border-radius: 37px 37px 0 0; }
+  .rule { position: absolute; left: 84px; right: 84px; top: 563px; height: 1px; background: var(--line); }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="id"><img src="/assets/img/icon-cooldown.webp" alt=""><span><b>Cooldown</b><small id="tagline"></small></span></div>
+  <h1 id="h1"></h1>
+  <p class="free" id="free"></p>
+  <div class="phone"><img id="screen" alt=""></div>
+  <div class="rule"></div>
+</div>
+<script>
+  // window.OG = {lang, tagline, h1, free, screen} comes from render_og.py.
+  document.documentElement.lang = OG.lang;
+  for (const key of ["tagline", "h1", "free"]) document.getElementById(key).textContent = OG[key];
+  document.getElementById("screen").src = OG.screen;
+  // The headline shrinks until it fits three lines above the "free" line.
+  const h1 = document.getElementById("h1"), free = document.getElementById("free");
+  const place = () => { free.style.top = h1.offsetTop + h1.offsetHeight + 28 + "px"; };
+  Promise.all([document.fonts.ready, document.getElementById("screen").decode()]).then(() => {
+    let size = 76;
+    const lines = () => h1.offsetHeight / (parseFloat(getComputedStyle(h1).lineHeight) || size);
+    while (size > 44 && (lines() > 3.2 || h1.scrollWidth > h1.clientWidth || h1.offsetTop + h1.offsetHeight > 470)) h1.style.fontSize = (size -= 2) + "px";
+    place();
+    document.body.dataset.ready = "1";
+  });
+</script>
+</body>
+</html>

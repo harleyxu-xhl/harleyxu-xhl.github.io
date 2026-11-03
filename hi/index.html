@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cooldown: Android के लिए फ़ोन तापमान मॉनिटर</title>
+  <meta name="description" content="Cooldown आपके फ़ोन की बैटरी का तापमान दिखाता है, फ़ोन ज़्यादा गर्म होने पर अलर्ट देता है और बताता है कि उसे क्या गर्म कर रहा है। Google Play पर मुफ़्त, साथ में Angora, Pipit और Somna भी।">
+  <link rel="canonical" href="https://harleyxu-xhl.github.io/hi/">
+  <link rel="alternate" hreflang="en" href="https://harleyxu-xhl.github.io/">
+  <link rel="alternate" hreflang="de" href="https://harleyxu-xhl.github.io/de/">
+  <link rel="alternate" hreflang="es" href="https://harleyxu-xhl.github.io/es/">
+  <link rel="alternate" hreflang="fr" href="https://harleyxu-xhl.github.io/fr/">
+  <link rel="alternate" hreflang="hi" href="https://harleyxu-xhl.github.io/hi/">
+  <link rel="alternate" hreflang="id" href="https://harleyxu-xhl.github.io/id/">
+  <link rel="alternate" hreflang="it" href="https://harleyxu-xhl.github.io/it/">
+  <link rel="alternate" hreflang="ja" href="https://harleyxu-xhl.github.io/ja/">
+  <link rel="alternate" hreflang="ko" href="https://harleyxu-xhl.github.io/ko/">
+  <link rel="alternate" hreflang="pt" href="https://harleyxu-xhl.github.io/pt/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://harleyxu-xhl.github.io/zh/">
+  <link rel="alternate" hreflang="x-default" href="https://harleyxu-xhl.github.io/">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f8fbfe" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#101820" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="icon" href="/favicon.png" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Cooldown">
+  <meta property="og:url" content="https://harleyxu-xhl.github.io/hi/">
+  <meta property="og:locale" content="hi_IN">
+  <meta property="og:title" content="Cooldown: जानें कि आपका फ़ोन गर्म क्यों होता है">
+  <meta property="og:description" content="बैटरी का तापमान, ओवरहीटिंग अलर्ट और फ़ोन ठंडा करने के व्यावहारिक तरीके। Google Play पर मुफ़्त।">
+  <meta property="og:image" content="https://harleyxu-xhl.github.io/assets/img/hi/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="/assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/site.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Cooldown: Phone Temperature",
+    "operatingSystem": "Android",
+    "applicationCategory": "UtilitiesApplication",
+    "inLanguage": "hi",
+    "description": "ओवरहीटिंग अलर्ट और ठंडा करने के सुझावों के साथ फ़ोन और बैटरी तापमान मॉनिटर।",
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.harley.cooldown",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Cooldown",
+    "alternateName": "Cooldown: Phone Temperature",
+    "url": "https://harleyxu-xhl.github.io/"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">मुख्य सामग्री पर जाएँ</a>
+
+  <header class="top wrap">
+    <nav class="apps-nav" aria-label="ऐप">
+      <a href="#cooldown" aria-current="page">Cooldown</a>
+      <a href="#angora">Angora</a>
+      <a href="#pipit">Pipit</a>
+      <a href="#somna">Somna</a>
+      <a href="#wattlab">Wattlab</a>
+    </nav>
+    <div class="top-end">
+      <a class="top-mail" href="mailto:tamariskx@gmail.com">संपर्क</a>
+      <details class="lang-menu">
+        <summary aria-label="भाषा: हिन्दी"><svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M128,24h0A104,104,0,1,0,232,128,104.12,104.12,0,0,0,128,24Zm87.62,96H175.79C174,83.49,159.94,57.67,148.41,42.4A88.19,88.19,0,0,1,215.62,120ZM96.23,136h63.54c-2.31,41.61-22.23,67.11-31.77,77C118.45,203.1,98.54,177.6,96.23,136Zm0-16C98.54,78.39,118.46,52.89,128,43c9.55,9.93,29.46,35.43,31.77,77Zm11.36-77.6C96.06,57.67,82,83.49,80.21,120H40.37A88.19,88.19,0,0,1,107.59,42.4ZM40.37,136H80.21c1.82,36.51,15.85,62.33,27.38,77.6A88.19,88.19,0,0,1,40.37,136Zm108,77.6c11.53-15.27,25.56-41.09,27.38-77.6h39.84A88.19,88.19,0,0,1,148.41,213.6Z"/></svg><span>हिन्दी</span></summary>
+        <ul>
+          <li><a href="/" hreflang="en" lang="en" data-lang="en">English</a></li>
+          <li><a href="/de/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li>
+          <li><a href="/es/" hreflang="es" lang="es-419" data-lang="es">Español</a></li>
+          <li><a href="/fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li>
+          <li><a href="/hi/" hreflang="hi" lang="hi" data-lang="hi" aria-current="true">हिन्दी</a></li>
+          <li><a href="/id/" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li>
+          <li><a href="/it/" hreflang="it" lang="it" data-lang="it">Italiano</a></li>
+          <li><a href="/ja/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li>
+          <li><a href="/ko/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li>
+          <li><a href="/pt/" hreflang="pt" lang="pt-BR" data-lang="pt">Português</a></li>
+          <li><a href="/zh/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh">简体中文</a></li>
+        </ul>
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" id="cooldown" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="app-id">
+          <img src="/assets/img/icon-cooldown.webp" width="160" height="160" alt="">
+          <span><b>Cooldown</b><small>Android के लिए फ़ोन तापमान</small></span>
+        </p>
+        <h1 id="hero-title">जानें कि आपका फ़ोन गर्म क्यों होता है।</h1>
+        <p class="lede">Cooldown बैटरी का तापमान दिखाता है, फ़ोन ज़्यादा गर्म होने पर अलर्ट देता है और बताता है कि उसे क्या गर्म कर रहा है। <span class="nowrap">कम-तापमान मोड</span> आपके लिए स्क्रीन की ब्राइटनेस भी कम कर सकता है।</p>
+        <div class="cta">
+          <div class="cta-row">
+            <a class="play" href="https://play.google.com/store/apps/details?id=com.harley.cooldown&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dhomepage%26utm_campaign%3Dhero"><img src="/assets/img/hi/google-play-badge.png" width="646" height="192" alt="Cooldown को Google Play पर पाएँ"></a>
+            <p class="count"><b>50 हज़ार+</b><span>डाउनलोड<span class="on-play">, Google&nbsp;Play पर</span></span></p>
+          </div>
+          <p class="fine">मुफ़्त। Pro एक बार की खरीदारी है, सब्सक्रिप्शन नहीं।</p>
+        </div>
+      </div>
+      <figure class="hero-device">
+        <div class="phone">
+          <img src="/assets/img/hi/cooldown-overview.webp" width="720" height="1540" fetchpriority="high" alt="Cooldown स्थिति स्क्रीन: बैटरी 30.9°C पर है, स्थिति सामान्य, कम-तापमान मोड और गर्मी के अलर्ट चालू हैं">
+        </div>
+      </figure>
+    </section>
+
+    <section class="heat" aria-labelledby="heat-title">
+      <div class="heat-in wrap">
+        <div class="heat-copy">
+          <h2 id="heat-title">कितनी गर्मी ज़्यादा है?</h2>
+          <p>चार्जिंग, स्ट्रीमिंग या गेम खेलते समय फ़ोन गर्म होते हैं, और थोड़ी गर्मी सामान्य है। Cooldown हर बैटरी रीडिंग को एक ही पैमाने पर रखता है और आपकी अलर्ट सीमा तक पहुँचने पर अलर्ट देता है, जो डिफ़ॉल्ट रूप से 42°C है।</p>
+        </div>
+
+        <figure class="scale" id="scale" data-level="hot" data-levels="[&quot;सामान्य&quot;, &quot;गर्म&quot;, &quot;बहुत गर्म&quot;, &quot;गंभीर&quot;]">
+          <p class="readout" aria-hidden="true"><b class="needle-val">42.3°C</b><span class="needle-level">बहुत गर्म</span></p>
+          <div class="scale-track" aria-hidden="true">
+            <div class="needle"><i class="needle-line"></i></div>
+            <div class="ticks"></div>
+            <div class="zones"><i></i><i></i><i></i><i></i></div>
+            <div class="nums"><span style="left:0">30</span><span style="left:25%">35</span><span style="left:50%">40</span><span style="left:75%">45</span><span style="left:100%">50°C</span></div>
+          </div>
+          <ul class="zone-names" aria-hidden="true">
+            <li>सामान्य</li><li>गर्म</li><li>बहुत गर्म</li><li>गंभीर</li>
+          </ul>
+          <figcaption class="sr-only">30 से 50°C तक बैटरी तापमान का पैमाना, जो Cooldown के चार स्तरों में बँटा है: सामान्य, गर्म, बहुत गर्म और गंभीर। 42.3°C की रीडिंग बहुत गर्म में आती है।</figcaption>
+        </figure>
+
+        <figure class="notice" id="alert" aria-label="Cooldown के गर्मी अलर्ट का उदाहरण">
+          <div class="notice-head">
+            <span class="notice-icon" aria-hidden="true"><svg viewBox="0 0 256 256"><path fill="currentColor" d="M160,146.08V40a32,32,0,0,0-64,0V146.08a56,56,0,1,0,64,0ZM128,24a16,16,0,0,1,16,16v64H112V40A16,16,0,0,1,128,24Z"/></svg></span>
+            <span>Cooldown · अभी</span>
+          </div>
+          <p class="notice-title">उच्च तापमान मिला</p>
+          <p class="notice-text">बैटरी 42.3°C · गेम, कैमरा, नेविगेशन या हॉटस्पॉट रोकें।</p>
+          <p class="notice-actions" aria-hidden="true"><span>डिस्प्ले</span><span>बैटरी सेवर</span></p>
+        </figure>
+      </div>
+    </section>
+
+    <section class="screens wrap" aria-labelledby="screens-title">
+      <h2 id="screens-title">एक नज़र में देखें, या बाद में पूरा हाल देखें।</h2>
+      <div class="shots">
+        <figure class="shot">
+          <div class="shot-frame"><img src="/assets/img/hi/cooldown-widget.webp" width="720" height="1540" loading="lazy" alt="होम स्क्रीन पर Cooldown विजेट, जो 28.0°C, 38.4°C और 42.3°C दिखा रहे हैं"></div>
+          <h3>आपकी होम स्क्रीन पर</h3>
+          <p>विजेट ताज़ा रीडिंग दिखाता है, ताकि आप ऐप खोले बिना उसे देख सकें।</p>
+        </figure>
+        <figure class="shot">
+          <div class="shot-frame"><img src="/assets/img/hi/cooldown-insights.webp" width="720" height="1540" loading="lazy" alt="पिछले 24 घंटों की तापमान जानकारी: न्यूनतम 27.9°C, अधिकतम 42.2°C, औसत 34.8°C"></div>
+          <h3>पिछले 24 घंटे और 7 दिन</h3>
+          <p>न्यूनतम, अधिकतम और औसत तापमान, और आपका फ़ोन कितनी देर आपकी अलर्ट सीमा से ऊपर रहा।</p>
+        </figure>
+        <figure class="shot">
+          <div class="shot-frame"><img src="/assets/img/hi/cooldown-events.webp" width="720" height="1540" loading="lazy" alt="तापमान बढ़ने की घटनाएँ और हर बार तापमान कितना बढ़ा, साथ में चार्जिंग सत्र और उनका सबसे ऊँचा तापमान"></div>
+          <h3>तापमान बढ़ने की घटनाएँ और चार्जिंग</h3>
+          <p>आपका फ़ोन कब गर्म हुआ, तापमान कितनी तेज़ी से बढ़ा, और हर चार्ज में फ़ोन कितना गर्म हुआ।</p>
+        </figure>
+      </div>
+      <p class="fine">तापमान की जानकारी Pro का हिस्सा है, या इसे 24 घंटे के लिए अनलॉक करने के लिए एक वैकल्पिक विज्ञापन देखें। स्क्रीन पर उदाहरण डेटा है।</p>
+    </section>
+
+    <section class="reviews wrap" aria-labelledby="reviews-title">
+      <svg class="sprite" aria-hidden="true"><symbol id="five-stars" viewBox="0 0 140 24"><path fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M12,1.7L14.94,8.85L22.65,9.44L16.76,14.45L18.58,21.96L12,17.9L5.42,21.96L7.24,14.45L1.35,9.44L9.06,8.85ZM41,1.7L43.94,8.85L51.65,9.44L45.76,14.45L47.58,21.96L41,17.9L34.42,21.96L36.24,14.45L30.35,9.44L38.06,8.85ZM70,1.7L72.94,8.85L80.65,9.44L74.76,14.45L76.58,21.96L70,17.9L63.42,21.96L65.24,14.45L59.35,9.44L67.06,8.85ZM99,1.7L101.94,8.85L109.65,9.44L103.76,14.45L105.58,21.96L99,17.9L92.42,21.96L94.24,14.45L88.35,9.44L96.06,8.85ZM128,1.7L130.94,8.85L138.65,9.44L132.76,14.45L134.58,21.96L128,17.9L121.42,21.96L123.24,14.45L117.35,9.44L125.06,8.85Z"/></symbol></svg>
+      <div class="reviews-head">
+        <div>
+          <h2 id="reviews-title">उनके अपने शब्दों में।</h2>
+          <p>Google&nbsp;Play की पाँच-स्टार समीक्षाएँ, अंग्रेज़ी में जैसी लिखी गईं, वैसी ही।</p>
+        </div>
+        <div class="pager">
+          <button type="button" class="prev" aria-label="पिछली समीक्षाएँ" aria-controls="reviews-list"><svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"/></svg></button>
+          <button type="button" class="next" aria-label="अगली समीक्षाएँ" aria-controls="reviews-list"><svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></button>
+        </div>
+      </div>
+      <ol class="reel" id="reviews-list" tabindex="0" aria-label="समीक्षाएँ">
+        <li class="review"><blockquote lang="en"><p>“I wasn’t sure it even existed, but this is the very app that I’d been searching for (I’m so happy I found it!) This app suits my needs.”</p></blockquote><div class="review-meta"><svg class="stars" role="img" aria-label="5 में से 5 स्टार"><use href="#five-stars"/></svg><span>Google&nbsp;Play · अक्टू॰ 2026</span></div></li>
+        <li class="review"><blockquote lang="en"><p>“tbh this is a great app and also gives me a heat notification and also tells me that is it a safe temp or a risky temp”</p></blockquote><div class="review-meta"><svg class="stars" role="img" aria-label="5 में से 5 स्टार"><use href="#five-stars"/></svg><span>Google&nbsp;Play · सित॰ 2026</span></div></li>
+        <li class="review"><blockquote lang="en"><p>“amazing it told me my app temperature was at 43 and the app send me a warning after”</p></blockquote><div class="review-meta"><svg class="stars" role="img" aria-label="5 में से 5 स्टार"><use href="#five-stars"/></svg><span>Google&nbsp;Play · अग॰ 2026</span></div></li>
+        <li class="review"><blockquote lang="en"><p>“very accurate and extremely helpful i would suggest all to have this installed on there devices”</p></blockquote><div class="review-meta"><svg class="stars" role="img" aria-label="5 में से 5 स्टार"><use href="#five-stars"/></svg><span>Google&nbsp;Play · सित॰ 2026</span></div></li>
+        <li class="review"><blockquote lang="en"><p>“Amazing, it alerts, as well as tell me, away to keep my phone from heating up!”</p></blockquote><div class="review-meta"><svg class="stars" role="img" aria-label="5 में से 5 स्टार"><use href="#five-stars"/></svg><span>Google&nbsp;Play · अग॰ 2026</span></div></li>
+        <li class="review"><blockquote lang="en"><p>“Brother this is the best app worth the download it is best over any application for temperature measure in play store no bugs no nothing just straight talk”</p></blockquote><div class="review-meta"><svg class="stars" role="img" aria-label="5 में से 5 स्टार"><use href="#five-stars"/></svg><span>Google&nbsp;Play · अक्टू॰ 2026</span></div></li>
+        <li class="review"><blockquote lang="en"><p>“Pretty good idea on this app very insightful I like it very much”</p></blockquote><div class="review-meta"><svg class="stars" role="img" aria-label="5 में से 5 स्टार"><use href="#five-stars"/></svg><span>Google&nbsp;Play · सित॰ 2026</span></div></li>
+        <li class="review"><blockquote lang="en"><p>“helped me to manage my phone health”</p></blockquote><div class="review-meta"><svg class="stars" role="img" aria-label="5 में से 5 स्टार"><use href="#five-stars"/></svg><span>Google&nbsp;Play · अक्टू॰ 2026</span></div></li>
+      </ol>
+    </section>
+
+    <section class="honest wrap" aria-labelledby="honest-title">
+      <h2 id="honest-title">कोई नकली कूलिंग नहीं।</h2>
+      <div class="honest-copy">
+        <ul class="nots">
+          <li>यह फ़ोन को तुरंत ठंडा करने का दावा नहीं करता।</li>
+          <li>यह ऐप को ज़बरदस्ती बंद नहीं करता, न ही CPU और GPU की स्पीड लॉक करता है।</li>
+          <li>इसे रूट की ज़रूरत नहीं है, और यह निजी सिस्टम फ़ाइलें नहीं पढ़ता।</li>
+        </ul>
+        <p>Cooldown दिखाता है कि आपके फ़ोन को असल में क्या गर्म कर रहा है, और उसे सुरक्षित तरीके से कैसे ठंडा करें। रीडिंग Android से ही आती हैं, इसलिए उपलब्ध सेंसर हर डिवाइस में अलग होते हैं।</p>
+      </div>
+      <div class="pro">
+        <h3>मॉनिटरिंग और अलर्ट मुफ़्त हैं।</h3>
+        <p>Pro एक बार की खरीदारी है, सब्सक्रिप्शन नहीं। इससे विज्ञापन हट जाते हैं और तापमान की जानकारी, गर्मी के जोखिम के विस्तृत संकेत, कस्टम अलर्ट सीमा, रंग थीम और पारदर्शी विजेट मिलते हैं।</p>
+        <a class="play" href="https://play.google.com/store/apps/details?id=com.harley.cooldown&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dhomepage%26utm_campaign%3Dpro"><img src="/assets/img/hi/google-play-badge.png" width="646" height="192" loading="lazy" alt="Cooldown को Google Play पर पाएँ"></a>
+      </div>
+    </section>
+
+    <section class="more wrap" aria-labelledby="more-title">
+      <h2 id="more-title">और ऐप</h2>
+      <ul class="apps">
+        <li class="app" id="angora">
+          <img src="/assets/img/icon-angora.webp" width="160" height="160" loading="lazy" alt="">
+          <div>
+            <h3>Angora</h3>
+            <p class="kind">डुप्लिकेट फ़ाइल फ़ाइंडर</p>
+            <p class="what">डुप्लिकेट और बड़ी फ़ाइलें ढूँढें, देखें कि स्टोरेज किससे भरा है, और सुरक्षित तरीके से जगह खाली करें। आपकी पुष्टि के बिना कुछ भी डिलीट नहीं होता।</p>
+            <a class="go" href="https://play.google.com/store/apps/details?id=com.harley.angora&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dhomepage%26utm_campaign%3Dmore_apps">Google Play पर पाएँ<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          </div>
+        </li>
+        <li class="app" id="pipit">
+          <img src="/assets/img/icon-pipit.webp" width="160" height="160" loading="lazy" alt="">
+          <div>
+            <h3>Pipit</h3>
+            <p class="kind">फ़ोटो को KB में छोटा करें</p>
+            <p class="what">फ़ोटो और हस्ताक्षर को ठीक उसी साइज़ में बदलें जो फ़ॉर्म माँगता है, जैसे 20 KB, 50 KB या 100 KB।</p>
+            <a class="go" href="https://play.google.com/store/apps/details?id=com.harley.pipit&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dhomepage%26utm_campaign%3Dmore_apps">Google Play पर पाएँ<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          </div>
+        </li>
+        <li class="app" id="somna">
+          <img src="/assets/img/icon-somna.webp" width="160" height="160" loading="lazy" alt="">
+          <div>
+            <h3>Somna</h3>
+            <p class="kind">नींद डायरी और CBT-I</p>
+            <p class="what">अनिद्रा के लिए संज्ञानात्मक व्यवहार थेरेपी (CBT-I) पर आधारित 6 हफ़्ते के प्रोग्राम वाली नींद डायरी।</p>
+            <a class="go" href="https://play.google.com/store/apps/details?id=com.harley.somna&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dhomepage%26utm_campaign%3Dmore_apps">Google Play पर पाएँ<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          </div>
+        </li>
+        <li class="app" id="wattlab">
+          <img src="/assets/img/icon-wattlab.webp" width="160" height="160" loading="lazy" alt="">
+          <div>
+            <h3>Wattlab</h3>
+            <p class="kind">चार्जिंग स्पीड टेस्ट</p>
+            <p class="what">देखें कि बैटरी में असल में कितने वॉट जा रहे हैं, जानें कि चार्जिंग धीमी क्यों है, और अपने चार्जर और केबल की तुलना करें।</p>
+            <p class="soon">जल्द ही Google Play पर</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="foot wrap">
+    <p><b>संपर्क</b><a href="mailto:tamariskx@gmail.com">tamariskx@gmail.com</a></p>
+    <p><b>गोपनीयता</b><a href="/cooldown-website/privacy.html">Cooldown</a>, <a href="/wattlab-website/privacy.html">Wattlab</a>, <a href="/angora-website/privacy.html">Angora</a>, <a href="/pipit-website/privacy.html">Pipit</a>, <a href="/somna-website/privacy.html">Somna</a></p>
+    <p class="foot-langs"><b>भाषा</b><a href="/" hreflang="en" lang="en" data-lang="en">English</a> <a href="/de/" hreflang="de" lang="de" data-lang="de">Deutsch</a> <a href="/es/" hreflang="es" lang="es-419" data-lang="es">Español</a> <a href="/fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a> <a href="/hi/" hreflang="hi" lang="hi" data-lang="hi" aria-current="true">हिन्दी</a> <a href="/id/" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a> <a href="/it/" hreflang="it" lang="it" data-lang="it">Italiano</a> <a href="/ja/" hreflang="ja" lang="ja" data-lang="ja">日本語</a> <a href="/ko/" hreflang="ko" lang="ko" data-lang="ko">한국어</a> <a href="/pt/" hreflang="pt" lang="pt-BR" data-lang="pt">Português</a> <a href="/zh/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh">简体中文</a></p>
+    <p><a href="https://play.google.com/store/apps/developer?id=rclaxihy">Google Play पर सभी ऐप</a></p>
+    <p class="fine">Google Play और Google Play लोगो, Google LLC के ट्रेडमार्क हैं।</p>
+  </footer>
+
+  <script>
+    (() => {
+      // The reading starts at the one shown on the phone above and climbs to the alert, once.
+      const scale = document.getElementById("scale");
+      const alert = document.getElementById("alert");
+      if (!("IntersectionObserver" in window) || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      const needle = scale.querySelector(".needle");
+      const value = scale.querySelector(".needle-val");
+      const level = scale.querySelector(".needle-level");
+      const names = JSON.parse(scale.dataset.levels);
+      const number = new Intl.NumberFormat(document.documentElement.lang, { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+      const from = 30.9, to = 42.3, min = 30, max = 50;
+      const levels = [[38, "normal", names[0]], [42, "warm", names[1]], [46, "hot", names[2]], [Infinity, "hot", names[3]]];
+      const show = (c) => {
+        const [, key, name] = levels.find(([limit]) => c < limit);
+        needle.style.setProperty("--t", ((c - min) / (max - min)).toFixed(4));
+        scale.dataset.level = key;
+        value.textContent = number.format(c) + "°C";
+        level.textContent = name;
+      };
+      show(from);
+      alert.dataset.hidden = "";
+      new IntersectionObserver((entries, observer) => {
+        if (!entries[0].isIntersecting) return;
+        observer.disconnect();
+        const start = performance.now(), duration = 1700;
+        const step = (now) => {
+          const p = Math.min(1, (now - start) / duration);
+          show(from + (to - from) * (1 - Math.pow(1 - p, 4)));
+          if (p < 1) requestAnimationFrame(step);
+          else setTimeout(() => alert.removeAttribute("data-hidden"), 150);
+        };
+        requestAnimationFrame(step);
+      }, { threshold: 0.6 }).observe(scale);
+    })();
+
+    (() => {
+      // The reel advances one review every few seconds and rewinds at the end. It pauses while hovered or focused,
+      // and stops for good once someone scrolls it sideways or uses the buttons. Reduced motion jumps instead of gliding.
+      const reel = document.getElementById("reviews-list");
+      const prev = document.querySelector(".pager .prev");
+      const next = document.querySelector(".pager .next");
+      const reduce = matchMedia("(prefers-reduced-motion: reduce)");
+      const step = () => reel.children[1].offsetLeft - reel.children[0].offsetLeft;
+      const atEnd = () => reel.scrollLeft + reel.clientWidth > reel.scrollWidth - 4;
+      const glide = (instant) => (instant || reduce.matches ? "auto" : "smooth");
+      const update = () => {
+        prev.setAttribute("aria-disabled", reel.scrollLeft < 4);
+        next.setAttribute("aria-disabled", atEnd());
+      };
+      let auto = true, held = false, seen = false;
+      const stop = () => { auto = false; };
+
+      // Previous and next move by as many reviews as fit; keyboard presses jump instead of gliding.
+      const go = (dir) => (event) => {
+        stop();
+        if (event.currentTarget.getAttribute("aria-disabled") === "true") return;
+        const count = Math.max(1, Math.round(reel.clientWidth / step()));
+        reel.scrollBy({ left: dir * count * step(), behavior: glide(event.detail === 0) });
+      };
+      prev.addEventListener("click", go(-1));
+      next.addEventListener("click", go(1));
+
+      setInterval(() => {
+        if (!auto || held || !seen || document.hidden) return;
+        if (atEnd()) reel.scrollTo({ left: 0, behavior: glide() });
+        else reel.scrollBy({ left: step(), behavior: glide() });
+      }, 4500);
+      if ("IntersectionObserver" in window) {
+        new IntersectionObserver((entries) => { seen = entries[0].isIntersecting; }, { threshold: 0.5 }).observe(reel);
+      }
+      reel.addEventListener("pointerenter", () => { held = true; });
+      reel.addEventListener("pointerleave", () => { held = false; });
+      reel.addEventListener("focusin", () => { held = true; });
+      reel.addEventListener("focusout", () => { held = false; });
+      for (const type of ["pointerdown", "touchstart", "keydown"]) reel.addEventListener(type, stop, { passive: true });
+      // A vertical wheel over the reel is the page scrolling past it, not someone taking over the reel.
+      reel.addEventListener("wheel", (event) => { if (Math.abs(event.deltaX) > Math.abs(event.deltaY)) stop(); }, { passive: true });
+
+      reel.addEventListener("scroll", update, { passive: true });
+      addEventListener("resize", update, { passive: true });
+      update();
+    })();
+
+    (() => {
+      // Picking a language remembers it, so the English page stops sending this browser to its own language.
+      for (const link of document.querySelectorAll("a[data-lang]")) {
+        link.addEventListener("click", () => { try { localStorage.setItem("lang", link.dataset.lang); } catch (e) {} });
+      }
+      // The menu closes on Escape or a click outside it.
+      const menu = document.querySelector(".lang-menu");
+      document.addEventListener("click", (event) => { if (menu.open && !menu.contains(event.target)) menu.open = false; });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && menu.open) { menu.open = false; menu.querySelector("summary").focus(); }
+      });
+    })();
+  </script>
+</body>
+</html>

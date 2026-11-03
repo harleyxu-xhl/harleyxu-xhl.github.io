@@ -1,0 +1,91 @@
+{
+ "title": "Cooldown: Handy-Temperatur-Monitor für Android",
+ "description": "Cooldown zeigt die Akku-Temperatur deines Handys, warnt dich bei Überhitzung und sagt dir, was es aufheizt. Kostenlos bei Google Play, genau wie Angora, Pipit und Somna.",
+ "og_title": "Cooldown: Finde heraus, warum dein Handy heiß wird",
+ "og_description": "Akku-Temperatur, Warnungen bei Überhitzung und praktische Tipps, um dein Handy abzukühlen. Kostenlos bei Google Play.",
+ "og_free": "Kostenlos bei Google Play",
+ "ld_description": "Monitor für Handy- und Akku-Temperatur mit Überhitzungswarnungen und Tipps zum Abkühlen.",
+ "skip": "Zum Inhalt springen",
+ "nav_label": "Apps",
+ "contact": "Kontakt",
+ "language": "Sprache",
+ "tagline": "Handy-Temperatur für Android",
+ "h1": "Finde heraus, warum dein Handy heiß wird.",
+ "lede": "Cooldown zeigt die Akku-Temperatur, warnt dich, wenn dein Handy überhitzt, und sagt dir, was es aufheizt. Der <span class=\"nowrap\">Niedrigtemperatur-Modus</span> kann außerdem den Bildschirm für dich dimmen.",
+ "badge_alt": "Cooldown bei Google Play herunterladen",
+ "downloads": "Downloads",
+ "on_play": " bei Google&nbsp;Play",
+ "free_note": "Kostenlos. Pro ist ein Einmalkauf, kein Abo.",
+ "hero_alt": "Cooldown-Übersicht: Der Akku hat {t_hero}, Status Normal, Niedrigtemperatur-Modus und Hitzewarnungen sind eingeschaltet",
+ "heat_title": "Wie heiß ist zu heiß?",
+ "heat_body": "Handys werden beim Laden, Streamen oder Spielen warm, und etwas Wärme ist normal. Cooldown ordnet jeden Akkuwert auf einer Skala ein und warnt dich, sobald er deinen Warnwert erreicht, standardmäßig {threshold}.",
+ "levels": [
+  "Normal",
+  "Warm",
+  "Überhitzt",
+  "Kritisch"
+ ],
+ "scale_caption": "Eine Skala der Akku-Temperatur von 30 bis 50°C, aufgeteilt in die vier Stufen von Cooldown: Normal, Warm, Überhitzt und Kritisch. Ein Wert von {t_alert} liegt bei Überhitzt.",
+ "notice_label": "Beispiel einer Hitzewarnung von Cooldown",
+ "now": "jetzt",
+ "notice_title": "Hohe Temperatur erkannt",
+ "notice_text": "Akku {t_alert} · Spiele, Kamera, Navigation oder Hotspot pausieren.",
+ "action_display": "Display",
+ "action_saver": "Energiesparen",
+ "screens_title": "Auf einen Blick prüfen oder später zurückschauen.",
+ "shot": {
+  "widget_alt": "Startbildschirm mit Cooldown-Widgets, die {w1}, {w2} und {t_alert} anzeigen",
+  "widget_title": "Auf deinem Startbildschirm",
+  "widget_body": "Das Widget zeigt den neuesten Wert, so prüfst du ihn, ohne die App zu öffnen.",
+  "insights_alt": "Temperaturverlauf der letzten 24 Stunden: Minimum {min}, Maximum {max}, Durchschnitt {avg}",
+  "insights_title": "Die letzten 24 Stunden und 7 Tage",
+  "insights_body": "Minimum, Maximum und Durchschnitt der Temperatur, und wie lange dein Handy über deinem Warnwert lag.",
+  "events_alt": "Erwärmungen mit dem jeweiligen Temperaturanstieg und Ladevorgänge mit ihrer Spitzentemperatur",
+  "events_title": "Erwärmungen und Ladevorgänge",
+  "events_body": "Wann dein Handy warm wurde, wie schnell die Temperatur stieg und wie heiß jeder Ladevorgang wurde."
+ },
+ "screens_note": "Der Temperaturverlauf gehört zu Pro, oder du schaltest ihn mit einer freiwilligen Werbung für 24 Stunden frei. Die Screens zeigen Beispieldaten.",
+ "reviews_title": "In ihren eigenen Worten.",
+ "reviews_sub": "Fünf-Sterne-Bewertungen von Google&nbsp;Play, im englischen Original zitiert.",
+ "prev": "Vorherige Bewertungen",
+ "next": "Nächste Bewertungen",
+ "reviews_label": "Bewertungen",
+ "stars": "5 von 5 Sternen",
+ "months": {
+  "2026-08": "Aug. 2026",
+  "2026-09": "Sept. 2026",
+  "2026-10": "Okt. 2026",
+  "2026-11": "Nov. 2026"
+ },
+ "honest_title": "Keine Fake-Kühlung.",
+ "nots": [
+  "Kein Versprechen, dein Handy sofort abzukühlen.",
+  "Kein Zwangsbeenden von Apps, keine festgelegten CPU- oder GPU-Takte.",
+  "Kein Root, kein Zugriff auf private Systemdateien."
+ ],
+ "honest_body": "Cooldown zeigt, was dein Handy wirklich aufheizt und wie du es sicher abkühlst. Die Werte kommen von Android selbst, deshalb hängen die verfügbaren Sensoren vom Gerät ab.",
+ "pro_title": "Überwachung und Warnungen sind kostenlos.",
+ "pro_body": "Pro ist ein Einmalkauf, kein Abo. Es entfernt die Werbung und bringt den Temperaturverlauf, detaillierte Signale zum Hitzerisiko, einen eigenen Warnwert, Farbthemen und transparente Widgets.",
+ "more_title": "Weitere Apps",
+ "get_it": "Bei Google Play herunterladen",
+ "soon": "Bald bei Google Play",
+ "angora": {
+  "kind": "Doppelte Dateien finden",
+  "what": "Finde doppelte und große Dateien, sieh, was deinen Speicher füllt, und schaffe sicher Platz. Gelöscht wird erst, wenn du bestätigst."
+ },
+ "pipit": {
+  "kind": "Fotos in KB verkleinern",
+  "what": "Verkleinere Fotos und Unterschriften genau auf die Dateigröße, die ein Formular verlangt, etwa 20 KB, 50 KB oder 100 KB."
+ },
+ "somna": {
+  "kind": "Schlaftagebuch und KVT-I",
+  "what": "Ein Schlaftagebuch mit einem 6-Wochen-Programm auf Basis der kognitiven Verhaltenstherapie bei Schlaflosigkeit."
+ },
+ "wattlab": {
+  "kind": "Ladegeschwindigkeit testen",
+  "what": "Sieh die echten Watt, die in deinen Akku fließen, finde heraus, warum ein Ladevorgang langsam ist, und vergleiche deine Ladegeräte und Kabel."
+ },
+ "privacy": "Datenschutz",
+ "all_apps": "Alle Apps bei Google Play",
+ "trademark": "Google Play und das Google Play-Logo sind Marken von Google LLC."
+}

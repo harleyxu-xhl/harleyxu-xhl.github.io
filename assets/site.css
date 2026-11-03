@@ -140,8 +140,48 @@ p { margin: 0; text-wrap: pretty; }
   .apps-nav { column-gap: 11px; font-size: 0.875rem; }
 }
 
+/* Contact and the language menu share the right end from 640px; narrower, the footer lists the languages. */
+.top-end { display: flex; align-items: center; gap: clamp(14px, 2.4vw, 26px); }
+.lang-menu { display: none; position: relative; }
+
 @media (min-width: 640px) {
   .top-mail { display: block; }
+  .lang-menu { display: block; }
+}
+
+.lang-menu summary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-block: 10px;
+  font-size: 0.9375rem;
+  color: var(--ink-2);
+  list-style: none;
+  cursor: pointer;
+}
+.lang-menu summary::-webkit-details-marker { display: none; }
+.lang-menu summary svg { width: 1.0625rem; height: 1.0625rem; flex: none; }
+.lang-menu[open] summary { color: var(--ink); }
+
+.lang-menu ul {
+  position: absolute;
+  right: -12px;
+  top: 100%;
+  z-index: 20;
+  min-width: 12rem;
+  margin: 4px 0 0;
+  padding: 6px;
+  list-style: none;
+  border-radius: 14px;
+  background: var(--card);
+  box-shadow: var(--shadow-card);
+}
+.top .lang-menu a { display: block; padding: 9px 12px; border-radius: 8px; color: var(--ink); white-space: nowrap; }
+.top .lang-menu a[aria-current] { font-weight: 600; color: var(--link); }
+
+@media (hover: hover) {
+  .lang-menu summary:hover { color: var(--ink); }
+  .top .lang-menu a:hover { background: var(--paper); text-decoration: none; }
 }
 
 /* ---------- Hero ---------- */
@@ -636,6 +676,34 @@ p { margin: 0; text-wrap: pretty; }
 .foot p { max-width: 60em; }
 .foot b { font-weight: 600; color: var(--ink); margin-right: 8px; }
 .foot .fine { margin-top: 14px; font-size: 0.8125rem; color: var(--ink-3); }
+/* Every language, as plain links, so phones can switch too. */
+.foot-langs { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 14px; row-gap: 2px; }
+.foot-langs b { margin-right: 0; }
+.foot-langs a { padding-block: 6px; }
+.foot-langs a[aria-current] { color: var(--ink); font-weight: 600; text-decoration: none; }
+
+/* ---------- Other scripts ---------- */
+/* Archivo has Latin only, so Japanese, Korean, Chinese and Hindi text falls back to each system's own font for that
+   script, while numbers and Latin names stay in Archivo. The display headings' tight tracking and line height suit
+   Latin capitals; other scripts get no negative tracking and room for their taller glyphs. */
+html:lang(ja) body { font-family: "Archivo", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Noto Sans CJK JP", "Yu Gothic UI", Meiryo, system-ui, sans-serif; }
+html:lang(ko) body { font-family: "Archivo", "Apple SD Gothic Neo", "Noto Sans KR", "Noto Sans CJK KR", "Malgun Gothic", system-ui, sans-serif; }
+html:lang(zh) body { font-family: "Archivo", "PingFang SC", "Noto Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", system-ui, sans-serif; }
+html:lang(hi) body { font-family: "Archivo", "Noto Sans Devanagari", "Kohinoor Devanagari", "Nirmala UI", system-ui, sans-serif; line-height: 1.65; }
+
+html:is(:lang(ja), :lang(ko), :lang(zh), :lang(hi)) :is(h1, h2, h3, .nots li) { letter-spacing: 0; }
+html:is(:lang(ja), :lang(ko), :lang(zh)) h1 { line-height: 1.12; }
+html:is(:lang(ja), :lang(ko), :lang(zh)) h2 { line-height: 1.18; }
+html:lang(hi) h1 { line-height: 1.2; }
+html:lang(hi) h2 { line-height: 1.25; }
+html:lang(hi) h3 { line-height: 1.4; }
+
+/* Break Japanese between phrases and Korean between words, not inside them. */
+html:lang(ja) :is(h1, h2, h3, p, li) { word-break: auto-phrase; }
+html:lang(ko) body { word-break: keep-all; overflow-wrap: anywhere; }
+
+/* German compounds can be wider than a phone at display size. */
+html:lang(de) :is(h1, h2) { hyphens: auto; -webkit-hyphens: auto; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

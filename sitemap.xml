@@ -1,7 +1,168 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://harleyxu-xhl.github.io/</loc>
-    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harleyxu-xhl.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://harleyxu-xhl.github.io/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://harleyxu-xhl.github.io/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://harleyxu-xhl.github.io/fr/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://harleyxu-xhl.github.io/hi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://harleyxu-xhl.github.io/id/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://harleyxu-xhl.github.io/it/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://harleyxu-xhl.github.io/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harleyxu-xhl.github.io/ko/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harleyxu-xhl.github.io/pt/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://harleyxu-xhl.github.io/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://harleyxu-xhl.github.io/"/>
+  </url>
+  <url>
+    <loc>https://harleyxu-xhl.github.io/de/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harleyxu-xhl.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://harleyxu-xhl.github.io/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://harleyxu-xhl.github.io/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://harleyxu-xhl.github.io/fr/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://harleyxu-xhl.github.io/hi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://harleyxu-xhl.github.io/id/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://harleyxu-xhl.github.io/it/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://harleyxu-xhl.github.io/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harleyxu-xhl.github.io/ko/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harleyxu-xhl.github.io/pt/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://harleyxu-xhl.github.io/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://harleyxu-xhl.github.io/"/>
+  </url>
+  <url>
+    <loc>https://harleyxu-xhl.github.io/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harleyxu-xhl.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://harleyxu-xhl.github.io/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://harleyxu-xhl.github.io/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://harleyxu-xhl.github.io/fr/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://harleyxu-xhl.github.io/hi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://harleyxu-xhl.github.io/id/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://harleyxu-xhl.github.io/it/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://harleyxu-xhl.github.io/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harleyxu-xhl.github.io/ko/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harleyxu-xhl.github.io/pt/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://harleyxu-xhl.github.io/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://harleyxu-xhl.github.io/"/>
+  </url>
+  <url>
+    <loc>https://harleyxu-xhl.github.io/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harleyxu-xhl.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://harleyxu-xhl.github.io/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://harleyxu-xhl.github.io/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://harleyxu-xhl.github.io/fr/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://harleyxu-xhl.github.io/hi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://harleyxu-xhl.github.io/id/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://harleyxu-xhl.github.io/it/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://harleyxu-xhl.github.io/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harleyxu-xhl.github.io/ko/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harleyxu-xhl.github.io/pt/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://harleyxu-xhl.github.io/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://harleyxu-xhl.github.io/"/>
+  </url>
+  <url>
+    <loc>https://harleyxu-xhl.github.io/hi/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harleyxu-xhl.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://harleyxu-xhl.github.io/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://harleyxu-xhl.github.io/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://harleyxu-xhl.github.io/fr/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://harleyxu-xhl.github.io/hi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://harleyxu-xhl.github.io/id/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://harleyxu-xhl.github.io/it/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://harleyxu-xhl.github.io/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harleyxu-xhl.github.io/ko/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harleyxu-xhl.github.io/pt/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://harleyxu-xhl.github.io/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://harleyxu-xhl.github.io/"/>
+  </url>
+  <url>
+    <loc>https://harleyxu-xhl.github.io/id/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harleyxu-xhl.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://harleyxu-xhl.github.io/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://harleyxu-xhl.github.io/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://harleyxu-xhl.github.io/fr/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://harleyxu-xhl.github.io/hi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://harleyxu-xhl.github.io/id/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://harleyxu-xhl.github.io/it/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://harleyxu-xhl.github.io/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harleyxu-xhl.github.io/ko/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harleyxu-xhl.github.io/pt/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://harleyxu-xhl.github.io/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://harleyxu-xhl.github.io/"/>
+  </url>
+  <url>
+    <loc>https://harleyxu-xhl.github.io/it/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harleyxu-xhl.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://harleyxu-xhl.github.io/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://harleyxu-xhl.github.io/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://harleyxu-xhl.github.io/fr/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://harleyxu-xhl.github.io/hi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://harleyxu-xhl.github.io/id/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://harleyxu-xhl.github.io/it/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://harleyxu-xhl.github.io/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harleyxu-xhl.github.io/ko/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harleyxu-xhl.github.io/pt/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://harleyxu-xhl.github.io/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://harleyxu-xhl.github.io/"/>
+  </url>
+  <url>
+    <loc>https://harleyxu-xhl.github.io/ja/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harleyxu-xhl.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://harleyxu-xhl.github.io/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://harleyxu-xhl.github.io/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://harleyxu-xhl.github.io/fr/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://harleyxu-xhl.github.io/hi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://harleyxu-xhl.github.io/id/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://harleyxu-xhl.github.io/it/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://harleyxu-xhl.github.io/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harleyxu-xhl.github.io/ko/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harleyxu-xhl.github.io/pt/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://harleyxu-xhl.github.io/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://harleyxu-xhl.github.io/"/>
+  </url>
+  <url>
+    <loc>https://harleyxu-xhl.github.io/ko/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harleyxu-xhl.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://harleyxu-xhl.github.io/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://harleyxu-xhl.github.io/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://harleyxu-xhl.github.io/fr/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://harleyxu-xhl.github.io/hi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://harleyxu-xhl.github.io/id/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://harleyxu-xhl.github.io/it/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://harleyxu-xhl.github.io/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harleyxu-xhl.github.io/ko/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harleyxu-xhl.github.io/pt/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://harleyxu-xhl.github.io/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://harleyxu-xhl.github.io/"/>
+  </url>
+  <url>
+    <loc>https://harleyxu-xhl.github.io/pt/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harleyxu-xhl.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://harleyxu-xhl.github.io/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://harleyxu-xhl.github.io/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://harleyxu-xhl.github.io/fr/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://harleyxu-xhl.github.io/hi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://harleyxu-xhl.github.io/id/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://harleyxu-xhl.github.io/it/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://harleyxu-xhl.github.io/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harleyxu-xhl.github.io/ko/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harleyxu-xhl.github.io/pt/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://harleyxu-xhl.github.io/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://harleyxu-xhl.github.io/"/>
+  </url>
+  <url>
+    <loc>https://harleyxu-xhl.github.io/zh/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harleyxu-xhl.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://harleyxu-xhl.github.io/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://harleyxu-xhl.github.io/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://harleyxu-xhl.github.io/fr/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://harleyxu-xhl.github.io/hi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://harleyxu-xhl.github.io/id/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://harleyxu-xhl.github.io/it/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://harleyxu-xhl.github.io/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harleyxu-xhl.github.io/ko/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harleyxu-xhl.github.io/pt/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://harleyxu-xhl.github.io/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://harleyxu-xhl.github.io/"/>
   </url>
 </urlset>

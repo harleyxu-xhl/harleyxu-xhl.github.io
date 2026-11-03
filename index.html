@@ -6,6 +6,18 @@
   <title>Cooldown: phone temperature monitor for Android</title>
   <meta name="description" content="Cooldown shows your phone's battery temperature, alerts you when it overheats, and tells you what is heating it up. Free on Google Play, along with Angora, Pipit and Somna.">
   <link rel="canonical" href="https://harleyxu-xhl.github.io/">
+  <link rel="alternate" hreflang="en" href="https://harleyxu-xhl.github.io/">
+  <link rel="alternate" hreflang="de" href="https://harleyxu-xhl.github.io/de/">
+  <link rel="alternate" hreflang="es" href="https://harleyxu-xhl.github.io/es/">
+  <link rel="alternate" hreflang="fr" href="https://harleyxu-xhl.github.io/fr/">
+  <link rel="alternate" hreflang="hi" href="https://harleyxu-xhl.github.io/hi/">
+  <link rel="alternate" hreflang="id" href="https://harleyxu-xhl.github.io/id/">
+  <link rel="alternate" hreflang="it" href="https://harleyxu-xhl.github.io/it/">
+  <link rel="alternate" hreflang="ja" href="https://harleyxu-xhl.github.io/ja/">
+  <link rel="alternate" hreflang="ko" href="https://harleyxu-xhl.github.io/ko/">
+  <link rel="alternate" hreflang="pt" href="https://harleyxu-xhl.github.io/pt/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://harleyxu-xhl.github.io/zh/">
+  <link rel="alternate" hreflang="x-default" href="https://harleyxu-xhl.github.io/">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#f8fbfe" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#101820" media="(prefers-color-scheme: dark)">
@@ -15,6 +27,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Cooldown">
   <meta property="og:url" content="https://harleyxu-xhl.github.io/">
+  <meta property="og:locale" content="en_US">
   <meta property="og:title" content="Cooldown: know why your phone gets hot">
   <meta property="og:description" content="Battery temperature, overheating alerts and practical ways to cool your phone down. Free on Google Play.">
   <meta property="og:image" content="https://harleyxu-xhl.github.io/assets/img/og.png">
@@ -24,6 +37,18 @@
   <link rel="preload" href="/assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/site.css">
   <script>document.documentElement.classList.add("js");</script>
+  <script>
+    (() => {
+      const pages = {"de": "/de/", "es": "/es/", "fr": "/fr/", "hi": "/hi/", "id": "/id/", "it": "/it/", "ja": "/ja/", "ko": "/ko/", "pt": "/pt/", "zh": "/zh/"};
+      try {
+        if (localStorage.getItem("lang")) return;
+        if (document.referrer && new URL(document.referrer).origin === location.origin) return;
+        const first = ((navigator.languages && navigator.languages[0]) || navigator.language || "").toLowerCase().split("-")[0];
+        const page = pages[first === "in" ? "id" : first];
+        if (page) location.replace(page + location.search + location.hash);
+      } catch (e) {}
+    })();
+  </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -31,6 +56,7 @@
     "name": "Cooldown: Phone Temperature",
     "operatingSystem": "Android",
     "applicationCategory": "UtilitiesApplication",
+    "inLanguage": "en",
     "description": "Phone temperature and battery temperature monitor with overheating alerts and cooling tips.",
     "downloadUrl": "https://play.google.com/store/apps/details?id=com.harley.cooldown",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
@@ -57,7 +83,25 @@
       <a href="#somna">Somna</a>
       <a href="#wattlab">Wattlab</a>
     </nav>
-    <a class="top-mail" href="mailto:tamariskx@gmail.com">Contact</a>
+    <div class="top-end">
+      <a class="top-mail" href="mailto:tamariskx@gmail.com">Contact</a>
+      <details class="lang-menu">
+        <summary aria-label="Language: English"><svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M128,24h0A104,104,0,1,0,232,128,104.12,104.12,0,0,0,128,24Zm87.62,96H175.79C174,83.49,159.94,57.67,148.41,42.4A88.19,88.19,0,0,1,215.62,120ZM96.23,136h63.54c-2.31,41.61-22.23,67.11-31.77,77C118.45,203.1,98.54,177.6,96.23,136Zm0-16C98.54,78.39,118.46,52.89,128,43c9.55,9.93,29.46,35.43,31.77,77Zm11.36-77.6C96.06,57.67,82,83.49,80.21,120H40.37A88.19,88.19,0,0,1,107.59,42.4ZM40.37,136H80.21c1.82,36.51,15.85,62.33,27.38,77.6A88.19,88.19,0,0,1,40.37,136Zm108,77.6c11.53-15.27,25.56-41.09,27.38-77.6h39.84A88.19,88.19,0,0,1,148.41,213.6Z"/></svg><span>English</span></summary>
+        <ul>
+          <li><a href="/" hreflang="en" lang="en" data-lang="en" aria-current="true">English</a></li>
+          <li><a href="/de/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li>
+          <li><a href="/es/" hreflang="es" lang="es-419" data-lang="es">Español</a></li>
+          <li><a href="/fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li>
+          <li><a href="/hi/" hreflang="hi" lang="hi" data-lang="hi">हिन्दी</a></li>
+          <li><a href="/id/" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li>
+          <li><a href="/it/" hreflang="it" lang="it" data-lang="it">Italiano</a></li>
+          <li><a href="/ja/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li>
+          <li><a href="/ko/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li>
+          <li><a href="/pt/" hreflang="pt" lang="pt-BR" data-lang="pt">Português</a></li>
+          <li><a href="/zh/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh">简体中文</a></li>
+        </ul>
+      </details>
+    </div>
   </header>
 
   <main id="main">
@@ -91,7 +135,7 @@
           <p>Phones warm up when they charge, stream or run games, and some warmth is normal. Cooldown puts every battery reading on one scale, and alerts you when it reaches your alert threshold, 42°C by default.</p>
         </div>
 
-        <figure class="scale" id="scale" data-level="hot">
+        <figure class="scale" id="scale" data-level="hot" data-levels="[&quot;Normal&quot;, &quot;Warm&quot;, &quot;Overheated&quot;, &quot;Critical&quot;]">
           <p class="readout" aria-hidden="true"><b class="needle-val">42.3°C</b><span class="needle-level">Overheated</span></p>
           <div class="scale-track" aria-hidden="true">
             <div class="needle"><i class="needle-line"></i></div>
@@ -226,6 +270,7 @@
   <footer class="foot wrap">
     <p><b>Contact</b><a href="mailto:tamariskx@gmail.com">tamariskx@gmail.com</a></p>
     <p><b>Privacy</b><a href="/cooldown-website/privacy.html">Cooldown</a>, <a href="/wattlab-website/privacy.html">Wattlab</a>, <a href="/angora-website/privacy.html">Angora</a>, <a href="/pipit-website/privacy.html">Pipit</a>, <a href="/somna-website/privacy.html">Somna</a></p>
+    <p class="foot-langs"><b>Language</b><a href="/" hreflang="en" lang="en" data-lang="en" aria-current="true">English</a> <a href="/de/" hreflang="de" lang="de" data-lang="de">Deutsch</a> <a href="/es/" hreflang="es" lang="es-419" data-lang="es">Español</a> <a href="/fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a> <a href="/hi/" hreflang="hi" lang="hi" data-lang="hi">हिन्दी</a> <a href="/id/" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a> <a href="/it/" hreflang="it" lang="it" data-lang="it">Italiano</a> <a href="/ja/" hreflang="ja" lang="ja" data-lang="ja">日本語</a> <a href="/ko/" hreflang="ko" lang="ko" data-lang="ko">한국어</a> <a href="/pt/" hreflang="pt" lang="pt-BR" data-lang="pt">Português</a> <a href="/zh/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh">简体中文</a></p>
     <p><a href="https://play.google.com/store/apps/developer?id=rclaxihy">All apps on Google Play</a></p>
     <p class="fine">Google Play and the Google Play logo are trademarks of Google LLC.</p>
   </footer>
@@ -239,13 +284,15 @@
       const needle = scale.querySelector(".needle");
       const value = scale.querySelector(".needle-val");
       const level = scale.querySelector(".needle-level");
+      const names = JSON.parse(scale.dataset.levels);
+      const number = new Intl.NumberFormat(document.documentElement.lang, { minimumFractionDigits: 1, maximumFractionDigits: 1 });
       const from = 30.9, to = 42.3, min = 30, max = 50;
-      const levels = [[38, "normal", "Normal"], [42, "warm", "Warm"], [46, "hot", "Overheated"], [Infinity, "hot", "Critical"]];
+      const levels = [[38, "normal", names[0]], [42, "warm", names[1]], [46, "hot", names[2]], [Infinity, "hot", names[3]]];
       const show = (c) => {
         const [, key, name] = levels.find(([limit]) => c < limit);
         needle.style.setProperty("--t", ((c - min) / (max - min)).toFixed(4));
         scale.dataset.level = key;
-        value.textContent = c.toFixed(1) + "°C";
+        value.textContent = number.format(c) + "°C";
         level.textContent = name;
       };
       show(from);
@@ -310,6 +357,19 @@
       reel.addEventListener("scroll", update, { passive: true });
       addEventListener("resize", update, { passive: true });
       update();
+    })();
+
+    (() => {
+      // Picking a language remembers it, so the English page stops sending this browser to its own language.
+      for (const link of document.querySelectorAll("a[data-lang]")) {
+        link.addEventListener("click", () => { try { localStorage.setItem("lang", link.dataset.lang); } catch (e) {} });
+      }
+      // The menu closes on Escape or a click outside it.
+      const menu = document.querySelector(".lang-menu");
+      document.addEventListener("click", (event) => { if (menu.open && !menu.contains(event.target)) menu.open = false; });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && menu.open) { menu.open = false; menu.querySelector("summary").focus(); }
+      });
     })();
   </script>
 </body>
