@@ -110,13 +110,11 @@ def review_items(code, text, reviews):
 
 
 def lang_links(current):
-    menu, inline = [], []
+    menu = []
     for code, (lang, hreflang, _, name, _, _) in LANGS.items():
         here = ' aria-current="true"' if code == current else ''
-        link = f'<a href="{path(code)}" hreflang="{hreflang}" lang="{lang}" data-lang="{code}"{here}>{name}</a>'
-        menu.append(f'          <li>{link}</li>')
-        inline.append(link)
-    return '        <ul>\n' + '\n'.join(menu) + '\n        </ul>', ' '.join(inline)
+        menu.append(f'          <li><a href="{path(code)}" hreflang="{hreflang}" lang="{lang}" data-lang="{code}"{here}>{name}</a></li>')
+    return '        <ul>\n' + '\n'.join(menu) + '\n        </ul>'
 
 
 def main():
@@ -156,7 +154,7 @@ def main():
             return value
 
         text = {k: localize(v) for k, v in text.items()}
-        menu, inline = lang_links(code)
+        menu = lang_links(code)
         img = '/assets/img/' if code == 'en' else f'/assets/img/{code}/'
         values = {
             **flatten({k: v for k, v in text.items() if k != 'extra_reviews'}),
@@ -178,7 +176,6 @@ def main():
             **{f'play_{a}': PLAY.format(app=a, campaign='more_apps') for a in ('angora', 'pipit', 'somna')},
             'reviews': review_items(code, text, reviews),
             'lang_menu': menu,
-            'lang_list': inline,
         }
         page = fill(template, values, f'{code}')
         page = re.sub(r'\n{3,}', '\n\n', page).replace('\n\n  <script type="application/ld+json">', '\n  <script type="application/ld+json">', 1)

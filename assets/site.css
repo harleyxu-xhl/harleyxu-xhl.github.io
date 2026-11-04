@@ -130,7 +130,6 @@ p { margin: 0; text-wrap: pretty; }
 
 .top a { color: var(--ink-2); text-decoration: none; padding-block: 10px; }
 .top a[aria-current="page"] { color: var(--ink); font-weight: 600; }
-.top-mail { display: none; }
 
 @media (hover: hover) {
   .top a:hover { color: var(--ink); text-decoration: underline; }
@@ -140,13 +139,13 @@ p { margin: 0; text-wrap: pretty; }
   .apps-nav { column-gap: 11px; font-size: 0.875rem; }
 }
 
-/* Contact and the language menu share the right end from 640px; narrower, the footer lists the languages. */
+/* The language menu holds the right end; below 640px it shows only the globe. */
 .top-end { display: flex; align-items: center; gap: clamp(14px, 2.4vw, 26px); }
-.lang-menu { display: none; position: relative; }
+.lang-menu { position: relative; }
 
-@media (min-width: 640px) {
-  .top-mail { display: block; }
-  .lang-menu { display: block; }
+@media (max-width: 639px) {
+  .lang-menu summary { min-width: 44px; min-height: 44px; justify-content: flex-end; }
+  .lang-menu summary span { display: none; }
 }
 
 .lang-menu summary {
@@ -677,10 +676,6 @@ p { margin: 0; text-wrap: pretty; }
 .foot b { font-weight: 600; color: var(--ink); margin-right: 8px; }
 .foot .fine { margin-top: 14px; font-size: 0.8125rem; color: var(--ink-3); }
 /* Every language, as plain links, so phones can switch too. */
-.foot-langs { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 14px; row-gap: 2px; }
-.foot-langs b { margin-right: 0; }
-.foot-langs a { padding-block: 6px; }
-.foot-langs a[aria-current] { color: var(--ink); font-weight: 600; text-decoration: none; }
 
 /* ---------- Other scripts ---------- */
 /* Archivo has Latin only, so Japanese, Korean, Chinese and Hindi text falls back to each system's own font for that
