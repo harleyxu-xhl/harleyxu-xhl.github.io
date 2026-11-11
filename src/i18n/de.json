@@ -1,6 +1,6 @@
 {
  "title": "Cooldown: Handy-Temperatur-Monitor für Android",
- "description": "Cooldown zeigt die Akku-Temperatur deines Handys, warnt dich bei Überhitzung und sagt dir, was es aufheizt. Kostenlos bei Google Play, genau wie Angora, Pipit und Somna.",
+ "description": "Cooldown zeigt die Akku-Temperatur deines Handys, warnt dich bei Überhitzung und sagt dir, was es aufheizt. Kostenlos bei Google Play, genau wie Angora, Pipit, Somna und Wattlab.",
  "og_title": "Cooldown: Finde heraus, warum dein Handy heiß wird",
  "og_description": "Akku-Temperatur, Warnungen bei Überhitzung und praktische Tipps, um dein Handy abzukühlen. Kostenlos bei Google Play.",
  "og_free": "Kostenlos bei Google Play",
@@ -68,7 +68,6 @@
  "pro_body": "Pro ist ein Einmalkauf, kein Abo. Es entfernt die Werbung und bringt den Temperaturverlauf, detaillierte Signale zum Hitzerisiko, einen eigenen Warnwert, Farbthemen und transparente Widgets.",
  "more_title": "Weitere Apps",
  "get_it": "Bei Google Play herunterladen",
- "soon": "Bald bei Google Play",
  "angora": {
   "kind": "Doppelte Dateien finden",
   "what": "Finde doppelte und große Dateien, sieh, was deinen Speicher füllt, und schaffe sicher Platz. Gelöscht wird erst, wenn du bestätigst."

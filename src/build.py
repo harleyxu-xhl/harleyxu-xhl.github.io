@@ -173,7 +173,7 @@ def main():
             'count': count,
             'play_hero': PLAY.format(app='cooldown', campaign='hero'),
             'play_pro': PLAY.format(app='cooldown', campaign='pro'),
-            **{f'play_{a}': PLAY.format(app=a, campaign='more_apps') for a in ('angora', 'pipit', 'somna')},
+            **{f'play_{a}': PLAY.format(app=a, campaign='more_apps') for a in ('angora', 'pipit', 'somna', 'wattlab')},
             'reviews': review_items(code, text, reviews),
             'lang_menu': menu,
         }

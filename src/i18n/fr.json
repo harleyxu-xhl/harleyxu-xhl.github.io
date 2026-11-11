@@ -1,6 +1,6 @@
 {
  "title": "Cooldown : température du téléphone pour Android",
- "description": "Cooldown affiche la température de la batterie de votre téléphone, vous alerte en cas de surchauffe et vous dit ce qui le fait chauffer. Gratuit sur Google Play, tout comme Angora, Pipit et Somna.",
+ "description": "Cooldown affiche la température de la batterie de votre téléphone, vous alerte en cas de surchauffe et vous dit ce qui le fait chauffer. Gratuit sur Google Play, tout comme Angora, Pipit, Somna et Wattlab.",
  "og_title": "Cooldown : comprenez pourquoi votre téléphone chauffe",
  "og_description": "Température de la batterie, alertes de surchauffe et conseils pratiques pour refroidir votre téléphone. Gratuit sur Google Play.",
  "og_free": "Gratuit sur Google Play",
@@ -68,7 +68,6 @@
  "pro_body": "Pro est un achat unique, pas un abonnement. Il supprime les publicités et ajoute les tendances de température, des signaux détaillés du risque de chaleur, un seuil d’alerte personnalisé, des thèmes de couleur et des widgets transparents.",
  "more_title": "Autres applications",
  "get_it": "Disponible sur Google Play",
- "soon": "Bientôt sur Google Play",
  "angora": {
   "kind": "Détecteur de fichiers en double",
   "what": "Trouvez les fichiers en double et volumineux, voyez ce qui remplit votre stockage et libérez de l’espace en toute sécurité : rien n’est supprimé sans votre confirmation."

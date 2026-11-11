@@ -1,6 +1,6 @@
 {
  "title": "Cooldown：Android用スマホ温度モニター",
- "description": "Cooldownは、スマホのバッテリー温度を表示し、熱くなりすぎたらアラートでお知らせ。発熱の原因も教えてくれます。Google Playで無料。Angora、Pipit、Somnaもあります。",
+ "description": "Cooldownは、スマホのバッテリー温度を表示し、熱くなりすぎたらアラートでお知らせ。発熱の原因も教えてくれます。Google Playで無料。Angora、Pipit、Somna、Wattlabもあります。",
  "og_title": "Cooldown：スマホが熱くなる理由がわかる",
  "og_description": "バッテリー温度、発熱アラート、スマホの温度を下げる実用的なヒント。Google Playで無料。",
  "og_free": "Google Playで無料",
@@ -68,7 +68,6 @@
  "pro_body": "Proはサブスクリプションではなく、買い切りです。広告が消え、温度の推移、発熱リスクの詳しい要因、アラートのしきい値の変更、カラーテーマ、透明ウィジェットが使えるようになります。",
  "more_title": "ほかのアプリ",
  "get_it": "Google Playで入手",
- "soon": "Google Playで近日公開",
  "angora": {
   "kind": "重複ファイル検索",
   "what": "重複ファイルや大きなファイルを見つけ、ストレージを何が占めているかを確認して、安全に空き容量を増やせます。確認するまで何も削除されません。"

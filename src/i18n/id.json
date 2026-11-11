@@ -1,6 +1,6 @@
 {
  "title": "Cooldown: pemantau suhu HP untuk Android",
- "description": "Cooldown menampilkan suhu baterai HP Anda, memberi peringatan saat HP terlalu panas, dan memberi tahu apa yang membuatnya panas. Gratis di Google Play, bersama Angora, Pipit, dan Somna.",
+ "description": "Cooldown menampilkan suhu baterai HP Anda, memberi peringatan saat HP terlalu panas, dan memberi tahu apa yang membuatnya panas. Gratis di Google Play, bersama Angora, Pipit, Somna, dan Wattlab.",
  "og_title": "Cooldown: ketahui kenapa HP Anda panas",
  "og_description": "Suhu baterai, peringatan HP terlalu panas, dan cara praktis mendinginkan HP. Gratis di Google Play.",
  "og_free": "Gratis di Google Play",
@@ -68,7 +68,6 @@
  "pro_body": "Pro adalah pembelian sekali bayar, bukan langganan. Pro menghapus iklan dan menambahkan analisis suhu, sinyal risiko panas yang terperinci, batas peringatan khusus, tema warna, dan widget transparan.",
  "more_title": "Aplikasi lainnya",
  "get_it": "Dapatkan di Google Play",
- "soon": "Segera hadir di Google Play",
  "angora": {
   "kind": "Pencari file duplikat",
   "what": "Temukan file duplikat dan file besar, lihat apa yang memenuhi penyimpanan Anda, dan kosongkan ruang dengan aman. Tidak ada yang dihapus sebelum Anda konfirmasi."

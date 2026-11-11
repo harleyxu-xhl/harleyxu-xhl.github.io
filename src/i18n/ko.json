@@ -1,6 +1,6 @@
 {
  "title": "Cooldown: Android용 휴대폰 온도 모니터",
- "description": "Cooldown은 휴대폰 배터리 온도를 보여 주고, 과열되면 알려 주며, 무엇 때문에 뜨거워지는지 알려 줍니다. Google Play에서 무료이며 Angora, Pipit, Somna도 있습니다.",
+ "description": "Cooldown은 휴대폰 배터리 온도를 보여 주고, 과열되면 알려 주며, 무엇 때문에 뜨거워지는지 알려 줍니다. Google Play에서 무료이며 Angora, Pipit, Somna, Wattlab도 있습니다.",
  "og_title": "Cooldown: 휴대폰이 뜨거워지는 이유를 알아보세요",
  "og_description": "배터리 온도, 과열 알림, 휴대폰 온도를 낮추는 실용적인 방법. Google Play에서 무료.",
  "og_free": "Google Play에서 무료",
@@ -68,7 +68,6 @@
  "pro_body": "Pro는 구독이 아닌 1회 구매입니다. 광고가 사라지고 온도 추세, 자세한 발열 위험 신호, 알림 기준 온도 직접 설정, 색상 테마, 투명 위젯이 추가됩니다.",
  "more_title": "다른 앱",
  "get_it": "Google Play에서 다운로드",
- "soon": "Google Play 출시 예정",
  "angora": {
   "kind": "중복 파일 찾기",
   "what": "중복 파일과 큰 파일을 찾고, 무엇이 저장 공간을 차지하는지 확인하고, 안전하게 공간을 확보하세요. 확인하기 전에는 아무것도 삭제되지 않습니다."

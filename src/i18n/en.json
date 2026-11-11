@@ -1,6 +1,6 @@
 {
  "title": "Cooldown: phone temperature monitor for Android",
- "description": "Cooldown shows your phone's battery temperature, alerts you when it overheats, and tells you what is heating it up. Free on Google Play, along with Angora, Pipit and Somna.",
+ "description": "Cooldown shows your phone's battery temperature, alerts you when it overheats, and tells you what is heating it up. Free on Google Play, along with Angora, Pipit, Somna and Wattlab.",
  "og_title": "Cooldown: know why your phone gets hot",
  "og_description": "Battery temperature, overheating alerts and practical ways to cool your phone down. Free on Google Play.",
  "og_free": "Free on Google Play",
@@ -58,7 +58,6 @@
  "pro_body": "Pro is a one-time purchase, not a subscription. It removes ads and adds temperature insights, detailed heat-risk signals, a custom alert threshold, color themes and transparent widgets.",
  "more_title": "More apps",
  "get_it": "Get it on Google Play",
- "soon": "Coming to Google Play",
  "angora": {"kind": "Duplicate file finder", "what": "Find duplicate and large files, see what fills your storage, and free up space safely, with nothing deleted until you confirm."},
  "pipit": {"kind": "Photo resizer in KB", "what": "Resize photos and signatures to the exact file size a form asks for, like 20 KB, 50 KB or 100 KB."},
  "somna": {"kind": "Sleep diary and CBT-I", "what": "A sleep diary with a 6-week program based on cognitive behavioral therapy for insomnia."},

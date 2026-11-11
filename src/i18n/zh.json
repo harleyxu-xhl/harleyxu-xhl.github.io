@@ -1,6 +1,6 @@
 {
  "title": "Cooldown：Android 手机温度监测",
- "description": "Cooldown 显示手机电池温度，过热时提醒你，并告诉你是什么让手机发热。在 Google Play 免费下载，同系列还有 Angora、Pipit 和 Somna。",
+ "description": "Cooldown 显示手机电池温度，过热时提醒你，并告诉你是什么让手机发热。在 Google Play 免费下载，同系列还有 Angora、Pipit、Somna 和 Wattlab。",
  "og_title": "Cooldown：知道手机为什么发烫",
  "og_description": "电池温度、过热提醒，以及让手机降温的实用方法。在 Google Play 免费下载。",
  "og_free": "Google Play 免费下载",
@@ -68,7 +68,6 @@
  "pro_body": "Pro 为一次性买断，不是订阅。它会移除广告，并增加温度洞察、详细的高温风险信号、自定义提醒阈值、主题配色和透明桌面小组件。",
  "more_title": "更多应用",
  "get_it": "在 Google Play 下载",
- "soon": "即将上架 Google Play",
  "angora": {
   "kind": "重复文件查找",
   "what": "找出重复文件和大文件，看清存储空间被什么占用，安全地释放空间。你确认之前不会删除任何文件。"

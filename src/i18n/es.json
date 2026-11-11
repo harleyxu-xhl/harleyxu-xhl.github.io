@@ -1,6 +1,6 @@
 {
  "title": "Cooldown: monitor de temperatura del celular para Android",
- "description": "Cooldown muestra la temperatura de la batería de tu celular, te avisa cuando se sobrecalienta y te dice qué lo está calentando. Gratis en Google Play, junto con Angora, Pipit y Somna.",
+ "description": "Cooldown muestra la temperatura de la batería de tu celular, te avisa cuando se sobrecalienta y te dice qué lo está calentando. Gratis en Google Play, junto con Angora, Pipit, Somna y Wattlab.",
  "og_title": "Cooldown: descubre por qué se calienta tu celular",
  "og_description": "Temperatura de la batería, alertas de sobrecalentamiento y formas prácticas de enfriar tu celular. Gratis en Google Play.",
  "og_free": "Gratis en Google Play",
@@ -75,7 +75,6 @@
  "pro_body": "Pro es un pago único, no una suscripción. Quita los anuncios y agrega el análisis de temperatura, señales detalladas del riesgo de calor, un umbral de alerta personalizado, temas de color y widgets transparentes.",
  "more_title": "Más apps",
  "get_it": "Descárgala en Google Play",
- "soon": "Próximamente en Google Play",
  "angora": {
   "kind": "Buscador de archivos duplicados",
   "what": "Encuentra archivos duplicados y grandes, mira qué llena tu almacenamiento y libera espacio con seguridad: no se borra nada hasta que lo confirmes."
