@@ -1,0 +1,12 @@
+{
+ "source": "wattlab repo, branding/promo-video/promo-data.json (PromoDataExport.kt): one phone's recorded traces run through the app's own speed test, ranking and health code. Copy the numbers from there; never edit them here by hand.",
+ "fullScaleMw": 100000,
+ "thresholdsMw": {"standard": 7500, "fast": 18000},
+ "setups": [
+  {"id": "original", "avgMw": 31115, "tier": "fast", "reason": null},
+  {"id": "small", "avgMw": 8611, "tier": "standard", "reason": null},
+  {"id": "generic", "avgMw": 1576, "tier": "slow", "reason": "usb_basic"},
+  {"id": "computer", "avgMw": 493, "tier": "slow", "reason": "usb_basic"}
+ ],
+ "health": {"capacityMah": 6034, "margin": 0.03, "chargesMah": [6034, 6014, 6022, 6022], "ratedMah": 6345, "percent": 95, "cycles": 164}
+}

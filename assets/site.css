@@ -118,6 +118,7 @@ p { margin: 0; text-wrap: pretty; }
 .fine { font-size: 0.875rem; line-height: 1.5; color: var(--ink-2); }
 
 /* ---------- Top line: the five apps ---------- */
+/* Shared with the other apps' pages (assets/wattlab.css), like the screens row, the other apps and the footer. */
 .top {
   display: flex;
   align-items: center;
@@ -135,8 +136,22 @@ p { margin: 0; text-wrap: pretty; }
   .top a:hover { color: var(--ink); text-decoration: underline; }
 }
 
-@media (max-width: 359px) {
-  .apps-nav { column-gap: 11px; font-size: 0.875rem; }
+/* Phones: the five names stay on one line. Where they don't all fit, the line scrolls sideways under a fade. */
+@media (max-width: 479px) {
+  .top { column-gap: 8px; }
+  .apps-nav {
+    flex-wrap: nowrap;
+    min-width: 0;
+    column-gap: 12px;
+    padding-right: 12px;
+    font-size: 0.875rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 12px), transparent);
+    mask-image: linear-gradient(to right, #000 calc(100% - 12px), transparent);
+  }
+  .apps-nav::-webkit-scrollbar { display: none; }
+  .apps-nav a { flex: none; }
 }
 
 /* The language menu holds the right end; below 640px it shows only the globe. */
@@ -630,6 +645,8 @@ p { margin: 0; text-wrap: pretty; }
 }
 .app img { width: 3.75rem; height: 3.75rem; border-radius: 14px; }
 .app h3 { font-size: 1.3125rem; }
+/* An app with a page of its own is named with a link to it. */
+.app h3 a { color: inherit; text-decoration: none; }
 .app .kind { margin-top: 2px; font-size: 0.9375rem; color: var(--ink-2); }
 .app .what { margin-top: 10px; max-width: 32em; font-size: 1rem; color: var(--ink-2); }
 
@@ -646,6 +663,7 @@ p { margin: 0; text-wrap: pretty; }
 .go:active svg { transform: translate(1px, -1px) scale(0.9); }
 
 @media (hover: hover) {
+  .app h3 a:hover { text-decoration: underline; }
   .go:hover { text-decoration: underline; }
   .go:hover svg { transform: translate(2px, -2px); }
 }
@@ -659,7 +677,7 @@ p { margin: 0; text-wrap: pretty; }
 /* Wide screens: all four apps in one row, each icon above its text. */
 @media (min-width: 1440px) {
   .apps { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  .app { grid-template-columns: minmax(0, 1fr); row-gap: 18px; }
+  .app { grid-template-columns: minmax(0, 1fr); row-gap: 18px; align-content: start; }
 }
 
 /* ---------- Footer ---------- */

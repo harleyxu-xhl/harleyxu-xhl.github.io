@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="zh-Hans" class="wattlab">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wattlab：Android 充电速度测试</title>
+  <meta name="description" content="Wattlab 测量真正进入电池的功率，告诉你充电为什么慢，并用 60 秒测试给你的充电头和线排名。在 Google Play 免费下载。">
+  <link rel="canonical" href="https://harleyxu-xhl.github.io/wattlab/zh/">
+  <link rel="alternate" hreflang="en" href="https://harleyxu-xhl.github.io/wattlab/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://harleyxu-xhl.github.io/wattlab/zh/">
+  <link rel="alternate" hreflang="x-default" href="https://harleyxu-xhl.github.io/wattlab/">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#111214">
+  <link rel="icon" href="/assets/img/wattlab/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="icon" href="/assets/img/wattlab/favicon.png" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="/assets/img/wattlab/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Wattlab">
+  <meta property="og:url" content="https://harleyxu-xhl.github.io/wattlab/zh/">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="Wattlab：是充电头、线，还是手机的问题？">
+  <meta property="og:description" content="真实充电功率、充电慢的原因，以及给充电头和线排名的 60 秒测试。在 Google Play 免费下载。">
+  <meta property="og:image" content="https://harleyxu-xhl.github.io/assets/img/wattlab/zh/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="/assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="/assets/wattlab.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Wattlab: Charging Speed Test",
+    "operatingSystem": "Android",
+    "applicationCategory": "UtilitiesApplication",
+    "inLanguage": "zh-Hans",
+    "description": "充电速度测试应用：测量进入电池的实际功率，解释充电慢的原因，并为充电头和线排名。",
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.harley.wattlab",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">跳到正文</a>
+
+  <header class="top wrap dark">
+    <nav class="apps-nav" aria-label="应用">
+      <a href="/zh/">Cooldown</a>
+      <a href="#wattlab" aria-current="page">Wattlab</a>
+      <a href="#somna">Somna</a>
+      <a href="#pipit">Pipit</a>
+      <a href="#angora">Angora</a>
+    </nav>
+    <div class="top-end">
+      <details class="lang-menu">
+        <summary aria-label="语言: 简体中文"><svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M128,24h0A104,104,0,1,0,232,128,104.12,104.12,0,0,0,128,24Zm87.62,96H175.79C174,83.49,159.94,57.67,148.41,42.4A88.19,88.19,0,0,1,215.62,120ZM96.23,136h63.54c-2.31,41.61-22.23,67.11-31.77,77C118.45,203.1,98.54,177.6,96.23,136Zm0-16C98.54,78.39,118.46,52.89,128,43c9.55,9.93,29.46,35.43,31.77,77Zm11.36-77.6C96.06,57.67,82,83.49,80.21,120H40.37A88.19,88.19,0,0,1,107.59,42.4ZM40.37,136H80.21c1.82,36.51,15.85,62.33,27.38,77.6A88.19,88.19,0,0,1,40.37,136Zm108,77.6c11.53-15.27,25.56-41.09,27.38-77.6h39.84A88.19,88.19,0,0,1,148.41,213.6Z"/></svg><span>简体中文</span></summary>
+        <ul>
+          <li><a href="/wattlab/" hreflang="en" lang="en" data-lang="en">English</a></li>
+          <li><a href="/wattlab/zh/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh" aria-current="true">简体中文</a></li>
+        </ul>
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="stage dark" id="wattlab" aria-labelledby="hero-title">
+      <div class="stage-in wrap">
+        <div class="hero-copy">
+          <p class="app-id">
+            <img src="/assets/img/icon-wattlab.webp" width="160" height="160" alt="">
+            <span><b>Wattlab</b><small>Android 充电速度测试</small></span>
+          </p>
+          <h1 id="hero-title"><span class="nowrap">是充电头、线，</span><span class="nowrap">还是手机的问题？</span></h1>
+          <p class="lede">Wattlab 测量真正进入电池的功率，告诉你充电为什么慢，并用可以重复的 60 秒测试给你的充电头和线排名。</p>
+          <div class="cta">
+            <a class="play" href="https://play.google.com/store/apps/details?id=com.harley.wattlab&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dwattlab%26utm_campaign%3Dhero"><img src="/assets/img/zh/google-play-badge.png" width="646" height="192" alt="在 Google Play 下载 Wattlab"></a>
+            <p class="fine">免费。Pro 为一次性买断，不是订阅。</p>
+          </div>
+        </div>
+
+        <div class="bench" id="bench" data-tier="fast" data-setups="[{&quot;mw&quot;: 31115, &quot;watts&quot;: &quot;31&quot;, &quot;tier&quot;: &quot;fast&quot;, &quot;tierName&quot;: &quot;快&quot;, &quot;icon&quot;: &quot;M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z&quot;, &quot;reason&quot;: &quot;&quot;, &quot;note&quot;: &quot;90 W 的充电头显示 30 W 左右很正常：电量越高，手机充得越慢。&quot;, &quot;said&quot;: &quot;90 W 充电头 + 原装线：31 W，快。 90 W 的充电头显示 30 W 左右很正常：电量越高，手机充得越慢。&quot;}, {&quot;mw&quot;: 8611, &quot;watts&quot;: &quot;8.6&quot;, &quot;tier&quot;: &quot;standard&quot;, &quot;tierName&quot;: &quot;标准&quot;, &quot;icon&quot;: &quot;M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z&quot;, &quot;reason&quot;: &quot;&quot;, &quot;note&quot;: &quot;同一根线，换成小功率充电头：速度不到三分之一。&quot;, &quot;said&quot;: &quot;18 W 充电头 + 原装线：8.6 W，标准。 同一根线，换成小功率充电头：速度不到三分之一。&quot;}, {&quot;mw&quot;: 1576, &quot;watts&quot;: &quot;1.6&quot;, &quot;tier&quot;: &quot;slow&quot;, &quot;tierName&quot;: &quot;慢&quot;, &quot;icon&quot;: &quot;M200,75.64V40a16,16,0,0,0-16-16H72A16,16,0,0,0,56,40V76a16.07,16.07,0,0,0,6.4,12.8L114.67,128,62.4,167.2A16.07,16.07,0,0,0,56,180v36a16,16,0,0,0,16,16H184a16,16,0,0,0,16-16V180.36a16.09,16.09,0,0,0-6.35-12.77L141.27,128l52.38-39.6A16.05,16.05,0,0,0,200,75.64ZM72,40H184V75.64L178.23,80H77.33L72,76ZM128,118L98.67,96h58.4ZM184,216H72V180l48-36v24a8,8,0,0,0,16,0V144.08l48,36.28Z&quot;, &quot;reason&quot;: &quot;正在按普通 USB 标准充电&quot;, &quot;note&quot;: &quot;同一个 90 W 充电头，换成普通线：速度只有约二十分之一。&quot;, &quot;said&quot;: &quot;90 W 充电头 + 普通线：1.6 W，慢。 正在按普通 USB 标准充电。 同一个 90 W 充电头，换成普通线：速度只有约二十分之一。&quot;}, {&quot;mw&quot;: 493, &quot;watts&quot;: &quot;0.5&quot;, &quot;tier&quot;: &quot;slow&quot;, &quot;tierName&quot;: &quot;慢&quot;, &quot;icon&quot;: &quot;M200,75.64V40a16,16,0,0,0-16-16H72A16,16,0,0,0,56,40V76a16.07,16.07,0,0,0,6.4,12.8L114.67,128,62.4,167.2A16.07,16.07,0,0,0,56,180v36a16,16,0,0,0,16,16H184a16,16,0,0,0,16-16V180.36a16.09,16.09,0,0,0-6.35-12.77L141.27,128l52.38-39.6A16.05,16.05,0,0,0,200,75.64ZM72,40H184V75.64L178.23,80H77.33L72,76ZM128,118L98.67,96h58.4ZM184,216H72V180l48-36v24a8,8,0,0,0,16,0V144.08l48,36.28Z&quot;, &quot;reason&quot;: &quot;正在按普通 USB 标准充电&quot;, &quot;note&quot;: &quot;电脑的 USB 口是四种里最慢的。&quot;, &quot;said&quot;: &quot;电脑 USB 口：0.5 W，慢。 正在按普通 USB 标准充电。 电脑的 USB 口是四种里最慢的。&quot;}]">
+          <div class="meter">
+            <svg class="gauge" viewBox="0 0 328 171" aria-hidden="true"><g fill="none" stroke-width="14"><path d="M7.00,164.00A157,157 0 0,1 60.10,46.30" stroke="#2c2c2c"/><path d="M63.13,43.69A157,157 0 0,1 125.06,11.91" stroke="#362e16"/><path d="M128.94,10.96A157,157 0 0,1 321.00,164.00" stroke="#453915"/></g><circle cx="7" cy="164" r="7" fill="#2c2c2c"/><circle cx="321" cy="164" r="7" fill="#453915"/><g fill="none" stroke-width="14"><path class="gauge-fill" d="M7.00,164.00A157,157 0 0,1 321.00,164.00" pathLength="1" stroke-linecap="round" stroke-dasharray="0.5578 1"/></g></svg>
+            <p class="marks" aria-hidden="true"><span style="left:14.81%;top:17.44%">7.5</span><span style="left:37.28%;top:-4.69%">18</span></p>
+            <p class="read" id="read">
+              <span class="sr-only">读数: </span>
+              <span class="chip"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"/></svg><span class="chip-name">快</span></span>
+              <span class="num"><b class="watts">31</b><span class="unit">W</span></span>
+            </p>
+          </div>
+          <p class="flow" aria-hidden="true">
+            <span class="end">0</span>
+            <span class="flow-mid"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M237.66,66.34a8,8,0,0,0-11.32,0L192,100.69,155.31,64l34.35-34.34a8,8,0,1,0-11.32-11.32L144,52.69,117.66,26.34a8,8,0,0,0-11.32,11.32L112.69,44l-53,53a40,40,0,0,0,0,56.57l15.71,15.71L26.34,218.34a8,8,0,0,0,11.32,11.32l49.09-49.09,15.71,15.71a40,40,0,0,0,56.57,0l53-53,6.34,6.35a8,8,0,0,0,11.32-11.32L203.31,112l34.35-34.34A8,8,0,0,0,237.66,66.34ZM147.72,185a24,24,0,0,1-33.95,0L71,142.23a24,24,0,0,1,0-33.95l53-53L200.69,132Z"/></svg><svg class="arrow" viewBox="0 0 48 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2.2,7H43.8M40.8,2.5L45.8,7M40.8,11.5L45.8,7"/></svg><svg class="ic batt" viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M200,56H32A24,24,0,0,0,8,80v96a24,24,0,0,0,24,24H200a24,24,0,0,0,24-24V80A24,24,0,0,0,200,56ZM208,176a8,8,0,0,1-8,8H32a8,8,0,0,1-8-8V80a8,8,0,0,1,8-8H200a8,8,0,0,1,8,8ZM256,96v64a8,8,0,0,1-16,0V96a8,8,0,0,1,16,0ZM138.81,123.79a8,8,0,0,1,.35,7.79l-16,32a8,8,0,0,1-14.32-7.16L119.06,136H100a8,8,0,0,1-7.16-11.58l16-32a8,8,0,1,1,14.32,7.16L112.94,120H132A8,8,0,0,1,138.81,123.79Z"/></svg><span>进入电池</span></span>
+            <span class="end">100&nbsp;W</span>
+          </p>
+
+          <fieldset class="setups">
+            <legend>同一台手机，四种充电方式</legend>
+          <label class="setup" data-tier="fast">
+            <input type="radio" name="setup" value="0" checked>
+            <span class="setup-rank" aria-hidden="true">1</span>
+            <span class="setup-name">90 W 充电头 + 原装线</span>
+            <span class="setup-watts">31&nbsp;W</span>
+            <span class="setup-bar" aria-hidden="true"><i style="width:100.0%"></i></span>
+            <span class="sr-only">快</span>
+          </label>
+          <label class="setup" data-tier="standard">
+            <input type="radio" name="setup" value="1">
+            <span class="setup-rank" aria-hidden="true">2</span>
+            <span class="setup-name">18 W 充电头 + 原装线</span>
+            <span class="setup-watts">8.6&nbsp;W</span>
+            <span class="setup-bar" aria-hidden="true"><i style="width:27.7%"></i></span>
+            <span class="sr-only">标准</span>
+          </label>
+          <label class="setup" data-tier="slow">
+            <input type="radio" name="setup" value="2">
+            <span class="setup-rank" aria-hidden="true">3</span>
+            <span class="setup-name">90 W 充电头 + 普通线</span>
+            <span class="setup-watts">1.6&nbsp;W</span>
+            <span class="setup-bar" aria-hidden="true"><i style="width:5.1%"></i></span>
+            <span class="sr-only">慢</span>
+          </label>
+          <label class="setup" data-tier="slow">
+            <input type="radio" name="setup" value="3">
+            <span class="setup-rank" aria-hidden="true">4</span>
+            <span class="setup-name">电脑 USB 口</span>
+            <span class="setup-watts">0.5&nbsp;W</span>
+            <span class="setup-bar" aria-hidden="true"><i style="width:2.0%"></i></span>
+            <span class="sr-only">慢</span>
+          </label>
+          </fieldset>
+          <p class="verdict" id="verdict"><b class="reason"></b><span class="note">90 W 的充电头显示 30 W 左右很正常：电量越高，手机充得越慢。</span></p>
+          <p class="sr-only" id="said" aria-live="polite"></p>
+          <p class="fine">以上是同一台手机上 Wattlab 60 秒测试的结果，厂商标称这台手机最高 90 W。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="screens wrap" aria-labelledby="screens-title">
+      <h2 id="screens-title"><span class="nowrap">三个问题，</span><span class="nowrap">都有答案。</span></h2>
+      <div class="shots">
+        <figure class="shot">
+          <div class="shot-frame"><img src="/assets/img/wattlab/zh/charge.webp" width="720" height="1520" loading="lazy" alt="Wattlab 的充电页：进入电池的功率为 30 W，评级为快，电流 7,140 mA，电压 4.21 V，温度 32.4 °C，预计 47 分钟充满"></div>
+          <h3>现在充得多快？</h3>
+          <p>实时功率、电流、电压、温度和预计充满时间，并按你这台手机的上报方式校准。</p>
+        </figure>
+        <figure class="shot">
+          <div class="shot-frame"><img src="/assets/img/wattlab/zh/slow.webp" width="720" height="1520" loading="lazy" alt="换成普通线后的充电页：2.5 W，评级为慢，原因是正在按普通 USB 标准充电"></div>
+          <h3>为什么充得慢？</h3>
+          <p>给出速度评级和最主要的原因：发热、线或接口只有普通 USB 速度、电量接近充满、电池保护、无线充电，或者已到手机自身的最高速度。</p>
+        </figure>
+        <figure class="shot">
+          <div class="shot-frame"><img src="/assets/img/wattlab/zh/result.webp" width="720" height="1520" loading="lazy" alt="一次测试的结果：平均 31 W，评级为快，是本机目前最快的结果，峰值 31 W，功率稳定"></div>
+          <h3>哪个充电头、哪根线最快？</h3>
+          <p>60 秒测试给出平均功率、峰值功率和稳定性。只有起始电量相近的测试才会放在一起排名，比较才公平。</p>
+        </figure>
+      </div>
+      <p class="fine">测速免费，不限次数。截图中的读数录自同一台手机。</p>
+    </section>
+
+    <section class="health" aria-labelledby="health-title">
+      <div class="health-in wrap">
+        <div class="health-copy">
+          <h2 id="health-title"><span class="nowrap">电池健康，</span><span class="nowrap">附带误差范围。</span></h2>
+          <p>把手机一直插到充电结束（比如充一整夜），Wattlab 就能读出电池的满电容量。它会标明各次充电的结果相差多少、一共依据了几次充电；只有知道设计容量时，才给出健康度百分比。</p>
+        </div>
+
+        <figure class="capacity" id="capacity">
+          <p class="cap-read" aria-hidden="true"><b>6,034</b><span class="cap-unit">mAh</span><span class="cap-margin">±3%</span></p>
+          <div class="cap-scale" aria-hidden="true">
+            <p class="cap-top"><span class="cap-count" style="left:47.71%">4 次充电</span><span class="cap-rated-label">额定 6,345 mAh</span></p>
+            <div class="cap-track">
+              <i class="cap-range" style="left:21.86%;width:51.71%"></i>
+              <i class="cap-charge" style="left:44.86%"></i><i class="cap-charge" style="left:46.00%"></i><i class="cap-charge" style="left:47.71%"></i>
+              <i class="cap-est" style="left:47.71%"></i>
+              <i class="cap-rated" style="left:92.14%"></i>
+            </div>
+            <p class="cap-ends"><span style="left:21.86%">5,853</span><span style="left:73.57%">6,215</span></p>
+          </div>
+          <dl class="cap-facts">
+            <div><dt>电池健康</dt><dd>约 95%</dd></div>
+            <div><dt>额定容量</dt><dd>6,345&nbsp;mAh</dd></div>
+            <div><dt>充电循环</dt><dd>164</dd></div>
+          </dl>
+          <figcaption class="sr-only">容量估算为 6,034 mAh，误差 ±3%，即 5,853 至 6,215 mAh。依据 4 次充电，各次读数相差不超过 20 mAh。厂商额定容量为 6,345 mAh，因此电池健康度约为 95%。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="also wrap" aria-labelledby="also-title">
+      <h2 id="also-title"><span class="nowrap">测完之后，</span><span class="nowrap">它还在工作。</span></h2>
+      <ul class="also-list">
+        <li><h3>每次充电都有记录</h3><p>开启自动记录后，从插电到拔线，每次充电都会在后台记录下来。</p></li>
+        <li><h3>电池用量</h3><p>拔线后用掉了多少电，亮屏和息屏时间分开显示，还能检查待机耗电。</p></li>
+        <li><h3>充电提醒</h3><p>充到 80% 时提醒你，也可以在 50% 到 100% 之间自己设定。</p></li>
+        <li><h3>桌面小部件</h3><p>不用打开应用，就能看到充电功率和电量。</p></li>
+      </ul>
+    </section>
+
+    <section class="honest wrap" aria-labelledby="honest-title">
+      <h2 id="honest-title">它只测量。</h2>
+      <div class="honest-copy">
+        <ul class="nots">
+          <li>不能让充电变快，也不能修复电池，更不会这样宣称。</li>
+          <li>没有清理功能，没有充电动画，也没有锁屏浮层。</li>
+          <li>不编造数字。手机不提供的数值，会如实标为“不提供”。</li>
+          <li>没有账号，没有云同步。读数和充电记录只保存在你的手机上。</li>
+        </ul>
+        <p>不同手机上报电池电流的单位和正负号并不一样。Wattlab 会先确认你这台手机的上报方式，再显示读数。使用统计只发送取整后的区间，从不发送原始读数。</p>
+      </div>
+      <div class="pro">
+        <h3>测量和诊断始终免费。</h3>
+        <p>Pro 为一次性买断，不是订阅。它会移除广告，并增加带功率和温度曲线的完整充电记录、7 天电池用量、电池健康趋势、充电习惯报告、不限数量的组合、过热提醒和 CSV 导出。也可以观看一段可选广告，免费查看记录、曲线和报告 24 小时。</p>
+        <a class="play" href="https://play.google.com/store/apps/details?id=com.harley.wattlab&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dwattlab%26utm_campaign%3Dpro"><img src="/assets/img/zh/google-play-badge.png" width="646" height="192" loading="lazy" alt="在 Google Play 下载 Wattlab"></a>
+      </div>
+    </section>
+
+    <section class="more wrap" aria-labelledby="more-title">
+      <h2 id="more-title">更多应用</h2>
+      <ul class="apps">
+        <li class="app" id="cooldown">
+          <img src="/assets/img/icon-cooldown.webp" width="160" height="160" loading="lazy" alt="">
+          <div>
+            <h3><a href="/zh/">Cooldown</a></h3>
+            <p class="kind">手机温度监测</p>
+            <p class="what">查看电池温度，手机过热时收到提醒，并找出是什么让它发热。</p>
+            <a class="go" href="https://play.google.com/store/apps/details?id=com.harley.cooldown&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dwattlab%26utm_campaign%3Dmore_apps">在 Google Play 下载<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          </div>
+        </li>
+        <li class="app" id="somna">
+          <img src="/assets/img/icon-somna.webp" width="160" height="160" loading="lazy" alt="">
+          <div>
+            <h3>Somna</h3>
+            <p class="kind">睡眠日记与 CBT-I</p>
+            <p class="what">一款睡眠日记，附带基于失眠认知行为疗法的 6 周课程。</p>
+            <a class="go" href="https://play.google.com/store/apps/details?id=com.harley.somna&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dwattlab%26utm_campaign%3Dmore_apps">在 Google Play 下载<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          </div>
+        </li>
+        <li class="app" id="pipit">
+          <img src="/assets/img/icon-pipit.webp" width="160" height="160" loading="lazy" alt="">
+          <div>
+            <h3>Pipit</h3>
+            <p class="kind">照片压缩到指定 KB</p>
+            <p class="what">把照片和签名调整到表单要求的精确大小，比如 20 KB、50 KB 或 100 KB。</p>
+            <a class="go" href="https://play.google.com/store/apps/details?id=com.harley.pipit&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dwattlab%26utm_campaign%3Dmore_apps">在 Google Play 下载<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          </div>
+        </li>
+        <li class="app" id="angora">
+          <img src="/assets/img/icon-angora.webp" width="160" height="160" loading="lazy" alt="">
+          <div>
+            <h3>Angora</h3>
+            <p class="kind">重复文件查找</p>
+            <p class="what">找出重复文件和大文件，看清存储空间被什么占用，安全地释放空间。你确认之前不会删除任何文件。</p>
+            <a class="go" href="https://play.google.com/store/apps/details?id=com.harley.angora&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dwattlab%26utm_campaign%3Dmore_apps">在 Google Play 下载<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="foot wrap">
+    <p><b>联系</b><a href="mailto:tamariskx@gmail.com">tamariskx@gmail.com</a></p>
+    <p><b>隐私政策</b><a href="/cooldown-website/privacy.html">Cooldown</a>, <a href="/wattlab-website/privacy.html">Wattlab</a>, <a href="/somna-website/privacy.html">Somna</a>, <a href="/pipit-website/privacy.html">Pipit</a>, <a href="/angora-website/privacy.html">Angora</a></p>
+    <p class="fine">Google Play 和 Google Play 徽标是 Google LLC 的商标。</p>
+  </footer>
+
+  <script>
+    (() => {
+      // The bench: picking a setup swings the gauge to that setup's 60-second test result. It steps through the four
+      // on its own while it is on screen, pauses under a pointer or focus, and stops for good once someone picks one.
+      const bench = document.getElementById("bench");
+      const setups = JSON.parse(bench.dataset.setups);
+      const inputs = [...bench.querySelectorAll('input[name="setup"]')];
+      const fill = bench.querySelector(".gauge-fill");
+      const read = document.getElementById("read");
+      const watts = read.querySelector(".watts");
+      const chipIcon = read.querySelector(".chip path");
+      const chipName = read.querySelector(".chip-name");
+      const verdict = document.getElementById("verdict");
+      const reason = verdict.querySelector(".reason");
+      const note = verdict.querySelector(".note");
+      const said = document.getElementById("said");
+      const reduce = matchMedia("(prefers-reduced-motion: reduce)");
+      const FULL_SCALE = 100000;                       // mW, as ChargePresentation.gaugeFraction
+      const fraction = (mw) => Math.sqrt(Math.max(0, mw) / FULL_SCALE);
+      const format = (mw) => (mw < 9950 ? (mw / 1000).toFixed(1) : String(Math.round(mw / 1000)));
+
+      // The gauge moves on the app's own spring (Gauge.kt: low bouncy, low stiffness); the number counts without overshoot.
+      const STIFFNESS = 200, DAMPING = 2 * 0.75 * Math.sqrt(STIFFNESS);
+      let x = fraction(setups[0].mw), v = 0, target = x, shownMw = setups[0].mw, count = null, frame = 0, last = 0;
+      const draw = () => {
+        fill.style.strokeDasharray = Math.max(0, x).toFixed(4) + " 1";
+        bench.style.setProperty("--glow", Math.min(1, Math.max(0, x)).toFixed(3));
+      };
+      const tick = (now) => {
+        const dt = Math.min(0.032, (now - last) / 1000 || 0.016);
+        last = now;
+        for (let i = 0, h = dt / 4; i < 4; i++) { v += (STIFFNESS * (target - x) - DAMPING * v) * h; x += v * h; }
+        let counting = false;
+        if (count) {
+          const p = Math.min(1, (now - count.start) / 520);
+          shownMw = count.from + (count.to - count.from) * (1 - Math.pow(1 - p, 3));
+          watts.textContent = p < 1 ? format(shownMw) : count.text;
+          if (p < 1) counting = true; else count = null;
+        }
+        draw();
+        if (counting || Math.abs(target - x) > 0.0004 || Math.abs(v) > 0.0004) frame = requestAnimationFrame(tick);
+        else { x = target; v = 0; draw(); frame = 0; }
+      };
+      const show = (i, instant) => {
+        const s = setups[i];
+        bench.dataset.tier = s.tier;
+        chipIcon.setAttribute("d", s.icon);
+        chipName.textContent = s.tierName;
+        reason.textContent = s.reason;
+        note.textContent = s.note;
+        target = fraction(s.mw);
+        if (instant || reduce.matches) {
+          x = target; v = 0; shownMw = s.mw; count = null;
+          watts.textContent = s.watts;
+          draw();
+          return;
+        }
+        count = { from: shownMw, to: s.mw, text: s.watts, start: performance.now() };
+        if (!frame) { last = performance.now(); frame = requestAnimationFrame(tick); }
+      };
+
+      let auto = !reduce.matches, held = false, seen = false, current = 0;
+      for (const input of inputs) {
+        input.addEventListener("change", () => {
+          auto = false;
+          current = Number(input.value);
+          show(current);
+          said.textContent = setups[current].said;   // read out once, and only for a choice someone made
+        });
+      }
+      bench.addEventListener("pointerenter", () => { held = true; });
+      bench.addEventListener("pointerleave", () => { held = false; });
+      bench.addEventListener("focusin", () => { held = true; });
+      bench.addEventListener("focusout", () => { held = false; });
+      setInterval(() => {
+        if (!auto || held || !seen || document.hidden) return;
+        current = (current + 1) % setups.length;
+        inputs[current].checked = true;
+        show(current);
+      }, 4200);
+
+      // On arrival the needle starts at zero and swings up to the first result, once.
+      if ("IntersectionObserver" in window) {
+        let started = false;
+        if (!reduce.matches) { x = 0; shownMw = 0; watts.textContent = "0.0"; draw(); }
+        new IntersectionObserver((entries) => {
+          seen = entries[0].isIntersecting;
+          if (seen && !started) { started = true; show(current); }
+        }, { threshold: 0.35 }).observe(bench.querySelector(".meter"));
+      }
+    })();
+
+    (() => {
+      // The capacity scale draws itself the first time it scrolls into view.
+      const figure = document.getElementById("capacity");
+      if (!("IntersectionObserver" in window) || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      figure.classList.add("wait");
+      new IntersectionObserver((entries, observer) => {
+        if (!entries[0].isIntersecting) return;
+        observer.disconnect();
+        figure.classList.remove("wait");
+      }, { threshold: 0.5 }).observe(figure.querySelector(".cap-scale"));
+    })();
+
+    (() => {
+      // Picking a language remembers it, so the English page stops sending this browser to its own language.
+      for (const link of document.querySelectorAll("a[data-lang]")) {
+        link.addEventListener("click", () => { try { localStorage.setItem("lang", link.dataset.lang); } catch (e) {} });
+      }
+      // The menu closes on Escape or a click outside it.
+      const menu = document.querySelector(".lang-menu");
+      document.addEventListener("click", (event) => { if (menu.open && !menu.contains(event.target)) menu.open = false; });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && menu.open) { menu.open = false; menu.querySelector("summary").focus(); }
+      });
+    })();
+  </script>
+</body>
+</html>

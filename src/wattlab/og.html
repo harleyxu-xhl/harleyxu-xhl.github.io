@@ -1,0 +1,52 @@
+<!doctype html>
+<html class="wattlab">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/wattlab.css">
+<style>
+  /* The 1200 x 630 share card: app name, the page's question, and the gauge at the fastest result. Always dark. */
+  html { font-size: 16px; }
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+  .card { position: relative; width: 1200px; height: 630px; overflow: hidden; }
+  .id { position: absolute; left: 84px; top: 92px; display: flex; align-items: center; gap: 18px; }
+  .id img { width: 72px; height: 72px; border-radius: 17px; outline: 1px solid var(--icon-edge); outline-offset: -1px; }
+  .id b { display: block; font-size: 27px; line-height: 1.2; font-weight: 600; font-stretch: 108%; }
+  .id small { display: block; font-size: 20px; color: var(--ink-2); }
+  h1 { position: absolute; left: 84px; top: 204px; width: 560px; font-size: 72px; line-height: 1; text-wrap: balance; }
+  .free { position: absolute; left: 84px; font-size: 22px; color: var(--ink-2); }
+  .bench { position: absolute; left: 706px; top: 168px; width: 410px; }
+  .bench::before { width: 190%; transform: translate(-50%, -30%); }
+  .meter { margin: 0; }
+  .marks { font-size: 15px; }
+  .flow { margin-top: 18px; font-size: 19px; }
+  .flow .end { font-size: 15px; }
+</style>
+</head>
+<body class="dark">
+<div class="card">
+  <div class="id"><img src="/assets/img/icon-wattlab.webp" alt=""><span><b>Wattlab</b><small id="tagline"></small></span></div>
+  <h1 id="h1"></h1>
+  <p class="free" id="free"></p>
+  <div class="bench" data-tier="fast">
+    <div class="meter" id="meter"></div>
+    <p class="flow" id="flow"></p>
+  </div>
+</div>
+<script>
+  // window.OG = {lang, tagline, h1, free, meter, flow} comes from render_og.py; h1, meter and flow are markup.
+  document.documentElement.lang = OG.lang;
+  for (const key of ["tagline", "free"]) document.getElementById(key).textContent = OG[key];
+  for (const key of ["h1", "meter", "flow"]) document.getElementById(key).innerHTML = OG[key];
+  // The headline shrinks until it fits four lines above the "free" line.
+  const h1 = document.getElementById("h1"), free = document.getElementById("free");
+  document.fonts.ready.then(() => {
+    let size = 72;
+    const lines = () => h1.offsetHeight / (parseFloat(getComputedStyle(h1).lineHeight) || size);
+    while (size > 44 && (lines() > 4.2 || h1.scrollWidth > h1.clientWidth || h1.offsetTop + h1.offsetHeight > 486)) h1.style.fontSize = (size -= 2) + "px";
+    free.style.top = h1.offsetTop + h1.offsetHeight + 28 + "px";
+    document.body.dataset.ready = "1";
+  });
+</script>
+</body>
+</html>

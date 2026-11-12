@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en" class="wattlab">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wattlab: charging speed test for Android</title>
+  <meta name="description" content="Wattlab measures the real watts going into your battery, tells you why a charge is slow, and ranks your chargers and cables with a 60-second test. Free on Google Play.">
+  <link rel="canonical" href="https://harleyxu-xhl.github.io/wattlab/">
+  <link rel="alternate" hreflang="en" href="https://harleyxu-xhl.github.io/wattlab/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://harleyxu-xhl.github.io/wattlab/zh/">
+  <link rel="alternate" hreflang="x-default" href="https://harleyxu-xhl.github.io/wattlab/">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#111214">
+  <link rel="icon" href="/assets/img/wattlab/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="icon" href="/assets/img/wattlab/favicon.png" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="/assets/img/wattlab/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Wattlab">
+  <meta property="og:url" content="https://harleyxu-xhl.github.io/wattlab/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Wattlab: is it the charger, the cable or the phone?">
+  <meta property="og:description" content="Real charging watts, the reason a charge is slow, and a 60-second test that ranks your chargers and cables. Free on Google Play.">
+  <meta property="og:image" content="https://harleyxu-xhl.github.io/assets/img/wattlab/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="/assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="/assets/wattlab.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <script>
+    (() => {
+      const pages = {"zh": "/wattlab/zh/"};
+      try {
+        if (localStorage.getItem("lang")) return;
+        if (document.referrer && new URL(document.referrer).origin === location.origin) return;
+        const first = ((navigator.languages && navigator.languages[0]) || navigator.language || "").toLowerCase().split("-")[0];
+        const page = pages[first === "in" ? "id" : first];
+        if (page) location.replace(page + location.search + location.hash);
+      } catch (e) {}
+    })();
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Wattlab: Charging Speed Test",
+    "operatingSystem": "Android",
+    "applicationCategory": "UtilitiesApplication",
+    "inLanguage": "en",
+    "description": "Charging speed test that measures the power going into the battery, explains slow charging, and ranks chargers and cables.",
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.harley.wattlab",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top wrap dark">
+    <nav class="apps-nav" aria-label="Apps">
+      <a href="/">Cooldown</a>
+      <a href="#wattlab" aria-current="page">Wattlab</a>
+      <a href="#somna">Somna</a>
+      <a href="#pipit">Pipit</a>
+      <a href="#angora">Angora</a>
+    </nav>
+    <div class="top-end">
+      <details class="lang-menu">
+        <summary aria-label="Language: English"><svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M128,24h0A104,104,0,1,0,232,128,104.12,104.12,0,0,0,128,24Zm87.62,96H175.79C174,83.49,159.94,57.67,148.41,42.4A88.19,88.19,0,0,1,215.62,120ZM96.23,136h63.54c-2.31,41.61-22.23,67.11-31.77,77C118.45,203.1,98.54,177.6,96.23,136Zm0-16C98.54,78.39,118.46,52.89,128,43c9.55,9.93,29.46,35.43,31.77,77Zm11.36-77.6C96.06,57.67,82,83.49,80.21,120H40.37A88.19,88.19,0,0,1,107.59,42.4ZM40.37,136H80.21c1.82,36.51,15.85,62.33,27.38,77.6A88.19,88.19,0,0,1,40.37,136Zm108,77.6c11.53-15.27,25.56-41.09,27.38-77.6h39.84A88.19,88.19,0,0,1,148.41,213.6Z"/></svg><span>English</span></summary>
+        <ul>
+          <li><a href="/wattlab/" hreflang="en" lang="en" data-lang="en" aria-current="true">English</a></li>
+          <li><a href="/wattlab/zh/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh">简体中文</a></li>
+        </ul>
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="stage dark" id="wattlab" aria-labelledby="hero-title">
+      <div class="stage-in wrap">
+        <div class="hero-copy">
+          <p class="app-id">
+            <img src="/assets/img/icon-wattlab.webp" width="160" height="160" alt="">
+            <span><b>Wattlab</b><small>Charging speed test for Android</small></span>
+          </p>
+          <h1 id="hero-title">Is it the charger, the cable or the phone?</h1>
+          <p class="lede">Wattlab measures the power actually going into your battery, tells you why a charge is slow, and ranks your chargers and cables with a 60-second test you can repeat.</p>
+          <div class="cta">
+            <a class="play" href="https://play.google.com/store/apps/details?id=com.harley.wattlab&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dwattlab%26utm_campaign%3Dhero"><img src="/assets/img/google-play-badge.png" width="564" height="168" alt="Get Wattlab on Google Play"></a>
+            <p class="fine">Free. Pro is a one-time purchase, not a subscription.</p>
+          </div>
+        </div>
+
+        <div class="bench" id="bench" data-tier="fast" data-setups="[{&quot;mw&quot;: 31115, &quot;watts&quot;: &quot;31&quot;, &quot;tier&quot;: &quot;fast&quot;, &quot;tierName&quot;: &quot;Fast&quot;, &quot;icon&quot;: &quot;M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z&quot;, &quot;reason&quot;: &quot;&quot;, &quot;note&quot;: &quot;A 90 W charger showing about 30 W is normal: phones cut fast charging as they fill.&quot;, &quot;said&quot;: &quot;90 W charger + original cable: 31 W, Fast. A 90 W charger showing about 30 W is normal: phones cut fast charging as they fill.&quot;}, {&quot;mw&quot;: 8611, &quot;watts&quot;: &quot;8.6&quot;, &quot;tier&quot;: &quot;standard&quot;, &quot;tierName&quot;: &quot;Standard&quot;, &quot;icon&quot;: &quot;M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z&quot;, &quot;reason&quot;: &quot;&quot;, &quot;note&quot;: &quot;A smaller charger on the same cable: less than a third of the speed.&quot;, &quot;said&quot;: &quot;18 W charger + original cable: 8.6 W, Standard. A smaller charger on the same cable: less than a third of the speed.&quot;}, {&quot;mw&quot;: 1576, &quot;watts&quot;: &quot;1.6&quot;, &quot;tier&quot;: &quot;slow&quot;, &quot;tierName&quot;: &quot;Slow&quot;, &quot;icon&quot;: &quot;M200,75.64V40a16,16,0,0,0-16-16H72A16,16,0,0,0,56,40V76a16.07,16.07,0,0,0,6.4,12.8L114.67,128,62.4,167.2A16.07,16.07,0,0,0,56,180v36a16,16,0,0,0,16,16H184a16,16,0,0,0,16-16V180.36a16.09,16.09,0,0,0-6.35-12.77L141.27,128l52.38-39.6A16.05,16.05,0,0,0,200,75.64ZM72,40H184V75.64L178.23,80H77.33L72,76ZM128,118L98.67,96h58.4ZM184,216H72V180l48-36v24a8,8,0,0,0,16,0V144.08l48,36.28Z&quot;, &quot;reason&quot;: &quot;Charging at basic USB speed&quot;, &quot;note&quot;: &quot;The same 90 W charger on a generic cable: about a twentieth of the speed.&quot;, &quot;said&quot;: &quot;90 W charger + generic cable: 1.6 W, Slow. Charging at basic USB speed. The same 90 W charger on a generic cable: about a twentieth of the speed.&quot;}, {&quot;mw&quot;: 493, &quot;watts&quot;: &quot;0.5&quot;, &quot;tier&quot;: &quot;slow&quot;, &quot;tierName&quot;: &quot;Slow&quot;, &quot;icon&quot;: &quot;M200,75.64V40a16,16,0,0,0-16-16H72A16,16,0,0,0,56,40V76a16.07,16.07,0,0,0,6.4,12.8L114.67,128,62.4,167.2A16.07,16.07,0,0,0,56,180v36a16,16,0,0,0,16,16H184a16,16,0,0,0,16-16V180.36a16.09,16.09,0,0,0-6.35-12.77L141.27,128l52.38-39.6A16.05,16.05,0,0,0,200,75.64ZM72,40H184V75.64L178.23,80H77.33L72,76ZM128,118L98.67,96h58.4ZM184,216H72V180l48-36v24a8,8,0,0,0,16,0V144.08l48,36.28Z&quot;, &quot;reason&quot;: &quot;Charging at basic USB speed&quot;, &quot;note&quot;: &quot;A computer's USB port is the slowest of the four.&quot;, &quot;said&quot;: &quot;Computer USB port: 0.5 W, Slow. Charging at basic USB speed. A computer's USB port is the slowest of the four.&quot;}]">
+          <div class="meter">
+            <svg class="gauge" viewBox="0 0 328 171" aria-hidden="true"><g fill="none" stroke-width="14"><path d="M7.00,164.00A157,157 0 0,1 60.10,46.30" stroke="#2c2c2c"/><path d="M63.13,43.69A157,157 0 0,1 125.06,11.91" stroke="#362e16"/><path d="M128.94,10.96A157,157 0 0,1 321.00,164.00" stroke="#453915"/></g><circle cx="7" cy="164" r="7" fill="#2c2c2c"/><circle cx="321" cy="164" r="7" fill="#453915"/><g fill="none" stroke-width="14"><path class="gauge-fill" d="M7.00,164.00A157,157 0 0,1 321.00,164.00" pathLength="1" stroke-linecap="round" stroke-dasharray="0.5578 1"/></g></svg>
+            <p class="marks" aria-hidden="true"><span style="left:14.81%;top:17.44%">7.5</span><span style="left:37.28%;top:-4.69%">18</span></p>
+            <p class="read" id="read">
+              <span class="sr-only">Reading: </span>
+              <span class="chip"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"/></svg><span class="chip-name">Fast</span></span>
+              <span class="num"><b class="watts">31</b><span class="unit">W</span></span>
+            </p>
+          </div>
+          <p class="flow" aria-hidden="true">
+            <span class="end">0</span>
+            <span class="flow-mid"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M237.66,66.34a8,8,0,0,0-11.32,0L192,100.69,155.31,64l34.35-34.34a8,8,0,1,0-11.32-11.32L144,52.69,117.66,26.34a8,8,0,0,0-11.32,11.32L112.69,44l-53,53a40,40,0,0,0,0,56.57l15.71,15.71L26.34,218.34a8,8,0,0,0,11.32,11.32l49.09-49.09,15.71,15.71a40,40,0,0,0,56.57,0l53-53,6.34,6.35a8,8,0,0,0,11.32-11.32L203.31,112l34.35-34.34A8,8,0,0,0,237.66,66.34ZM147.72,185a24,24,0,0,1-33.95,0L71,142.23a24,24,0,0,1,0-33.95l53-53L200.69,132Z"/></svg><svg class="arrow" viewBox="0 0 48 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2.2,7H43.8M40.8,2.5L45.8,7M40.8,11.5L45.8,7"/></svg><svg class="ic batt" viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M200,56H32A24,24,0,0,0,8,80v96a24,24,0,0,0,24,24H200a24,24,0,0,0,24-24V80A24,24,0,0,0,200,56ZM208,176a8,8,0,0,1-8,8H32a8,8,0,0,1-8-8V80a8,8,0,0,1,8-8H200a8,8,0,0,1,8,8ZM256,96v64a8,8,0,0,1-16,0V96a8,8,0,0,1,16,0ZM138.81,123.79a8,8,0,0,1,.35,7.79l-16,32a8,8,0,0,1-14.32-7.16L119.06,136H100a8,8,0,0,1-7.16-11.58l16-32a8,8,0,1,1,14.32,7.16L112.94,120H132A8,8,0,0,1,138.81,123.79Z"/></svg><span>Into the battery</span></span>
+            <span class="end">100&nbsp;W</span>
+          </p>
+
+          <fieldset class="setups">
+            <legend>One phone, four ways to charge it</legend>
+          <label class="setup" data-tier="fast">
+            <input type="radio" name="setup" value="0" checked>
+            <span class="setup-rank" aria-hidden="true">1</span>
+            <span class="setup-name">90 W charger + original cable</span>
+            <span class="setup-watts">31&nbsp;W</span>
+            <span class="setup-bar" aria-hidden="true"><i style="width:100.0%"></i></span>
+            <span class="sr-only">Fast</span>
+          </label>
+          <label class="setup" data-tier="standard">
+            <input type="radio" name="setup" value="1">
+            <span class="setup-rank" aria-hidden="true">2</span>
+            <span class="setup-name">18 W charger + original cable</span>
+            <span class="setup-watts">8.6&nbsp;W</span>
+            <span class="setup-bar" aria-hidden="true"><i style="width:27.7%"></i></span>
+            <span class="sr-only">Standard</span>
+          </label>
+          <label class="setup" data-tier="slow">
+            <input type="radio" name="setup" value="2">
+            <span class="setup-rank" aria-hidden="true">3</span>
+            <span class="setup-name">90 W charger + generic cable</span>
+            <span class="setup-watts">1.6&nbsp;W</span>
+            <span class="setup-bar" aria-hidden="true"><i style="width:5.1%"></i></span>
+            <span class="sr-only">Slow</span>
+          </label>
+          <label class="setup" data-tier="slow">
+            <input type="radio" name="setup" value="3">
+            <span class="setup-rank" aria-hidden="true">4</span>
+            <span class="setup-name">Computer USB port</span>
+            <span class="setup-watts">0.5&nbsp;W</span>
+            <span class="setup-bar" aria-hidden="true"><i style="width:2.0%"></i></span>
+            <span class="sr-only">Slow</span>
+          </label>
+          </fieldset>
+          <p class="verdict" id="verdict"><b class="reason"></b><span class="note">A 90 W charger showing about 30 W is normal: phones cut fast charging as they fill.</span></p>
+          <p class="sr-only" id="said" aria-live="polite"></p>
+          <p class="fine">Results of Wattlab's 60-second test on one phone, which its maker rates at up to 90 W.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="screens wrap" aria-labelledby="screens-title">
+      <h2 id="screens-title">Three questions, answered.</h2>
+      <div class="shots">
+        <figure class="shot">
+          <div class="shot-frame"><img src="/assets/img/wattlab/charge.webp" width="720" height="1520" loading="lazy" alt="Wattlab's Charge screen: 30 W going into the battery, rated Fast, with 7,140 mA, 4.21 V, 32.4 °C and 47 minutes to full"></div>
+          <h3>How fast is it charging right now?</h3>
+          <p>Live watts, current, voltage, temperature and time to full, calibrated for the way your phone reports them.</p>
+        </figure>
+        <figure class="shot">
+          <div class="shot-frame"><img src="/assets/img/wattlab/slow.webp" width="720" height="1520" loading="lazy" alt="The Charge screen with a generic cable: 2.5 W, rated Slow, with the reason: Charging at basic USB speed"></div>
+          <h3>Why is it slow?</h3>
+          <p>A speed verdict with the main reason: heat, a cable or port at basic USB speed, a nearly full battery, battery protection, wireless charging, or the phone's own top speed.</p>
+        </figure>
+        <figure class="shot">
+          <div class="shot-frame"><img src="/assets/img/wattlab/result.webp" width="720" height="1520" loading="lazy" alt="A test result: 31 W on average, rated Fast, the fastest result on this phone so far, with a 31 W peak and steady power"></div>
+          <h3>Which charger and cable are fastest?</h3>
+          <p>A 60-second test gives average and peak watts and stability. Only tests started at a similar battery level are ranked together, so the comparison is fair.</p>
+        </figure>
+      </div>
+      <p class="fine">The speed test is free and unlimited. Screens show readings recorded on one phone.</p>
+    </section>
+
+    <section class="health" aria-labelledby="health-title">
+      <div class="health-in wrap">
+        <div class="health-copy">
+          <h2 id="health-title">Battery health, with its error range.</h2>
+          <p>Leave a charge plugged in until it finishes, such as overnight, and Wattlab reads your battery's full capacity. It shows how far the charges disagree and how many it rests on, and a health percentage only when the design capacity is known.</p>
+        </div>
+
+        <figure class="capacity" id="capacity">
+          <p class="cap-read" aria-hidden="true"><b>6,034</b><span class="cap-unit">mAh</span><span class="cap-margin">±3%</span></p>
+          <div class="cap-scale" aria-hidden="true">
+            <p class="cap-top"><span class="cap-count" style="left:47.71%">4 charges</span><span class="cap-rated-label">Rated 6,345 mAh</span></p>
+            <div class="cap-track">
+              <i class="cap-range" style="left:21.86%;width:51.71%"></i>
+              <i class="cap-charge" style="left:44.86%"></i><i class="cap-charge" style="left:46.00%"></i><i class="cap-charge" style="left:47.71%"></i>
+              <i class="cap-est" style="left:47.71%"></i>
+              <i class="cap-rated" style="left:92.14%"></i>
+            </div>
+            <p class="cap-ends"><span style="left:21.86%">5,853</span><span style="left:73.57%">6,215</span></p>
+          </div>
+          <dl class="cap-facts">
+            <div><dt>Battery health</dt><dd>About 95%</dd></div>
+            <div><dt>Rated capacity</dt><dd>6,345&nbsp;mAh</dd></div>
+            <div><dt>Charge cycles</dt><dd>164</dd></div>
+          </dl>
+          <figcaption class="sr-only">A capacity estimate of 6,034 mAh, plus or minus 3%, a range from 5,853 to 6,215 mAh. It rests on 4 charges that read within 20 mAh of each other. The maker's rated capacity is 6,345 mAh, so battery health is about 95%.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="also wrap" aria-labelledby="also-title">
+      <h2 id="also-title">It keeps working after the test.</h2>
+      <ul class="also-list">
+        <li><h3>Every charge, recorded</h3><p>Turn on auto-record and each charge is logged in the background, from plug-in to unplug.</p></li>
+        <li><h3>Battery usage</h3><p>How much battery you have used since unplugging, with screen-on and screen-off time shown apart, and a standby drain check.</p></li>
+        <li><h3>Charge alerts</h3><p>A notification at 80%, or at any level you pick from 50% to 100%.</p></li>
+        <li><h3>Home screen widget</h3><p>Charging watts and battery level, without opening the app.</p></li>
+      </ul>
+    </section>
+
+    <section class="honest wrap" aria-labelledby="honest-title">
+      <h2 id="honest-title">It only measures.</h2>
+      <div class="honest-copy">
+        <ul class="nots">
+          <li>It can't make charging faster or repair a battery, and it doesn't claim to.</li>
+          <li>No cleaner, no charging animations, no lock-screen overlays.</li>
+          <li>No made-up numbers. A value your phone doesn't report is shown as not reported.</li>
+          <li>No account and no cloud sync. Readings and charge history stay on your phone.</li>
+        </ul>
+        <p>Phones report battery current in different units and signs. Wattlab checks how yours reports it before it shows a reading. Usage statistics send rounded ranges, never raw readings.</p>
+      </div>
+      <div class="pro">
+        <h3>Measuring and diagnosis stay free.</h3>
+        <p>Pro is a one-time purchase, not a subscription. It removes ads and adds full charge history with power and temperature curves, 7-day battery usage, battery health trends, charging habit reports, unlimited setups, an overheating alert and CSV export. Or watch an optional ad to open history, curves and reports for 24 hours.</p>
+        <a class="play" href="https://play.google.com/store/apps/details?id=com.harley.wattlab&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dwattlab%26utm_campaign%3Dpro"><img src="/assets/img/google-play-badge.png" width="564" height="168" loading="lazy" alt="Get Wattlab on Google Play"></a>
+      </div>
+    </section>
+
+    <section class="more wrap" aria-labelledby="more-title">
+      <h2 id="more-title">More apps</h2>
+      <ul class="apps">
+        <li class="app" id="cooldown">
+          <img src="/assets/img/icon-cooldown.webp" width="160" height="160" loading="lazy" alt="">
+          <div>
+            <h3><a href="/">Cooldown</a></h3>
+            <p class="kind">Phone temperature monitor</p>
+            <p class="what">See your battery temperature, get an alert when your phone overheats, and find out what is heating it up.</p>
+            <a class="go" href="https://play.google.com/store/apps/details?id=com.harley.cooldown&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dwattlab%26utm_campaign%3Dmore_apps">Get it on Google Play<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          </div>
+        </li>
+        <li class="app" id="somna">
+          <img src="/assets/img/icon-somna.webp" width="160" height="160" loading="lazy" alt="">
+          <div>
+            <h3>Somna</h3>
+            <p class="kind">Sleep diary and CBT-I</p>
+            <p class="what">A sleep diary with a 6-week program based on cognitive behavioral therapy for insomnia.</p>
+            <a class="go" href="https://play.google.com/store/apps/details?id=com.harley.somna&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dwattlab%26utm_campaign%3Dmore_apps">Get it on Google Play<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          </div>
+        </li>
+        <li class="app" id="pipit">
+          <img src="/assets/img/icon-pipit.webp" width="160" height="160" loading="lazy" alt="">
+          <div>
+            <h3>Pipit</h3>
+            <p class="kind">Photo resizer in KB</p>
+            <p class="what">Resize photos and signatures to the exact file size a form asks for, like 20 KB, 50 KB or 100 KB.</p>
+            <a class="go" href="https://play.google.com/store/apps/details?id=com.harley.pipit&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dwattlab%26utm_campaign%3Dmore_apps">Get it on Google Play<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          </div>
+        </li>
+        <li class="app" id="angora">
+          <img src="/assets/img/icon-angora.webp" width="160" height="160" loading="lazy" alt="">
+          <div>
+            <h3>Angora</h3>
+            <p class="kind">Duplicate file finder</p>
+            <p class="what">Find duplicate and large files, see what fills your storage, and free up space safely, with nothing deleted until you confirm.</p>
+            <a class="go" href="https://play.google.com/store/apps/details?id=com.harley.angora&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dwattlab%26utm_campaign%3Dmore_apps">Get it on Google Play<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="foot wrap">
+    <p><b>Contact</b><a href="mailto:tamariskx@gmail.com">tamariskx@gmail.com</a></p>
+    <p><b>Privacy</b><a href="/cooldown-website/privacy.html">Cooldown</a>, <a href="/wattlab-website/privacy.html">Wattlab</a>, <a href="/somna-website/privacy.html">Somna</a>, <a href="/pipit-website/privacy.html">Pipit</a>, <a href="/angora-website/privacy.html">Angora</a></p>
+    <p class="fine">Google Play and the Google Play logo are trademarks of Google LLC.</p>
+  </footer>
+
+  <script>
+    (() => {
+      // The bench: picking a setup swings the gauge to that setup's 60-second test result. It steps through the four
+      // on its own while it is on screen, pauses under a pointer or focus, and stops for good once someone picks one.
+      const bench = document.getElementById("bench");
+      const setups = JSON.parse(bench.dataset.setups);
+      const inputs = [...bench.querySelectorAll('input[name="setup"]')];
+      const fill = bench.querySelector(".gauge-fill");
+      const read = document.getElementById("read");
+      const watts = read.querySelector(".watts");
+      const chipIcon = read.querySelector(".chip path");
+      const chipName = read.querySelector(".chip-name");
+      const verdict = document.getElementById("verdict");
+      const reason = verdict.querySelector(".reason");
+      const note = verdict.querySelector(".note");
+      const said = document.getElementById("said");
+      const reduce = matchMedia("(prefers-reduced-motion: reduce)");
+      const FULL_SCALE = 100000;                       // mW, as ChargePresentation.gaugeFraction
+      const fraction = (mw) => Math.sqrt(Math.max(0, mw) / FULL_SCALE);
+      const format = (mw) => (mw < 9950 ? (mw / 1000).toFixed(1) : String(Math.round(mw / 1000)));
+
+      // The gauge moves on the app's own spring (Gauge.kt: low bouncy, low stiffness); the number counts without overshoot.
+      const STIFFNESS = 200, DAMPING = 2 * 0.75 * Math.sqrt(STIFFNESS);
+      let x = fraction(setups[0].mw), v = 0, target = x, shownMw = setups[0].mw, count = null, frame = 0, last = 0;
+      const draw = () => {
+        fill.style.strokeDasharray = Math.max(0, x).toFixed(4) + " 1";
+        bench.style.setProperty("--glow", Math.min(1, Math.max(0, x)).toFixed(3));
+      };
+      const tick = (now) => {
+        const dt = Math.min(0.032, (now - last) / 1000 || 0.016);
+        last = now;
+        for (let i = 0, h = dt / 4; i < 4; i++) { v += (STIFFNESS * (target - x) - DAMPING * v) * h; x += v * h; }
+        let counting = false;
+        if (count) {
+          const p = Math.min(1, (now - count.start) / 520);
+          shownMw = count.from + (count.to - count.from) * (1 - Math.pow(1 - p, 3));
+          watts.textContent = p < 1 ? format(shownMw) : count.text;
+          if (p < 1) counting = true; else count = null;
+        }
+        draw();
+        if (counting || Math.abs(target - x) > 0.0004 || Math.abs(v) > 0.0004) frame = requestAnimationFrame(tick);
+        else { x = target; v = 0; draw(); frame = 0; }
+      };
+      const show = (i, instant) => {
+        const s = setups[i];
+        bench.dataset.tier = s.tier;
+        chipIcon.setAttribute("d", s.icon);
+        chipName.textContent = s.tierName;
+        reason.textContent = s.reason;
+        note.textContent = s.note;
+        target = fraction(s.mw);
+        if (instant || reduce.matches) {
+          x = target; v = 0; shownMw = s.mw; count = null;
+          watts.textContent = s.watts;
+          draw();
+          return;
+        }
+        count = { from: shownMw, to: s.mw, text: s.watts, start: performance.now() };
+        if (!frame) { last = performance.now(); frame = requestAnimationFrame(tick); }
+      };
+
+      let auto = !reduce.matches, held = false, seen = false, current = 0;
+      for (const input of inputs) {
+        input.addEventListener("change", () => {
+          auto = false;
+          current = Number(input.value);
+          show(current);
+          said.textContent = setups[current].said;   // read out once, and only for a choice someone made
+        });
+      }
+      bench.addEventListener("pointerenter", () => { held = true; });
+      bench.addEventListener("pointerleave", () => { held = false; });
+      bench.addEventListener("focusin", () => { held = true; });
+      bench.addEventListener("focusout", () => { held = false; });
+      setInterval(() => {
+        if (!auto || held || !seen || document.hidden) return;
+        current = (current + 1) % setups.length;
+        inputs[current].checked = true;
+        show(current);
+      }, 4200);
+
+      // On arrival the needle starts at zero and swings up to the first result, once.
+      if ("IntersectionObserver" in window) {
+        let started = false;
+        if (!reduce.matches) { x = 0; shownMw = 0; watts.textContent = "0.0"; draw(); }
+        new IntersectionObserver((entries) => {
+          seen = entries[0].isIntersecting;
+          if (seen && !started) { started = true; show(current); }
+        }, { threshold: 0.35 }).observe(bench.querySelector(".meter"));
+      }
+    })();
+
+    (() => {
+      // The capacity scale draws itself the first time it scrolls into view.
+      const figure = document.getElementById("capacity");
+      if (!("IntersectionObserver" in window) || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      figure.classList.add("wait");
+      new IntersectionObserver((entries, observer) => {
+        if (!entries[0].isIntersecting) return;
+        observer.disconnect();
+        figure.classList.remove("wait");
+      }, { threshold: 0.5 }).observe(figure.querySelector(".cap-scale"));
+    })();
+
+    (() => {
+      // Picking a language remembers it, so the English page stops sending this browser to its own language.
+      for (const link of document.querySelectorAll("a[data-lang]")) {
+        link.addEventListener("click", () => { try { localStorage.setItem("lang", link.dataset.lang); } catch (e) {} });
+      }
+      // The menu closes on Escape or a click outside it.
+      const menu = document.querySelector(".lang-menu");
+      document.addEventListener("click", (event) => { if (menu.open && !menu.contains(event.target)) menu.open = false; });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && menu.open) { menu.open = false; menu.querySelector("summary").focus(); }
+      });
+    })();
+  </script>
+</body>
+</html>

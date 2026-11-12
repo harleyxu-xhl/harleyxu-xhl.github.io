@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="{{html_lang}}" class="wattlab">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}}</title>
+  <meta name="description" content="{{description|attr}}">
+  <link rel="canonical" href="{{url}}">
+{{alternates}}
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#111214">
+  <link rel="icon" href="/assets/img/wattlab/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="icon" href="/assets/img/wattlab/favicon.png" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="/assets/img/wattlab/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Wattlab">
+  <meta property="og:url" content="{{url}}">
+  <meta property="og:locale" content="{{og_locale}}">
+  <meta property="og:title" content="{{og_title|attr}}">
+  <meta property="og:description" content="{{og_description|attr}}">
+  <meta property="og:image" content="{{og_image}}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="/assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="/assets/wattlab.css">
+  <script>document.documentElement.classList.add("js");</script>
+{{redirect}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Wattlab: Charging Speed Test",
+    "operatingSystem": "Android",
+    "applicationCategory": "UtilitiesApplication",
+    "inLanguage": "{{html_lang}}",
+    "description": {{ld_description|json}},
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.harley.wattlab",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">{{skip}}</a>
+
+  <header class="top wrap dark">
+{{nav}}
+    <div class="top-end">
+      <details class="lang-menu">
+        <summary aria-label="{{language|attr}}: {{lang_name|attr}}">{{globe}}<span>{{lang_name}}</span></summary>
+{{lang_menu}}
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="stage dark" id="wattlab" aria-labelledby="hero-title">
+      <div class="stage-in wrap">
+        <div class="hero-copy">
+          <p class="app-id">
+            <img src="/assets/img/icon-wattlab.webp" width="160" height="160" alt="">
+            <span><b>Wattlab</b><small>{{tagline}}</small></span>
+          </p>
+          <h1 id="hero-title">{{h1}}</h1>
+          <p class="lede">{{lede}}</p>
+          <div class="cta">
+            <a class="play" href="{{play_hero}}"><img src="{{badge}}" width="{{badge_w}}" height="{{badge_h}}" alt="{{badge_alt|attr}}"></a>
+            <p class="fine">{{free_note}}</p>
+          </div>
+        </div>
+
+        <div class="bench" id="bench" data-tier="fast" data-setups="{{setups_json|attr}}">
+          <div class="meter">
+            {{gauge}}
+            <p class="marks" aria-hidden="true">{{gauge_marks}}</p>
+            <p class="read" id="read">
+              <span class="sr-only">{{reading}}: </span>
+              <span class="chip"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="{{tier_icon}}"/></svg><span class="chip-name">{{tiers_fast}}</span></span>
+              <span class="num"><b class="watts">{{watts_first}}</b><span class="unit">W</span></span>
+            </p>
+          </div>
+          <p class="flow" aria-hidden="true">
+            <span class="end">0</span>
+            <span class="flow-mid">{{icon_plug}}<svg class="arrow" viewBox="0 0 48 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2.2,7H43.8M40.8,2.5L45.8,7M40.8,11.5L45.8,7"/></svg>{{icon_battery}}<span>{{flow}}</span></span>
+            <span class="end">100&nbsp;W</span>
+          </p>
+
+          <fieldset class="setups">
+            <legend>{{bench_title}}</legend>
+{{setups}}
+          </fieldset>
+          <p class="verdict" id="verdict"><b class="reason"></b><span class="note">{{notes_original}}</span></p>
+          <p class="sr-only" id="said" aria-live="polite"></p>
+          <p class="fine">{{bench_note}}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="screens wrap" aria-labelledby="screens-title">
+      <h2 id="screens-title">{{screens_title}}</h2>
+      <div class="shots">
+        <figure class="shot">
+          <div class="shot-frame"><img src="{{img}}charge.webp" width="720" height="1520" loading="lazy" alt="{{shot_charge_alt|attr}}"></div>
+          <h3>{{shot_charge_title}}</h3>
+          <p>{{shot_charge_body}}</p>
+        </figure>
+        <figure class="shot">
+          <div class="shot-frame"><img src="{{img}}slow.webp" width="720" height="1520" loading="lazy" alt="{{shot_slow_alt|attr}}"></div>
+          <h3>{{shot_slow_title}}</h3>
+          <p>{{shot_slow_body}}</p>
+        </figure>
+        <figure class="shot">
+          <div class="shot-frame"><img src="{{img}}result.webp" width="720" height="1520" loading="lazy" alt="{{shot_result_alt|attr}}"></div>
+          <h3>{{shot_result_title}}</h3>
+          <p>{{shot_result_body}}</p>
+        </figure>
+      </div>
+      <p class="fine">{{screens_note}}</p>
+    </section>
+
+    <section class="health" aria-labelledby="health-title">
+      <div class="health-in wrap">
+        <div class="health-copy">
+          <h2 id="health-title">{{health_title}}</h2>
+          <p>{{health_body}}</p>
+        </div>
+
+        <figure class="capacity" id="capacity">
+          <p class="cap-read" aria-hidden="true"><b>{{cap_value}}</b><span class="cap-unit">mAh</span><span class="cap-margin">{{cap_margin}}</span></p>
+          <div class="cap-scale" aria-hidden="true">
+            <p class="cap-top"><span class="cap-count" style="left:{{cap_at}}">{{cap_charges}}</span><span class="cap-rated-label">{{cap_rated_label}}</span></p>
+            <div class="cap-track">
+              <i class="cap-range" style="left:{{cap_low_at}};width:{{cap_width}}"></i>
+              {{cap_marks}}
+              <i class="cap-est" style="left:{{cap_at}}"></i>
+              <i class="cap-rated" style="left:{{cap_rated_at}}"></i>
+            </div>
+            <p class="cap-ends"><span style="left:{{cap_low_at}}">{{cap_low}}</span><span style="left:{{cap_high_at}}">{{cap_high}}</span></p>
+          </div>
+          <dl class="cap-facts">
+            <div><dt>{{fact_health}}</dt><dd>{{fact_health_value}}</dd></div>
+            <div><dt>{{fact_rated}}</dt><dd>{{cap_rated}}&nbsp;mAh</dd></div>
+            <div><dt>{{fact_cycles}}</dt><dd>{{cap_cycles}}</dd></div>
+          </dl>
+          <figcaption class="sr-only">{{cap_caption}}</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="also wrap" aria-labelledby="also-title">
+      <h2 id="also-title">{{also_title}}</h2>
+      <ul class="also-list">
+        <li><h3>{{also_record_title}}</h3><p>{{also_record_body}}</p></li>
+        <li><h3>{{also_usage_title}}</h3><p>{{also_usage_body}}</p></li>
+        <li><h3>{{also_alert_title}}</h3><p>{{also_alert_body}}</p></li>
+        <li><h3>{{also_widget_title}}</h3><p>{{also_widget_body}}</p></li>
+      </ul>
+    </section>
+
+    <section class="honest wrap" aria-labelledby="honest-title">
+      <h2 id="honest-title">{{honest_title}}</h2>
+      <div class="honest-copy">
+        <ul class="nots">
+          <li>{{nots_0}}</li>
+          <li>{{nots_1}}</li>
+          <li>{{nots_2}}</li>
+          <li>{{nots_3}}</li>
+        </ul>
+        <p>{{honest_body}}</p>
+      </div>
+      <div class="pro">
+        <h3>{{pro_title}}</h3>
+        <p>{{pro_body}}</p>
+        <a class="play" href="{{play_pro}}"><img src="{{badge}}" width="{{badge_w}}" height="{{badge_h}}" loading="lazy" alt="{{badge_alt|attr}}"></a>
+      </div>
+    </section>
+
+    <section class="more wrap" aria-labelledby="more-title">
+      <h2 id="more-title">{{more_title}}</h2>
+      <ul class="apps">
+{{more_apps}}
+      </ul>
+    </section>
+  </main>
+
+{{footer}}
+
+  <script>
+    (() => {
+      // The bench: picking a setup swings the gauge to that setup's 60-second test result. It steps through the four
+      // on its own while it is on screen, pauses under a pointer or focus, and stops for good once someone picks one.
+      const bench = document.getElementById("bench");
+      const setups = JSON.parse(bench.dataset.setups);
+      const inputs = [...bench.querySelectorAll('input[name="setup"]')];
+      const fill = bench.querySelector(".gauge-fill");
+      const read = document.getElementById("read");
+      const watts = read.querySelector(".watts");
+      const chipIcon = read.querySelector(".chip path");
+      const chipName = read.querySelector(".chip-name");
+      const verdict = document.getElementById("verdict");
+      const reason = verdict.querySelector(".reason");
+      const note = verdict.querySelector(".note");
+      const said = document.getElementById("said");
+      const reduce = matchMedia("(prefers-reduced-motion: reduce)");
+      const FULL_SCALE = 100000;                       // mW, as ChargePresentation.gaugeFraction
+      const fraction = (mw) => Math.sqrt(Math.max(0, mw) / FULL_SCALE);
+      const format = (mw) => (mw < 9950 ? (mw / 1000).toFixed(1) : String(Math.round(mw / 1000)));
+
+      // The gauge moves on the app's own spring (Gauge.kt: low bouncy, low stiffness); the number counts without overshoot.
+      const STIFFNESS = 200, DAMPING = 2 * 0.75 * Math.sqrt(STIFFNESS);
+      let x = fraction(setups[0].mw), v = 0, target = x, shownMw = setups[0].mw, count = null, frame = 0, last = 0;
+      const draw = () => {
+        fill.style.strokeDasharray = Math.max(0, x).toFixed(4) + " 1";
+        bench.style.setProperty("--glow", Math.min(1, Math.max(0, x)).toFixed(3));
+      };
+      const tick = (now) => {
+        const dt = Math.min(0.032, (now - last) / 1000 || 0.016);
+        last = now;
+        for (let i = 0, h = dt / 4; i < 4; i++) { v += (STIFFNESS * (target - x) - DAMPING * v) * h; x += v * h; }
+        let counting = false;
+        if (count) {
+          const p = Math.min(1, (now - count.start) / 520);
+          shownMw = count.from + (count.to - count.from) * (1 - Math.pow(1 - p, 3));
+          watts.textContent = p < 1 ? format(shownMw) : count.text;
+          if (p < 1) counting = true; else count = null;
+        }
+        draw();
+        if (counting || Math.abs(target - x) > 0.0004 || Math.abs(v) > 0.0004) frame = requestAnimationFrame(tick);
+        else { x = target; v = 0; draw(); frame = 0; }
+      };
+      const show = (i, instant) => {
+        const s = setups[i];
+        bench.dataset.tier = s.tier;
+        chipIcon.setAttribute("d", s.icon);
+        chipName.textContent = s.tierName;
+        reason.textContent = s.reason;
+        note.textContent = s.note;
+        target = fraction(s.mw);
+        if (instant || reduce.matches) {
+          x = target; v = 0; shownMw = s.mw; count = null;
+          watts.textContent = s.watts;
+          draw();
+          return;
+        }
+        count = { from: shownMw, to: s.mw, text: s.watts, start: performance.now() };
+        if (!frame) { last = performance.now(); frame = requestAnimationFrame(tick); }
+      };
+
+      let auto = !reduce.matches, held = false, seen = false, current = 0;
+      for (const input of inputs) {
+        input.addEventListener("change", () => {
+          auto = false;
+          current = Number(input.value);
+          show(current);
+          said.textContent = setups[current].said;   // read out once, and only for a choice someone made
+        });
+      }
+      bench.addEventListener("pointerenter", () => { held = true; });
+      bench.addEventListener("pointerleave", () => { held = false; });
+      bench.addEventListener("focusin", () => { held = true; });
+      bench.addEventListener("focusout", () => { held = false; });
+      setInterval(() => {
+        if (!auto || held || !seen || document.hidden) return;
+        current = (current + 1) % setups.length;
+        inputs[current].checked = true;
+        show(current);
+      }, 4200);
+
+      // On arrival the needle starts at zero and swings up to the first result, once.
+      if ("IntersectionObserver" in window) {
+        let started = false;
+        if (!reduce.matches) { x = 0; shownMw = 0; watts.textContent = "0.0"; draw(); }
+        new IntersectionObserver((entries) => {
+          seen = entries[0].isIntersecting;
+          if (seen && !started) { started = true; show(current); }
+        }, { threshold: 0.35 }).observe(bench.querySelector(".meter"));
+      }
+    })();
+
+    (() => {
+      // The capacity scale draws itself the first time it scrolls into view.
+      const figure = document.getElementById("capacity");
+      if (!("IntersectionObserver" in window) || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      figure.classList.add("wait");
+      new IntersectionObserver((entries, observer) => {
+        if (!entries[0].isIntersecting) return;
+        observer.disconnect();
+        figure.classList.remove("wait");
+      }, { threshold: 0.5 }).observe(figure.querySelector(".cap-scale"));
+    })();
+
+{{menu_script}}
+  </script>
+</body>
+</html>

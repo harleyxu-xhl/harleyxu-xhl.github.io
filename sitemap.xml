@@ -165,4 +165,16 @@
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://harleyxu-xhl.github.io/zh/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://harleyxu-xhl.github.io/"/>
   </url>
+  <url>
+    <loc>https://harleyxu-xhl.github.io/wattlab/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harleyxu-xhl.github.io/wattlab/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://harleyxu-xhl.github.io/wattlab/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://harleyxu-xhl.github.io/wattlab/"/>
+  </url>
+  <url>
+    <loc>https://harleyxu-xhl.github.io/wattlab/zh/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harleyxu-xhl.github.io/wattlab/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://harleyxu-xhl.github.io/wattlab/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://harleyxu-xhl.github.io/wattlab/"/>
+  </url>
 </urlset>
