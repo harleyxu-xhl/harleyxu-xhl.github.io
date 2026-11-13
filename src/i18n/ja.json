@@ -25,13 +25,15 @@
   "過熱",
   "危険"
  ],
- "scale_caption": "30〜50°Cのバッテリー温度スケール。Cooldownの4段階（正常、やや高め、過熱、危険）に分かれています。{t_alert}は過熱に入ります。",
+ "scale_label": "バッテリー温度",
+ "scale_hint": "針をドラッグするか、レベルをタップすると、Cooldownの表示が変わります。",
  "notice_label": "Cooldownの発熱アラートの例",
  "now": "今",
- "notice_title": "高温を検出しました",
- "notice_text": "バッテリー {t_alert} · ゲーム、カメラ、ナビ、テザリングを一時停止してください。",
  "action_display": "画面",
  "action_saver": "省電力",
+ "why_title": "何が熱くしているのかがわかる。",
+ "why_body": "CooldownはAndroidが報告する情報を1つの発熱リスクスコアにまとめ、その要因を示します。バッテリーの高温、急な温度上昇、充電、システムの熱負荷、CPU/GPUの発熱などです。",
+ "why_note": "発熱リスクスコアは無料です。要因の詳細はProの機能です。カードはサンプルデータです。",
  "screens_title": "ひと目で確認。あとから振り返りも。",
  "shot": {
   "widget_alt": "{w1}、{w2}、{t_alert}を表示したCooldownウィジェットのあるホーム画面",

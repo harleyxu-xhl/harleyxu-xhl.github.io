@@ -25,13 +25,15 @@
   "Terlalu panas",
   "Kritis"
  ],
- "scale_caption": "Skala suhu baterai dari 30 hingga 50°C, dibagi menjadi empat level Cooldown: Normal, Hangat, Terlalu panas, dan Kritis. Pembacaan {t_alert} masuk level Terlalu panas.",
+ "scale_label": "Suhu baterai",
+ "scale_hint": "Geser jarum atau ketuk salah satu level untuk melihat apa kata Cooldown.",
  "notice_label": "Contoh peringatan panas Cooldown",
  "now": "sekarang",
- "notice_title": "Suhu tinggi terdeteksi",
- "notice_text": "Baterai {t_alert} · Jeda game, kamera, navigasi, atau hotspot.",
  "action_display": "Layar",
  "action_saver": "Penghemat baterai",
+ "why_title": "Lihat apa yang membuatnya panas.",
+ "why_body": "Cooldown merangkum laporan Android menjadi satu skor risiko panas, lalu menyebutkan penyebabnya: baterai yang panas, suhu yang naik cepat, pengisian daya, tekanan termal sistem, atau CPU/GPU yang hangat.",
+ "why_note": "Skor risiko panas gratis. Detail di baliknya adalah bagian dari Pro. Kartu menampilkan contoh data.",
  "screens_title": "Cek sekilas, atau lihat riwayatnya nanti.",
  "shot": {
   "widget_alt": "Layar utama dengan widget Cooldown yang menunjukkan {w1}, {w2}, dan {t_alert}",

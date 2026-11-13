@@ -25,13 +25,15 @@
   "Surriscaldato",
   "Critico"
  ],
- "scale_caption": "Una scala della temperatura della batteria da 30 a 50°C, divisa nei quattro livelli di Cooldown: Normale, Caldo, Surriscaldato e Critico. Una lettura di {t_alert} rientra in Surriscaldato.",
+ "scale_label": "Temperatura della batteria",
+ "scale_hint": "Trascina la lancetta o tocca un livello per vedere cosa ti direbbe Cooldown.",
  "notice_label": "Esempio di avviso di calore di Cooldown",
  "now": "ora",
- "notice_title": "Rilevata alta temperatura",
- "notice_text": "Batteria {t_alert} · Metti in pausa giochi, fotocamera, navigatore o hotspot.",
  "action_display": "Schermo",
  "action_saver": "Risparmio energetico",
+ "why_title": "Scopri cosa lo sta scaldando.",
+ "why_body": "Cooldown riassume ciò che Android segnala in un unico punteggio di rischio di calore e ti dice cosa c’è dietro: una batteria calda, un aumento rapido, la ricarica, lo stress termico del sistema o una CPU/GPU calda.",
+ "why_note": "Il punteggio di rischio di calore è gratuito. I dettagli che lo spiegano fanno parte di Pro. La scheda mostra dati di esempio.",
  "screens_title": "Controlla con un’occhiata, o riguarda tutto più tardi.",
  "shot": {
   "widget_alt": "Schermata Home con widget Cooldown che indicano {w1}, {w2} e {t_alert}",

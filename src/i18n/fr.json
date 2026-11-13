@@ -25,13 +25,15 @@
   "Surchauffe",
   "Critique"
  ],
- "scale_caption": "Une échelle de température de la batterie de 30 à 50°C, divisée en quatre niveaux Cooldown : Normal, Chaud, Surchauffe et Critique. Un relevé de {t_alert} se situe en Surchauffe.",
+ "scale_label": "Température de la batterie",
+ "scale_hint": "Faites glisser l’aiguille ou touchez un niveau pour voir ce que Cooldown vous dirait.",
  "notice_label": "Exemple d’alerte de chaleur Cooldown",
  "now": "maintenant",
- "notice_title": "Température élevée détectée",
- "notice_text": "Batterie {t_alert} · Mettez en pause les jeux, l’appareil photo, la navigation ou le partage de connexion.",
  "action_display": "Écran",
  "action_saver": "Économiseur",
+ "why_title": "Voyez ce qui le fait chauffer.",
+ "why_body": "Cooldown réunit ce qu’Android signale en un seul score de risque de chaleur, et nomme ce qui l’explique : une batterie chaude, une hausse rapide, la recharge, un stress thermique du système ou un CPU/GPU qui chauffe.",
+ "why_note": "Le score de risque de chaleur est gratuit. Les détails qui l’expliquent font partie de Pro. La carte montre des données d’exemple.",
  "screens_title": "Un coup d’œil suffit, et l’historique reste là.",
  "shot": {
   "widget_alt": "Écran d’accueil avec des widgets Cooldown affichant {w1}, {w2} et {t_alert}",

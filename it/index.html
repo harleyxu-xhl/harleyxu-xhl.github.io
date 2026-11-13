@@ -122,37 +122,62 @@
           <p>I telefoni si scaldano mentre si ricaricano, riproducono video o fanno girare giochi, e un po’ di calore è normale. Cooldown mette ogni lettura della batteria su un’unica scala e ti avvisa quando raggiunge la tua soglia di avviso, 42°C per impostazione predefinita.</p>
         </div>
 
-        <figure class="scale" id="scale" data-level="hot" data-levels="[&quot;Normale&quot;, &quot;Caldo&quot;, &quot;Surriscaldato&quot;, &quot;Critico&quot;]">
-          <p class="readout" aria-hidden="true"><b class="needle-val">42,3°C</b><span class="needle-level">Surriscaldato</span></p>
-          <div class="scale-track" aria-hidden="true">
-            <div class="needle"><i class="needle-line"></i></div>
-            <div class="ticks"></div>
-            <div class="zones"><i></i><i></i><i></i><i></i></div>
-            <div class="nums"><span style="left:0">30</span><span style="left:25%">35</span><span style="left:50%">40</span><span style="left:75%">45</span><span style="left:100%">50°C</span></div>
+        <div class="scale" id="scale" data-level="hot" data-alert data-state="{&quot;levels&quot;: [{&quot;name&quot;: &quot;Normale&quot;, &quot;advice&quot;: &quot;Uso leggero OK&quot;}, {&quot;name&quot;: &quot;Caldo&quot;, &quot;advice&quot;: &quot;Abbassa la luminosità e metti in pausa le attività pesanti.&quot;}, {&quot;name&quot;: &quot;Surriscaldato&quot;, &quot;advice&quot;: &quot;Metti in pausa video, fotocamera, navigatore o hotspot.&quot;}, {&quot;name&quot;: &quot;Critico&quot;, &quot;advice&quot;: &quot;Interrompi subito la ricarica e le attività pesanti.&quot;}], &quot;alerts&quot;: [{&quot;title&quot;: &quot;Rilevata alta temperatura&quot;, &quot;text&quot;: &quot;Batteria {t} · Metti in pausa giochi, fotocamera, navigatore o hotspot.&quot;}, {&quot;title&quot;: &quot;Rilevato calore critico&quot;, &quot;text&quot;: &quot;Batteria {t} · Interrompi subito le attività pesanti.&quot;}]}">
+          <div class="reading">
+            <b class="needle-val">42,3°C</b>
+            <p class="status"><b class="needle-level">Surriscaldato</b> <span class="needle-advice">Metti in pausa video, fotocamera, navigatore o hotspot.</span></p>
           </div>
-          <ul class="zone-names" aria-hidden="true">
-            <li>Normale</li><li>Caldo</li><li>Surriscaldato</li><li>Critico</li>
-          </ul>
-          <figcaption class="sr-only">Una scala della temperatura della batteria da 30 a 50°C, divisa nei quattro livelli di Cooldown: Normale, Caldo, Surriscaldato e Critico. Una lettura di 42,3°C rientra in Surriscaldato.</figcaption>
-        </figure>
 
-        <figure class="notice" id="alert" aria-label="Esempio di avviso di calore di Cooldown">
-          <div class="notice-head">
-            <span class="notice-icon" aria-hidden="true"><svg viewBox="0 0 256 256"><path fill="currentColor" d="M160,146.08V40a32,32,0,0,0-64,0V146.08a56,56,0,1,0,64,0ZM128,24a16,16,0,0,1,16,16v64H112V40A16,16,0,0,1,128,24Z"/></svg></span>
-            <span>Cooldown · ora</span>
+          <div class="scale-track">
+            <div class="rail">
+              <input class="scale-input" type="range" min="30" max="50" step="0.1" value="42.3" aria-label="Temperatura della batteria">
+              <div class="needle" aria-hidden="true"><i class="needle-line"></i></div>
+              <div class="ticks" aria-hidden="true"></div>
+              <div class="zones" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            </div>
+            <div class="nums" aria-hidden="true"><span style="left:0">30</span><span style="left:25%">35</span><span style="left:50%">40</span><span class="alert-mark" style="left:60%"><svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M224,71.1a8,8,0,0,1-10.78-3.42,94.13,94.13,0,0,0-33.46-36.91,8,8,0,1,1,8.54-13.54,111.46,111.46,0,0,1,39.12,43.09A8,8,0,0,1,224,71.1ZM35.71,72a8,8,0,0,0,7.1-4.32A94.13,94.13,0,0,1,76.27,30.77a8,8,0,1,0-8.54-13.54A111.46,111.46,0,0,0,28.61,60.32,8,8,0,0,0,35.71,72Zm186.1,103.94A16,16,0,0,1,208,200H167.2a40,40,0,0,1-78.4,0H48a16,16,0,0,1-13.79-24.06C43.22,160.39,48,138.28,48,112a80,80,0,0,1,160,0C208,138.27,212.78,160.38,221.81,175.94ZM150.62,200H105.38a24,24,0,0,0,45.24,0ZM208,184c-10.64-18.27-16-42.49-16-72a64,64,0,0,0-128,0c0,29.52-5.38,53.74-16,72Z"/></svg></span><span style="left:75%">45</span><span style="left:100%">50°C</span></div>
           </div>
-          <p class="notice-title">Rilevata alta temperatura</p>
-          <p class="notice-text">Batteria 42,3°C · Metti in pausa giochi, fotocamera, navigatore o hotspot.</p>
-          <p class="notice-actions" aria-hidden="true"><span>Schermo</span><span>Risparmio energetico</span></p>
-        </figure>
+          <ul class="zone-names">
+            <li><button type="button" data-reading="30.9" aria-pressed="false">Normale</button></li>
+            <li><button type="button" data-reading="38.4" aria-pressed="false">Caldo</button></li>
+            <li><button type="button" data-reading="42.3" aria-pressed="true">Surriscaldato</button></li>
+            <li><button type="button" data-reading="46.8" aria-pressed="false">Critico</button></li>
+          </ul>
+          <p class="scale-hint">Trascina la lancetta o tocca un livello per vedere cosa ti direbbe Cooldown.</p>
+          <p class="sr-only" id="scale-said" role="status"></p>
+
+          <div class="alert-slot">
+            <p class="alert-idle" aria-hidden="true"><svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M224,71.1a8,8,0,0,1-10.78-3.42,94.13,94.13,0,0,0-33.46-36.91,8,8,0,1,1,8.54-13.54,111.46,111.46,0,0,1,39.12,43.09A8,8,0,0,1,224,71.1ZM35.71,72a8,8,0,0,0,7.1-4.32A94.13,94.13,0,0,1,76.27,30.77a8,8,0,1,0-8.54-13.54A111.46,111.46,0,0,0,28.61,60.32,8,8,0,0,0,35.71,72Zm186.1,103.94A16,16,0,0,1,208,200H167.2a40,40,0,0,1-78.4,0H48a16,16,0,0,1-13.79-24.06C43.22,160.39,48,138.28,48,112a80,80,0,0,1,160,0C208,138.27,212.78,160.38,221.81,175.94ZM150.62,200H105.38a24,24,0,0,0,45.24,0ZM208,184c-10.64-18.27-16-42.49-16-72a64,64,0,0,0-128,0c0,29.52-5.38,53.74-16,72Z"/></svg><span>Avvisi di calore</span><b>42°C</b></p>
+            <figure class="notice" id="alert" aria-label="Esempio di avviso di calore di Cooldown">
+              <div class="notice-head">
+                <span class="notice-icon" aria-hidden="true"><svg viewBox="0 0 256 256"><path fill="currentColor" d="M160,146.08V40a32,32,0,0,0-64,0V146.08a56,56,0,1,0,64,0ZM128,24a16,16,0,0,1,16,16v64H112V40A16,16,0,0,1,128,24Z"/></svg></span>
+                <span>Cooldown · ora</span>
+              </div>
+              <p class="notice-title">Rilevata alta temperatura</p>
+              <p class="notice-text">Batteria 42,3°C · Metti in pausa giochi, fotocamera, navigatore o hotspot.</p>
+              <p class="notice-actions" aria-hidden="true"><span>Schermo</span><span>Risparmio energetico</span></p>
+            </figure>
+          </div>
+        </div>
       </div>
+    </section>
+
+    <section class="why wrap" aria-labelledby="why-title">
+      <div class="why-copy">
+        <h2 id="why-title">Scopri cosa lo sta scaldando.</h2>
+        <p>Cooldown riassume ciò che Android segnala in un unico punteggio di rischio di calore e ti dice cosa c’è dietro: una batteria calda, un aumento rapido, la ricarica, lo stress termico del sistema o una CPU/GPU calda.</p>
+        <p class="fine">Il punteggio di rischio di calore è gratuito. I dettagli che lo spiegano fanno parte di Pro. La scheda mostra dati di esempio.</p>
+      </div>
+      <figure class="why-card">
+        <img src="/assets/img/it/cooldown-risk.webp" width="1080" height="915" loading="lazy" alt="Rischio di calore: 83 / 100, Alto. Dettagli del rischio: La temperatura è alta. Temperatura batteria: 42,3°C. In carica. La ricarica può scaldare la batteria.">
+      </figure>
     </section>
 
     <section class="screens wrap" aria-labelledby="screens-title">
       <h2 id="screens-title">Controlla con un’occhiata, o riguarda tutto più tardi.</h2>
       <div class="shots">
         <figure class="shot">
-          <div class="shot-frame"><img src="/assets/img/it/cooldown-widget.webp" width="720" height="1540" loading="lazy" alt="Schermata Home con widget Cooldown che indicano 28,0°C, 38,4°C e 42,3°C"></div>
+          <div class="shot-frame"><img src="/assets/img/it/cooldown-widget.webp" width="720" height="1240" loading="lazy" alt="Schermata Home con widget Cooldown che indicano 28,0°C, 38,4°C e 42,3°C"></div>
           <h3>Nella schermata Home</h3>
           <p>Il widget mostra l’ultima lettura, così puoi controllarla senza aprire l’app.</p>
         </figure>
@@ -262,38 +287,79 @@
 
   <script>
     (() => {
-      // The reading starts at the one shown on the phone above and climbs to the alert, once.
+      // The scale works like the app: drag the needle or pick a level, and the reading, its level, the app's
+      // advice and the heat alert follow. It opens by climbing once from the reading on the phone above to the alert.
       const scale = document.getElementById("scale");
-      const alert = document.getElementById("alert");
-      if (!("IntersectionObserver" in window) || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      const input = scale.querySelector(".scale-input");
       const needle = scale.querySelector(".needle");
       const value = scale.querySelector(".needle-val");
       const level = scale.querySelector(".needle-level");
-      const names = JSON.parse(scale.dataset.levels);
+      const advice = scale.querySelector(".needle-advice");
+      const title = scale.querySelector(".notice-title");
+      const text = scale.querySelector(".notice-text");
+      const said = document.getElementById("scale-said");
+      const buttons = [...scale.querySelectorAll(".zone-names button")];
+      const state = JSON.parse(scale.dataset.state);
+      const reduce = matchMedia("(prefers-reduced-motion: reduce)");
       const number = new Intl.NumberFormat(document.documentElement.lang, { minimumFractionDigits: 1, maximumFractionDigits: 1 });
-      const from = 30.9, to = 42.3, min = 30, max = 50;
-      const levels = [[38, "normal", names[0]], [42, "warm", names[1]], [46, "hot", names[2]], [Infinity, "hot", names[3]]];
+      const min = +input.min, max = +input.max;
+      // TemperatureLevel.kt: Warm from 38°C, Overheated from 42°C (the default alert threshold), Critical from 46°C.
+      const limits = [38, 42, 46, Infinity], colors = ["normal", "warm", "hot", "critical"];
+      let now = +input.value, frame = 0, touched = false;
+
       const show = (c) => {
-        const [, key, name] = levels.find(([limit]) => c < limit);
+        now = c;
+        const i = limits.findIndex((limit) => c < limit);
+        const reading = number.format(c) + "°C";
+        const alert = i > 1 ? state.alerts[i - 2] : null;
         needle.style.setProperty("--t", ((c - min) / (max - min)).toFixed(4));
-        scale.dataset.level = key;
-        value.textContent = number.format(c) + "°C";
-        level.textContent = name;
+        scale.dataset.level = colors[i];
+        scale.toggleAttribute("data-alert", !!alert);
+        value.textContent = reading;
+        level.textContent = state.levels[i].name;
+        advice.textContent = state.levels[i].advice;
+        if (alert) {
+          title.textContent = alert.title;
+          text.textContent = alert.text.replace("{t}", reading);
+        }
+        buttons.forEach((button, n) => button.setAttribute("aria-pressed", n === i));
+        input.setAttribute("aria-valuetext", reading + ", " + state.levels[i].name + ". " + state.levels[i].advice);
       };
-      show(from);
-      alert.dataset.hidden = "";
+
+      // Moves the needle to a reading, gliding unless motion is reduced.
+      const glide = (to, duration, done) => {
+        cancelAnimationFrame(frame);
+        const from = now, start = performance.now();
+        const step = (time) => {
+          const p = reduce.matches ? 1 : Math.min(1, (time - start) / duration);
+          show(p < 1 ? from + (to - from) * (1 - Math.pow(1 - p, 4)) : to);
+          input.value = now;
+          if (p < 1) frame = requestAnimationFrame(step);
+          else if (done) done();
+        };
+        frame = requestAnimationFrame(step);
+      };
+
+      input.addEventListener("input", () => {
+        cancelAnimationFrame(frame);
+        show(+input.value);
+      });
+      for (const button of buttons) {
+        button.addEventListener("click", () => {
+          glide(+button.dataset.reading, 600, () => { said.textContent = input.getAttribute("aria-valuetext"); });
+        });
+      }
+      for (const type of ["pointerdown", "keydown"]) scale.addEventListener(type, () => { touched = true; }, { passive: true });
+
+      if (!("IntersectionObserver" in window) || reduce.matches) return show(now);
+      const alertAt = now;
+      show(+buttons[0].dataset.reading);
+      input.value = now;
       new IntersectionObserver((entries, observer) => {
         if (!entries[0].isIntersecting) return;
         observer.disconnect();
-        const start = performance.now(), duration = 1700;
-        const step = (now) => {
-          const p = Math.min(1, (now - start) / duration);
-          show(from + (to - from) * (1 - Math.pow(1 - p, 4)));
-          if (p < 1) requestAnimationFrame(step);
-          else setTimeout(() => alert.removeAttribute("data-hidden"), 150);
-        };
-        requestAnimationFrame(step);
-      }, { threshold: 0.6 }).observe(scale);
+        if (!touched) glide(alertAt, 1700);
+      }, { threshold: 1 }).observe(scale.querySelector(".rail"));
     })();
 
     (() => {

@@ -25,13 +25,15 @@
   "Überhitzt",
   "Kritisch"
  ],
- "scale_caption": "Eine Skala der Akku-Temperatur von 30 bis 50°C, aufgeteilt in die vier Stufen von Cooldown: Normal, Warm, Überhitzt und Kritisch. Ein Wert von {t_alert} liegt bei Überhitzt.",
+ "scale_label": "Akkutemperatur",
+ "scale_hint": "Zieh die Nadel oder tippe auf eine Stufe und sieh, was Cooldown dazu sagt.",
  "notice_label": "Beispiel einer Hitzewarnung von Cooldown",
  "now": "jetzt",
- "notice_title": "Hohe Temperatur erkannt",
- "notice_text": "Akku {t_alert} · Spiele, Kamera, Navigation oder Hotspot pausieren.",
  "action_display": "Display",
  "action_saver": "Energiesparen",
+ "why_title": "Sieh, was dein Handy aufheizt.",
+ "why_body": "Cooldown macht aus dem, was Android meldet, einen einzigen Wert für das Hitzerisiko und nennt die Gründe dahinter: ein heißer Akku, ein schneller Anstieg, das Laden, thermische Belastung des Systems oder eine warme CPU/GPU.",
+ "why_note": "Der Wert für das Hitzerisiko ist kostenlos. Die Details dahinter gehören zu Pro. Die Karte zeigt Beispieldaten.",
  "screens_title": "Auf einen Blick prüfen oder später zurückschauen.",
  "shot": {
   "widget_alt": "Startbildschirm mit Cooldown-Widgets, die {w1}, {w2} und {t_alert} anzeigen",

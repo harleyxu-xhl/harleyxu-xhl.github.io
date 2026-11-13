@@ -14,8 +14,10 @@ other apps' cards and the footer are the same on every page and are written here
 describes itself for the other pages in its own files (Wattlab's cooldown.kind and cooldown.what).
 
 Cooldown's text may use {t_hero}, {t_alert}, {threshold}, {w1}, {w2}, {min}, {max} and {avg}, which become
-temperatures written the way the app writes them in that language (30,9°C or 30.9°C). src/reviews.json holds the
-English Google Play reviews shown on every Cooldown page, quoted as written. Wattlab's readings come from
+temperatures written the way the app writes them in that language (30,9°C or 30.9°C). The advice and alerts on its
+temperature scale and the words of its heat risk card are the app's own strings, in src/app_strings.json
+(src/pull_strings.py); the pixel sizes of its screens are in src/screens.json (src/render_screens.py).
+src/reviews.json holds the English Google Play reviews shown on every Cooldown page, quoted as written. Wattlab's readings come from
 src/wattlab/data.json through src/wattlab/parts.py, and its text may use the {cap_...} values of parts.capacity().
 
 Edit the sources and rebuild; never edit the generated pages by hand. Screens and Open Graph images come from
@@ -51,6 +53,10 @@ LANGS = {
     'zh': ('zh-Hans', 'zh-Hans', 'zh_CN', '简体中文', False, '5万+'),
 }
 TEMPS = {'t_hero': 30.9, 't_alert': 42.3, 'threshold': 42, 'w1': 28.0, 'w2': 38.4, 'min': 27.9, 'max': 42.2, 'avg': 34.8}
+# The temperature scale: the app's four levels (TemperatureLevel.kt), and the reading each level's button jumps to.
+LEVELS = ('normal', 'warm', 'overheated', 'critical')
+LEVEL_READINGS = (TEMPS['t_hero'], TEMPS['w2'], TEMPS['t_alert'], 46.8)
+RISK_SCORE = 83   # the score on the heat risk card that render_screens.py draws
 
 # The apps in the order they appear everywhere: the top line, the other apps' cards and the privacy links.
 APPS = {'cooldown': 'Cooldown', 'wattlab': 'Wattlab', 'somna': 'Somna', 'pipit': 'Pipit', 'angora': 'Angora'}
@@ -279,9 +285,40 @@ def write(app, code, page):
 
 # ---- Pages ------------------------------------------------------------------------------------
 
+def scale(text, app, temps):
+    """The temperature scale's values: the level buttons, what the page shows before any script runs (the alert
+    reading), and the JSON the script reads: each level's name and advice, and the alert's two forms."""
+    buttons = '\n'.join(
+        f'            <li><button type="button" data-reading="{reading}" aria-pressed="{str(i == 2).lower()}">{name}</button></li>'
+        for i, (name, reading) in enumerate(zip(text['levels'], LEVEL_READINGS)))
+    alerts = [{'title': app[f'high_temperature_alert_{kind}_title'], 'text': app[f'high_temperature_alert_battery_{kind}']}
+              for kind in ('warning', 'critical')]
+    state = {'levels': [{'name': name, 'advice': app[f'temperature_advice_{key}']}
+                        for key, name in zip(LEVELS, text['levels'])],
+             'alerts': alerts}
+    return {
+        'scale_buttons': buttons,
+        'scale_json': json.dumps(state, ensure_ascii=False),
+        'advice': state['levels'][2]['advice'],
+        'alert_title': alerts[0]['title'],
+        'alert_text': alerts[0]['text'].replace('{t}', temps['t_alert']),
+        'alert_idle': app['alert_card_title'],
+    }
+
+
+def risk_alt(app, temps):
+    """The heat risk card read out in its own words."""
+    score = app['risk_score_format'].replace('{n}', str(RISK_SCORE))
+    return (f"{app['risk_score_title']}: {score}, {app['risk_level_high']}. {app['risk_evidence_title']}: "
+            f"{app['risk_factor_temperature_hot']}. {app['risk_evidence_temperature'].replace('{t}', temps['t_alert'])} "
+            f"{app['risk_factor_charging']}. {app['risk_evidence_charging']}")
+
+
 def build_cooldown(site):
     template = (SRC / 'page.html').read_text()
     reviews = json.loads((SRC / 'reviews.json').read_text())
+    strings = json.loads((SRC / 'app_strings.json').read_text())
+    sizes = json.loads((SRC / 'screens.json').read_text())
     for code, text in site.items():
         missing = {r['month'] for r in reviews + text.get('extra_reviews', [])} - set(text['months'])
         if missing:
@@ -295,6 +332,9 @@ def build_cooldown(site):
             **flatten({k: v for k, v in text.items() if k != 'extra_reviews'}),
             **temps,
             **shared('cooldown', code, text, 'homepage'),
+            **scale(text, strings[code], temps),
+            **{f'{name}_{side}': str(px) for name, size in sizes[code].items() for side, px in zip('wh', size)},
+            'why_alt': risk_alt(strings[code], temps),
             'og_image': f'{ORIGIN}{img}og.png',
             'img': img,
             'count': count,

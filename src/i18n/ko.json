@@ -25,13 +25,15 @@
   "과열",
   "위험"
  ],
- "scale_caption": "30~50°C 배터리 온도 척도로, Cooldown의 네 단계인 정상, 따뜻함, 과열, 위험으로 나뉩니다. {t_alert}는 과열에 해당합니다.",
+ "scale_label": "배터리 온도",
+ "scale_hint": "바늘을 끌거나 단계를 눌러 Cooldown이 어떻게 알려 주는지 확인해 보세요.",
  "notice_label": "Cooldown 발열 알림 예시",
  "now": "지금",
- "notice_title": "고온 감지",
- "notice_text": "배터리 {t_alert} · 게임, 카메라, 내비게이션, 핫스팟 사용을 멈추세요.",
  "action_display": "디스플레이",
  "action_saver": "절전 모드",
+ "why_title": "무엇이 뜨겁게 하는지 확인하세요.",
+ "why_body": "Cooldown은 Android가 알려 주는 정보를 하나의 발열 위험 점수로 정리하고, 그 원인을 알려 줍니다. 뜨거운 배터리, 빠른 온도 상승, 충전, 시스템 발열 부하, 뜨거운 CPU/GPU 등입니다.",
+ "why_note": "발열 위험 점수는 무료입니다. 점수의 상세 원인은 Pro 기능입니다. 카드는 예시 데이터입니다.",
  "screens_title": "한눈에 확인하고, 나중에 다시 살펴보세요.",
  "shot": {
   "widget_alt": "{w1}, {w2}, {t_alert}를 표시하는 Cooldown 위젯이 있는 홈 화면",

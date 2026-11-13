@@ -25,13 +25,15 @@
   "Sobrecalentado",
   "Crítico"
  ],
- "scale_caption": "Una escala de temperatura de la batería de 30 a 50°C, dividida en los cuatro niveles de Cooldown: Normal, Tibio, Sobrecalentado y Crítico. Una lectura de {t_alert} cae en Sobrecalentado.",
+ "scale_label": "Temperatura de la batería",
+ "scale_hint": "Arrastra la aguja o toca un nivel para ver qué te diría Cooldown.",
  "notice_label": "Ejemplo de alerta de calor de Cooldown",
  "now": "ahora",
- "notice_title": "Se detectó alta temperatura",
- "notice_text": "Batería {t_alert} · Pausa juegos, cámara, navegación o hotspot.",
  "action_display": "Pantalla",
  "action_saver": "Ahorro de batería",
+ "why_title": "Mira qué lo está calentando.",
+ "why_body": "Cooldown convierte lo que informa Android en una sola puntuación de riesgo de calor y te dice qué hay detrás: una batería caliente, una subida rápida, la carga, estrés térmico del sistema o una CPU/GPU caliente.",
+ "why_note": "La puntuación de riesgo de calor es gratis. Los detalles que la explican son parte de Pro. La tarjeta muestra datos de ejemplo.",
  "screens_title": "Revísalo de un vistazo o consulta el historial después.",
  "shot": {
   "widget_alt": "Pantalla de inicio con widgets de Cooldown que marcan {w1}, {w2} y {t_alert}",

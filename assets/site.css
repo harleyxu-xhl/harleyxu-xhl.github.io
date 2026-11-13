@@ -304,21 +304,28 @@ p { margin: 0; text-wrap: pretty; }
 
 .heat-in {
   display: grid;
-  grid-template-areas: "copy" "scale" "notice";
-  gap: 48px;
+  gap: clamp(40px, 5vw, 64px);
   padding-block: clamp(72px, 9vw, 7.5rem);
 }
 
-.heat-copy { grid-area: copy; }
 .heat-copy p { max-width: 34em; margin-top: 18px; color: var(--ink-2); }
 
-.scale { --level: var(--hot); grid-area: scale; margin: 0; }
+/* The scale is an instrument: the reading leads, the needle is a slider, the levels are buttons, and the alert
+   has a place of its own that stays empty until the reading reaches the threshold. */
+.scale {
+  --level: var(--hot);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "reading" "track" "names" "hint" "alert";
+}
 .scale[data-level="normal"] { --level: var(--normal); }
 .scale[data-level="warm"] { --level: var(--warm); }
+.scale[data-level="critical"] .needle { color: var(--fill-critical); }
 
-/* The reading is the section's headline number; the needle below only marks where it falls. */
-.readout { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 24px; }
+/* The reading is the section's headline number; the level and the app's advice for it sit right under it. */
+.reading { grid-area: reading; }
 .needle-val {
+  display: block;
   font-size: clamp(4.5rem, 1.6rem + 12vw, 12rem);
   line-height: 0.9;
   font-weight: 600;
@@ -326,9 +333,43 @@ p { margin: 0; text-wrap: pretty; }
   letter-spacing: -0.04em;
   font-variant-numeric: tabular-nums;
 }
-.needle-level { font-size: clamp(1.0625rem, 0.9rem + 0.6vw, 1.375rem); font-weight: 600; color: var(--level); }
+/* Room for the longest advice, so the scale below does not move while the needle is dragged. */
+.status {
+  min-height: 3lh;
+  margin-top: clamp(16px, 1.8vw, 24px);
+  font-size: clamp(1.0625rem, 0.9rem + 0.6vw, 1.375rem);
+  line-height: 1.4;
+  color: var(--ink-2);
+}
+.needle-level { margin-right: 0.35em; font-weight: 600; color: var(--level); }
 
-.scale-track { position: relative; margin-top: clamp(28px, 4vw, 40px); padding-top: 20px; }
+.scale-track { grid-area: track; margin-top: clamp(20px, 3vw, 36px); }
+.rail { position: relative; padding-top: 20px; }
+
+/* A native slider lies over the rail, wider by its thumb (no wider than the page gutter) so the thumb's centre
+   runs the rail's full length.
+   It is invisible: the needle below is drawn from its value, and shows its focus. */
+.scale-input {
+  position: absolute;
+  top: -8px;
+  left: -16px;
+  z-index: 1;
+  width: calc(100% + 32px);
+  height: calc(100% + 22px);
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  cursor: ew-resize;
+  touch-action: pan-y;
+  -webkit-appearance: none;
+  appearance: none;
+  background: none;
+}
+.scale-input::-webkit-slider-runnable-track { height: 100%; }
+.scale-input::-webkit-slider-thumb { -webkit-appearance: none; width: 32px; height: 100%; }
+.scale-input::-moz-range-track { height: 100%; }
+.scale-input::-moz-range-thumb { width: 32px; height: 60px; border: 0; background: none; }
+html:not(.js) :is(.scale-input, .scale-hint) { display: none; }
 
 .needle {
   --t: 0.615;
@@ -341,23 +382,32 @@ p { margin: 0; text-wrap: pretty; }
 .needle-line {
   position: absolute;
   top: 0;
-  bottom: 26px;
+  bottom: 6px;
   left: -1px;
   width: 2px;
   border-radius: 1px;
   background: var(--ink);
 }
+/* The knob, on the coloured bar: what the hand takes hold of. */
 .needle-line::after {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: -4px;
-  width: 10px;
-  height: 10px;
-  margin-left: -5px;
+  bottom: -11px;
+  width: 22px;
+  height: 22px;
+  margin-left: -11px;
+  border: 5px solid var(--ink);
   border-radius: 50%;
   background: currentColor;
-  box-shadow: 0 0 0 3px var(--paper);
+  box-shadow: 0 0 0 3px var(--paper), 0 4px 10px rgb(0 0 0 / 0.5);
+  transition: transform 0.16s var(--ease-out);
+}
+.scale-input:active + .needle .needle-line::after { transform: scale(1.18); }
+.scale-input:focus-visible + .needle .needle-line::after { outline: 2px solid var(--link); outline-offset: 5px; }
+@media (hover: hover) {
+  .scale-input:hover + .needle .needle-line::after { transform: scale(1.12); }
+  .scale-input:active + .needle .needle-line::after { transform: scale(1.18); }
 }
 
 .ticks {
@@ -377,42 +427,84 @@ p { margin: 0; text-wrap: pretty; }
 .zones i:nth-child(3) { background: var(--fill-hot); }
 .zones i:nth-child(4) { background: var(--fill-critical); }
 
-.nums { position: relative; height: 26px; margin-top: 8px; font-size: 0.8125rem; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.nums { position: relative; height: 26px; margin-top: 14px; font-size: 0.8125rem; color: var(--ink-2); font-variant-numeric: tabular-nums; }
 .nums span { position: absolute; top: 0; transform: translateX(-50%); }
 .nums span:first-child { transform: none; }
 .nums span:last-child { transform: translateX(-100%); }
 
+/* The bell marks the alert threshold on the scale, and rings when the reading gets there. */
+.alert-mark { color: var(--ink-3); transition: color 0.2s; }
+.alert-mark svg { display: block; width: 1rem; height: 1rem; margin-top: 1px; transform-origin: 50% 10%; }
+.scale[data-alert] .alert-mark { color: var(--hot); }
+.js .scale[data-alert] .alert-mark svg { animation: ring 0.7s var(--ease-out); }
+@keyframes ring {
+  20% { transform: rotate(-16deg); }
+  45% { transform: rotate(13deg); }
+  70% { transform: rotate(-7deg); }
+}
+
+/* The four levels, each a button that sends the needle to a reading in that level. */
 .zone-names {
+  grid-area: names;
   display: flex;
   flex-wrap: wrap;
-  gap: 6px 18px;
-  margin-top: 14px;
+  gap: 8px;
+  margin: 10px 0 0;
   padding: 0;
   list-style: none;
+}
+.zone-names button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 2.5rem;
+  padding: 0 14px 0 12px;
+  border: 1px solid rgb(229 237 245 / 0.16);
+  border-radius: 999px;
+  background: none;
+  color: var(--name);
+  font: inherit;
   font-size: 0.875rem;
   font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.16s var(--ease-out), border-color 0.16s var(--ease-out), transform 0.14s var(--ease-out);
 }
-.zone-names li { display: flex; align-items: center; gap: 7px; }
-.zone-names li::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--dot); }
-.zone-names li:nth-child(1) { color: var(--normal); --dot: var(--fill-normal); }
-.zone-names li:nth-child(2) { color: var(--warm); --dot: var(--fill-warm); }
-.zone-names li:nth-child(3) { color: var(--hot); --dot: var(--fill-hot); }
-.zone-names li:nth-child(4) { color: var(--hot); --dot: var(--fill-critical); }
+.zone-names button::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--dot); }
+.zone-names button[aria-pressed="true"] { border-color: var(--dot); background: color-mix(in srgb, var(--dot) 14%, transparent); }
+.zone-names button:active { transform: scale(0.96); }
+.zone-names li:nth-child(1) { --name: var(--normal); --dot: var(--fill-normal); }
+.zone-names li:nth-child(2) { --name: var(--warm); --dot: var(--fill-warm); }
+.zone-names li:nth-child(3) { --name: var(--hot); --dot: var(--fill-hot); }
+.zone-names li:nth-child(4) { --name: var(--hot); --dot: var(--fill-critical); }
+html:not(.js) .zone-names button { pointer-events: none; }
 
-/* The four names fit one line from about 400px; narrower, two rows of two instead of one name alone. */
-@media (max-width: 399px) {
-  .zone-names { display: grid; grid-template-columns: repeat(2, max-content); gap: 8px 28px; }
+@media (hover: hover) {
+  .zone-names button:hover { background: color-mix(in srgb, var(--dot) 14%, transparent); }
 }
 
-@media (min-width: 640px) {
-  .zone-names { display: grid; grid-template-columns: 8fr 4fr 4fr 4fr; gap: 3px; margin-top: 2px; }
-  .zone-names li::before { display: none; }
+.scale-hint { grid-area: hint; margin-top: 16px; font-size: 0.8125rem; color: var(--ink-3); }
+
+/* The alert's place. Below the threshold it is an outline naming the threshold; at it, the notification arrives. */
+.alert-slot { grid-area: alert; display: grid; width: min(100%, 25rem); margin-top: 36px; }
+.alert-slot > * { grid-area: 1 / 1; }
+
+.alert-idle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px dashed rgb(229 237 245 / 0.2);
+  border-radius: 26px;
+  font-size: 0.875rem;
+  color: var(--ink-3);
+  transition: opacity 0.3s var(--ease-out);
 }
+.alert-idle svg { width: 1.125rem; height: 1.125rem; }
+.alert-idle b { font-weight: 600; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.scale[data-alert] .alert-idle { opacity: 0; }
 
 /* An Android heads-up notification, drawn with the alert's real strings. */
 .notice {
-  grid-area: notice;
-  width: min(100%, 25rem);
   margin: 0;
   padding: 14px 18px 8px;
   border-radius: 26px;
@@ -420,6 +512,13 @@ p { margin: 0; text-wrap: pretty; }
   box-shadow: var(--shadow-card);
   font-family: Roboto, system-ui, sans-serif;
   font-stretch: 100%;
+  transition: opacity 0.35s var(--ease-out), transform 0.45s var(--ease-out), visibility 0s;
+}
+.scale:not([data-alert]) .notice {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px) scale(0.98);
+  transition-delay: 0s, 0s, 0.35s;
 }
 .notice-head { display: flex; align-items: center; gap: 8px; font-size: 0.8125rem; color: var(--ink-2); }
 .notice-icon {
@@ -433,26 +532,61 @@ p { margin: 0; text-wrap: pretty; }
 }
 .notice-icon svg { width: 0.9375rem; height: 0.9375rem; }
 .notice-title { margin-top: 8px; font-size: 0.9375rem; font-weight: 600; line-height: 1.35; }
-.notice-text { margin-top: 2px; font-size: 0.875rem; line-height: 1.45; color: var(--ink-2); }
+.notice-text { min-height: 2lh; margin-top: 2px; font-size: 0.875rem; line-height: 1.45; color: var(--ink-2); }
 .notice-actions { display: flex; gap: 22px; margin-top: 4px; font-size: 0.875rem; font-weight: 600; color: var(--link); }
 .notice-actions span { padding-block: 10px; }
 
-@media (min-width: 900px) {
-  .heat-in {
-    grid-template-columns: minmax(0, 1fr) auto;
-    grid-template-areas: "copy notice" "scale scale";
-    column-gap: 72px;
-    row-gap: 56px;
-  }
-  .notice { width: 23.75rem; }
+/* Phones: two rows of two instead of three buttons and one alone. */
+@media (max-width: 519px) {
+  .zone-names { display: grid; grid-template-columns: 1fr 1fr; }
+  .zone-names button { width: 100%; }
 }
 
-/* Revealed after the needle reaches the alert; only when scripts run and motion is allowed. */
-.js .notice[data-hidden] { opacity: 0; transform: translateY(10px) scale(0.98); }
-.notice { transition: opacity 0.5s var(--ease-out), transform 0.6s var(--ease-out); }
+/* The longest alert runs to three lines on the narrowest phones; elsewhere two lines hold it and the advice. */
+@media (max-width: 399px) {
+  .notice-text { min-height: 3lh; }
+}
+@media (min-width: 640px) {
+  .status { min-height: 2lh; }
+}
+
+/* Wide: each level's button sits under its part of the scale. */
+@media (min-width: 900px) {
+  .zone-names { display: grid; grid-template-columns: 8fr 4fr 4fr 4fr; gap: 3px; }
+  .zone-names li { min-width: 0; }
+}
+
+/* Wider, once the reading leaves room for it: the alert stands beside the reading. */
+@media (min-width: 1080px) {
+  .scale {
+    grid-template-columns: minmax(0, 1fr) 23.75rem;
+    grid-template-areas: "reading alert" "track track" "names names" "hint hint";
+    column-gap: clamp(40px, 5vw, 72px);
+  }
+  .alert-slot { align-self: center; width: auto; margin-top: 0; }
+}
+
+/* ---------- What is heating it up: the heat risk card ---------- */
+.why {
+  display: grid;
+  align-items: center;
+  gap: 40px;
+  padding-block: var(--section);
+}
+.why-copy p { max-width: 34em; margin-top: 18px; color: var(--ink-2); }
+.why-copy p.fine { margin-top: 22px; }
+
+/* A piece of the app's Insights screen: the card on the app's own dark background, in both color schemes. */
+.why-card { width: min(100%, 30rem); margin: 0; justify-self: center; }
+.why-card img { width: 100%; border-radius: 28px; box-shadow: var(--shadow-phone); }
+
+@media (min-width: 900px) {
+  .why { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); column-gap: clamp(48px, 8vw, 128px); }
+  .why-card { justify-self: end; }
+}
 
 /* ---------- Screens ---------- */
-.screens { padding-block: var(--section); }
+.screens { padding-block: var(--section); border-top: 1px solid var(--line); }
 
 .shots {
   display: grid;
@@ -556,6 +690,8 @@ p { margin: 0; text-wrap: pretty; }
   scroll-snap-type: x mandatory;
   overscroll-behavior-x: contain;
   scrollbar-width: none;
+  /* Each review is as tall as its own words, so the stars follow the quote instead of the longest review. */
+  align-items: start;
 }
 .reel::-webkit-scrollbar { display: none; }
 
@@ -574,8 +710,7 @@ p { margin: 0; text-wrap: pretty; }
 .review {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 28px;
+  gap: 22px;
   scroll-snap-align: start;
 }
 .review blockquote { margin: 0; }

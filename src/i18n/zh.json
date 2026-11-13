@@ -25,13 +25,15 @@
   "过热",
   "危险"
  ],
- "scale_caption": "30 至 50°C 的电池温度标尺，分为 Cooldown 的四个等级：正常、偏热、过热和危险。{t_alert} 属于过热。",
+ "scale_label": "电池温度",
+ "scale_hint": "拖动指针或点选一个等级，看看 Cooldown 会怎么提示。",
  "notice_label": "Cooldown 高温提醒示例",
  "now": "现在",
- "notice_title": "检测到高温",
- "notice_text": "电池 {t_alert} · 请暂停游戏、相机、导航或热点。",
  "action_display": "显示",
  "action_saver": "省电",
+ "why_title": "看清是什么让手机发热。",
+ "why_body": "Cooldown 把 Android 报告的信息汇成一个高温风险评分，并指出背后的原因：电池温度高、升温过快、正在充电、系统热压力，或 CPU/GPU 偏热。",
+ "why_note": "高温风险评分免费。评分背后的依据属于 Pro。卡片为示例数据。",
  "screens_title": "一眼看清，也能回头细看。",
  "shot": {
   "widget_alt": "主屏幕上的 Cooldown 小组件，分别显示 {w1}、{w2} 和 {t_alert}",
