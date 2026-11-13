@@ -56,9 +56,6 @@
 
 .pipit-stage h1 {
   font-size: clamp(2.375rem, 0.9rem + 4.9vw, 7.5rem);
-  background: linear-gradient(180deg, #ffffff 40%, #b8edd6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 @media (min-width: 960px) {
