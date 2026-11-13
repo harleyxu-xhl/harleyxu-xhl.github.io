@@ -1,0 +1,587 @@
+/* Somna: Nocturnal sanctuary aesthetic. Loaded after site.css.
+   Tokens come from Somna's design system: midnight navy, moonlight lavender (#BDB2FF), and restorative amber. */
+:root.somna {
+  --paper: #090b1e;
+  --ink: #f3f1fa;
+  --ink-2: #a5a3c6;
+  --ink-3: #716f94;
+  --line: rgb(189 178 255 / 0.12);
+  --link: #bdb2ff;
+  --card: #13173a;
+  --surface-alt: #1c224e;
+  --device: #050612;
+  --icon-edge: rgb(189 178 255 / 0.18);
+  --brand: #bdb2ff;
+  --on-brand: #0f1230;
+  --asleep: #818cf8;
+  --awake: #f59e0b;
+  --optimal: #34d399;
+  --glow-color: rgb(189 178 255 / 0.22);
+  --shadow-card: 0 0 0 1px rgb(189 178 255 / 0.08), 0 16px 40px -12px rgb(0 0 0 / 0.7);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root.somna {
+    --paper: #090b1e;
+    --ink: #f3f1fa;
+    --ink-2: #a5a3c6;
+    --ink-3: #716f94;
+    --line: rgb(189 178 255 / 0.12);
+    --link: #bdb2ff;
+    --card: #13173a;
+    --surface-alt: #1c224e;
+  }
+}
+
+.somna .dark {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.somna .top.wrap { width: auto; margin: 0; padding-inline: var(--gutter); }
+
+/* ---------- Hero & Bedside Console ---------- */
+.stage.somna-stage {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(800px 500px at 75% 20%, rgb(88 95 186 / 0.25), transparent 70%),
+    radial-gradient(1000px 600px at 20% 0%, rgb(59 66 143 / 0.2), transparent 75%),
+    var(--paper);
+}
+
+.somna-stage .stage-in {
+  display: grid;
+  gap: 48px;
+  padding-block: clamp(24px, 4.2vw, 64px) clamp(56px, 7vw, 104px);
+}
+
+.somna-stage h1 {
+  font-size: clamp(2.375rem, 0.9rem + 4.9vw, 7.5rem);
+  background: linear-gradient(180deg, #ffffff 40%, #c8c2f8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (min-width: 960px) {
+  .somna-stage .stage-in {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
+    column-gap: clamp(48px, 6vw, 112px);
+    align-items: center;
+  }
+}
+
+/* Console Card */
+.somna-console {
+  position: relative;
+  isolation: isolate;
+  background: linear-gradient(180deg, rgb(24 29 70 / 0.7) 0%, rgb(13 16 43 / 0.85) 100%);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  padding: clamp(20px, 3.5vw, 36px);
+  box-shadow: var(--shadow-card), 0 0 60px -20px var(--glow-color);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.console-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.console-title {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+
+/* Presets */
+.preset-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.preset-btn {
+  position: relative;
+  isolation: isolate;
+  cursor: pointer;
+  margin: 0;
+}
+.preset-btn input {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.preset-btn span {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ink-2);
+  background: rgb(255 255 255 / 0.04);
+  border: 1px solid rgb(255 255 255 / 0.08);
+  transition: all 0.25s var(--ease-out);
+}
+.preset-btn input:checked ~ span {
+  background: rgb(189 178 255 / 0.18);
+  color: var(--ink);
+  border-color: var(--brand);
+  box-shadow: 0 0 16px -4px var(--glow-color);
+}
+.preset-btn:hover span {
+  color: var(--ink);
+  border-color: rgb(189 178 255 / 0.3);
+}
+
+/* Gauge Area */
+.eff-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-block: 12px 24px;
+}
+.eff-ring-box {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.eff-ring {
+  width: 100%;
+  height: 100%;
+  transform: rotate(0deg);
+}
+.ring-bg {
+  stroke: rgb(255 255 255 / 0.08);
+}
+.ring-fill {
+  stroke: var(--brand);
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.6s var(--ease-out), stroke 0.4s;
+}
+.target-mark {
+  stroke: var(--optimal);
+  stroke-dasharray: 2 2;
+}
+.eff-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.eff-val {
+  font-size: 3.5rem;
+  line-height: 1;
+  font-weight: 700;
+  font-stretch: 110%;
+  letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums;
+  color: #ffffff;
+}
+.eff-unit {
+  font-size: 1.5rem;
+  color: var(--brand);
+  margin-left: 2px;
+}
+.eff-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  margin-top: 4px;
+}
+
+/* Status Pill */
+.eff-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  background: rgb(255 255 255 / 0.06);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  transition: all 0.3s;
+}
+.eff-chip[data-tier="optimal"] {
+  background: rgb(52 211 153 / 0.15);
+  border-color: rgb(52 211 153 / 0.4);
+  color: #6ee7b7;
+}
+.eff-chip[data-tier="low"] {
+  background: rgb(245 158 11 / 0.15);
+  border-color: rgb(245 158 11 / 0.4);
+  color: #fcd34d;
+}
+
+/* Timeline Sleep Strip */
+.timeline-strip {
+  margin-block: 16px;
+  padding: 14px 18px;
+  border-radius: 16px;
+  background: rgb(0 0 0 / 0.25);
+  border: 1px solid rgb(255 255 255 / 0.05);
+}
+.timeline-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8125rem;
+  color: var(--ink-2);
+  margin-bottom: 8px;
+  font-variant-numeric: tabular-nums;
+}
+.timeline-bar {
+  height: 12px;
+  border-radius: 6px;
+  display: flex;
+  overflow: hidden;
+  background: rgb(255 255 255 / 0.08);
+}
+.timeline-seg-awake {
+  height: 100%;
+  background: var(--awake);
+  transition: width 0.5s var(--ease-out);
+}
+.timeline-seg-asleep {
+  height: 100%;
+  background: var(--asleep);
+  transition: width 0.5s var(--ease-out);
+}
+.timeline-legend {
+  display: flex;
+  gap: 18px;
+  margin-top: 10px;
+  font-size: 0.8125rem;
+  color: var(--ink-2);
+}
+.legend-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.dot-asleep { background: var(--asleep); }
+.dot-awake { background: var(--awake); }
+
+/* CBT-I Feedback Card */
+.cbti-feedback {
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: 16px;
+  background: rgb(189 178 255 / 0.06);
+  border-left: 3px solid var(--brand);
+}
+.cbti-diagnosis {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+.cbti-prescription {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--ink-2);
+  margin-top: 6px;
+}
+.somna-console .fine {
+  margin-top: 14px;
+  font-size: 0.75rem;
+  color: var(--ink-3);
+  text-align: center;
+}
+
+/* ---------- 6-Week Curriculum Section ---------- */
+.curriculum {
+  padding-block: var(--section);
+  background: linear-gradient(180deg, var(--paper) 0%, #0d1029 50%, var(--paper) 100%);
+}
+.section-head {
+  text-align: center;
+  max-width: 44rem;
+  margin-inline: auto;
+  margin-bottom: clamp(36px, 5vw, 64px);
+}
+.section-head h2 {
+  font-size: clamp(2rem, 1rem + 3.2vw, 4.5rem);
+}
+.section-head p {
+  margin-top: 14px;
+  color: var(--ink-2);
+  font-size: 1.125rem;
+}
+
+.weeks-grid {
+  display: grid;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+@media (min-width: 680px) {
+  .weeks-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1040px) {
+  .weeks-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+.week-card {
+  position: relative;
+  padding: 28px;
+  border-radius: 22px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  box-shadow: 0 4px 20px rgb(0 0 0 / 0.3);
+  transition: transform 0.3s var(--ease-out), border-color 0.3s;
+}
+.week-card:hover {
+  transform: translateY(-4px);
+  border-color: rgb(189 178 255 / 0.35);
+  box-shadow: 0 12px 32px -8px var(--glow-color);
+}
+.week-num {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: rgb(189 178 255 / 0.12);
+  color: var(--brand);
+  margin-bottom: 14px;
+}
+.week-card h3 {
+  font-size: 1.25rem;
+  line-height: 1.3;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+.week-card p {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--ink-2);
+}
+
+/* ---------- Calming Tools & Breathing Guide ---------- */
+.calm-suite {
+  padding-block: var(--section);
+  border-top: 1px solid var(--line);
+}
+.tools-grid {
+  display: grid;
+  gap: 32px;
+  margin-top: 40px;
+}
+@media (min-width: 860px) {
+  .tools-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: stretch;
+  }
+}
+
+.tool-box {
+  padding: clamp(24px, 4vw, 40px);
+  border-radius: 28px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+}
+.tool-box h3 { font-size: 1.5rem; color: #ffffff; }
+.tool-box > p { margin-top: 10px; color: var(--ink-2); font-size: 0.9375rem; line-height: 1.6; }
+
+/* Breathing circle */
+.breathe-interactive {
+  margin-top: auto;
+  padding-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.breathe-disc {
+  position: relative;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgb(189 178 255 / 0.3) 0%, rgb(59 66 143 / 0.1) 70%);
+  border: 2px solid var(--brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 40px -10px var(--glow-color);
+  transition: transform 4s ease-in-out, box-shadow 4s ease-in-out;
+}
+.breathe-disc.inhale {
+  transform: scale(1.35);
+  box-shadow: 0 0 60px 10px rgb(189 178 255 / 0.5);
+}
+.breathe-disc.hold {
+  transform: scale(1.35);
+  box-shadow: 0 0 50px 5px rgb(189 178 255 / 0.4);
+}
+.breathe-disc.exhale {
+  transform: scale(1);
+  box-shadow: 0 0 20px -5px var(--glow-color);
+}
+.breathe-state {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  text-align: center;
+}
+.breathe-btn {
+  padding: 10px 24px;
+  border-radius: 999px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--on-brand);
+  background: var(--brand);
+  border: 0;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+}
+.breathe-btn:hover { opacity: 0.92; }
+.breathe-btn:active { transform: scale(0.97); }
+
+/* Soundscapes */
+.sounds-interactive {
+  margin-top: auto;
+  padding-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.sound-card {
+  position: relative;
+  padding: 16px 14px;
+  border-radius: 16px;
+  background: rgb(255 255 255 / 0.04);
+  border: 1px solid rgb(255 255 255 / 0.08);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  color: var(--ink);
+  transition: all 0.2s;
+  text-align: left;
+}
+.sound-card:hover {
+  background: rgb(189 178 255 / 0.1);
+  border-color: rgb(189 178 255 / 0.25);
+}
+.sound-card.playing {
+  background: rgb(189 178 255 / 0.18);
+  border-color: var(--brand);
+  box-shadow: 0 0 16px -4px var(--glow-color);
+}
+.sound-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  flex: none;
+  background: rgb(255 255 255 / 0.1);
+  border: 0;
+  color: var(--brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.sound-card.playing .sound-btn {
+  background: var(--brand);
+  color: var(--on-brand);
+}
+.sound-name {
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+.sound-hint {
+  grid-column: 1 / -1;
+  font-size: 0.8125rem;
+  color: var(--ink-3);
+  margin-top: 8px;
+}
+
+/* ---------- AI Sleep Coach Showcase ---------- */
+.coach-section {
+  padding-block: var(--section);
+  border-top: 1px solid var(--line);
+}
+.coach-box {
+  max-width: 48rem;
+  margin-inline: auto;
+  padding: clamp(24px, 4vw, 44px);
+  border-radius: 28px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-card);
+}
+.chat-thread {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 24px;
+}
+.msg {
+  max-width: 86%;
+  padding: 16px 20px;
+  border-radius: 20px;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+}
+.msg-user {
+  align-self: flex-end;
+  background: rgb(189 178 255 / 0.18);
+  border: 1px solid rgb(189 178 255 / 0.3);
+  color: #ffffff;
+  border-bottom-right-radius: 6px;
+}
+.msg-ai {
+  align-self: flex-start;
+  background: rgb(255 255 255 / 0.06);
+  border: 1px solid rgb(255 255 255 / 0.1);
+  color: var(--ink);
+  border-bottom-left-radius: 6px;
+}
+.coach-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+.coach-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 0.05);
+  color: var(--brand);
+}
+
+/* Honest section dashes */
+.somna .nots li::before { background: var(--brand); }

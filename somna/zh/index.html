@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="zh-Hans" class="somna">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Somna: 睡眠日记与 CBT-I 改善计划</title>
+  <meta name="description" content="Somna 是一款基于失眠认知行为疗法的 6 周睡眠改善应用：记录睡眠日记，每周自动调整睡眠窗口，追踪 42 天睡眠效率曲线，并配备专属 AI 睡眠教练。在 Google Play 免费下载。">
+  <link rel="canonical" href="https://harleyxu-xhl.github.io/somna/zh/">
+  <link rel="alternate" hreflang="en" href="https://harleyxu-xhl.github.io/somna/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://harleyxu-xhl.github.io/somna/zh/">
+  <link rel="alternate" hreflang="x-default" href="https://harleyxu-xhl.github.io/somna/">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#090b1e">
+  <link rel="icon" href="/assets/img/somna/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="icon" href="/assets/img/somna/favicon.png" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="/assets/img/somna/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Somna">
+  <meta property="og:url" content="https://harleyxu-xhl.github.io/somna/zh/">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="Somna: 用认知行为疗法，重塑自然好睡眠">
+  <meta property="og:description" content="基于临床循证医学的 6 周 CBT-I 失眠改善计划。睡眠日记、每周睡眠窗口、科学积蓄睡眠动力。在 Google Play 免费下载。">
+  <meta property="og:image" content="https://harleyxu-xhl.github.io/assets/img/somna/zh/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="/assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="/assets/somna.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Somna: CBT-I Sleep Program",
+    "operatingSystem": "Android",
+    "applicationCategory": "HealthApplication",
+    "inLanguage": "zh-Hans",
+    "description": "面向慢性失眠患者的睡眠日记与 6 周 CBT-I 疗程应用，包含睡眠限制、刺激控制与 AI 睡眠教练。",
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.harley.somna",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+</head>
+<body class="dark">
+  <a class="skip" href="#main">跳到正文</a>
+
+  <header class="top wrap dark">
+    <nav class="apps-nav" aria-label="应用">
+      <a href="/zh/">Cooldown</a>
+      <a href="/wattlab/zh/">Wattlab</a>
+      <a href="#somna" aria-current="page">Somna</a>
+      <a href="/pipit/zh/">Pipit</a>
+      <a href="#angora">Angora</a>
+    </nav>
+    <div class="top-end">
+      <details class="lang-menu">
+        <summary aria-label="语言: 简体中文"><svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M128,24h0A104,104,0,1,0,232,128,104.12,104.12,0,0,0,128,24Zm87.62,96H175.79C174,83.49,159.94,57.67,148.41,42.4A88.19,88.19,0,0,1,215.62,120ZM96.23,136h63.54c-2.31,41.61-22.23,67.11-31.77,77C118.45,203.1,98.54,177.6,96.23,136Zm0-16C98.54,78.39,118.46,52.89,128,43c9.55,9.93,29.46,35.43,31.77,77Zm11.36-77.6C96.06,57.67,82,83.49,80.21,120H40.37A88.19,88.19,0,0,1,107.59,42.4ZM40.37,136H80.21c1.82,36.51,15.85,62.33,27.38,77.6A88.19,88.19,0,0,1,40.37,136Zm108,77.6c11.53-15.27,25.56-41.09,27.38-77.6h39.84A88.19,88.19,0,0,1,148.41,213.6Z"/></svg><span>简体中文</span></summary>
+        <ul>
+          <li><a href="/somna/" hreflang="en" lang="en" data-lang="en">English</a></li>
+          <li><a href="/somna/zh/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh" aria-current="true">简体中文</a></li>
+        </ul>
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="stage somna-stage dark" id="somna" aria-labelledby="hero-title">
+      <div class="stage-in wrap">
+        <div class="hero-copy">
+          <p class="app-id">
+            <img src="/assets/img/icon-somna.webp" width="160" height="160" alt="">
+            <span><b>Somna</b><small>基于 CBT-I 的睡眠改善应用</small></span>
+          </p>
+          <h1 id="hero-title">用认知行为疗法，重塑自然好睡眠。</h1>
+          <p class="lede">Somna 将每日睡眠日记与结构化的 6 周 CBT-I 课程深度结合。科学积蓄睡眠驱动力，缩短在床上辗转反侧的时间，让深度睡眠自然发生。</p>
+          <div class="cta">
+            <a class="play" href="https://play.google.com/store/apps/details?id=com.harley.somna&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dsomna%26utm_campaign%3Dhero"><img src="/assets/img/zh/google-play-badge.png" width="646" height="192" alt="在 Google Play 下载 Somna"></a>
+            <p class="fine">免费下载。Pro 为一次性买断，不是订阅制。</p>
+          </div>
+        </div>
+
+        <div class="somna-console" id="somnaConsole" data-presets="[{&quot;id&quot;: &quot;insomnia&quot;, &quot;key&quot;: &quot;preset_insomnia&quot;, &quot;bedtime&quot;: &quot;22:30&quot;, &quot;latency&quot;: 60, &quot;wakings&quot;: 75, &quot;wakeTime&quot;: &quot;07:00&quot;, &quot;timeInBedMin&quot;: 510, &quot;asleepMin&quot;: 375, &quot;efficiency&quot;: 74, &quot;targetMet&quot;: false, &quot;tier&quot;: &quot;low&quot;, &quot;window&quot;: &quot;00:00 – 07:00&quot;, &quot;sleepWindowDuration&quot;: &quot;7h 00m&quot;, &quot;name&quot;: &quot;失眠基线（入睡困难）&quot;, &quot;diagnosis&quot;: &quot;在床 8 小时 30 分，其中清醒耗时 2 小时 15 分。睡眠效率仅为 74%。&quot;, &quot;prescription&quot;: &quot;CBT-I 睡眠限制法：在床上清醒过久会削弱睡眠动力。建议将睡眠窗口限制为 7 小时（上床时间推迟至 00:00，严格固定 07:00 起床）。醒着超过 20 分钟立刻离床。&quot;, &quot;statusLabel&quot;: &quot;睡眠碎片化（&lt;85%）&quot;, &quot;asleepFormatted&quot;: &quot;6小时15分&quot;, &quot;awakeFormatted&quot;: &quot;2小时15分&quot;}, {&quot;id&quot;: &quot;broken&quot;, &quot;key&quot;: &quot;preset_broken&quot;, &quot;bedtime&quot;: &quot;23:00&quot;, &quot;latency&quot;: 25, &quot;wakings&quot;: 120, &quot;wakeTime&quot;: &quot;07:30&quot;, &quot;timeInBedMin&quot;: 510, &quot;asleepMin&quot;: 365, &quot;efficiency&quot;: 71, &quot;targetMet&quot;: false, &quot;tier&quot;: &quot;low&quot;, &quot;window&quot;: &quot;00:30 – 07:00&quot;, &quot;sleepWindowDuration&quot;: &quot;6h 30m&quot;, &quot;name&quot;: &quot;碎片化睡眠（频繁夜醒）&quot;, &quot;diagnosis&quot;: &quot;在床 8 小时 30 分，夜间断续醒来长达 2 小时。睡眠效率为 71%。&quot;, &quot;prescription&quot;: &quot;刺激控制法：夜间清醒超过 20 分钟必须离开床铺，在昏暗光线下拉伸或阅读，仅在困倦时回床。重建床与睡眠的绝对神经条件反射。&quot;, &quot;statusLabel&quot;: &quot;睡眠碎片化（&lt;85%）&quot;, &quot;asleepFormatted&quot;: &quot;6小时5分&quot;, &quot;awakeFormatted&quot;: &quot;2小时25分&quot;}, {&quot;id&quot;: &quot;week4&quot;, &quot;key&quot;: &quot;preset_week4&quot;, &quot;bedtime&quot;: &quot;23:45&quot;, &quot;latency&quot;: 15, &quot;wakings&quot;: 20, &quot;wakeTime&quot;: &quot;07:00&quot;, &quot;timeInBedMin&quot;: 435, &quot;asleepMin&quot;: 400, &quot;efficiency&quot;: 92, &quot;targetMet&quot;: true, &quot;tier&quot;: &quot;optimal&quot;, &quot;window&quot;: &quot;23:30 – 07:00&quot;, &quot;sleepWindowDuration&quot;: &quot;7h 30m&quot;, &quot;name&quot;: &quot;第 4 周巩固（深度改善）&quot;, &quot;diagnosis&quot;: &quot;在床 7 小时 15 分，实际睡眠 6 小时 40 分。睡眠效率攀升至 92%。&quot;, &quot;prescription&quot;: &quot;睡眠动力已高度巩固！床已重新与深睡眠建立稳固连接。保持当前作息，或尝试将睡眠窗口适度放宽 15 分钟。&quot;, &quot;statusLabel&quot;: &quot;进入 CBT-I 理想区间（85%+）&quot;, &quot;asleepFormatted&quot;: &quot;6小时40分&quot;, &quot;awakeFormatted&quot;: &quot;0小时35分&quot;}]">
+          <div class="console-header">
+            <span class="console-title">交互式 CBT-I 睡眠控制台</span>
+            <span class="eff-chip" id="consoleChip" data-tier="low">睡眠碎片化（<85%）</span>
+          </div>
+
+          <div class="preset-bar">
+          <label class="preset-btn">
+            <input type="radio" name="somna_preset" value="insomnia" checked>
+            <span>失眠基线（入睡困难）</span>
+          </label>
+          <label class="preset-btn">
+            <input type="radio" name="somna_preset" value="broken">
+            <span>碎片化睡眠（频繁夜醒）</span>
+          </label>
+          <label class="preset-btn">
+            <input type="radio" name="somna_preset" value="week4">
+            <span>第 4 周巩固（深度改善）</span>
+          </label>
+          </div>
+
+          <div class="eff-display">
+            <div class="eff-ring-box">
+              <svg class="eff-ring" viewBox="0 0 200 200" width="200" height="200" aria-hidden="true">
+  <circle class="ring-bg" cx="100.0" cy="100.0" r="93.0" stroke-width="14" fill="none"/>
+  <circle class="ring-fill" cx="100.0" cy="100.0" r="93.0" stroke-width="14" fill="none"
+          stroke-dasharray="584.34" stroke-dashoffset="151.93"
+          transform="rotate(-90 100.0 100.0)"/>
+  <line class="target-mark" x1="33.7" y1="51.8" x2="15.9" y2="38.9" stroke-width="2.5"/>
+</svg>
+              <div class="eff-center">
+                <span class="eff-val" id="effNum">74<span class="eff-unit">%</span></span>
+                <span class="eff-label">睡眠效率</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-strip">
+            <div class="timeline-labels">
+              <span>本周建议睡眠窗口: <b id="windowVal">00:00 – 07:00</b></span>
+              <span id="targetBadge">85% 临床基准线</span>
+            </div>
+            <div class="timeline-bar" aria-hidden="true">
+              <div class="timeline-seg-awake" id="segAwake1" style="width: 14%;"></div>
+              <div class="timeline-seg-asleep" id="segAsleep" style="width: 74%;"></div>
+              <div class="timeline-seg-awake" id="segAwake2" style="width: 12%;"></div>
+            </div>
+            <div class="timeline-legend">
+              <span><i class="legend-dot dot-asleep"></i>实际睡着: <b id="timeAsleep">6h 15m</b></span>
+              <span><i class="legend-dot dot-awake"></i>在床清醒: <b id="timeAwake">2h 15m</b></span>
+            </div>
+          </div>
+
+          <div class="cbti-feedback">
+            <p class="cbti-diagnosis" id="cbtiDiagnosis">在床 8 小时 30 分，其中清醒耗时 2 小时 15 分。睡眠效率仅为 74%。</p>
+            <p class="cbti-prescription" id="cbtiPrescription">CBT-I 睡眠限制法：在床上清醒过久会削弱睡眠动力。建议将睡眠窗口限制为 7 小时（上床时间推迟至 00:00，严格固定 07:00 起床）。醒着超过 20 分钟立刻离床。</p>
+          </div>
+
+          <p class="fine">依据 Somna 每周睡眠限制算法动态模拟。点击预设体验不同睡眠阶段的 CBT-I 处方演变。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="screens wrap" aria-labelledby="screens-title">
+      <div class="section-head">
+        <h2 id="screens-title">临床级 CBT-I，为你床头而生。</h2>
+        <p>告别助眠药与伪科学，用严谨心理学和生物节律重置睡眠本能。</p>
+      </div>
+      <div class="shots">
+        <figure class="shot">
+          <div class="shot-frame"><img src="/assets/img/somna/zh/home.webp" width="720" height="1542" loading="lazy" alt="Somna 主界面展示睡眠效率圆环、今日睡眠窗口与每日疗程计划"></div>
+          <h3>每日睡眠仪表盘</h3>
+          <p>每日睡眠效率圆环、睡眠窗口倒计时与当日专属训练任务，一目了然。</p>
+        </figure>
+        <figure class="shot">
+          <div class="shot-frame"><img src="/assets/img/somna/zh/plan.webp" width="720" height="1542" loading="lazy" alt="Somna 每周睡眠计划界面展示个性化睡眠窗口建议与作息调整"></div>
+          <h3>每周个性化睡眠处方</h3>
+          <p>每周根据你过去 7 天的睡眠日记，由算法重新测算并定制专属的上床与起床窗口。</p>
+        </figure>
+        <figure class="shot">
+          <div class="shot-frame"><img src="/assets/img/somna/zh/trends.webp" width="720" height="1542" loading="lazy" alt="Somna 趋势分析界面展示 6 周睡眠效率曲线与在床时间变化"></div>
+          <h3>42 晚深度巩固趋势图</h3>
+          <p>直观见证睡眠效率曲线周周攀升，在床清醒的焦虑时光被真正浓缩为安稳长眠。</p>
+        </figure>
+      </div>
+      <p class="fine">截图展示 Somna Android 真实应用界面及示例数据。</p>
+    </section>
+
+    <section class="curriculum" aria-labelledby="curriculum-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="curriculum-title">六周循证蜕变，告别失眠困扰。</h2>
+          <p>失眠认知行为疗法（CBT-I）是国际睡眠医学界公认的慢性失眠一线首选疗法。</p>
+        </div>
+        <ul class="weeks-grid">
+          <li class="week-card">
+            <span class="week-num">Week 1</span>
+            <h3>第 1 周：建立基线与睡眠日记</h3>
+            <p>记录每日上床、入睡耗时与早晨醒来时间。不带批判地看清真实睡眠效率，告别主观臆测。</p>
+          </li>
+          <li class="week-card">
+            <span class="week-num">Week 2</span>
+            <h3>第 2 周：睡眠限制疗法（压缩窗口）</h3>
+            <p>暂时压缩在床时间，使其与真实睡眠时长精确匹配。快速重新蓄积强烈的睡眠驱动力。</p>
+          </li>
+          <li class="week-card">
+            <span class="week-num">Week 3</span>
+            <h3>第 3 周：刺激控制法（打破条件反射）</h3>
+            <p>斩断床铺与“清醒、焦虑、翻来覆去”的负向神经关联。严守 20 分钟原则：醒了就起，困了才睡。</p>
+          </li>
+          <li class="week-card">
+            <span class="week-num">Week 4</span>
+            <h3>第 4 周：认知重塑（消解睡眠焦虑）</h3>
+            <p>利用认知重构技术，瓦解“今晚睡不满 8 小时明天就全毁了”等灾难化思维，平息睡前反刍。</p>
+          </li>
+          <li class="week-card">
+            <span class="week-num">Week 5</span>
+            <h3>第 5 周：昼夜节律与睡眠卫生</h3>
+            <p>锚定晨间起床时间与晨光暴露，科学设定咖啡因截点与卧室温光环境，校准生物钟节律。</p>
+          </li>
+          <li class="week-card">
+            <span class="week-num">Week 6</span>
+            <h3>第 6 周：预防复发与毕业仪式</h3>
+            <p>将所学化为终生睡眠能力。复盘 42 天蜕变报告，签署毕业誓约，颁发毕业证书。</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="calm-suite wrap" aria-labelledby="tools-title">
+      <div class="section-head">
+        <h2 id="tools-title">在睡眠窗口前，让身心安宁着陆。</h2>
+        <p>通过声学白噪音与引导式 4-7-8 呼吸，抑制交感神经亢奋，平稳过渡到睡眠状态。</p>
+      </div>
+      <div class="tools-grid">
+        <div class="tool-box">
+          <h3>4-7-8 助眠腹式呼吸法</h3>
+          <p>吸气 4 秒，屏气 7 秒，慢呼气 8 秒。刺激迷走神经，迅速降低心率与神经中枢唤醒水平。</p>
+          <div class="breathe-interactive">
+            <div class="breathe-disc" id="breatheDisc" aria-hidden="true">
+              <span class="breathe-state" id="breatheState">吸气（4秒）</span>
+            </div>
+            <button type="button" class="breathe-btn" id="breatheBtn" data-start="开始 4-7-8 助眠呼吸" data-stop="停止呼吸指引">开始 4-7-8 助眠呼吸</button>
+          </div>
+        </div>
+
+        <div class="tool-box">
+          <h3>高保真助眠声学空间</h3>
+          <p>粉红噪音、深沉棕噪、轻柔夜雨与舒缓海浪。科学屏蔽外界环境突发声响，抚平神经噪点。</p>
+          <div class="sounds-interactive" id="soundsContainer">
+            <button type="button" class="sound-card" data-sound="pink">
+              <span class="sound-btn"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M240,128a15.74,15.74,0,0,1-7.6,13.51L88.32,229.65A16,16,0,0,1,64,216.13V39.87a16,16,0,0,1,24.32-13.52L232.4,114.49A15.74,15.74,0,0,1,240,128Z"/></svg></span>
+              <span class="sound-name">粉红噪音</span>
+            </button>
+            <button type="button" class="sound-card" data-sound="rain">
+              <span class="sound-btn"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M240,128a15.74,15.74,0,0,1-7.6,13.51L88.32,229.65A16,16,0,0,1,64,216.13V39.87a16,16,0,0,1,24.32-13.52L232.4,114.49A15.74,15.74,0,0,1,240,128Z"/></svg></span>
+              <span class="sound-name">窗边夜雨</span>
+            </button>
+            <button type="button" class="sound-card" data-sound="waves">
+              <span class="sound-btn"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M240,128a15.74,15.74,0,0,1-7.6,13.51L88.32,229.65A16,16,0,0,1,64,216.13V39.87a16,16,0,0,1,24.32-13.52L232.4,114.49A15.74,15.74,0,0,1,240,128Z"/></svg></span>
+              <span class="sound-name">舒缓海浪</span>
+            </button>
+            <button type="button" class="sound-card" data-sound="brown">
+              <span class="sound-btn"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M240,128a15.74,15.74,0,0,1-7.6,13.51L88.32,229.65A16,16,0,0,1,64,216.13V39.87a16,16,0,0,1,24.32-13.52L232.4,114.49A15.74,15.74,0,0,1,240,128Z"/></svg></span>
+              <span class="sound-name">深沉棕噪</span>
+            </button>
+            <p class="sound-hint">点击任意声效，即可在浏览器中实时生成纯净的环境助眠声音。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="coach-section wrap" aria-labelledby="coach-title">
+      <div class="section-head">
+        <h2 id="coach-title">读懂你日记的专属 AI 睡眠教练。</h2>
+        <p>基于严谨的 CBT-I 临床诊疗规范构建。持续理解你最近 14 晚的睡眠数据，随时给予专业、温暖且无偏见的指导。</p>
+      </div>
+      <div class="coach-box">
+        <div class="chat-thread">
+          <div class="msg msg-user">
+            <p>我这周睡眠效率达到了 87%，但晚上 10 点就觉得有点困，可以提前去床上睡吗？</p>
+          </div>
+          <div class="msg msg-ai">
+            <p>恭喜你！效率达到 87% 说明你的睡眠驱动力正在稳固建立。但在 CBT-I 现阶段，建议严格按处方保持 23:15 上床，至少维持两天。过早上床极易导致夜间再次醒来，破坏巩固效果。如果困倦，可以在柔和灯光下听听轻音乐或简单拉伸。</p>
+          </div>
+        </div>
+        <div class="coach-tags">
+          <span class="coach-tag">深度研读 14 晚日记</span>
+          <span class="coach-tag">CBT-I 循证规范对齐</span>
+          <span class="coach-tag">本地优先，绝对私密</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="honest wrap" aria-labelledby="honest-title">
+      <h2 id="honest-title">科学循证，拒绝伪科学噱头。</h2>
+      <div class="honest-copy">
+        <ul class="nots">
+          <li>不卖助眠药物、褪黑素或任何产生化学依赖的成分。</li>
+          <li>不夸大宣传“10秒入睡”、“神效冥想”等虚假神话。</li>
+          <li>不强制注册账号，不设诱导扣费暗扣。</li>
+          <li>不上传、不出售个人健康数据。所有睡眠日记完全保存在你的手机本地。</li>
+        </ul>
+        <p>美国医师协会（ACP）与欧洲睡眠研究学会（ESRS）权威指南均将认知行为疗法（CBT-I）列为成人慢性失眠的首选一线治疗方案，其远期有效率与防复发效果显著超越安眠类药物。</p>
+      </div>
+      <div class="pro">
+        <h3>睡眠日记与基础工具完全免费。</h3>
+        <p>Somna Pro 是一次性买断，不是订阅制。它解锁完整 6 周 CBT-I 课程体系、每周自动睡眠处方计算、完整 42 天趋势分析、AI 睡眠教练深度解读及全套助眠声景。终身使用，绝无续费套路。</p>
+        <a class="play" href="https://play.google.com/store/apps/details?id=com.harley.somna&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dsomna%26utm_campaign%3Dpro"><img src="/assets/img/zh/google-play-badge.png" width="646" height="192" loading="lazy" alt="在 Google Play 下载 Somna"></a>
+      </div>
+    </section>
+
+    <section class="more wrap" aria-labelledby="more-title">
+      <h2 id="more-title">更多应用</h2>
+      <ul class="apps">
+        <li class="app" id="cooldown">
+          <img src="/assets/img/icon-cooldown.webp" width="160" height="160" loading="lazy" alt="">
+          <div>
+            <h3><a href="/zh/">Cooldown</a></h3>
+            <p class="kind">手机温度监控</p>
+            <p class="what">实时查看电池温度，过热时收到警报，并找出导致发热的具体原因。</p>
+            <a class="go" href="https://play.google.com/store/apps/details?id=com.harley.cooldown&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dsomna%26utm_campaign%3Dmore_apps">在 Google Play 下载<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          </div>
+        </li>
+        <li class="app" id="wattlab">
+          <img src="/assets/img/icon-wattlab.webp" width="160" height="160" loading="lazy" alt="">
+          <div>
+            <h3><a href="/wattlab/zh/">Wattlab</a></h3>
+            <p class="kind">充电速度测试</p>
+            <p class="what">查看真正进入电池的功率，找出充电慢的原因，并给你的充电器和数据线排个名。</p>
+            <a class="go" href="https://play.google.com/store/apps/details?id=com.harley.wattlab&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dsomna%26utm_campaign%3Dmore_apps">在 Google Play 下载<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          </div>
+        </li>
+        <li class="app" id="pipit">
+          <img src="/assets/img/icon-pipit.webp" width="160" height="160" loading="lazy" alt="">
+          <div>
+            <h3><a href="/pipit/zh/">Pipit</a></h3>
+            <p class="kind">照片压缩到指定 KB</p>
+            <p class="what">把照片和签名调整到表单要求的精确大小，比如 20 KB、50 KB 或 100 KB。</p>
+            <a class="go" href="https://play.google.com/store/apps/details?id=com.harley.pipit&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dsomna%26utm_campaign%3Dmore_apps">在 Google Play 下载<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          </div>
+        </li>
+        <li class="app" id="angora">
+          <img src="/assets/img/icon-angora.webp" width="160" height="160" loading="lazy" alt="">
+          <div>
+            <h3>Angora</h3>
+            <p class="kind">重复文件查找</p>
+            <p class="what">找出重复文件和大文件，看清存储空间被什么占用，安全地释放空间。你确认之前不会删除任何文件。</p>
+            <a class="go" href="https://play.google.com/store/apps/details?id=com.harley.angora&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dsomna%26utm_campaign%3Dmore_apps">在 Google Play 下载<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="foot wrap">
+    <p><b>联系</b><a href="mailto:tamariskx@gmail.com">tamariskx@gmail.com</a></p>
+    <p><b>隐私政策</b><a href="/cooldown-website/privacy.html">Cooldown</a>, <a href="/wattlab-website/privacy.html">Wattlab</a>, <a href="/somna-website/privacy.html">Somna</a>, <a href="/pipit-website/privacy.html">Pipit</a>, <a href="/angora-website/privacy.html">Angora</a></p>
+    <p class="fine">Google Play 和 Google Play 徽标是 Google LLC 的商标。</p>
+  </footer>
+
+  <script>
+    (() => {
+      // 1. Bedside Console Presets
+      const consoleEl = document.getElementById("somnaConsole");
+      const presets = JSON.parse(consoleEl.dataset.presets);
+      const ringFill = consoleEl.querySelector(".ring-fill");
+      const effNum = document.getElementById("effNum");
+      const chip = document.getElementById("consoleChip");
+      const windowVal = document.getElementById("windowVal");
+      const timeAsleep = document.getElementById("timeAsleep");
+      const timeAwake = document.getElementById("timeAwake");
+      const diagnosis = document.getElementById("cbtiDiagnosis");
+      const prescription = document.getElementById("cbtiPrescription");
+      const segAwake1 = document.getElementById("segAwake1");
+      const segAsleep = document.getElementById("segAsleep");
+      const segAwake2 = document.getElementById("segAwake2");
+
+      const r = 93;
+      const circ = 2 * Math.PI * r;
+
+      function updateConsole(p) {
+        const offset = circ * (1 - p.efficiency / 100);
+        ringFill.style.strokeDashoffset = offset.toFixed(2);
+        effNum.innerHTML = `${p.efficiency}<span class="eff-unit">%</span>`;
+        chip.textContent = p.statusLabel;
+        chip.dataset.tier = p.tier;
+        windowVal.textContent = p.window;
+        timeAsleep.textContent = p.asleepFormatted;
+        timeAwake.textContent = p.awakeFormatted;
+        diagnosis.textContent = p.diagnosis;
+        prescription.textContent = p.prescription;
+
+        const awakePct = 100 - p.efficiency;
+        segAwake1.style.width = (awakePct * 0.55).toFixed(1) + "%";
+        segAsleep.style.width = p.efficiency + "%";
+        segAwake2.style.width = (awakePct * 0.45).toFixed(1) + "%";
+      }
+
+      consoleEl.querySelectorAll('input[name="somna_preset"]').forEach((input) => {
+        input.addEventListener("change", () => {
+          const match = presets.find((p) => p.id === input.value);
+          if (match) updateConsole(match);
+        });
+      });
+
+      // 2. 4-7-8 Breathing Guide
+      const breatheBtn = document.getElementById("breatheBtn");
+      const breatheDisc = document.getElementById("breatheDisc");
+      const breatheState = document.getElementById("breatheState");
+      let breatheTimer = null;
+      let isBreathing = false;
+
+      function runBreathingCycle() {
+        if (!isBreathing) return;
+        // Inhale 4s
+        breatheDisc.className = "breathe-disc inhale";
+        breatheState.textContent = "吸气（4秒）";
+        breatheTimer = setTimeout(() => {
+          if (!isBreathing) return;
+          // Hold 7s
+          breatheDisc.className = "breathe-disc hold";
+          breatheState.textContent = "保持（7秒）";
+          breatheTimer = setTimeout(() => {
+            if (!isBreathing) return;
+            // Exhale 8s
+            breatheDisc.className = "breathe-disc exhale";
+            breatheState.textContent = "慢呼气（8秒）";
+            breatheTimer = setTimeout(() => {
+              if (isBreathing) runBreathingCycle();
+            }, 8000);
+          }, 7000);
+        }, 4000);
+      }
+
+      breatheBtn.addEventListener("click", () => {
+        isBreathing = !isBreathing;
+        if (isBreathing) {
+          breatheBtn.textContent = breatheBtn.dataset.stop;
+          runBreathingCycle();
+        } else {
+          clearTimeout(breatheTimer);
+          breatheDisc.className = "breathe-disc";
+          breatheState.textContent = "吸气（4秒）";
+          breatheBtn.textContent = breatheBtn.dataset.start;
+        }
+      });
+
+      // 3. Web Audio Noise Synthesis (Client-side, 0 bytes external audio files)
+      let audioCtx = null;
+      let activeNoiseNode = null;
+      let activeSound = null;
+
+      function createNoiseBuffer(type) {
+        if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const bufferSize = audioCtx.sampleRate * 2;
+        const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+        const data = buffer.getChannelData(0);
+
+        if (type === "pink") {
+          let b0 = 0, b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, b6 = 0;
+          for (let i = 0; i < bufferSize; i++) {
+            const white = Math.random() * 2 - 1;
+            b0 = 0.99886 * b0 + white * 0.0555179;
+            b1 = 0.99332 * b1 + white * 0.0750759;
+            b2 = 0.96900 * b2 + white * 0.1538520;
+            b3 = 0.86650 * b3 + white * 0.3104856;
+            b4 = 0.55000 * b4 + white * 0.5329522;
+            b5 = -0.7616 * b5 - white * 0.0168980;
+            data[i] = (b0 + b1 + b2 + b3 + b4 + b5 + b6 + white * 0.5362) * 0.04;
+            b6 = white * 0.115926;
+          }
+        } else if (type === "brown") {
+          let lastOut = 0.0;
+          for (let i = 0; i < bufferSize; i++) {
+            const white = Math.random() * 2 - 1;
+            data[i] = (lastOut + (0.02 * white)) / 1.02;
+            lastOut = data[i];
+            data[i] *= 0.35;
+          }
+        } else if (type === "rain") {
+          for (let i = 0; i < bufferSize; i++) {
+            const white = Math.random() * 2 - 1;
+            data[i] = white * (Math.random() > 0.92 ? 0.08 : 0.02);
+          }
+        } else if (type === "waves") {
+          for (let i = 0; i < bufferSize; i++) {
+            const t = i / audioCtx.sampleRate;
+            const envelope = 0.5 + 0.5 * Math.sin(2 * Math.PI * 0.25 * t);
+            const white = Math.random() * 2 - 1;
+            data[i] = white * envelope * 0.035;
+          }
+        }
+        return buffer;
+      }
+
+      function stopSound() {
+        if (activeNoiseNode) {
+          try { activeNoiseNode.stop(); activeNoiseNode.disconnect(); } catch (e) {}
+          activeNoiseNode = null;
+        }
+        document.querySelectorAll(".sound-card").forEach((card) => {
+          card.classList.remove("playing");
+          card.querySelector(".sound-btn").innerHTML = `<svg class="ic" viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M240,128a15.74,15.74,0,0,1-7.6,13.51L88.32,229.65A16,16,0,0,1,64,216.13V39.87a16,16,0,0,1,24.32-13.52L232.4,114.49A15.74,15.74,0,0,1,240,128Z"/></svg>`;
+        });
+        activeSound = null;
+      }
+
+      document.querySelectorAll(".sound-card").forEach((card) => {
+        card.addEventListener("click", () => {
+          const sound = card.dataset.sound;
+          if (activeSound === sound) {
+            stopSound();
+            return;
+          }
+          stopSound();
+          try {
+            const buffer = createNoiseBuffer(sound);
+            const src = audioCtx.createBufferSource();
+            src.buffer = buffer;
+            src.loop = true;
+            const gain = audioCtx.createGain();
+            gain.gain.setValueAtTime(0.01, audioCtx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.15, audioCtx.currentTime + 1.2);
+            src.connect(gain);
+            gain.connect(audioCtx.destination);
+            src.start();
+            activeNoiseNode = src;
+            activeSound = sound;
+            card.classList.add("playing");
+            card.querySelector(".sound-btn").innerHTML = `<svg class="ic" viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M216,48V208a16,16,0,0,1-16,16H160a16,16,0,0,1-16-16V48a16,16,0,0,1,16-16h40A16,16,0,0,1,216,48ZM96,32H56A16,16,0,0,0,40,48V208a16,16,0,0,0,16,16H96a16,16,0,0,0,16-16V48A16,16,0,0,0,96,32Z"/></svg>`;
+          } catch (e) {
+            console.error(e);
+          }
+        });
+      });
+    })();
+  </script>
+  <script>    (() => {
+      // Picking a language remembers it, so the English page stops sending this browser to its own language.
+      for (const link of document.querySelectorAll("a[data-lang]")) {
+        link.addEventListener("click", () => { try { localStorage.setItem("lang", link.dataset.lang); } catch (e) {} });
+      }
+      // The menu closes on Escape or a click outside it.
+      const menu = document.querySelector(".lang-menu");
+      document.addEventListener("click", (event) => { if (menu.open && !menu.contains(event.target)) menu.open = false; });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && menu.open) { menu.open = false; menu.querySelector("summary").focus(); }
+      });
+    })();</script>
+</body>
+</html>

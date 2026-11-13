@@ -34,8 +34,17 @@ SITE = Path(__file__).resolve().parent.parent
 SRC = SITE / 'src'
 ORIGIN = 'https://harleyxu-xhl.github.io'
 
-sys.path.insert(0, str(SRC / 'wattlab'))
-import parts  # noqa: E402
+import importlib.util
+
+def load_module(name, path):
+    spec = importlib.util.spec_from_file_location(name, path)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+wattlab_parts = load_module('wattlab_parts', SRC / 'wattlab/parts.py')
+somna_parts = load_module('somna_parts', SRC / 'somna/parts.py')
+pipit_parts = load_module('pipit_parts', SRC / 'pipit/parts.py')
 
 # code: (html lang, hreflang, og:locale, name in its own language, decimal comma, Cooldown's Play download count)
 # The count mirrors Google Play's public figure in Play's own wording; update every language when Play moves on.
@@ -64,6 +73,8 @@ APPS = {'cooldown': 'Cooldown', 'wattlab': 'Wattlab', 'somna': 'Somna', 'pipit':
 PAGES = {
     'cooldown': {'langs': list(LANGS), 'dir': ''},
     'wattlab': {'langs': ['en', 'zh'], 'dir': 'wattlab/'},
+    'somna': {'langs': ['en', 'zh'], 'dir': 'somna/'},
+    'pipit': {'langs': ['en', 'zh'], 'dir': 'pipit/'},
 }
 
 PLAY = 'https://play.google.com/store/apps/details?id=com.harley.{app}&amp;referrer=utm_source%3Dwebsite%26utm_medium%3D{medium}%26utm_campaign%3D{campaign}'
@@ -349,13 +360,13 @@ def build_wattlab(site):
     template = (SRC / 'wattlab/page.html').read_text()
     codes = PAGES['wattlab']['langs']
     own = load(SRC / 'wattlab/i18n', codes, lists=('nots',))
-    capacity = parts.capacity()
-    first = parts.DATA['setups'][0]
+    capacity = wattlab_parts.capacity()
+    first = wattlab_parts.DATA['setups'][0]
     for code in codes:
         # The announce line keeps its {name}, {watts} and {tier}: parts.setups() fills them for each setup.
         text = localize({k: v for k, v in own[code].items() if k != 'announce'}, capacity, f'wattlab/i18n/{code}.json')
         text['announce'] = own[code]['announce']
-        rows, state = parts.setups(text)
+        rows, state = wattlab_parts.setups(text)
         img = '/assets/img/wattlab/' if code == 'en' else f'/assets/img/wattlab/{code}/'
         values = {
             **{k: site[code][k] for k in ('skip', 'language', 'more_title')},
@@ -366,16 +377,62 @@ def build_wattlab(site):
             'img': img,
             'play_hero': play('wattlab', 'wattlab', 'hero'),
             'play_pro': play('wattlab', 'wattlab', 'pro'),
-            'gauge': parts.gauge_svg(first['avgMw']),
-            'gauge_marks': parts.gauge_marks(),
-            'tier_icon': parts.ICONS[parts.TIER_ICON[first['tier']]],
-            'watts_first': parts.watts(first['avgMw']),
-            'icon_plug': parts.icon('plug'),
-            'icon_battery': parts.icon('battery', 'batt'),
+            'gauge': wattlab_parts.gauge_svg(first['avgMw']),
+            'gauge_marks': wattlab_parts.gauge_marks(),
+            'tier_icon': wattlab_parts.ICONS[wattlab_parts.TIER_ICON[first['tier']]],
+            'watts_first': wattlab_parts.watts(first['avgMw']),
+            'icon_plug': wattlab_parts.icon('plug'),
+            'icon_battery': wattlab_parts.icon('battery', 'batt'),
             'setups': rows,
             'setups_json': state,
         }
         write('wattlab', code, fill(template, values, f'wattlab {code}'))
+
+
+def build_somna(site):
+    template = (SRC / 'somna/page.html').read_text()
+    codes = PAGES['somna']['langs']
+    own = load(SRC / 'somna/i18n', codes, lists=('nots',))
+    for code in codes:
+        text = own[code]
+        img = '/assets/img/somna/' if code == 'en' else f'/assets/img/somna/{code}/'
+        first_preset = somna_parts.PRESETS[0]
+        values = {
+            **{k: site[code][k] for k in ('skip', 'language', 'more_title')},
+            **flatten(text),
+            **shared('somna', code, {**site[code], **text}, 'somna'),
+            'og_image': f'{ORIGIN}{img}og.png',
+            'img': img,
+            'play_hero': play('somna', 'somna', 'hero'),
+            'play_pro': play('somna', 'somna', 'pro'),
+            'presets_buttons': somna_parts.presets_html(text),
+            'presets_json': somna_parts.presets_json(text),
+            'gauge_svg': somna_parts.efficiency_ring_svg(first_preset['efficiency'], 200, 14),
+            'icon_play': somna_parts.ICONS['play'],
+            'icon_pause': somna_parts.ICONS['pause'],
+        }
+        write('somna', code, fill(template, values, f'somna {code}'))
+
+
+def build_pipit(site):
+    template = (SRC / 'pipit/page.html').read_text()
+    codes = PAGES['pipit']['langs']
+    own = load(SRC / 'pipit/i18n', codes, lists=('nots',))
+    for code in codes:
+        text = own[code]
+        img = '/assets/img/pipit/' if code == 'en' else f'/assets/img/pipit/{code}/'
+        values = {
+            **{k: site[code][k] for k in ('skip', 'language', 'more_title')},
+            **flatten(text),
+            **shared('pipit', code, {**site[code], **text}, 'pipit'),
+            'og_image': f'{ORIGIN}{img}og.png',
+            'img': img,
+            'play_hero': play('pipit', 'pipit', 'hero'),
+            'play_pro': play('pipit', 'pipit', 'pro'),
+            'presets_buttons': pipit_parts.presets_html(text),
+            'presets_json': pipit_parts.presets_json(text),
+        }
+        write('pipit', code, fill(template, values, f'pipit {code}'))
 
 
 def sitemap():
@@ -394,6 +451,8 @@ def main():
     site = load(SRC / 'i18n', list(LANGS), lists=('levels', 'nots'))
     build_cooldown(site)
     build_wattlab(site)
+    build_somna(site)
+    build_pipit(site)
     sitemap()
 
 

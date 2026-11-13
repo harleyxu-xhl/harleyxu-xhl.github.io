@@ -1,0 +1,90 @@
+<!doctype html>
+<html class="somna">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/somna.css">
+<style>
+  html { font-size: 16px; }
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; background: #090b1e; color: #f3f1fa; }
+  .card {
+    position: relative;
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+    background:
+      radial-gradient(800px 500px at 75% 30%, rgb(88 95 186 / 0.35), transparent 70%),
+      radial-gradient(1000px 600px at 20% 0%, rgb(59 66 143 / 0.25), transparent 75%),
+      #090b1e;
+  }
+  .id { position: absolute; left: 84px; top: 80px; display: flex; align-items: center; gap: 18px; }
+  .id img { width: 72px; height: 72px; border-radius: 17px; outline: 1px solid var(--icon-edge); }
+  .id b { display: block; font-size: 28px; line-height: 1.2; font-weight: 600; font-stretch: 108%; }
+  .id small { display: block; font-size: 19px; color: var(--ink-2); }
+  h1 {
+    position: absolute;
+    left: 84px;
+    top: 188px;
+    width: 580px;
+    font-size: 64px;
+    line-height: 1.05;
+    text-wrap: balance;
+    background: linear-gradient(180deg, #ffffff 40%, #c8c2f8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .free { position: absolute; left: 84px; font-size: 22px; color: var(--ink-2); }
+  .console-preview {
+    position: absolute;
+    right: 84px;
+    top: 96px;
+    width: 420px;
+    padding: 32px;
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgb(24 29 70 / 0.8) 0%, rgb(13 16 43 / 0.95) 100%);
+    border: 1px solid var(--line);
+    box-shadow: 0 0 60px -10px var(--glow-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ring-box { position: relative; width: 190px; height: 190px; }
+  .eff-center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .eff-val { font-size: 3.5rem; font-weight: 700; color: #ffffff; line-height: 1; }
+  .eff-unit { font-size: 1.5rem; color: var(--brand); }
+  .eff-label { font-size: 0.8125rem; font-weight: 600; color: var(--ink-2); text-transform: uppercase; margin-top: 4px; }
+  .pill { margin-top: 20px; padding: 6px 16px; border-radius: 999px; background: rgb(52 211 153 / 0.15); border: 1px solid rgb(52 211 153 / 0.4); color: #6ee7b7; font-size: 0.875rem; font-weight: 600; }
+  .caption { margin-top: 14px; font-size: 0.875rem; color: var(--ink-2); text-align: center; }
+</style>
+</head>
+<body class="dark">
+<div class="card">
+  <div class="id">
+    <img src="/assets/img/icon-somna.webp" alt="">
+    <span><b>Somna</b><small id="tagline"></small></span>
+  </div>
+  <h1 id="h1"></h1>
+  <p class="free" id="free"></p>
+  <div class="console-preview">
+    <div class="ring-box" id="gaugeBox"></div>
+    <div class="pill" id="pill"></div>
+    <p class="caption" id="caption"></p>
+  </div>
+</div>
+<script>
+  document.documentElement.lang = OG.lang;
+  for (const key of ["tagline", "free", "pill", "caption"]) document.getElementById(key).textContent = OG[key];
+  document.getElementById("h1").innerHTML = OG.h1;
+  document.getElementById("gaugeBox").innerHTML = OG.gauge;
+
+  const h1 = document.getElementById("h1"), free = document.getElementById("free");
+  document.fonts.ready.then(() => {
+    let size = 64;
+    const lines = () => h1.offsetHeight / (parseFloat(getComputedStyle(h1).lineHeight) || size);
+    while (size > 40 && (lines() > 4.2 || h1.scrollWidth > h1.clientWidth || h1.offsetTop + h1.offsetHeight > 480)) h1.style.fontSize = (size -= 2) + "px";
+    free.style.top = h1.offsetTop + h1.offsetHeight + 28 + "px";
+    document.body.dataset.ready = "1";
+  });
+</script>
+</body>
+</html>

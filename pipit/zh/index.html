@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="zh-Hans" class="pipit">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pipit: 照片压缩到指定 KB 与尺寸修改</title>
+  <meta name="description" content="Pipit 将照片和电子签名精确压缩到政务、考试或签证表单要求的指定文件大小，例如 20 KB、50 KB 或 100 KB。100% 本地离线处理，零隐私风险。在 Google Play 免费下载。">
+  <link rel="canonical" href="https://harleyxu-xhl.github.io/pipit/zh/">
+  <link rel="alternate" hreflang="en" href="https://harleyxu-xhl.github.io/pipit/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://harleyxu-xhl.github.io/pipit/zh/">
+  <link rel="alternate" hreflang="x-default" href="https://harleyxu-xhl.github.io/pipit/">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0c261e">
+  <link rel="icon" href="/assets/img/pipit/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="icon" href="/assets/img/pipit/favicon.png" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="/assets/img/pipit/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pipit">
+  <meta property="og:url" content="https://harleyxu-xhl.github.io/pipit/zh/">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="Pipit: 精确压缩到指定 KB，一张不差">
+  <meta property="og:description" content="一次精准达到 20 KB 或 50 KB 上限，告别反复盲猜与模糊画质。100% 手机本地离线压缩，免注册、无水印。在 Google Play 免费下载。">
+  <meta property="og:image" content="https://harleyxu-xhl.github.io/assets/img/pipit/zh/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="/assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="/assets/pipit.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Pipit: Photo Resizer in KB",
+    "operatingSystem": "Android",
+    "applicationCategory": "PhotographyApplication",
+    "inLanguage": "zh-Hans",
+    "description": "面向公考、签证、学生档案与求职招聘表单的本地照片压缩工具，支持精确压缩到指定 KB 与标准像素尺寸调整。",
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.harley.pipit",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+</head>
+<body class="dark">
+  <a class="skip" href="#main">跳到正文</a>
+
+  <header class="top wrap dark">
+    <nav class="apps-nav" aria-label="应用">
+      <a href="/zh/">Cooldown</a>
+      <a href="/wattlab/zh/">Wattlab</a>
+      <a href="/somna/zh/">Somna</a>
+      <a href="#pipit" aria-current="page">Pipit</a>
+      <a href="#angora">Angora</a>
+    </nav>
+    <div class="top-end">
+      <details class="lang-menu">
+        <summary aria-label="语言: 简体中文"><svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M128,24h0A104,104,0,1,0,232,128,104.12,104.12,0,0,0,128,24Zm87.62,96H175.79C174,83.49,159.94,57.67,148.41,42.4A88.19,88.19,0,0,1,215.62,120ZM96.23,136h63.54c-2.31,41.61-22.23,67.11-31.77,77C118.45,203.1,98.54,177.6,96.23,136Zm0-16C98.54,78.39,118.46,52.89,128,43c9.55,9.93,29.46,35.43,31.77,77Zm11.36-77.6C96.06,57.67,82,83.49,80.21,120H40.37A88.19,88.19,0,0,1,107.59,42.4ZM40.37,136H80.21c1.82,36.51,15.85,62.33,27.38,77.6A88.19,88.19,0,0,1,40.37,136Zm108,77.6c11.53-15.27,25.56-41.09,27.38-77.6h39.84A88.19,88.19,0,0,1,148.41,213.6Z"/></svg><span>简体中文</span></summary>
+        <ul>
+          <li><a href="/pipit/" hreflang="en" lang="en" data-lang="en">English</a></li>
+          <li><a href="/pipit/zh/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh" aria-current="true">简体中文</a></li>
+        </ul>
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="stage pipit-stage dark" id="pipit" aria-labelledby="hero-title">
+      <div class="stage-in wrap">
+        <div class="hero-copy">
+          <p class="app-id">
+            <img src="/assets/img/icon-pipit.webp" width="160" height="160" alt="">
+            <span><b>Pipit</b><small>照片压缩到指定 KB 工具</small></span>
+          </p>
+          <h1 id="hero-title">精确压缩到指定 KB，一张不差。</h1>
+          <p class="lede">公考报名、出国签证、学信网或招聘系统常常强制要求“50 KB 以下”或“20 KB 到 100 KB”。Pipit 独家智能二分算法，无需反复试错猜测画质，一次精准命中目标文件大小，画质依然清晰锐利。</p>
+          <div class="cta">
+            <a class="play" href="https://play.google.com/store/apps/details?id=com.harley.pipit&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dpipit%26utm_campaign%3Dhero"><img src="/assets/img/zh/google-play-badge.png" width="646" height="192" alt="在 Google Play 下载 Pipit"></a>
+            <p class="fine">免费下载。Pro 为一次性买断，不是订阅制。</p>
+          </div>
+        </div>
+
+        <div class="pipit-console" id="pipitConsole" data-presets="[{&quot;id&quot;: &quot;kb20&quot;, &quot;targetKb&quot;: 20, &quot;label&quot;: &quot;20 KB&quot;, &quot;key&quot;: &quot;preset_20kb&quot;, &quot;chipKey&quot;: &quot;chip_visa&quot;, &quot;actualKb&quot;: 19.4, &quot;dimensions&quot;: &quot;720 × 540 px&quot;, &quot;ratio&quot;: &quot;4:3&quot;, &quot;reduction&quot;: &quot;-99.4%&quot;, &quot;autoDownscale&quot;: true, &quot;format&quot;: &quot;JPEG&quot;, &quot;chipText&quot;: &quot;护照 / 申根签证（&lt;20 KB）&quot;, &quot;note&quot;: &quot;智能二分压缩：自动将分辨率适配为 720 × 540 像素，严格确保文件小于 20 KB 的同时保留面部清晰五官细节。&quot;}, {&quot;id&quot;: &quot;kb50&quot;, &quot;targetKb&quot;: 50, &quot;label&quot;: &quot;50 KB&quot;, &quot;key&quot;: &quot;preset_50kb&quot;, &quot;chipKey&quot;: &quot;chip_exam&quot;, &quot;actualKb&quot;: 48.7, &quot;dimensions&quot;: &quot;1024 × 768 px&quot;, &quot;ratio&quot;: &quot;4:3&quot;, &quot;reduction&quot;: &quot;-98.6%&quot;, &quot;autoDownscale&quot;: true, &quot;format&quot;: &quot;JPEG&quot;, &quot;chipText&quot;: &quot;公考 / 考研报名（&lt;50 KB）&quot;, &quot;note&quot;: &quot;精准命中目标：48.7 KB 稳居 50 KB 上限以内。边缘锐利，文字可辨，完全符合国家考试与政务系统审核规范。&quot;}, {&quot;id&quot;: &quot;kb100&quot;, &quot;targetKb&quot;: 100, &quot;label&quot;: &quot;100 KB&quot;, &quot;key&quot;: &quot;preset_100kb&quot;, &quot;chipKey&quot;: &quot;chip_portal&quot;, &quot;actualKb&quot;: 96.5, &quot;dimensions&quot;: &quot;1600 × 1200 px&quot;, &quot;ratio&quot;: &quot;4:3&quot;, &quot;reduction&quot;: &quot;-97.3%&quot;, &quot;autoDownscale&quot;: true, &quot;format&quot;: &quot;JPEG&quot;, &quot;chipText&quot;: &quot;政务系统与求职平台（&lt;100 KB）&quot;, &quot;note&quot;: &quot;高分辨率输出：在 96.5 KB 体积下保留 1600 × 1200 像素，满足求职简历、学籍档案及官方系统对高清画质的要求。&quot;}, {&quot;id&quot;: &quot;kb200&quot;, &quot;targetKb&quot;: 200, &quot;label&quot;: &quot;200 KB&quot;, &quot;key&quot;: &quot;preset_200kb&quot;, &quot;chipKey&quot;: &quot;chip_web&quot;, &quot;actualKb&quot;: 192.0, &quot;dimensions&quot;: &quot;2048 × 1536 px&quot;, &quot;ratio&quot;: &quot;4:3&quot;, &quot;reduction&quot;: &quot;-94.6%&quot;, &quot;autoDownscale&quot;: false, &quot;format&quot;: &quot;JPEG&quot;, &quot;chipText&quot;: &quot;网页表单与邮件附件（&lt;200 KB）&quot;, &quot;note&quot;: &quot;保留 2048 × 1536 像素超清分辨率，体积缩减 94.6%。兼顾极致画质与极小文件体积。&quot;}, {&quot;id&quot;: &quot;orig&quot;, &quot;targetKb&quot;: 0, &quot;label&quot;: &quot;3.5 MB&quot;, &quot;key&quot;: &quot;preset_orig&quot;, &quot;chipKey&quot;: &quot;chip_orig&quot;, &quot;actualKb&quot;: 3584.0, &quot;dimensions&quot;: &quot;4096 × 3072 px&quot;, &quot;ratio&quot;: &quot;4:3&quot;, &quot;reduction&quot;: &quot;Original&quot;, &quot;autoDownscale&quot;: false, &quot;format&quot;: &quot;JPEG&quot;, &quot;chipText&quot;: &quot;手机拍摄原始照片&quot;, &quot;note&quot;: &quot;相机直出原始照片：4096 × 3072 像素，体积高达 3.5 MB。远超各类线上报名系统的上传上限。&quot;}]">
+          <div class="console-topbar">
+            <span class="console-title">交互式目标 KB 压缩测试台</span>
+            <div class="compare-toggle">
+              <button type="button" class="compare-btn active" id="btnResult">压缩后</button>
+              <button type="button" class="compare-btn" id="btnOrig">原图</button>
+            </div>
+          </div>
+
+          <div class="viewfinder-frame">
+            <img class="viewfinder-img" id="vfImg" src="/assets/img/pipit/sample-photo.webp" alt="Sample photograph">
+            <div class="vf-corner vf-tl" aria-hidden="true"></div>
+            <div class="vf-corner vf-tr" aria-hidden="true"></div>
+            <div class="vf-corner vf-bl" aria-hidden="true"></div>
+            <div class="vf-corner vf-br" aria-hidden="true"></div>
+            <div class="vf-hud-top" id="hudChip">公考 / 考研报名（<50 KB）</div>
+            <div class="vf-hud-bottom">
+              <span id="hudDims">1024 × 768 px</span>
+              <span id="hudFormat">JPEG · Target: &lt; 50 KB</span>
+            </div>
+          </div>
+
+          <div class="preset-chips">
+          <label class="preset-btn">
+            <input type="radio" name="pipit_preset" value="kb20">
+            <span>20 KB</span>
+          </label>
+          <label class="preset-btn">
+            <input type="radio" name="pipit_preset" value="kb50" checked>
+            <span>50 KB</span>
+          </label>
+          <label class="preset-btn">
+            <input type="radio" name="pipit_preset" value="kb100">
+            <span>100 KB</span>
+          </label>
+          <label class="preset-btn">
+            <input type="radio" name="pipit_preset" value="kb200">
+            <span>200 KB</span>
+          </label>
+          <label class="preset-btn">
+            <input type="radio" name="pipit_preset" value="orig">
+            <span>3.5 MB</span>
+          </label>
+          </div>
+
+          <div class="slider-control">
+            <div class="slider-labels">
+              <span>目标上限: <b id="sliderVal">50 KB</b></span>
+              <span>10 KB – 500 KB</span>
+            </div>
+            <input type="range" class="kb-slider" id="kbSlider" min="10" max="500" value="50" step="5">
+          </div>
+
+          <dl class="stats-grid">
+            <div class="stat-item">
+              <dt>目标上限</dt>
+              <dd id="statTargetVal">&lt; 50 KB</dd>
+            </div>
+            <div class="stat-item">
+              <dt>输出大小</dt>
+              <dd class="highlight" id="statActualVal">48.7 KB</dd>
+            </div>
+            <div class="stat-item">
+              <dt>像素尺寸</dt>
+              <dd id="statDimsVal">1024 × 768</dd>
+            </div>
+            <div class="stat-item">
+              <dt>体积缩减</dt>
+              <dd class="highlight" id="statReductVal">-98.6%</dd>
+            </div>
+          </dl>
+
+          <div class="console-note-card">
+            <p id="consoleNoteText">精准命中目标：48.7 KB 稳居 50 KB 上限以内。边缘锐利，文字可辨，完全符合国家考试与政务系统审核规范。</p>
+          </div>
+
+          <p class="fine">基于 Pipit 手机端二分压缩算法实时模拟。点击“压缩后 / 原图”切换对比清晰度。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="screens wrap" aria-labelledby="screens-title">
+      <div class="section-head">
+        <h2 id="screens-title">为严苛的上传表单与日常修图量身打造。</h2>
+        <p>从 3.5 MB 瞬间缩至指定 KB，告别反复试错，无需联网上传。</p>
+      </div>
+      <div class="shots">
+        <figure class="shot">
+          <div class="shot-frame"><img src="/assets/img/pipit/zh/result.webp" width="720" height="1526" loading="lazy" alt="Pipit 压缩结果界面展示文件大小从 3.5 MB 缩减至 153 KB"></div>
+          <h3>毫秒级精准命中目标</h3>
+          <p>从 3.5 MB 压缩到 153 KB。Pipit 本地算法引擎自动计算最优压缩质量曲线，一次通过表单文件大小校验。</p>
+        </figure>
+        <figure class="shot">
+          <div class="shot-frame"><img src="/assets/img/pipit/zh/kb-limit.webp" width="720" height="1520" loading="lazy" alt="Pipit 最大文件大小设定界面，展示 20 KB、50 KB、100 KB 与 200 KB 快捷标签"></div>
+          <h3>直观设定目标 KB 上限</h3>
+          <p>提供 20 KB、50 KB、100 KB、200 KB 快捷标签，亦可输入表单要求的任意精确数值。</p>
+        </figure>
+        <figure class="shot">
+          <div class="shot-frame"><img src="/assets/img/pipit/zh/resize.webp" width="720" height="1532" loading="lazy" alt="Pipit 尺寸调整设置界面，展示像素尺寸与比例设置选项"></div>
+          <h3>多维尺寸调整与画布填充</h3>
+          <p>支持按宽高像素、百分比缩放，或在固定画布中保持比例补白与居中裁剪。</p>
+        </figure>
+      </div>
+      <p class="fine">截图展示 Pipit Android 真实应用界面及示例照片。</p>
+    </section>
+
+    <section class="specs-section" aria-labelledby="specs-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="specs-title">官方证件照、签证与各类考试尺寸规范。</h2>
+          <p>再也不用担心因为尺寸超标、比例失真或画面拉伸而被系统驳回申请。</p>
+        </div>
+
+        <div class="canvas-mode-bar">
+          <button type="button" class="canvas-mode-btn active" id="btnModeFit" data-mode="fit">保持比例补白</button>
+          <button type="button" class="canvas-mode-btn" id="btnModeCrop" data-mode="crop">居中裁剪填满</button>
+        </div>
+
+        <ul class="specs-grid">
+          <li class="spec-card">
+            <div class="spec-ratio-box" aria-hidden="true">
+              <div class="spec-inner-photo" id="specBox1" style="aspect-ratio: 35 / 45; width: auto; height: 85%;">200 × 230</div>
+            </div>
+            <span class="spec-badge">Biometric</span>
+            <h3>护照与出国签证</h3>
+            <p class="spec-metric">35 × 45 毫米（200 × 230 像素）</p>
+            <p>严格符合申根签证、美签、英签及各国护照网申系统标准。</p>
+          </li>
+          <li class="spec-card">
+            <div class="spec-ratio-box" aria-hidden="true">
+              <div class="spec-inner-photo" id="specBox2" style="aspect-ratio: 3 / 4; width: auto; height: 85%;">300 × 400</div>
+            </div>
+            <span class="spec-badge">National Standard</span>
+            <h3>公务员与各类考证</h3>
+            <p class="spec-metric">小 1 寸（295 × 413 像素）· 2 寸（413 × 626 像素）</p>
+            <p>对齐国考、省考、教资、医考、会计考等官方报名系统要求。</p>
+          </li>
+          <li class="spec-card">
+            <div class="spec-ratio-box" aria-hidden="true">
+              <div class="spec-inner-photo" id="specBox3" style="aspect-ratio: 1 / 1; width: auto; height: 85%;">1080 × 1080</div>
+            </div>
+            <span class="spec-badge">Digital</span>
+            <h3>正方形与现代网页</h3>
+            <p class="spec-metric">1:1（1080 × 1080 像素）· 16:9（1920 × 1080 像素）</p>
+            <p>适合用于个人求职头像、电子签名上传与网络文档配图。</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="formats-section wrap" aria-labelledby="format-title">
+      <div class="section-head">
+        <h2 id="format-title">格式一键转换，支持多达 100 张批量加速。</h2>
+        <p>单张微调精准如手术刀，亦可一键并发批处理海量图片。</p>
+      </div>
+
+      <div class="formats-grid">
+        <div class="format-card">
+          <h3>JPEG 压缩</h3>
+          <p>最通用的图片格式。配合智能二分算法，在严格卡死 KB 上限的同时榨取最高画质。</p>
+        </div>
+        <div class="format-card">
+          <h3>PNG 无损转换</h3>
+          <p>无损图形压缩，完整支持透明通道。专为印章、手写电子签名与透明证件照设计。</p>
+        </div>
+        <div class="format-card">
+          <h3>WebP（有损 / 无损）</h3>
+          <p>现代高压缩比格式。在同等视觉观感下，文件体积比传统 JPEG 再小约 30%。</p>
+        </div>
+      </div>
+
+      <div class="batch-wide-card">
+        <div class="batch-copy">
+          <h3>批量处理（Pipit Pro）</h3>
+          <p>单次队列可并发批量处理多达 100 张图片。统一应用 KB 上限、裁剪规则与格式转换，数秒搞定。</p>
+        </div>
+        <div class="batch-matrix-box">
+          <div class="matrix-grid" id="batchMatrix" aria-hidden="true"></div>
+          <div class="matrix-status">
+            <span id="batchCount">已处理 100 / 100 张 · 耗时 2.1 秒</span>
+            <span>⚡ 60 FPS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="honest wrap" aria-labelledby="honest-title">
+      <h2 id="honest-title">你的照片绝不离开手机半步。</h2>
+      <div class="honest-copy">
+        <ul class="nots">
+          <li>不需要注册，不需要登录，无需提供邮箱或手机号。</li>
+          <li>绝不向任何外部服务器上传你的照片、身份证件、护照或电子签名。</li>
+          <li>导出的图片绝对不加任何水印。</li>
+          <li>没有每月自动续费套路。Pro 版为一次性终身买断。</li>
+        </ul>
+        <p>所有图片压缩、裁剪与格式转换均 100% 在你的手机本地利用 Android 原生 Canvas 和 Bitmap 硬件加速管道完成。完全离线可用，从根源上杜绝任何隐私泄露风险。</p>
+      </div>
+      <div class="pro">
+        <h3>单张调整与指定 KB 压缩完全免费。</h3>
+        <p>Pipit Pro 为可选的一次性买断，不是订阅制。它会移除广告，解锁多达 100 张图片的高速并发批处理，并允许保存多达 20 个自定义常用预设，让重复报考填表快人一步。</p>
+        <a class="play" href="https://play.google.com/store/apps/details?id=com.harley.pipit&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dpipit%26utm_campaign%3Dpro"><img src="/assets/img/zh/google-play-badge.png" width="646" height="192" loading="lazy" alt="在 Google Play 下载 Pipit"></a>
+      </div>
+    </section>
+
+    <section class="more wrap" aria-labelledby="more-title">
+      <h2 id="more-title">更多应用</h2>
+      <ul class="apps">
+        <li class="app" id="cooldown">
+          <img src="/assets/img/icon-cooldown.webp" width="160" height="160" loading="lazy" alt="">
+          <div>
+            <h3><a href="/zh/">Cooldown</a></h3>
+            <p class="kind">手机温度监控</p>
+            <p class="what">实时查看电池温度，过热时收到警报，并找出导致发热的具体原因。</p>
+            <a class="go" href="https://play.google.com/store/apps/details?id=com.harley.cooldown&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dpipit%26utm_campaign%3Dmore_apps">在 Google Play 下载<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          </div>
+        </li>
+        <li class="app" id="wattlab">
+          <img src="/assets/img/icon-wattlab.webp" width="160" height="160" loading="lazy" alt="">
+          <div>
+            <h3><a href="/wattlab/zh/">Wattlab</a></h3>
+            <p class="kind">充电速度测试</p>
+            <p class="what">查看真正进入电池的功率，找出充电慢的原因，并给你的充电器和数据线排个名。</p>
+            <a class="go" href="https://play.google.com/store/apps/details?id=com.harley.wattlab&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dpipit%26utm_campaign%3Dmore_apps">在 Google Play 下载<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          </div>
+        </li>
+        <li class="app" id="somna">
+          <img src="/assets/img/icon-somna.webp" width="160" height="160" loading="lazy" alt="">
+          <div>
+            <h3><a href="/somna/zh/">Somna</a></h3>
+            <p class="kind">睡眠日记与 CBT-I</p>
+            <p class="what">一款睡眠日记，附带基于失眠认知行为疗法的 6 周课程。</p>
+            <a class="go" href="https://play.google.com/store/apps/details?id=com.harley.somna&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dpipit%26utm_campaign%3Dmore_apps">在 Google Play 下载<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          </div>
+        </li>
+        <li class="app" id="angora">
+          <img src="/assets/img/icon-angora.webp" width="160" height="160" loading="lazy" alt="">
+          <div>
+            <h3>Angora</h3>
+            <p class="kind">重复文件查找</p>
+            <p class="what">找出重复文件和大文件，看清存储空间被什么占用，安全地释放空间。你确认之前不会删除任何文件。</p>
+            <a class="go" href="https://play.google.com/store/apps/details?id=com.harley.angora&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dpipit%26utm_campaign%3Dmore_apps">在 Google Play 下载<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="foot wrap">
+    <p><b>联系</b><a href="mailto:tamariskx@gmail.com">tamariskx@gmail.com</a></p>
+    <p><b>隐私政策</b><a href="/cooldown-website/privacy.html">Cooldown</a>, <a href="/wattlab-website/privacy.html">Wattlab</a>, <a href="/somna-website/privacy.html">Somna</a>, <a href="/pipit-website/privacy.html">Pipit</a>, <a href="/angora-website/privacy.html">Angora</a></p>
+    <p class="fine">Google Play 和 Google Play 徽标是 Google LLC 的商标。</p>
+  </footer>
+
+  <script>
+    (() => {
+      // 1. Interactive Compressor Console
+      const consoleEl = document.getElementById("pipitConsole");
+      const presets = JSON.parse(consoleEl.dataset.presets);
+      const vfImg = document.getElementById("vfImg");
+      const hudChip = document.getElementById("hudChip");
+      const hudDims = document.getElementById("hudDims");
+      const hudFormat = document.getElementById("hudFormat");
+      const sliderVal = document.getElementById("sliderVal");
+      const kbSlider = document.getElementById("kbSlider");
+      const statTarget = document.getElementById("statTargetVal");
+      const statActual = document.getElementById("statActualVal");
+      const statDims = document.getElementById("statDimsVal");
+      const statReduct = document.getElementById("statReductVal");
+      const noteText = document.getElementById("consoleNoteText");
+      const btnResult = document.getElementById("btnResult");
+      const btnOrig = document.getElementById("btnOrig");
+
+      let currentMode = "result";
+      let activePreset = presets[1]; // default 50 KB
+
+      function renderPreset(p, isOrig) {
+        if (isOrig) {
+          vfImg.style.filter = "none";
+          vfImg.style.transform = "none";
+          hudChip.textContent = "手机拍摄原始照片";
+          hudDims.textContent = "4096 × 3072 px";
+          hudFormat.textContent = "JPEG · 3.5 MB";
+          statTarget.textContent = "None";
+          statActual.textContent = "3.5 MB";
+          statDims.textContent = "4096 × 3072";
+          statReduct.textContent = "Original";
+          noteText.textContent = "相机直出原始照片：4096 × 3072 像素，体积高达 3.5 MB。远超各类线上报名系统的上传上限。";
+        } else {
+          // Subtle blur / sharpness simulation based on KB
+          const blurVal = p.targetKb <= 20 ? "blur(0.4px)" : "none";
+          vfImg.style.filter = blurVal;
+          vfImg.style.transform = "none";
+          hudChip.textContent = p.chipText;
+          hudDims.textContent = p.dimensions;
+          hudFormat.textContent = `JPEG · Target: < ${p.targetKb} KB`;
+          statTarget.textContent = `< ${p.targetKb} KB`;
+          statActual.textContent = `${p.actualKb.toFixed(1)} KB`;
+          statDims.textContent = p.dimensions.replace(" px", "");
+          statReduct.textContent = p.reduction;
+          noteText.textContent = p.note;
+        }
+      }
+
+      consoleEl.querySelectorAll('input[name="pipit_preset"]').forEach((input) => {
+        input.addEventListener("change", () => {
+          const match = presets.find((p) => p.id === input.value);
+          if (match) {
+            activePreset = match;
+            if (match.targetKb > 0) kbSlider.value = match.targetKb;
+            sliderVal.textContent = match.targetKb > 0 ? `${match.targetKb} KB` : "None";
+            btnResult.classList.add("active");
+            btnOrig.classList.remove("active");
+            currentMode = "result";
+            renderPreset(match, false);
+          }
+        });
+      });
+
+      kbSlider.addEventListener("input", (e) => {
+        const val = parseInt(e.target.value, 10);
+        sliderVal.textContent = `${val} KB`;
+        const estActual = (val * 0.96).toFixed(1);
+        let dims = "1280 × 960";
+        if (val <= 20) dims = "720 × 540";
+        else if (val <= 50) dims = "1024 × 768";
+        else if (val <= 100) dims = "1600 × 1200";
+        else dims = "2048 × 1536";
+
+        statTarget.textContent = `< ${val} KB`;
+        statActual.textContent = `${estActual} KB`;
+        statDims.textContent = dims;
+        statReduct.textContent = `-${(100 - (val / 3584 * 100)).toFixed(1)}%`;
+        hudDims.textContent = `${dims} px`;
+        hudFormat.textContent = `JPEG · Target: < ${val} KB`;
+        btnResult.classList.add("active");
+        btnOrig.classList.remove("active");
+        currentMode = "result";
+      });
+
+      btnResult.addEventListener("click", () => {
+        btnResult.classList.add("active");
+        btnOrig.classList.remove("active");
+        currentMode = "result";
+        renderPreset(activePreset, false);
+      });
+
+      btnOrig.addEventListener("click", () => {
+        btnOrig.classList.add("active");
+        btnResult.classList.remove("active");
+        currentMode = "orig";
+        renderPreset(activePreset, true);
+      });
+
+      // 2. Aspect Ratio & Canvas Mode Switcher
+      const btnFit = document.getElementById("btnModeFit");
+      const btnCrop = document.getElementById("btnModeCrop");
+      const specBoxes = [document.getElementById("specBox1"), document.getElementById("specBox2"), document.getElementById("specBox3")];
+
+      btnFit.addEventListener("click", () => {
+        btnFit.classList.add("active");
+        btnCrop.classList.remove("active");
+        specBoxes.forEach((b) => {
+          b.style.width = "auto";
+          b.style.height = "85%";
+          b.style.borderStyle = "dashed";
+        });
+      });
+
+      btnCrop.addEventListener("click", () => {
+        btnCrop.classList.add("active");
+        btnFit.classList.remove("active");
+        specBoxes.forEach((b) => {
+          b.style.width = "100%";
+          b.style.height = "100%";
+          b.style.borderStyle = "solid";
+        });
+      });
+
+      // 3. Batch 100 Matrix Animation
+      const matrix = document.getElementById("batchMatrix");
+      const dots = [];
+      for (let i = 0; i < 100; i++) {
+        const d = document.createElement("div");
+        d.className = "matrix-dot";
+        matrix.appendChild(d);
+        dots.push(d);
+      }
+
+      let batchStep = 0;
+      function animateBatch() {
+        if (batchStep < 100) {
+          dots[batchStep].classList.add("done");
+          batchStep++;
+          setTimeout(animateBatch, 22);
+        } else {
+          setTimeout(() => {
+            dots.forEach((d) => d.classList.remove("done"));
+            batchStep = 0;
+            animateBatch();
+          }, 2400);
+        }
+      }
+      setTimeout(animateBatch, 800);
+    })();
+  </script>
+  <script>    (() => {
+      // Picking a language remembers it, so the English page stops sending this browser to its own language.
+      for (const link of document.querySelectorAll("a[data-lang]")) {
+        link.addEventListener("click", () => { try { localStorage.setItem("lang", link.dataset.lang); } catch (e) {} });
+      }
+      // The menu closes on Escape or a click outside it.
+      const menu = document.querySelector(".lang-menu");
+      document.addEventListener("click", (event) => { if (menu.open && !menu.contains(event.target)) menu.open = false; });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && menu.open) { menu.open = false; menu.querySelector("summary").focus(); }
+      });
+    })();</script>
+</body>
+</html>

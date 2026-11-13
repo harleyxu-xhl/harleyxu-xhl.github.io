@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en" class="somna">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Somna: sleep diary & CBT-I program for Android</title>
+  <meta name="description" content="Somna is a 6-week CBT-I program for insomnia: a daily sleep diary, weekly personalized sleep windows, 42-day sleep efficiency trends, and an AI sleep coach. Free on Google Play.">
+  <link rel="canonical" href="https://harleyxu-xhl.github.io/somna/">
+  <link rel="alternate" hreflang="en" href="https://harleyxu-xhl.github.io/somna/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://harleyxu-xhl.github.io/somna/zh/">
+  <link rel="alternate" hreflang="x-default" href="https://harleyxu-xhl.github.io/somna/">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#090b1e">
+  <link rel="icon" href="/assets/img/somna/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="icon" href="/assets/img/somna/favicon.png" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="/assets/img/somna/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Somna">
+  <meta property="og:url" content="https://harleyxu-xhl.github.io/somna/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Somna: retrain your sleep with clinical CBT-I">
+  <meta property="og:description" content="A 6-week cognitive behavioral therapy program for insomnia. Sleep diary, weekly sleep windows, and evidence-based consolidation. Free on Google Play.">
+  <meta property="og:image" content="https://harleyxu-xhl.github.io/assets/img/somna/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="/assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="/assets/somna.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <script>
+    (() => {
+      const pages = {"zh": "/somna/zh/"};
+      try {
+        if (localStorage.getItem("lang")) return;
+        if (document.referrer && new URL(document.referrer).origin === location.origin) return;
+        const first = ((navigator.languages && navigator.languages[0]) || navigator.language || "").toLowerCase().split("-")[0];
+        const page = pages[first === "in" ? "id" : first];
+        if (page) location.replace(page + location.search + location.hash);
+      } catch (e) {}
+    })();
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Somna: CBT-I Sleep Program",
+    "operatingSystem": "Android",
+    "applicationCategory": "HealthApplication",
+    "inLanguage": "en",
+    "description": "Sleep diary and 6-week CBT-I program for chronic insomnia with sleep restriction, stimulus control, and an AI sleep coach.",
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.harley.somna",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+</head>
+<body class="dark">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top wrap dark">
+    <nav class="apps-nav" aria-label="Apps">
+      <a href="/">Cooldown</a>
+      <a href="/wattlab/">Wattlab</a>
+      <a href="#somna" aria-current="page">Somna</a>
+      <a href="/pipit/">Pipit</a>
+      <a href="#angora">Angora</a>
+    </nav>
+    <div class="top-end">
+      <details class="lang-menu">
+        <summary aria-label="Language: English"><svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M128,24h0A104,104,0,1,0,232,128,104.12,104.12,0,0,0,128,24Zm87.62,96H175.79C174,83.49,159.94,57.67,148.41,42.4A88.19,88.19,0,0,1,215.62,120ZM96.23,136h63.54c-2.31,41.61-22.23,67.11-31.77,77C118.45,203.1,98.54,177.6,96.23,136Zm0-16C98.54,78.39,118.46,52.89,128,43c9.55,9.93,29.46,35.43,31.77,77Zm11.36-77.6C96.06,57.67,82,83.49,80.21,120H40.37A88.19,88.19,0,0,1,107.59,42.4ZM40.37,136H80.21c1.82,36.51,15.85,62.33,27.38,77.6A88.19,88.19,0,0,1,40.37,136Zm108,77.6c11.53-15.27,25.56-41.09,27.38-77.6h39.84A88.19,88.19,0,0,1,148.41,213.6Z"/></svg><span>English</span></summary>
+        <ul>
+          <li><a href="/somna/" hreflang="en" lang="en" data-lang="en" aria-current="true">English</a></li>
+          <li><a href="/somna/zh/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh">简体中文</a></li>
+        </ul>
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="stage somna-stage dark" id="somna" aria-labelledby="hero-title">
+      <div class="stage-in wrap">
+        <div class="hero-copy">
+          <p class="app-id">
+            <img src="/assets/img/icon-somna.webp" width="160" height="160" alt="">
+            <span><b>Somna</b><small>CBT-I sleep program for Android</small></span>
+          </p>
+          <h1 id="hero-title">Retrain your sleep with clinical CBT-I.</h1>
+          <p class="lede">Somna combines a daily sleep diary with a structured 6-week program based on cognitive behavioral therapy for insomnia. Rebuild your sleep drive, shrink hours spent awake in bed, and let science consolidate your nights.</p>
+          <div class="cta">
+            <a class="play" href="https://play.google.com/store/apps/details?id=com.harley.somna&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dsomna%26utm_campaign%3Dhero"><img src="/assets/img/google-play-badge.png" width="564" height="168" alt="Get Somna on Google Play"></a>
+            <p class="fine">Free. Pro is a one-time purchase, not a subscription.</p>
+          </div>
+        </div>
+
+        <div class="somna-console" id="somnaConsole" data-presets="[{&quot;id&quot;: &quot;insomnia&quot;, &quot;key&quot;: &quot;preset_insomnia&quot;, &quot;bedtime&quot;: &quot;22:30&quot;, &quot;latency&quot;: 60, &quot;wakings&quot;: 75, &quot;wakeTime&quot;: &quot;07:00&quot;, &quot;timeInBedMin&quot;: 510, &quot;asleepMin&quot;: 375, &quot;efficiency&quot;: 74, &quot;targetMet&quot;: false, &quot;tier&quot;: &quot;low&quot;, &quot;window&quot;: &quot;00:00 – 07:00&quot;, &quot;sleepWindowDuration&quot;: &quot;7h 00m&quot;, &quot;name&quot;: &quot;Insomnia Baseline&quot;, &quot;diagnosis&quot;: &quot;In bed 8h 30m, but awake for 2h 15m. Sleep efficiency is 74%.&quot;, &quot;prescription&quot;: &quot;CBT-I Sleep Restriction: Spending too much awake time in bed weakens your sleep drive. Restrict sleep window to 7h 00m (delay bedtime to 00:00). Leave bed if awake for 20 minutes.&quot;, &quot;statusLabel&quot;: &quot;Fragmented (&lt;85%)&quot;, &quot;asleepFormatted&quot;: &quot;6h 15m&quot;, &quot;awakeFormatted&quot;: &quot;2h 15m&quot;}, {&quot;id&quot;: &quot;broken&quot;, &quot;key&quot;: &quot;preset_broken&quot;, &quot;bedtime&quot;: &quot;23:00&quot;, &quot;latency&quot;: 25, &quot;wakings&quot;: 120, &quot;wakeTime&quot;: &quot;07:30&quot;, &quot;timeInBedMin&quot;: 510, &quot;asleepMin&quot;: 365, &quot;efficiency&quot;: 71, &quot;targetMet&quot;: false, &quot;tier&quot;: &quot;low&quot;, &quot;window&quot;: &quot;00:30 – 07:00&quot;, &quot;sleepWindowDuration&quot;: &quot;6h 30m&quot;, &quot;name&quot;: &quot;Fragmented Sleep&quot;, &quot;diagnosis&quot;: &quot;In bed 8h 30m with 2 hours of fragmented night awakenings. Sleep efficiency is 71%.&quot;, &quot;prescription&quot;: &quot;Stimulus Control Protocol: If awake for more than 20 minutes, leave the bed. Only return when drowsy. Strictly preserve the association between bed and sleep.&quot;, &quot;statusLabel&quot;: &quot;Fragmented (&lt;85%)&quot;, &quot;asleepFormatted&quot;: &quot;6h 5m&quot;, &quot;awakeFormatted&quot;: &quot;2h 25m&quot;}, {&quot;id&quot;: &quot;week4&quot;, &quot;key&quot;: &quot;preset_week4&quot;, &quot;bedtime&quot;: &quot;23:45&quot;, &quot;latency&quot;: 15, &quot;wakings&quot;: 20, &quot;wakeTime&quot;: &quot;07:00&quot;, &quot;timeInBedMin&quot;: 435, &quot;asleepMin&quot;: 400, &quot;efficiency&quot;: 92, &quot;targetMet&quot;: true, &quot;tier&quot;: &quot;optimal&quot;, &quot;window&quot;: &quot;23:30 – 07:00&quot;, &quot;sleepWindowDuration&quot;: &quot;7h 30m&quot;, &quot;name&quot;: &quot;Week 4 Consolidated&quot;, &quot;diagnosis&quot;: &quot;In bed 7h 15m, actual sleep 6h 40m. Sleep efficiency reached 92%.&quot;, &quot;prescription&quot;: &quot;Sleep drive consolidated! Bed is now strongly associated with restorative sleep. Maintain current sleep window or expand bedtime by 15 minutes.&quot;, &quot;statusLabel&quot;: &quot;Optimal CBT-I Zone (85%+)&quot;, &quot;asleepFormatted&quot;: &quot;6h 40m&quot;, &quot;awakeFormatted&quot;: &quot;0h 35m&quot;}]">
+          <div class="console-header">
+            <span class="console-title">Interactive CBT-I Sleep Console</span>
+            <span class="eff-chip" id="consoleChip" data-tier="low">Fragmented (<85%)</span>
+          </div>
+
+          <div class="preset-bar">
+          <label class="preset-btn">
+            <input type="radio" name="somna_preset" value="insomnia" checked>
+            <span>Insomnia Baseline</span>
+          </label>
+          <label class="preset-btn">
+            <input type="radio" name="somna_preset" value="broken">
+            <span>Fragmented Sleep</span>
+          </label>
+          <label class="preset-btn">
+            <input type="radio" name="somna_preset" value="week4">
+            <span>Week 4 Consolidated</span>
+          </label>
+          </div>
+
+          <div class="eff-display">
+            <div class="eff-ring-box">
+              <svg class="eff-ring" viewBox="0 0 200 200" width="200" height="200" aria-hidden="true">
+  <circle class="ring-bg" cx="100.0" cy="100.0" r="93.0" stroke-width="14" fill="none"/>
+  <circle class="ring-fill" cx="100.0" cy="100.0" r="93.0" stroke-width="14" fill="none"
+          stroke-dasharray="584.34" stroke-dashoffset="151.93"
+          transform="rotate(-90 100.0 100.0)"/>
+  <line class="target-mark" x1="33.7" y1="51.8" x2="15.9" y2="38.9" stroke-width="2.5"/>
+</svg>
+              <div class="eff-center">
+                <span class="eff-val" id="effNum">74<span class="eff-unit">%</span></span>
+                <span class="eff-label">Sleep Efficiency</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-strip">
+            <div class="timeline-labels">
+              <span>Recommended Sleep Window: <b id="windowVal">00:00 – 07:00</b></span>
+              <span id="targetBadge">85% Clinical Target</span>
+            </div>
+            <div class="timeline-bar" aria-hidden="true">
+              <div class="timeline-seg-awake" id="segAwake1" style="width: 14%;"></div>
+              <div class="timeline-seg-asleep" id="segAsleep" style="width: 74%;"></div>
+              <div class="timeline-seg-awake" id="segAwake2" style="width: 12%;"></div>
+            </div>
+            <div class="timeline-legend">
+              <span><i class="legend-dot dot-asleep"></i>Actual Sleep: <b id="timeAsleep">6h 15m</b></span>
+              <span><i class="legend-dot dot-awake"></i>Awake in Bed: <b id="timeAwake">2h 15m</b></span>
+            </div>
+          </div>
+
+          <div class="cbti-feedback">
+            <p class="cbti-diagnosis" id="cbtiDiagnosis">In bed 8h 30m, but awake for 2h 15m. Sleep efficiency is 74%.</p>
+            <p class="cbti-prescription" id="cbtiPrescription">CBT-I Sleep Restriction: Spending too much awake time in bed weakens your sleep drive. Restrict sleep window to 7h 00m (delay bedtime to 00:00). Leave bed if awake for 20 minutes.</p>
+          </div>
+
+          <p class="fine">Simulated using Somna's weekly sleep restriction formula. Pick a preset or adjust scenarios to explore CBT-I feedback.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="screens wrap" aria-labelledby="screens-title">
+      <div class="section-head">
+        <h2 id="screens-title">Clinical CBT-I, designed for your nightstand.</h2>
+        <p>Everything you need to reset your sleep cycle without sleeping pills.</p>
+      </div>
+      <div class="shots">
+        <figure class="shot">
+          <div class="shot-frame"><img src="/assets/img/somna/home.webp" width="720" height="1542" loading="lazy" alt="Somna home screen showing sleep efficiency ring, today's sleep window, and daily program tasks"></div>
+          <h3>Daily Sleep Dashboard</h3>
+          <p>Your daily sleep efficiency ring, countdown to your sleep window, and today's CBT-I action at a single glance.</p>
+        </figure>
+        <figure class="shot">
+          <div class="shot-frame"><img src="/assets/img/somna/plan.webp" width="720" height="1542" loading="lazy" alt="Somna weekly sleep plan screen displaying sleep window recommendations and bedtime adjustments"></div>
+          <h3>Weekly Sleep Prescription</h3>
+          <p>Every week, Somna analyzes your past 7 days of sleep logs and recalculates your personalized bedtime window.</p>
+        </figure>
+        <figure class="shot">
+          <div class="shot-frame"><img src="/assets/img/somna/trends.webp" width="720" height="1542" loading="lazy" alt="Somna sleep trends screen showing sleep efficiency curve and time in bed versus actual sleep time"></div>
+          <h3>42-Night Consolidation Trends</h3>
+          <p>Track your sleep efficiency curve rising week over week as time spent awake in bed steadily narrows.</p>
+        </figure>
+      </div>
+      <p class="fine">Screens show actual Somna Android app UI with example data.</p>
+    </section>
+
+    <section class="curriculum" aria-labelledby="curriculum-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="curriculum-title">A structured 6-week journey to natural sleep.</h2>
+          <p>Cognitive Behavioral Therapy for Insomnia (CBT-I) is the gold standard, first-line treatment recommended by clinical sleep medicine.</p>
+        </div>
+        <ul class="weeks-grid">
+          <li class="week-card">
+            <span class="week-num">Week 1</span>
+            <h3>Week 1: Sleep Baseline & The Diary</h3>
+            <p>Log bedtimes, wake times, and night awakenings. Discover your true baseline sleep efficiency without judgment or pressure.</p>
+          </li>
+          <li class="week-card">
+            <span class="week-num">Week 2</span>
+            <h3>Week 2: Sleep Restriction Therapy</h3>
+            <p>Temporarily match your time in bed to your actual sleep duration. Rebuild intense, natural homeostatic sleep pressure.</p>
+          </li>
+          <li class="week-card">
+            <span class="week-num">Week 3</span>
+            <h3>Week 3: Stimulus Control Protocol</h3>
+            <p>Break the subconscious link between your bed and frustration or wakefulness. The strict 20-minute rule: if awake, get out of bed.</p>
+          </li>
+          <li class="week-card">
+            <span class="week-num">Week 4</span>
+            <h3>Week 4: Cognitive Restructuring</h3>
+            <p>Dismantle catastrophic sleep anxiety ('If I don't sleep 8 hours, tomorrow is ruined') using clinically proven cognitive reframing.</p>
+          </li>
+          <li class="week-card">
+            <span class="week-num">Week 5</span>
+            <h3>Week 5: Circadian Rhythm & Sleep Hygiene</h3>
+            <p>Anchor your morning wake-up time, synchronize sunlight exposure, calibrate bedroom temperature, and set caffeine cutoffs.</p>
+          </li>
+          <li class="week-card">
+            <span class="week-num">Week 6</span>
+            <h3>Week 6: Relapse Prevention & Graduation</h3>
+            <p>Lock in lifelong healthy sleep habits. Review your transformation report, sign your graduation pledge, and keep your certificate.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="calm-suite wrap" aria-labelledby="tools-title">
+      <div class="section-head">
+        <h2 id="tools-title">Wind down before your sleep window.</h2>
+        <p>Calm your sympathetic nervous system with soothing acoustic soundscapes and guided 4-7-8 breathing.</p>
+      </div>
+      <div class="tools-grid">
+        <div class="tool-box">
+          <h3>4-7-8 Relaxing Breath</h3>
+          <p>Inhale 4s through the nose, hold 7s, exhale 8s slowly through the mouth. Stimulates the vagus nerve and lowers heart rate.</p>
+          <div class="breathe-interactive">
+            <div class="breathe-disc" id="breatheDisc" aria-hidden="true">
+              <span class="breathe-state" id="breatheState">Inhale (4s)</span>
+            </div>
+            <button type="button" class="breathe-btn" id="breatheBtn" data-start="Start 4-7-8 Breathing" data-stop="Stop Breathing Guide">Start 4-7-8 Breathing</button>
+          </div>
+        </div>
+
+        <div class="tool-box">
+          <h3>Soothing Acoustic Soundscapes</h3>
+          <p>White noise, pink noise, brown noise, gentle rain, and ocean waves. Synthesized to mask distracting noises and cradle you into sleep.</p>
+          <div class="sounds-interactive" id="soundsContainer">
+            <button type="button" class="sound-card" data-sound="pink">
+              <span class="sound-btn"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M240,128a15.74,15.74,0,0,1-7.6,13.51L88.32,229.65A16,16,0,0,1,64,216.13V39.87a16,16,0,0,1,24.32-13.52L232.4,114.49A15.74,15.74,0,0,1,240,128Z"/></svg></span>
+              <span class="sound-name">Pink Noise</span>
+            </button>
+            <button type="button" class="sound-card" data-sound="rain">
+              <span class="sound-btn"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M240,128a15.74,15.74,0,0,1-7.6,13.51L88.32,229.65A16,16,0,0,1,64,216.13V39.87a16,16,0,0,1,24.32-13.52L232.4,114.49A15.74,15.74,0,0,1,240,128Z"/></svg></span>
+              <span class="sound-name">Rain on Glass</span>
+            </button>
+            <button type="button" class="sound-card" data-sound="waves">
+              <span class="sound-btn"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M240,128a15.74,15.74,0,0,1-7.6,13.51L88.32,229.65A16,16,0,0,1,64,216.13V39.87a16,16,0,0,1,24.32-13.52L232.4,114.49A15.74,15.74,0,0,1,240,128Z"/></svg></span>
+              <span class="sound-name">Ocean Waves</span>
+            </button>
+            <button type="button" class="sound-card" data-sound="brown">
+              <span class="sound-btn"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M240,128a15.74,15.74,0,0,1-7.6,13.51L88.32,229.65A16,16,0,0,1,64,216.13V39.87a16,16,0,0,1,24.32-13.52L232.4,114.49A15.74,15.74,0,0,1,240,128Z"/></svg></span>
+              <span class="sound-name">Deep Brown Noise</span>
+            </button>
+            <p class="sound-hint">Tap any soundscape to preview real synthesized ambient sound right in your browser.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="coach-section wrap" aria-labelledby="coach-title">
+      <div class="section-head">
+        <h2 id="coach-title">An AI sleep coach that reads your diary.</h2>
+        <p>Trained on clinical CBT-I guidelines. Analyzes your past 14 nights of logs to deliver empathetic, personalized feedback anytime.</p>
+      </div>
+      <div class="coach-box">
+        <div class="chat-thread">
+          <div class="msg msg-user">
+            <p>My sleep efficiency reached 87% this week, but I still feel sleepy at 22:00. Should I go to bed earlier?</p>
+          </div>
+          <div class="msg msg-ai">
+            <p>Congratulations on hitting 87% efficiency! That shows your sleep consolidation is working. However, stick to your prescribed 23:15 window for at least two more days. Going to bed too early risks fragmenting your sleep again. If you feel tired, try 10 minutes of gentle stretching or reading under dim light first.</p>
+          </div>
+        </div>
+        <div class="coach-tags">
+          <span class="coach-tag">Reads 14 nights of logs</span>
+          <span class="coach-tag">Clinical CBT-I guidelines</span>
+          <span class="coach-tag">Private & on-device</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="honest wrap" aria-labelledby="honest-title">
+      <h2 id="honest-title">Grounded in sleep science, not gimmicks.</h2>
+      <div class="honest-copy">
+        <ul class="nots">
+          <li>No sleeping pills, melatonin candies, or chemical dependencies.</li>
+          <li>No magical promises like 'fall asleep in 10 seconds without effort'.</li>
+          <li>No forced user accounts or dark patterns.</li>
+          <li>No health data harvesting. Your sleep diary stays strictly private on your phone.</li>
+        </ul>
+        <p>Cognitive Behavioral Therapy for Insomnia (CBT-I) is recommended by the American College of Physicians (ACP) and European Sleep Research Society as the #1 initial treatment for chronic insomnia, outperforming sleeping medication in long-term efficacy.</p>
+      </div>
+      <div class="pro">
+        <h3>Sleep diary and baseline tools are free.</h3>
+        <p>Somna Pro is a one-time purchase, not a subscription. It unlocks the complete 6-week guided CBT-I curriculum, automatic weekly sleep window adjustments, full 42-day trend insights, AI sleep coach analysis, and all soundscapes. No monthly fees ever.</p>
+        <a class="play" href="https://play.google.com/store/apps/details?id=com.harley.somna&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dsomna%26utm_campaign%3Dpro"><img src="/assets/img/google-play-badge.png" width="564" height="168" loading="lazy" alt="Get Somna on Google Play"></a>
+      </div>
+    </section>
+
+    <section class="more wrap" aria-labelledby="more-title">
+      <h2 id="more-title">More apps</h2>
+      <ul class="apps">
+        <li class="app" id="cooldown">
+          <img src="/assets/img/icon-cooldown.webp" width="160" height="160" loading="lazy" alt="">
+          <div>
+            <h3><a href="/">Cooldown</a></h3>
+            <p class="kind">Phone temperature monitor</p>
+            <p class="what">See your battery temperature, get an alert when your phone overheats, and find out what is heating it up.</p>
+            <a class="go" href="https://play.google.com/store/apps/details?id=com.harley.cooldown&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dsomna%26utm_campaign%3Dmore_apps">Get it on Google Play<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          </div>
+        </li>
+        <li class="app" id="wattlab">
+          <img src="/assets/img/icon-wattlab.webp" width="160" height="160" loading="lazy" alt="">
+          <div>
+            <h3><a href="/wattlab/">Wattlab</a></h3>
+            <p class="kind">Charging speed test</p>
+            <p class="what">See the real watts going into your battery, find out why a charge is slow, and rank your chargers and cables.</p>
+            <a class="go" href="https://play.google.com/store/apps/details?id=com.harley.wattlab&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dsomna%26utm_campaign%3Dmore_apps">Get it on Google Play<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          </div>
+        </li>
+        <li class="app" id="pipit">
+          <img src="/assets/img/icon-pipit.webp" width="160" height="160" loading="lazy" alt="">
+          <div>
+            <h3><a href="/pipit/">Pipit</a></h3>
+            <p class="kind">Photo resizer in KB</p>
+            <p class="what">Resize photos and signatures to the exact file size a form asks for, like 20 KB, 50 KB or 100 KB.</p>
+            <a class="go" href="https://play.google.com/store/apps/details?id=com.harley.pipit&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dsomna%26utm_campaign%3Dmore_apps">Get it on Google Play<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          </div>
+        </li>
+        <li class="app" id="angora">
+          <img src="/assets/img/icon-angora.webp" width="160" height="160" loading="lazy" alt="">
+          <div>
+            <h3>Angora</h3>
+            <p class="kind">Duplicate file finder</p>
+            <p class="what">Find duplicate and large files, see what fills your storage, and free up space safely, with nothing deleted until you confirm.</p>
+            <a class="go" href="https://play.google.com/store/apps/details?id=com.harley.angora&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dsomna%26utm_campaign%3Dmore_apps">Get it on Google Play<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="foot wrap">
+    <p><b>Contact</b><a href="mailto:tamariskx@gmail.com">tamariskx@gmail.com</a></p>
+    <p><b>Privacy</b><a href="/cooldown-website/privacy.html">Cooldown</a>, <a href="/wattlab-website/privacy.html">Wattlab</a>, <a href="/somna-website/privacy.html">Somna</a>, <a href="/pipit-website/privacy.html">Pipit</a>, <a href="/angora-website/privacy.html">Angora</a></p>
+    <p class="fine">Google Play and the Google Play logo are trademarks of Google LLC.</p>
+  </footer>
+
+  <script>
+    (() => {
+      // 1. Bedside Console Presets
+      const consoleEl = document.getElementById("somnaConsole");
+      const presets = JSON.parse(consoleEl.dataset.presets);
+      const ringFill = consoleEl.querySelector(".ring-fill");
+      const effNum = document.getElementById("effNum");
+      const chip = document.getElementById("consoleChip");
+      const windowVal = document.getElementById("windowVal");
+      const timeAsleep = document.getElementById("timeAsleep");
+      const timeAwake = document.getElementById("timeAwake");
+      const diagnosis = document.getElementById("cbtiDiagnosis");
+      const prescription = document.getElementById("cbtiPrescription");
+      const segAwake1 = document.getElementById("segAwake1");
+      const segAsleep = document.getElementById("segAsleep");
+      const segAwake2 = document.getElementById("segAwake2");
+
+      const r = 93;
+      const circ = 2 * Math.PI * r;
+
+      function updateConsole(p) {
+        const offset = circ * (1 - p.efficiency / 100);
+        ringFill.style.strokeDashoffset = offset.toFixed(2);
+        effNum.innerHTML = `${p.efficiency}<span class="eff-unit">%</span>`;
+        chip.textContent = p.statusLabel;
+        chip.dataset.tier = p.tier;
+        windowVal.textContent = p.window;
+        timeAsleep.textContent = p.asleepFormatted;
+        timeAwake.textContent = p.awakeFormatted;
+        diagnosis.textContent = p.diagnosis;
+        prescription.textContent = p.prescription;
+
+        const awakePct = 100 - p.efficiency;
+        segAwake1.style.width = (awakePct * 0.55).toFixed(1) + "%";
+        segAsleep.style.width = p.efficiency + "%";
+        segAwake2.style.width = (awakePct * 0.45).toFixed(1) + "%";
+      }
+
+      consoleEl.querySelectorAll('input[name="somna_preset"]').forEach((input) => {
+        input.addEventListener("change", () => {
+          const match = presets.find((p) => p.id === input.value);
+          if (match) updateConsole(match);
+        });
+      });
+
+      // 2. 4-7-8 Breathing Guide
+      const breatheBtn = document.getElementById("breatheBtn");
+      const breatheDisc = document.getElementById("breatheDisc");
+      const breatheState = document.getElementById("breatheState");
+      let breatheTimer = null;
+      let isBreathing = false;
+
+      function runBreathingCycle() {
+        if (!isBreathing) return;
+        // Inhale 4s
+        breatheDisc.className = "breathe-disc inhale";
+        breatheState.textContent = "Inhale (4s)";
+        breatheTimer = setTimeout(() => {
+          if (!isBreathing) return;
+          // Hold 7s
+          breatheDisc.className = "breathe-disc hold";
+          breatheState.textContent = "Hold (7s)";
+          breatheTimer = setTimeout(() => {
+            if (!isBreathing) return;
+            // Exhale 8s
+            breatheDisc.className = "breathe-disc exhale";
+            breatheState.textContent = "Exhale (8s)";
+            breatheTimer = setTimeout(() => {
+              if (isBreathing) runBreathingCycle();
+            }, 8000);
+          }, 7000);
+        }, 4000);
+      }
+
+      breatheBtn.addEventListener("click", () => {
+        isBreathing = !isBreathing;
+        if (isBreathing) {
+          breatheBtn.textContent = breatheBtn.dataset.stop;
+          runBreathingCycle();
+        } else {
+          clearTimeout(breatheTimer);
+          breatheDisc.className = "breathe-disc";
+          breatheState.textContent = "Inhale (4s)";
+          breatheBtn.textContent = breatheBtn.dataset.start;
+        }
+      });
+
+      // 3. Web Audio Noise Synthesis (Client-side, 0 bytes external audio files)
+      let audioCtx = null;
+      let activeNoiseNode = null;
+      let activeSound = null;
+
+      function createNoiseBuffer(type) {
+        if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const bufferSize = audioCtx.sampleRate * 2;
+        const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+        const data = buffer.getChannelData(0);
+
+        if (type === "pink") {
+          let b0 = 0, b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, b6 = 0;
+          for (let i = 0; i < bufferSize; i++) {
+            const white = Math.random() * 2 - 1;
+            b0 = 0.99886 * b0 + white * 0.0555179;
+            b1 = 0.99332 * b1 + white * 0.0750759;
+            b2 = 0.96900 * b2 + white * 0.1538520;
+            b3 = 0.86650 * b3 + white * 0.3104856;
+            b4 = 0.55000 * b4 + white * 0.5329522;
+            b5 = -0.7616 * b5 - white * 0.0168980;
+            data[i] = (b0 + b1 + b2 + b3 + b4 + b5 + b6 + white * 0.5362) * 0.04;
+            b6 = white * 0.115926;
+          }
+        } else if (type === "brown") {
+          let lastOut = 0.0;
+          for (let i = 0; i < bufferSize; i++) {
+            const white = Math.random() * 2 - 1;
+            data[i] = (lastOut + (0.02 * white)) / 1.02;
+            lastOut = data[i];
+            data[i] *= 0.35;
+          }
+        } else if (type === "rain") {
+          for (let i = 0; i < bufferSize; i++) {
+            const white = Math.random() * 2 - 1;
+            data[i] = white * (Math.random() > 0.92 ? 0.08 : 0.02);
+          }
+        } else if (type === "waves") {
+          for (let i = 0; i < bufferSize; i++) {
+            const t = i / audioCtx.sampleRate;
+            const envelope = 0.5 + 0.5 * Math.sin(2 * Math.PI * 0.25 * t);
+            const white = Math.random() * 2 - 1;
+            data[i] = white * envelope * 0.035;
+          }
+        }
+        return buffer;
+      }
+
+      function stopSound() {
+        if (activeNoiseNode) {
+          try { activeNoiseNode.stop(); activeNoiseNode.disconnect(); } catch (e) {}
+          activeNoiseNode = null;
+        }
+        document.querySelectorAll(".sound-card").forEach((card) => {
+          card.classList.remove("playing");
+          card.querySelector(".sound-btn").innerHTML = `<svg class="ic" viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M240,128a15.74,15.74,0,0,1-7.6,13.51L88.32,229.65A16,16,0,0,1,64,216.13V39.87a16,16,0,0,1,24.32-13.52L232.4,114.49A15.74,15.74,0,0,1,240,128Z"/></svg>`;
+        });
+        activeSound = null;
+      }
+
+      document.querySelectorAll(".sound-card").forEach((card) => {
+        card.addEventListener("click", () => {
+          const sound = card.dataset.sound;
+          if (activeSound === sound) {
+            stopSound();
+            return;
+          }
+          stopSound();
+          try {
+            const buffer = createNoiseBuffer(sound);
+            const src = audioCtx.createBufferSource();
+            src.buffer = buffer;
+            src.loop = true;
+            const gain = audioCtx.createGain();
+            gain.gain.setValueAtTime(0.01, audioCtx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.15, audioCtx.currentTime + 1.2);
+            src.connect(gain);
+            gain.connect(audioCtx.destination);
+            src.start();
+            activeNoiseNode = src;
+            activeSound = sound;
+            card.classList.add("playing");
+            card.querySelector(".sound-btn").innerHTML = `<svg class="ic" viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M216,48V208a16,16,0,0,1-16,16H160a16,16,0,0,1-16-16V48a16,16,0,0,1,16-16h40A16,16,0,0,1,216,48ZM96,32H56A16,16,0,0,0,40,48V208a16,16,0,0,0,16,16H96a16,16,0,0,0,16-16V48A16,16,0,0,0,96,32Z"/></svg>`;
+          } catch (e) {
+            console.error(e);
+          }
+        });
+      });
+    })();
+  </script>
+  <script>    (() => {
+      // Picking a language remembers it, so the English page stops sending this browser to its own language.
+      for (const link of document.querySelectorAll("a[data-lang]")) {
+        link.addEventListener("click", () => { try { localStorage.setItem("lang", link.dataset.lang); } catch (e) {} });
+      }
+      // The menu closes on Escape or a click outside it.
+      const menu = document.querySelector(".lang-menu");
+      document.addEventListener("click", (event) => { if (menu.open && !menu.contains(event.target)) menu.open = false; });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && menu.open) { menu.open = false; menu.querySelector("summary").focus(); }
+      });
+    })();</script>
+</body>
+</html>

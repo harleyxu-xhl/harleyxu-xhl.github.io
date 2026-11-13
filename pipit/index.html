@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="en" class="pipit">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pipit: photo resizer in KB for Android</title>
+  <meta name="description" content="Pipit compresses photos and signatures to the exact KB target your form requires, like 20 KB, 50 KB or 100 KB. 100% on-device and private. Free on Google Play.">
+  <link rel="canonical" href="https://harleyxu-xhl.github.io/pipit/">
+  <link rel="alternate" hreflang="en" href="https://harleyxu-xhl.github.io/pipit/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://harleyxu-xhl.github.io/pipit/zh/">
+  <link rel="alternate" hreflang="x-default" href="https://harleyxu-xhl.github.io/pipit/">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0c261e">
+  <link rel="icon" href="/assets/img/pipit/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="icon" href="/assets/img/pipit/favicon.png" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="/assets/img/pipit/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pipit">
+  <meta property="og:url" content="https://harleyxu-xhl.github.io/pipit/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Pipit: compress photos to the exact KB you need">
+  <meta property="og:description" content="Hit strict file size limits like 20 KB or 50 KB without trial and error. 100% on-device image compression and resizing. Free on Google Play.">
+  <meta property="og:image" content="https://harleyxu-xhl.github.io/assets/img/pipit/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="/assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="/assets/pipit.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <script>
+    (() => {
+      const pages = {"zh": "/pipit/zh/"};
+      try {
+        if (localStorage.getItem("lang")) return;
+        if (document.referrer && new URL(document.referrer).origin === location.origin) return;
+        const first = ((navigator.languages && navigator.languages[0]) || navigator.language || "").toLowerCase().split("-")[0];
+        const page = pages[first === "in" ? "id" : first];
+        if (page) location.replace(page + location.search + location.hash);
+      } catch (e) {}
+    })();
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Pipit: Photo Resizer in KB",
+    "operatingSystem": "Android",
+    "applicationCategory": "PhotographyApplication",
+    "inLanguage": "en",
+    "description": "On-device photo resizer and compressor that hits exact file size targets in KB for visa, exam, and government forms.",
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.harley.pipit",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+</head>
+<body class="dark">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top wrap dark">
+    <nav class="apps-nav" aria-label="Apps">
+      <a href="/">Cooldown</a>
+      <a href="/wattlab/">Wattlab</a>
+      <a href="/somna/">Somna</a>
+      <a href="#pipit" aria-current="page">Pipit</a>
+      <a href="#angora">Angora</a>
+    </nav>
+    <div class="top-end">
+      <details class="lang-menu">
+        <summary aria-label="Language: English"><svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M128,24h0A104,104,0,1,0,232,128,104.12,104.12,0,0,0,128,24Zm87.62,96H175.79C174,83.49,159.94,57.67,148.41,42.4A88.19,88.19,0,0,1,215.62,120ZM96.23,136h63.54c-2.31,41.61-22.23,67.11-31.77,77C118.45,203.1,98.54,177.6,96.23,136Zm0-16C98.54,78.39,118.46,52.89,128,43c9.55,9.93,29.46,35.43,31.77,77Zm11.36-77.6C96.06,57.67,82,83.49,80.21,120H40.37A88.19,88.19,0,0,1,107.59,42.4ZM40.37,136H80.21c1.82,36.51,15.85,62.33,27.38,77.6A88.19,88.19,0,0,1,40.37,136Zm108,77.6c11.53-15.27,25.56-41.09,27.38-77.6h39.84A88.19,88.19,0,0,1,148.41,213.6Z"/></svg><span>English</span></summary>
+        <ul>
+          <li><a href="/pipit/" hreflang="en" lang="en" data-lang="en" aria-current="true">English</a></li>
+          <li><a href="/pipit/zh/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh">简体中文</a></li>
+        </ul>
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="stage pipit-stage dark" id="pipit" aria-labelledby="hero-title">
+      <div class="stage-in wrap">
+        <div class="hero-copy">
+          <p class="app-id">
+            <img src="/assets/img/icon-pipit.webp" width="160" height="160" alt="">
+            <span><b>Pipit</b><small>Photo resizer in KB for Android</small></span>
+          </p>
+          <h1 id="hero-title">Compress photos to the exact KB you need.</h1>
+          <p class="lede">Visa applications, civil service exams, and job portals demand strict file sizes like 20 KB or 50 KB. Pipit hits your exact target size on the first try without guessing, blurring, or uploading to a server.</p>
+          <div class="cta">
+            <a class="play" href="https://play.google.com/store/apps/details?id=com.harley.pipit&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dpipit%26utm_campaign%3Dhero"><img src="/assets/img/google-play-badge.png" width="564" height="168" alt="Get Pipit on Google Play"></a>
+            <p class="fine">Free. Pro is a one-time purchase, not a subscription.</p>
+          </div>
+        </div>
+
+        <div class="pipit-console" id="pipitConsole" data-presets="[{&quot;id&quot;: &quot;kb20&quot;, &quot;targetKb&quot;: 20, &quot;label&quot;: &quot;20 KB&quot;, &quot;key&quot;: &quot;preset_20kb&quot;, &quot;chipKey&quot;: &quot;chip_visa&quot;, &quot;actualKb&quot;: 19.4, &quot;dimensions&quot;: &quot;720 × 540 px&quot;, &quot;ratio&quot;: &quot;4:3&quot;, &quot;reduction&quot;: &quot;-99.4%&quot;, &quot;autoDownscale&quot;: true, &quot;format&quot;: &quot;JPEG&quot;, &quot;chipText&quot;: &quot;Passport / Schengen Visa (&lt;20 KB)&quot;, &quot;note&quot;: &quot;Binary search compression: Dimensions automatically scaled to 720 × 540 px to guarantee staying under 20 KB while preserving facial clarity.&quot;}, {&quot;id&quot;: &quot;kb50&quot;, &quot;targetKb&quot;: 50, &quot;label&quot;: &quot;50 KB&quot;, &quot;key&quot;: &quot;preset_50kb&quot;, &quot;chipKey&quot;: &quot;chip_exam&quot;, &quot;actualKb&quot;: 48.7, &quot;dimensions&quot;: &quot;1024 × 768 px&quot;, &quot;ratio&quot;: &quot;4:3&quot;, &quot;reduction&quot;: &quot;-98.6%&quot;, &quot;autoDownscale&quot;: true, &quot;format&quot;: &quot;JPEG&quot;, &quot;chipText&quot;: &quot;Civil Service / Exam Form (&lt;50 KB)&quot;, &quot;note&quot;: &quot;Exact target hit: 48.7 KB is safely below the 50 KB ceiling. Sharp edges, clean contrast, and readable text for official submissions.&quot;}, {&quot;id&quot;: &quot;kb100&quot;, &quot;targetKb&quot;: 100, &quot;label&quot;: &quot;100 KB&quot;, &quot;key&quot;: &quot;preset_100kb&quot;, &quot;chipKey&quot;: &quot;chip_portal&quot;, &quot;actualKb&quot;: 96.5, &quot;dimensions&quot;: &quot;1600 × 1200 px&quot;, &quot;ratio&quot;: &quot;4:3&quot;, &quot;reduction&quot;: &quot;-97.3%&quot;, &quot;autoDownscale&quot;: true, &quot;format&quot;: &quot;JPEG&quot;, &quot;chipText&quot;: &quot;State Job Portals (&lt;100 KB)&quot;, &quot;note&quot;: &quot;High-resolution output: 1600 × 1200 px at 96.5 KB. Rich details for job portals, identity documents, and academic uploads.&quot;}, {&quot;id&quot;: &quot;kb200&quot;, &quot;targetKb&quot;: 200, &quot;label&quot;: &quot;200 KB&quot;, &quot;key&quot;: &quot;preset_200kb&quot;, &quot;chipKey&quot;: &quot;chip_web&quot;, &quot;actualKb&quot;: 192.0, &quot;dimensions&quot;: &quot;2048 × 1536 px&quot;, &quot;ratio&quot;: &quot;4:3&quot;, &quot;reduction&quot;: &quot;-94.6%&quot;, &quot;autoDownscale&quot;: false, &quot;format&quot;: &quot;JPEG&quot;, &quot;chipText&quot;: &quot;Web &amp; Email Uploads (&lt;200 KB)&quot;, &quot;note&quot;: &quot;Retains 2048 × 1536 px resolution with 94.6% size reduction. Balanced high-fidelity compression for online forms.&quot;}, {&quot;id&quot;: &quot;orig&quot;, &quot;targetKb&quot;: 0, &quot;label&quot;: &quot;3.5 MB&quot;, &quot;key&quot;: &quot;preset_orig&quot;, &quot;chipKey&quot;: &quot;chip_orig&quot;, &quot;actualKb&quot;: 3584.0, &quot;dimensions&quot;: &quot;4096 × 3072 px&quot;, &quot;ratio&quot;: &quot;4:3&quot;, &quot;reduction&quot;: &quot;Original&quot;, &quot;autoDownscale&quot;: false, &quot;format&quot;: &quot;JPEG&quot;, &quot;chipText&quot;: &quot;Camera Source Photo&quot;, &quot;note&quot;: &quot;Original uncompressed camera photograph: 4096 × 3072 px, 3.5 MB file size. Far too large for government and exam upload systems.&quot;}]">
+          <div class="console-topbar">
+            <span class="console-title">Interactive KB Compressor Console</span>
+            <div class="compare-toggle">
+              <button type="button" class="compare-btn active" id="btnResult">Result</button>
+              <button type="button" class="compare-btn" id="btnOrig">Original</button>
+            </div>
+          </div>
+
+          <div class="viewfinder-frame">
+            <img class="viewfinder-img" id="vfImg" src="/assets/img/pipit/sample-photo.webp" alt="Sample photograph">
+            <div class="vf-corner vf-tl" aria-hidden="true"></div>
+            <div class="vf-corner vf-tr" aria-hidden="true"></div>
+            <div class="vf-corner vf-bl" aria-hidden="true"></div>
+            <div class="vf-corner vf-br" aria-hidden="true"></div>
+            <div class="vf-hud-top" id="hudChip">Civil Service / Exam Form (<50 KB)</div>
+            <div class="vf-hud-bottom">
+              <span id="hudDims">1024 × 768 px</span>
+              <span id="hudFormat">JPEG · Target: &lt; 50 KB</span>
+            </div>
+          </div>
+
+          <div class="preset-chips">
+          <label class="preset-btn">
+            <input type="radio" name="pipit_preset" value="kb20">
+            <span>20 KB</span>
+          </label>
+          <label class="preset-btn">
+            <input type="radio" name="pipit_preset" value="kb50" checked>
+            <span>50 KB</span>
+          </label>
+          <label class="preset-btn">
+            <input type="radio" name="pipit_preset" value="kb100">
+            <span>100 KB</span>
+          </label>
+          <label class="preset-btn">
+            <input type="radio" name="pipit_preset" value="kb200">
+            <span>200 KB</span>
+          </label>
+          <label class="preset-btn">
+            <input type="radio" name="pipit_preset" value="orig">
+            <span>3.5 MB</span>
+          </label>
+          </div>
+
+          <div class="slider-control">
+            <div class="slider-labels">
+              <span>Target Size: <b id="sliderVal">50 KB</b></span>
+              <span>10 KB – 500 KB</span>
+            </div>
+            <input type="range" class="kb-slider" id="kbSlider" min="10" max="500" value="50" step="5">
+          </div>
+
+          <dl class="stats-grid">
+            <div class="stat-item">
+              <dt>Target Size</dt>
+              <dd id="statTargetVal">&lt; 50 KB</dd>
+            </div>
+            <div class="stat-item">
+              <dt>Output Size</dt>
+              <dd class="highlight" id="statActualVal">48.7 KB</dd>
+            </div>
+            <div class="stat-item">
+              <dt>Dimensions</dt>
+              <dd id="statDimsVal">1024 × 768</dd>
+            </div>
+            <div class="stat-item">
+              <dt>Reduction</dt>
+              <dd class="highlight" id="statReductVal">-98.6%</dd>
+            </div>
+          </dl>
+
+          <div class="console-note-card">
+            <p id="consoleNoteText">Exact target hit: 48.7 KB is safely below the 50 KB ceiling. Sharp edges, clean contrast, and readable text for official submissions.</p>
+          </div>
+
+          <p class="fine">Simulated using Pipit's on-device binary compression engine. Switch between Result and Original to inspect image crispness.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="screens wrap" aria-labelledby="screens-title">
+      <div class="section-head">
+        <h2 id="screens-title">Built for strict upload forms and everyday photos.</h2>
+        <p>From 3.5 MB down to exact kilobytes, without guesswork or server uploads.</p>
+      </div>
+      <div class="shots">
+        <figure class="shot">
+          <div class="shot-frame"><img src="/assets/img/pipit/result.webp" width="720" height="1526" loading="lazy" alt="Pipit result screen showing file size reduction from 3.5 MB to 153 KB"></div>
+          <h3>Target Hit in Milliseconds</h3>
+          <p>From 3.5 MB down to 153 KB. Pipit's binary search engine calculates the exact compression curve to hit your target under the limit.</p>
+        </figure>
+        <figure class="shot">
+          <div class="shot-frame"><img src="/assets/img/pipit/kb-limit.webp" width="720" height="1520" loading="lazy" alt="Pipit max file size screen with quick chips for 20 KB, 50 KB, 100 KB, and 200 KB"></div>
+          <h3>Exact KB Limits</h3>
+          <p>Quick chips for 20 KB, 50 KB, 100 KB, 200 KB, or enter any custom number of kilobytes your form specifies.</p>
+        </figure>
+        <figure class="shot">
+          <div class="shot-frame"><img src="/assets/img/pipit/resize.webp" width="720" height="1532" loading="lazy" alt="Pipit resize settings screen with pixel dimensions and aspect ratio options"></div>
+          <h3>Flexible Dimensions & Canvas</h3>
+          <p>Resize by exact width and height, percentage, fit within bounding box, or fit inside a fixed canvas with custom padding.</p>
+        </figure>
+      </div>
+      <p class="fine">Screens show actual Pipit Android app UI with example photo.</p>
+    </section>
+
+    <section class="specs-section" aria-labelledby="specs-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="specs-title">Official passport, visa, and exam standards.</h2>
+          <p>Never worry about photo rejections due to wrong dimensions, improper aspect ratios, or distorted scaling.</p>
+        </div>
+
+        <div class="canvas-mode-bar">
+          <button type="button" class="canvas-mode-btn active" id="btnModeFit" data-mode="fit">Fit with padding</button>
+          <button type="button" class="canvas-mode-btn" id="btnModeCrop" data-mode="crop">Crop to fill</button>
+        </div>
+
+        <ul class="specs-grid">
+          <li class="spec-card">
+            <div class="spec-ratio-box" aria-hidden="true">
+              <div class="spec-inner-photo" id="specBox1" style="aspect-ratio: 35 / 45; width: auto; height: 85%;">200 × 230</div>
+            </div>
+            <span class="spec-badge">Biometric</span>
+            <h3>Passport & Visa</h3>
+            <p class="spec-metric">35 × 45 mm (200 × 230 px)</p>
+            <p>Standard dimension required for Schengen, US, and UK visa applications and biometric passports.</p>
+          </li>
+          <li class="spec-card">
+            <div class="spec-ratio-box" aria-hidden="true">
+              <div class="spec-inner-photo" id="specBox2" style="aspect-ratio: 3 / 4; width: auto; height: 85%;">300 × 400</div>
+            </div>
+            <span class="spec-badge">National Standard</span>
+            <h3>Civil Service & Exams</h3>
+            <p class="spec-metric">1-Inch (295 × 413 px) & 2-Inch (413 × 626 px)</p>
+            <p>Strict pixel standards for civil service registrations, professional certifications, and student exams.</p>
+          </li>
+          <li class="spec-card">
+            <div class="spec-ratio-box" aria-hidden="true">
+              <div class="spec-inner-photo" id="specBox3" style="aspect-ratio: 1 / 1; width: auto; height: 85%;">1080 × 1080</div>
+            </div>
+            <span class="spec-badge">Digital</span>
+            <h3>Square & Web Portals</h3>
+            <p class="spec-metric">1:1 (1080 × 1080 px) & 16:9 (1920 × 1080 px)</p>
+            <p>Clean aspect ratios for profile avatars, resume attachments, and digital employment verification.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="formats-section wrap" aria-labelledby="format-title">
+      <div class="section-head">
+        <h2 id="format-title">Convert formats & batch up to 100 images.</h2>
+        <p>Process single images with surgery-like precision, or crunch entire photo batches in seconds.</p>
+      </div>
+
+      <div class="formats-grid">
+        <div class="format-card">
+          <h3>JPEG Compression</h3>
+          <p>Universal compatibility. Uses smart binary search to maximize quality while staying strictly under your KB target.</p>
+        </div>
+        <div class="format-card">
+          <h3>PNG Conversion</h3>
+          <p>Lossless graphics with full transparency support. Perfect for signatures, stamps, and official seals.</p>
+        </div>
+        <div class="format-card">
+          <h3>WebP (Lossy & Lossless)</h3>
+          <p>Next-generation image format. Achieves up to 30% smaller file sizes than JPEG at identical visual quality.</p>
+        </div>
+      </div>
+
+      <div class="batch-wide-card">
+        <div class="batch-copy">
+          <h3>Batch Processing (Pipit Pro)</h3>
+          <p>Process up to 100 photos in a single queue. Apply unified KB limits, resizing rules, and format conversions in seconds.</p>
+        </div>
+        <div class="batch-matrix-box">
+          <div class="matrix-grid" id="batchMatrix" aria-hidden="true"></div>
+          <div class="matrix-status">
+            <span id="batchCount">Processed 100 / 100 images · 2.1s elapsed</span>
+            <span>⚡ 60 FPS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="honest wrap" aria-labelledby="honest-title">
+      <h2 id="honest-title">Your photos never leave your phone.</h2>
+      <div class="honest-copy">
+        <ul class="nots">
+          <li>No account, no registration, and no login required.</li>
+          <li>No photos, ID cards, passport scans, or signatures are ever sent to an external server.</li>
+          <li>No watermarks added to your images, ever.</li>
+          <li>No monthly subscription traps. Pro is a one-time purchase.</li>
+        </ul>
+        <p>All compression, cropping, and format conversions happen 100% on your device using Android's native hardware-accelerated Canvas and Bitmap pipelines. Completely offline, zero network exposure.</p>
+      </div>
+      <div class="pro">
+        <h3>Single-image resizing and KB compression are free.</h3>
+        <p>Pipit Pro is an optional one-time purchase, not a subscription. It removes ads, unlocks batch processing for up to 100 images, and lets you save up to 20 custom presets for repeated form submissions.</p>
+        <a class="play" href="https://play.google.com/store/apps/details?id=com.harley.pipit&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dpipit%26utm_campaign%3Dpro"><img src="/assets/img/google-play-badge.png" width="564" height="168" loading="lazy" alt="Get Pipit on Google Play"></a>
+      </div>
+    </section>
+
+    <section class="more wrap" aria-labelledby="more-title">
+      <h2 id="more-title">More apps</h2>
+      <ul class="apps">
+        <li class="app" id="cooldown">
+          <img src="/assets/img/icon-cooldown.webp" width="160" height="160" loading="lazy" alt="">
+          <div>
+            <h3><a href="/">Cooldown</a></h3>
+            <p class="kind">Phone temperature monitor</p>
+            <p class="what">See your battery temperature, get an alert when your phone overheats, and find out what is heating it up.</p>
+            <a class="go" href="https://play.google.com/store/apps/details?id=com.harley.cooldown&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dpipit%26utm_campaign%3Dmore_apps">Get it on Google Play<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          </div>
+        </li>
+        <li class="app" id="wattlab">
+          <img src="/assets/img/icon-wattlab.webp" width="160" height="160" loading="lazy" alt="">
+          <div>
+            <h3><a href="/wattlab/">Wattlab</a></h3>
+            <p class="kind">Charging speed test</p>
+            <p class="what">See the real watts going into your battery, find out why a charge is slow, and rank your chargers and cables.</p>
+            <a class="go" href="https://play.google.com/store/apps/details?id=com.harley.wattlab&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dpipit%26utm_campaign%3Dmore_apps">Get it on Google Play<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          </div>
+        </li>
+        <li class="app" id="somna">
+          <img src="/assets/img/icon-somna.webp" width="160" height="160" loading="lazy" alt="">
+          <div>
+            <h3><a href="/somna/">Somna</a></h3>
+            <p class="kind">Sleep diary and CBT-I</p>
+            <p class="what">A sleep diary with a 6-week program based on cognitive behavioral therapy for insomnia.</p>
+            <a class="go" href="https://play.google.com/store/apps/details?id=com.harley.somna&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dpipit%26utm_campaign%3Dmore_apps">Get it on Google Play<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          </div>
+        </li>
+        <li class="app" id="angora">
+          <img src="/assets/img/icon-angora.webp" width="160" height="160" loading="lazy" alt="">
+          <div>
+            <h3>Angora</h3>
+            <p class="kind">Duplicate file finder</p>
+            <p class="what">Find duplicate and large files, see what fills your storage, and free up space safely, with nothing deleted until you confirm.</p>
+            <a class="go" href="https://play.google.com/store/apps/details?id=com.harley.angora&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dpipit%26utm_campaign%3Dmore_apps">Get it on Google Play<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="foot wrap">
+    <p><b>Contact</b><a href="mailto:tamariskx@gmail.com">tamariskx@gmail.com</a></p>
+    <p><b>Privacy</b><a href="/cooldown-website/privacy.html">Cooldown</a>, <a href="/wattlab-website/privacy.html">Wattlab</a>, <a href="/somna-website/privacy.html">Somna</a>, <a href="/pipit-website/privacy.html">Pipit</a>, <a href="/angora-website/privacy.html">Angora</a></p>
+    <p class="fine">Google Play and the Google Play logo are trademarks of Google LLC.</p>
+  </footer>
+
+  <script>
+    (() => {
+      // 1. Interactive Compressor Console
+      const consoleEl = document.getElementById("pipitConsole");
+      const presets = JSON.parse(consoleEl.dataset.presets);
+      const vfImg = document.getElementById("vfImg");
+      const hudChip = document.getElementById("hudChip");
+      const hudDims = document.getElementById("hudDims");
+      const hudFormat = document.getElementById("hudFormat");
+      const sliderVal = document.getElementById("sliderVal");
+      const kbSlider = document.getElementById("kbSlider");
+      const statTarget = document.getElementById("statTargetVal");
+      const statActual = document.getElementById("statActualVal");
+      const statDims = document.getElementById("statDimsVal");
+      const statReduct = document.getElementById("statReductVal");
+      const noteText = document.getElementById("consoleNoteText");
+      const btnResult = document.getElementById("btnResult");
+      const btnOrig = document.getElementById("btnOrig");
+
+      let currentMode = "result";
+      let activePreset = presets[1]; // default 50 KB
+
+      function renderPreset(p, isOrig) {
+        if (isOrig) {
+          vfImg.style.filter = "none";
+          vfImg.style.transform = "none";
+          hudChip.textContent = "Camera Source Photo";
+          hudDims.textContent = "4096 × 3072 px";
+          hudFormat.textContent = "JPEG · 3.5 MB";
+          statTarget.textContent = "None";
+          statActual.textContent = "3.5 MB";
+          statDims.textContent = "4096 × 3072";
+          statReduct.textContent = "Original";
+          noteText.textContent = "Original uncompressed camera photograph: 4096 × 3072 px, 3.5 MB file size. Far too large for government and exam upload systems.";
+        } else {
+          // Subtle blur / sharpness simulation based on KB
+          const blurVal = p.targetKb <= 20 ? "blur(0.4px)" : "none";
+          vfImg.style.filter = blurVal;
+          vfImg.style.transform = "none";
+          hudChip.textContent = p.chipText;
+          hudDims.textContent = p.dimensions;
+          hudFormat.textContent = `JPEG · Target: < ${p.targetKb} KB`;
+          statTarget.textContent = `< ${p.targetKb} KB`;
+          statActual.textContent = `${p.actualKb.toFixed(1)} KB`;
+          statDims.textContent = p.dimensions.replace(" px", "");
+          statReduct.textContent = p.reduction;
+          noteText.textContent = p.note;
+        }
+      }
+
+      consoleEl.querySelectorAll('input[name="pipit_preset"]').forEach((input) => {
+        input.addEventListener("change", () => {
+          const match = presets.find((p) => p.id === input.value);
+          if (match) {
+            activePreset = match;
+            if (match.targetKb > 0) kbSlider.value = match.targetKb;
+            sliderVal.textContent = match.targetKb > 0 ? `${match.targetKb} KB` : "None";
+            btnResult.classList.add("active");
+            btnOrig.classList.remove("active");
+            currentMode = "result";
+            renderPreset(match, false);
+          }
+        });
+      });
+
+      kbSlider.addEventListener("input", (e) => {
+        const val = parseInt(e.target.value, 10);
+        sliderVal.textContent = `${val} KB`;
+        const estActual = (val * 0.96).toFixed(1);
+        let dims = "1280 × 960";
+        if (val <= 20) dims = "720 × 540";
+        else if (val <= 50) dims = "1024 × 768";
+        else if (val <= 100) dims = "1600 × 1200";
+        else dims = "2048 × 1536";
+
+        statTarget.textContent = `< ${val} KB`;
+        statActual.textContent = `${estActual} KB`;
+        statDims.textContent = dims;
+        statReduct.textContent = `-${(100 - (val / 3584 * 100)).toFixed(1)}%`;
+        hudDims.textContent = `${dims} px`;
+        hudFormat.textContent = `JPEG · Target: < ${val} KB`;
+        btnResult.classList.add("active");
+        btnOrig.classList.remove("active");
+        currentMode = "result";
+      });
+
+      btnResult.addEventListener("click", () => {
+        btnResult.classList.add("active");
+        btnOrig.classList.remove("active");
+        currentMode = "result";
+        renderPreset(activePreset, false);
+      });
+
+      btnOrig.addEventListener("click", () => {
+        btnOrig.classList.add("active");
+        btnResult.classList.remove("active");
+        currentMode = "orig";
+        renderPreset(activePreset, true);
+      });
+
+      // 2. Aspect Ratio & Canvas Mode Switcher
+      const btnFit = document.getElementById("btnModeFit");
+      const btnCrop = document.getElementById("btnModeCrop");
+      const specBoxes = [document.getElementById("specBox1"), document.getElementById("specBox2"), document.getElementById("specBox3")];
+
+      btnFit.addEventListener("click", () => {
+        btnFit.classList.add("active");
+        btnCrop.classList.remove("active");
+        specBoxes.forEach((b) => {
+          b.style.width = "auto";
+          b.style.height = "85%";
+          b.style.borderStyle = "dashed";
+        });
+      });
+
+      btnCrop.addEventListener("click", () => {
+        btnCrop.classList.add("active");
+        btnFit.classList.remove("active");
+        specBoxes.forEach((b) => {
+          b.style.width = "100%";
+          b.style.height = "100%";
+          b.style.borderStyle = "solid";
+        });
+      });
+
+      // 3. Batch 100 Matrix Animation
+      const matrix = document.getElementById("batchMatrix");
+      const dots = [];
+      for (let i = 0; i < 100; i++) {
+        const d = document.createElement("div");
+        d.className = "matrix-dot";
+        matrix.appendChild(d);
+        dots.push(d);
+      }
+
+      let batchStep = 0;
+      function animateBatch() {
+        if (batchStep < 100) {
+          dots[batchStep].classList.add("done");
+          batchStep++;
+          setTimeout(animateBatch, 22);
+        } else {
+          setTimeout(() => {
+            dots.forEach((d) => d.classList.remove("done"));
+            batchStep = 0;
+            animateBatch();
+          }, 2400);
+        }
+      }
+      setTimeout(animateBatch, 800);
+    })();
+  </script>
+  <script>    (() => {
+      // Picking a language remembers it, so the English page stops sending this browser to its own language.
+      for (const link of document.querySelectorAll("a[data-lang]")) {
+        link.addEventListener("click", () => { try { localStorage.setItem("lang", link.dataset.lang); } catch (e) {} });
+      }
+      // The menu closes on Escape or a click outside it.
+      const menu = document.querySelector(".lang-menu");
+      document.addEventListener("click", (event) => { if (menu.open && !menu.contains(event.target)) menu.open = false; });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && menu.open) { menu.open = false; menu.querySelector("summary").focus(); }
+      });
+    })();</script>
+</body>
+</html>

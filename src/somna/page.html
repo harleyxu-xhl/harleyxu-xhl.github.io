@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="{{html_lang}}" class="somna">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}}</title>
+  <meta name="description" content="{{description|attr}}">
+  <link rel="canonical" href="{{url}}">
+{{alternates}}
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#090b1e">
+  <link rel="icon" href="/assets/img/somna/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="icon" href="/assets/img/somna/favicon.png" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="/assets/img/somna/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Somna">
+  <meta property="og:url" content="{{url}}">
+  <meta property="og:locale" content="{{og_locale}}">
+  <meta property="og:title" content="{{og_title|attr}}">
+  <meta property="og:description" content="{{og_description|attr}}">
+  <meta property="og:image" content="{{og_image}}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="/assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="/assets/somna.css">
+  <script>document.documentElement.classList.add("js");</script>
+{{redirect}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Somna: CBT-I Sleep Program",
+    "operatingSystem": "Android",
+    "applicationCategory": "HealthApplication",
+    "inLanguage": "{{html_lang}}",
+    "description": {{ld_description|json}},
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.harley.somna",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+</head>
+<body class="dark">
+  <a class="skip" href="#main">{{skip}}</a>
+
+  <header class="top wrap dark">
+{{nav}}
+    <div class="top-end">
+      <details class="lang-menu">
+        <summary aria-label="{{language|attr}}: {{lang_name|attr}}">{{globe}}<span>{{lang_name}}</span></summary>
+{{lang_menu}}
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="stage somna-stage dark" id="somna" aria-labelledby="hero-title">
+      <div class="stage-in wrap">
+        <div class="hero-copy">
+          <p class="app-id">
+            <img src="/assets/img/icon-somna.webp" width="160" height="160" alt="">
+            <span><b>Somna</b><small>{{tagline}}</small></span>
+          </p>
+          <h1 id="hero-title">{{h1}}</h1>
+          <p class="lede">{{lede}}</p>
+          <div class="cta">
+            <a class="play" href="{{play_hero}}"><img src="{{badge}}" width="{{badge_w}}" height="{{badge_h}}" alt="{{badge_alt|attr}}"></a>
+            <p class="fine">{{free_note}}</p>
+          </div>
+        </div>
+
+        <div class="somna-console" id="somnaConsole" data-presets="{{presets_json|attr}}">
+          <div class="console-header">
+            <span class="console-title">{{console_title}}</span>
+            <span class="eff-chip" id="consoleChip" data-tier="low">{{low_label}}</span>
+          </div>
+
+          <div class="preset-bar">
+{{presets_buttons}}
+          </div>
+
+          <div class="eff-display">
+            <div class="eff-ring-box">
+              {{gauge_svg}}
+              <div class="eff-center">
+                <span class="eff-val" id="effNum">74<span class="eff-unit">%</span></span>
+                <span class="eff-label">{{efficiency_label}}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-strip">
+            <div class="timeline-labels">
+              <span>{{window_label}}: <b id="windowVal">00:00 – 07:00</b></span>
+              <span id="targetBadge">{{target_badge}}</span>
+            </div>
+            <div class="timeline-bar" aria-hidden="true">
+              <div class="timeline-seg-awake" id="segAwake1" style="width: 14%;"></div>
+              <div class="timeline-seg-asleep" id="segAsleep" style="width: 74%;"></div>
+              <div class="timeline-seg-awake" id="segAwake2" style="width: 12%;"></div>
+            </div>
+            <div class="timeline-legend">
+              <span><i class="legend-dot dot-asleep"></i>{{asleep_label}}: <b id="timeAsleep">6h 15m</b></span>
+              <span><i class="legend-dot dot-awake"></i>{{awake_label}}: <b id="timeAwake">2h 15m</b></span>
+            </div>
+          </div>
+
+          <div class="cbti-feedback">
+            <p class="cbti-diagnosis" id="cbtiDiagnosis">{{insomnia_diagnosis}}</p>
+            <p class="cbti-prescription" id="cbtiPrescription">{{insomnia_prescription}}</p>
+          </div>
+
+          <p class="fine">{{console_note}}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="screens wrap" aria-labelledby="screens-title">
+      <div class="section-head">
+        <h2 id="screens-title">{{screens_title}}</h2>
+        <p>{{screens_sub}}</p>
+      </div>
+      <div class="shots">
+        <figure class="shot">
+          <div class="shot-frame"><img src="{{img}}home.webp" width="720" height="1542" loading="lazy" alt="{{shot_home_alt|attr}}"></div>
+          <h3>{{shot_home_title}}</h3>
+          <p>{{shot_home_body}}</p>
+        </figure>
+        <figure class="shot">
+          <div class="shot-frame"><img src="{{img}}plan.webp" width="720" height="1542" loading="lazy" alt="{{shot_plan_alt|attr}}"></div>
+          <h3>{{shot_plan_title}}</h3>
+          <p>{{shot_plan_body}}</p>
+        </figure>
+        <figure class="shot">
+          <div class="shot-frame"><img src="{{img}}trends.webp" width="720" height="1542" loading="lazy" alt="{{shot_trends_alt|attr}}"></div>
+          <h3>{{shot_trends_title}}</h3>
+          <p>{{shot_trends_body}}</p>
+        </figure>
+      </div>
+      <p class="fine">{{screens_note}}</p>
+    </section>
+
+    <section class="curriculum" aria-labelledby="curriculum-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="curriculum-title">{{program_title}}</h2>
+          <p>{{program_sub}}</p>
+        </div>
+        <ul class="weeks-grid">
+          <li class="week-card">
+            <span class="week-num">Week 1</span>
+            <h3>{{w1_title}}</h3>
+            <p>{{w1_desc}}</p>
+          </li>
+          <li class="week-card">
+            <span class="week-num">Week 2</span>
+            <h3>{{w2_title}}</h3>
+            <p>{{w2_desc}}</p>
+          </li>
+          <li class="week-card">
+            <span class="week-num">Week 3</span>
+            <h3>{{w3_title}}</h3>
+            <p>{{w3_desc}}</p>
+          </li>
+          <li class="week-card">
+            <span class="week-num">Week 4</span>
+            <h3>{{w4_title}}</h3>
+            <p>{{w4_desc}}</p>
+          </li>
+          <li class="week-card">
+            <span class="week-num">Week 5</span>
+            <h3>{{w5_title}}</h3>
+            <p>{{w5_desc}}</p>
+          </li>
+          <li class="week-card">
+            <span class="week-num">Week 6</span>
+            <h3>{{w6_title}}</h3>
+            <p>{{w6_desc}}</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="calm-suite wrap" aria-labelledby="tools-title">
+      <div class="section-head">
+        <h2 id="tools-title">{{tools_title}}</h2>
+        <p>{{tools_sub}}</p>
+      </div>
+      <div class="tools-grid">
+        <div class="tool-box">
+          <h3>{{breathe_title}}</h3>
+          <p>{{breathe_desc}}</p>
+          <div class="breathe-interactive">
+            <div class="breathe-disc" id="breatheDisc" aria-hidden="true">
+              <span class="breathe-state" id="breatheState">{{breathe_inhale}}</span>
+            </div>
+            <button type="button" class="breathe-btn" id="breatheBtn" data-start="{{breathe_start}}" data-stop="{{breathe_stop}}">{{breathe_start}}</button>
+          </div>
+        </div>
+
+        <div class="tool-box">
+          <h3>{{sound_title}}</h3>
+          <p>{{sound_desc}}</p>
+          <div class="sounds-interactive" id="soundsContainer">
+            <button type="button" class="sound-card" data-sound="pink">
+              <span class="sound-btn">{{icon_play}}</span>
+              <span class="sound-name">{{sound_pink}}</span>
+            </button>
+            <button type="button" class="sound-card" data-sound="rain">
+              <span class="sound-btn">{{icon_play}}</span>
+              <span class="sound-name">{{sound_rain}}</span>
+            </button>
+            <button type="button" class="sound-card" data-sound="waves">
+              <span class="sound-btn">{{icon_play}}</span>
+              <span class="sound-name">{{sound_waves}}</span>
+            </button>
+            <button type="button" class="sound-card" data-sound="brown">
+              <span class="sound-btn">{{icon_play}}</span>
+              <span class="sound-name">{{sound_brown}}</span>
+            </button>
+            <p class="sound-hint">{{sound_hint}}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="coach-section wrap" aria-labelledby="coach-title">
+      <div class="section-head">
+        <h2 id="coach-title">{{coach_title}}</h2>
+        <p>{{coach_sub}}</p>
+      </div>
+      <div class="coach-box">
+        <div class="chat-thread">
+          <div class="msg msg-user">
+            <p>{{coach_user_msg}}</p>
+          </div>
+          <div class="msg msg-ai">
+            <p>{{coach_ai_msg}}</p>
+          </div>
+        </div>
+        <div class="coach-tags">
+          <span class="coach-tag">{{coach_tag_1}}</span>
+          <span class="coach-tag">{{coach_tag_2}}</span>
+          <span class="coach-tag">{{coach_tag_3}}</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="honest wrap" aria-labelledby="honest-title">
+      <h2 id="honest-title">{{honest_title}}</h2>
+      <div class="honest-copy">
+        <ul class="nots">
+          <li>{{nots_0}}</li>
+          <li>{{nots_1}}</li>
+          <li>{{nots_2}}</li>
+          <li>{{nots_3}}</li>
+        </ul>
+        <p>{{honest_body}}</p>
+      </div>
+      <div class="pro">
+        <h3>{{pro_title}}</h3>
+        <p>{{pro_body}}</p>
+        <a class="play" href="{{play_pro}}"><img src="{{badge}}" width="{{badge_w}}" height="{{badge_h}}" loading="lazy" alt="{{badge_alt|attr}}"></a>
+      </div>
+    </section>
+
+    <section class="more wrap" aria-labelledby="more-title">
+      <h2 id="more-title">{{more_title}}</h2>
+      <ul class="apps">
+{{more_apps}}
+      </ul>
+    </section>
+  </main>
+
+{{footer}}
+
+  <script>
+    (() => {
+      // 1. Bedside Console Presets
+      const consoleEl = document.getElementById("somnaConsole");
+      const presets = JSON.parse(consoleEl.dataset.presets);
+      const ringFill = consoleEl.querySelector(".ring-fill");
+      const effNum = document.getElementById("effNum");
+      const chip = document.getElementById("consoleChip");
+      const windowVal = document.getElementById("windowVal");
+      const timeAsleep = document.getElementById("timeAsleep");
+      const timeAwake = document.getElementById("timeAwake");
+      const diagnosis = document.getElementById("cbtiDiagnosis");
+      const prescription = document.getElementById("cbtiPrescription");
+      const segAwake1 = document.getElementById("segAwake1");
+      const segAsleep = document.getElementById("segAsleep");
+      const segAwake2 = document.getElementById("segAwake2");
+
+      const r = 93;
+      const circ = 2 * Math.PI * r;
+
+      function updateConsole(p) {
+        const offset = circ * (1 - p.efficiency / 100);
+        ringFill.style.strokeDashoffset = offset.toFixed(2);
+        effNum.innerHTML = `${p.efficiency}<span class="eff-unit">%</span>`;
+        chip.textContent = p.statusLabel;
+        chip.dataset.tier = p.tier;
+        windowVal.textContent = p.window;
+        timeAsleep.textContent = p.asleepFormatted;
+        timeAwake.textContent = p.awakeFormatted;
+        diagnosis.textContent = p.diagnosis;
+        prescription.textContent = p.prescription;
+
+        const awakePct = 100 - p.efficiency;
+        segAwake1.style.width = (awakePct * 0.55).toFixed(1) + "%";
+        segAsleep.style.width = p.efficiency + "%";
+        segAwake2.style.width = (awakePct * 0.45).toFixed(1) + "%";
+      }
+
+      consoleEl.querySelectorAll('input[name="somna_preset"]').forEach((input) => {
+        input.addEventListener("change", () => {
+          const match = presets.find((p) => p.id === input.value);
+          if (match) updateConsole(match);
+        });
+      });
+
+      // 2. 4-7-8 Breathing Guide
+      const breatheBtn = document.getElementById("breatheBtn");
+      const breatheDisc = document.getElementById("breatheDisc");
+      const breatheState = document.getElementById("breatheState");
+      let breatheTimer = null;
+      let isBreathing = false;
+
+      function runBreathingCycle() {
+        if (!isBreathing) return;
+        // Inhale 4s
+        breatheDisc.className = "breathe-disc inhale";
+        breatheState.textContent = "{{breathe_inhale}}";
+        breatheTimer = setTimeout(() => {
+          if (!isBreathing) return;
+          // Hold 7s
+          breatheDisc.className = "breathe-disc hold";
+          breatheState.textContent = "{{breathe_hold}}";
+          breatheTimer = setTimeout(() => {
+            if (!isBreathing) return;
+            // Exhale 8s
+            breatheDisc.className = "breathe-disc exhale";
+            breatheState.textContent = "{{breathe_exhale}}";
+            breatheTimer = setTimeout(() => {
+              if (isBreathing) runBreathingCycle();
+            }, 8000);
+          }, 7000);
+        }, 4000);
+      }
+
+      breatheBtn.addEventListener("click", () => {
+        isBreathing = !isBreathing;
+        if (isBreathing) {
+          breatheBtn.textContent = breatheBtn.dataset.stop;
+          runBreathingCycle();
+        } else {
+          clearTimeout(breatheTimer);
+          breatheDisc.className = "breathe-disc";
+          breatheState.textContent = "{{breathe_inhale}}";
+          breatheBtn.textContent = breatheBtn.dataset.start;
+        }
+      });
+
+      // 3. Web Audio Noise Synthesis (Client-side, 0 bytes external audio files)
+      let audioCtx = null;
+      let activeNoiseNode = null;
+      let activeSound = null;
+
+      function createNoiseBuffer(type) {
+        if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const bufferSize = audioCtx.sampleRate * 2;
+        const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+        const data = buffer.getChannelData(0);
+
+        if (type === "pink") {
+          let b0 = 0, b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, b6 = 0;
+          for (let i = 0; i < bufferSize; i++) {
+            const white = Math.random() * 2 - 1;
+            b0 = 0.99886 * b0 + white * 0.0555179;
+            b1 = 0.99332 * b1 + white * 0.0750759;
+            b2 = 0.96900 * b2 + white * 0.1538520;
+            b3 = 0.86650 * b3 + white * 0.3104856;
+            b4 = 0.55000 * b4 + white * 0.5329522;
+            b5 = -0.7616 * b5 - white * 0.0168980;
+            data[i] = (b0 + b1 + b2 + b3 + b4 + b5 + b6 + white * 0.5362) * 0.04;
+            b6 = white * 0.115926;
+          }
+        } else if (type === "brown") {
+          let lastOut = 0.0;
+          for (let i = 0; i < bufferSize; i++) {
+            const white = Math.random() * 2 - 1;
+            data[i] = (lastOut + (0.02 * white)) / 1.02;
+            lastOut = data[i];
+            data[i] *= 0.35;
+          }
+        } else if (type === "rain") {
+          for (let i = 0; i < bufferSize; i++) {
+            const white = Math.random() * 2 - 1;
+            data[i] = white * (Math.random() > 0.92 ? 0.08 : 0.02);
+          }
+        } else if (type === "waves") {
+          for (let i = 0; i < bufferSize; i++) {
+            const t = i / audioCtx.sampleRate;
+            const envelope = 0.5 + 0.5 * Math.sin(2 * Math.PI * 0.25 * t);
+            const white = Math.random() * 2 - 1;
+            data[i] = white * envelope * 0.035;
+          }
+        }
+        return buffer;
+      }
+
+      function stopSound() {
+        if (activeNoiseNode) {
+          try { activeNoiseNode.stop(); activeNoiseNode.disconnect(); } catch (e) {}
+          activeNoiseNode = null;
+        }
+        document.querySelectorAll(".sound-card").forEach((card) => {
+          card.classList.remove("playing");
+          card.querySelector(".sound-btn").innerHTML = `{{icon_play}}`;
+        });
+        activeSound = null;
+      }
+
+      document.querySelectorAll(".sound-card").forEach((card) => {
+        card.addEventListener("click", () => {
+          const sound = card.dataset.sound;
+          if (activeSound === sound) {
+            stopSound();
+            return;
+          }
+          stopSound();
+          try {
+            const buffer = createNoiseBuffer(sound);
+            const src = audioCtx.createBufferSource();
+            src.buffer = buffer;
+            src.loop = true;
+            const gain = audioCtx.createGain();
+            gain.gain.setValueAtTime(0.01, audioCtx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.15, audioCtx.currentTime + 1.2);
+            src.connect(gain);
+            gain.connect(audioCtx.destination);
+            src.start();
+            activeNoiseNode = src;
+            activeSound = sound;
+            card.classList.add("playing");
+            card.querySelector(".sound-btn").innerHTML = `{{icon_pause}}`;
+          } catch (e) {
+            console.error(e);
+          }
+        });
+      });
+    })();
+  </script>
+  <script>{{menu_script}}</script>
+</body>
+</html>

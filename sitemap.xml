@@ -177,4 +177,28 @@
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://harleyxu-xhl.github.io/wattlab/zh/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://harleyxu-xhl.github.io/wattlab/"/>
   </url>
+  <url>
+    <loc>https://harleyxu-xhl.github.io/somna/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harleyxu-xhl.github.io/somna/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://harleyxu-xhl.github.io/somna/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://harleyxu-xhl.github.io/somna/"/>
+  </url>
+  <url>
+    <loc>https://harleyxu-xhl.github.io/somna/zh/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harleyxu-xhl.github.io/somna/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://harleyxu-xhl.github.io/somna/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://harleyxu-xhl.github.io/somna/"/>
+  </url>
+  <url>
+    <loc>https://harleyxu-xhl.github.io/pipit/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harleyxu-xhl.github.io/pipit/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://harleyxu-xhl.github.io/pipit/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://harleyxu-xhl.github.io/pipit/"/>
+  </url>
+  <url>
+    <loc>https://harleyxu-xhl.github.io/pipit/zh/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harleyxu-xhl.github.io/pipit/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://harleyxu-xhl.github.io/pipit/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://harleyxu-xhl.github.io/pipit/"/>
+  </url>
 </urlset>

@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="{{html_lang}}" class="pipit">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}}</title>
+  <meta name="description" content="{{description|attr}}">
+  <link rel="canonical" href="{{url}}">
+{{alternates}}
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0c261e">
+  <link rel="icon" href="/assets/img/pipit/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="icon" href="/assets/img/pipit/favicon.png" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="/assets/img/pipit/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pipit">
+  <meta property="og:url" content="{{url}}">
+  <meta property="og:locale" content="{{og_locale}}">
+  <meta property="og:title" content="{{og_title|attr}}">
+  <meta property="og:description" content="{{og_description|attr}}">
+  <meta property="og:image" content="{{og_image}}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="/assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="/assets/pipit.css">
+  <script>document.documentElement.classList.add("js");</script>
+{{redirect}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Pipit: Photo Resizer in KB",
+    "operatingSystem": "Android",
+    "applicationCategory": "PhotographyApplication",
+    "inLanguage": "{{html_lang}}",
+    "description": {{ld_description|json}},
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.harley.pipit",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+</head>
+<body class="dark">
+  <a class="skip" href="#main">{{skip}}</a>
+
+  <header class="top wrap dark">
+{{nav}}
+    <div class="top-end">
+      <details class="lang-menu">
+        <summary aria-label="{{language|attr}}: {{lang_name|attr}}">{{globe}}<span>{{lang_name}}</span></summary>
+{{lang_menu}}
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="stage pipit-stage dark" id="pipit" aria-labelledby="hero-title">
+      <div class="stage-in wrap">
+        <div class="hero-copy">
+          <p class="app-id">
+            <img src="/assets/img/icon-pipit.webp" width="160" height="160" alt="">
+            <span><b>Pipit</b><small>{{tagline}}</small></span>
+          </p>
+          <h1 id="hero-title">{{h1}}</h1>
+          <p class="lede">{{lede}}</p>
+          <div class="cta">
+            <a class="play" href="{{play_hero}}"><img src="{{badge}}" width="{{badge_w}}" height="{{badge_h}}" alt="{{badge_alt|attr}}"></a>
+            <p class="fine">{{free_note}}</p>
+          </div>
+        </div>
+
+        <div class="pipit-console" id="pipitConsole" data-presets="{{presets_json|attr}}">
+          <div class="console-topbar">
+            <span class="console-title">{{console_title}}</span>
+            <div class="compare-toggle">
+              <button type="button" class="compare-btn active" id="btnResult">{{toggle_result}}</button>
+              <button type="button" class="compare-btn" id="btnOrig">{{toggle_orig}}</button>
+            </div>
+          </div>
+
+          <div class="viewfinder-frame">
+            <img class="viewfinder-img" id="vfImg" src="/assets/img/pipit/sample-photo.webp" alt="Sample photograph">
+            <div class="vf-corner vf-tl" aria-hidden="true"></div>
+            <div class="vf-corner vf-tr" aria-hidden="true"></div>
+            <div class="vf-corner vf-bl" aria-hidden="true"></div>
+            <div class="vf-corner vf-br" aria-hidden="true"></div>
+            <div class="vf-hud-top" id="hudChip">{{chip_exam}}</div>
+            <div class="vf-hud-bottom">
+              <span id="hudDims">1024 × 768 px</span>
+              <span id="hudFormat">JPEG · Target: &lt; 50 KB</span>
+            </div>
+          </div>
+
+          <div class="preset-chips">
+{{presets_buttons}}
+          </div>
+
+          <div class="slider-control">
+            <div class="slider-labels">
+              <span>{{stat_target}}: <b id="sliderVal">50 KB</b></span>
+              <span>10 KB – 500 KB</span>
+            </div>
+            <input type="range" class="kb-slider" id="kbSlider" min="10" max="500" value="50" step="5">
+          </div>
+
+          <dl class="stats-grid">
+            <div class="stat-item">
+              <dt>{{stat_target}}</dt>
+              <dd id="statTargetVal">&lt; 50 KB</dd>
+            </div>
+            <div class="stat-item">
+              <dt>{{stat_actual}}</dt>
+              <dd class="highlight" id="statActualVal">48.7 KB</dd>
+            </div>
+            <div class="stat-item">
+              <dt>{{stat_dimensions}}</dt>
+              <dd id="statDimsVal">1024 × 768</dd>
+            </div>
+            <div class="stat-item">
+              <dt>{{stat_reduction}}</dt>
+              <dd class="highlight" id="statReductVal">-98.6%</dd>
+            </div>
+          </dl>
+
+          <div class="console-note-card">
+            <p id="consoleNoteText">{{kb50_note}}</p>
+          </div>
+
+          <p class="fine">{{console_note}}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="screens wrap" aria-labelledby="screens-title">
+      <div class="section-head">
+        <h2 id="screens-title">{{screens_title}}</h2>
+        <p>{{screens_sub}}</p>
+      </div>
+      <div class="shots">
+        <figure class="shot">
+          <div class="shot-frame"><img src="{{img}}result.webp" width="720" height="1526" loading="lazy" alt="{{shot_result_alt|attr}}"></div>
+          <h3>{{shot_result_title}}</h3>
+          <p>{{shot_result_body}}</p>
+        </figure>
+        <figure class="shot">
+          <div class="shot-frame"><img src="{{img}}kb-limit.webp" width="720" height="1520" loading="lazy" alt="{{shot_limit_alt|attr}}"></div>
+          <h3>{{shot_limit_title}}</h3>
+          <p>{{shot_limit_body}}</p>
+        </figure>
+        <figure class="shot">
+          <div class="shot-frame"><img src="{{img}}resize.webp" width="720" height="1532" loading="lazy" alt="{{shot_resize_alt|attr}}"></div>
+          <h3>{{shot_resize_title}}</h3>
+          <p>{{shot_resize_body}}</p>
+        </figure>
+      </div>
+      <p class="fine">{{screens_note}}</p>
+    </section>
+
+    <section class="specs-section" aria-labelledby="specs-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="specs-title">{{spec_title}}</h2>
+          <p>{{spec_sub}}</p>
+        </div>
+
+        <div class="canvas-mode-bar">
+          <button type="button" class="canvas-mode-btn active" id="btnModeFit" data-mode="fit">{{spec_mode_fit}}</button>
+          <button type="button" class="canvas-mode-btn" id="btnModeCrop" data-mode="crop">{{spec_mode_crop}}</button>
+        </div>
+
+        <ul class="specs-grid">
+          <li class="spec-card">
+            <div class="spec-ratio-box" aria-hidden="true">
+              <div class="spec-inner-photo" id="specBox1" style="aspect-ratio: 35 / 45; width: auto; height: 85%;">200 × 230</div>
+            </div>
+            <span class="spec-badge">Biometric</span>
+            <h3>{{spec_passport_title}}</h3>
+            <p class="spec-metric">{{spec_passport_spec}}</p>
+            <p>{{spec_passport_desc}}</p>
+          </li>
+          <li class="spec-card">
+            <div class="spec-ratio-box" aria-hidden="true">
+              <div class="spec-inner-photo" id="specBox2" style="aspect-ratio: 3 / 4; width: auto; height: 85%;">300 × 400</div>
+            </div>
+            <span class="spec-badge">National Standard</span>
+            <h3>{{spec_exam_title}}</h3>
+            <p class="spec-metric">{{spec_exam_spec}}</p>
+            <p>{{spec_exam_desc}}</p>
+          </li>
+          <li class="spec-card">
+            <div class="spec-ratio-box" aria-hidden="true">
+              <div class="spec-inner-photo" id="specBox3" style="aspect-ratio: 1 / 1; width: auto; height: 85%;">1080 × 1080</div>
+            </div>
+            <span class="spec-badge">Digital</span>
+            <h3>{{spec_social_title}}</h3>
+            <p class="spec-metric">{{spec_social_spec}}</p>
+            <p>{{spec_social_desc}}</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="formats-section wrap" aria-labelledby="format-title">
+      <div class="section-head">
+        <h2 id="format-title">{{format_title}}</h2>
+        <p>{{format_sub}}</p>
+      </div>
+
+      <div class="formats-grid">
+        <div class="format-card">
+          <h3>{{fmt_jpeg_title}}</h3>
+          <p>{{fmt_jpeg_desc}}</p>
+        </div>
+        <div class="format-card">
+          <h3>{{fmt_png_title}}</h3>
+          <p>{{fmt_png_desc}}</p>
+        </div>
+        <div class="format-card">
+          <h3>{{fmt_webp_title}}</h3>
+          <p>{{fmt_webp_desc}}</p>
+        </div>
+      </div>
+
+      <div class="batch-wide-card">
+        <div class="batch-copy">
+          <h3>{{batch_card_title}}</h3>
+          <p>{{batch_card_desc}}</p>
+        </div>
+        <div class="batch-matrix-box">
+          <div class="matrix-grid" id="batchMatrix" aria-hidden="true"></div>
+          <div class="matrix-status">
+            <span id="batchCount">{{batch_status}}</span>
+            <span>⚡ 60 FPS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="honest wrap" aria-labelledby="honest-title">
+      <h2 id="honest-title">{{honest_title}}</h2>
+      <div class="honest-copy">
+        <ul class="nots">
+          <li>{{nots_0}}</li>
+          <li>{{nots_1}}</li>
+          <li>{{nots_2}}</li>
+          <li>{{nots_3}}</li>
+        </ul>
+        <p>{{honest_body}}</p>
+      </div>
+      <div class="pro">
+        <h3>{{pro_title}}</h3>
+        <p>{{pro_body}}</p>
+        <a class="play" href="{{play_pro}}"><img src="{{badge}}" width="{{badge_w}}" height="{{badge_h}}" loading="lazy" alt="{{badge_alt|attr}}"></a>
+      </div>
+    </section>
+
+    <section class="more wrap" aria-labelledby="more-title">
+      <h2 id="more-title">{{more_title}}</h2>
+      <ul class="apps">
+{{more_apps}}
+      </ul>
+    </section>
+  </main>
+
+{{footer}}
+
+  <script>
+    (() => {
+      // 1. Interactive Compressor Console
+      const consoleEl = document.getElementById("pipitConsole");
+      const presets = JSON.parse(consoleEl.dataset.presets);
+      const vfImg = document.getElementById("vfImg");
+      const hudChip = document.getElementById("hudChip");
+      const hudDims = document.getElementById("hudDims");
+      const hudFormat = document.getElementById("hudFormat");
+      const sliderVal = document.getElementById("sliderVal");
+      const kbSlider = document.getElementById("kbSlider");
+      const statTarget = document.getElementById("statTargetVal");
+      const statActual = document.getElementById("statActualVal");
+      const statDims = document.getElementById("statDimsVal");
+      const statReduct = document.getElementById("statReductVal");
+      const noteText = document.getElementById("consoleNoteText");
+      const btnResult = document.getElementById("btnResult");
+      const btnOrig = document.getElementById("btnOrig");
+
+      let currentMode = "result";
+      let activePreset = presets[1]; // default 50 KB
+
+      function renderPreset(p, isOrig) {
+        if (isOrig) {
+          vfImg.style.filter = "none";
+          vfImg.style.transform = "none";
+          hudChip.textContent = "{{chip_orig}}";
+          hudDims.textContent = "4096 × 3072 px";
+          hudFormat.textContent = "JPEG · 3.5 MB";
+          statTarget.textContent = "None";
+          statActual.textContent = "3.5 MB";
+          statDims.textContent = "4096 × 3072";
+          statReduct.textContent = "Original";
+          noteText.textContent = "{{orig_note}}";
+        } else {
+          // Subtle blur / sharpness simulation based on KB
+          const blurVal = p.targetKb <= 20 ? "blur(0.4px)" : "none";
+          vfImg.style.filter = blurVal;
+          vfImg.style.transform = "none";
+          hudChip.textContent = p.chipText;
+          hudDims.textContent = p.dimensions;
+          hudFormat.textContent = `JPEG · Target: < ${p.targetKb} KB`;
+          statTarget.textContent = `< ${p.targetKb} KB`;
+          statActual.textContent = `${p.actualKb.toFixed(1)} KB`;
+          statDims.textContent = p.dimensions.replace(" px", "");
+          statReduct.textContent = p.reduction;
+          noteText.textContent = p.note;
+        }
+      }
+
+      consoleEl.querySelectorAll('input[name="pipit_preset"]').forEach((input) => {
+        input.addEventListener("change", () => {
+          const match = presets.find((p) => p.id === input.value);
+          if (match) {
+            activePreset = match;
+            if (match.targetKb > 0) kbSlider.value = match.targetKb;
+            sliderVal.textContent = match.targetKb > 0 ? `${match.targetKb} KB` : "None";
+            btnResult.classList.add("active");
+            btnOrig.classList.remove("active");
+            currentMode = "result";
+            renderPreset(match, false);
+          }
+        });
+      });
+
+      kbSlider.addEventListener("input", (e) => {
+        const val = parseInt(e.target.value, 10);
+        sliderVal.textContent = `${val} KB`;
+        const estActual = (val * 0.96).toFixed(1);
+        let dims = "1280 × 960";
+        if (val <= 20) dims = "720 × 540";
+        else if (val <= 50) dims = "1024 × 768";
+        else if (val <= 100) dims = "1600 × 1200";
+        else dims = "2048 × 1536";
+
+        statTarget.textContent = `< ${val} KB`;
+        statActual.textContent = `${estActual} KB`;
+        statDims.textContent = dims;
+        statReduct.textContent = `-${(100 - (val / 3584 * 100)).toFixed(1)}%`;
+        hudDims.textContent = `${dims} px`;
+        hudFormat.textContent = `JPEG · Target: < ${val} KB`;
+        btnResult.classList.add("active");
+        btnOrig.classList.remove("active");
+        currentMode = "result";
+      });
+
+      btnResult.addEventListener("click", () => {
+        btnResult.classList.add("active");
+        btnOrig.classList.remove("active");
+        currentMode = "result";
+        renderPreset(activePreset, false);
+      });
+
+      btnOrig.addEventListener("click", () => {
+        btnOrig.classList.add("active");
+        btnResult.classList.remove("active");
+        currentMode = "orig";
+        renderPreset(activePreset, true);
+      });
+
+      // 2. Aspect Ratio & Canvas Mode Switcher
+      const btnFit = document.getElementById("btnModeFit");
+      const btnCrop = document.getElementById("btnModeCrop");
+      const specBoxes = [document.getElementById("specBox1"), document.getElementById("specBox2"), document.getElementById("specBox3")];
+
+      btnFit.addEventListener("click", () => {
+        btnFit.classList.add("active");
+        btnCrop.classList.remove("active");
+        specBoxes.forEach((b) => {
+          b.style.width = "auto";
+          b.style.height = "85%";
+          b.style.borderStyle = "dashed";
+        });
+      });
+
+      btnCrop.addEventListener("click", () => {
+        btnCrop.classList.add("active");
+        btnFit.classList.remove("active");
+        specBoxes.forEach((b) => {
+          b.style.width = "100%";
+          b.style.height = "100%";
+          b.style.borderStyle = "solid";
+        });
+      });
+
+      // 3. Batch 100 Matrix Animation
+      const matrix = document.getElementById("batchMatrix");
+      const dots = [];
+      for (let i = 0; i < 100; i++) {
+        const d = document.createElement("div");
+        d.className = "matrix-dot";
+        matrix.appendChild(d);
+        dots.push(d);
+      }
+
+      let batchStep = 0;
+      function animateBatch() {
+        if (batchStep < 100) {
+          dots[batchStep].classList.add("done");
+          batchStep++;
+          setTimeout(animateBatch, 22);
+        } else {
+          setTimeout(() => {
+            dots.forEach((d) => d.classList.remove("done"));
+            batchStep = 0;
+            animateBatch();
+          }, 2400);
+        }
+      }
+      setTimeout(animateBatch, 800);
+    })();
+  </script>
+  <script>{{menu_script}}</script>
+</body>
+</html>
