@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="{{html_lang}}" class="angora">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}}</title>
+  <meta name="description" content="{{description|attr}}">
+  <link rel="canonical" href="{{url}}">
+{{alternates}}
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0b182b">
+  <link rel="icon" href="/assets/img/angora/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="icon" href="/assets/img/angora/favicon.png" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="/assets/img/angora/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Angora">
+  <meta property="og:url" content="{{url}}">
+  <meta property="og:locale" content="{{og_locale}}">
+  <meta property="og:title" content="{{og_title|attr}}">
+  <meta property="og:description" content="{{og_description|attr}}">
+  <meta property="og:image" content="{{og_image}}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="/assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="/assets/angora.css">
+  <script>document.documentElement.classList.add("js");</script>
+{{redirect}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Angora: Duplicate File Finder",
+    "operatingSystem": "Android",
+    "applicationCategory": "UtilitiesApplication",
+    "inLanguage": "{{html_lang}}",
+    "description": {{ld_description|json}},
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.harley.angora",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+</head>
+<body class="dark">
+  <a class="skip" href="#main">{{skip}}</a>
+
+  <header class="top wrap dark">
+{{nav}}
+    <div class="top-end">
+      <details class="lang-menu">
+        <summary aria-label="{{language|attr}}: {{lang_name|attr}}">{{globe}}<span>{{lang_name}}</span></summary>
+{{lang_menu}}
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="stage angora-stage dark" id="angora" aria-labelledby="hero-title">
+      <div class="stage-in wrap">
+        <div class="hero-copy">
+          <p class="app-id">
+            <img src="/assets/img/icon-angora.webp" width="160" height="160" alt="">
+            <span><b>Angora</b><small>{{tagline}}</small></span>
+          </p>
+          <h1 id="hero-title">{{h1}}</h1>
+          <p class="lede">{{lede}}</p>
+          <div class="cta">
+            <a class="play" href="{{play_hero}}"><img src="{{badge}}" width="{{badge_w}}" height="{{badge_h}}" alt="{{badge_alt|attr}}"></a>
+            <p class="fine">{{free_note}}</p>
+          </div>
+        </div>
+
+        <div class="angora-console" id="angoraConsole" data-groups="{{groups_json|attr}}">
+          <div class="console-topbar">
+            <span class="console-title">{{console_title}}</span>
+            <span class="console-summary-chip" id="summaryChip">+287.4 MB {{stat_reclaimable}}</span>
+          </div>
+
+          <div class="dup-groups-box">
+{{groups_html}}
+          </div>
+
+          <dl class="angora-stats-grid">
+            <div class="stat-box">
+              <dt>{{stat_reclaimable}}</dt>
+              <dd class="highlight" id="reclaimVal">287.4 MB</dd>
+            </div>
+            <div class="stat-box">
+              <dt>{{stat_preserved}}</dt>
+              <dd>{{stat_preserved_val}}</dd>
+            </div>
+            <div class="stat-box">
+              <dt>{{stat_groups}}</dt>
+              <dd>{{stat_groups_val}}</dd>
+            </div>
+          </dl>
+
+          <p class="fine">{{console_note}}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="screens wrap" aria-labelledby="screens-title">
+      <div class="section-head">
+        <h2 id="screens-title">{{screens_title}}</h2>
+        <p>{{screens_sub}}</p>
+      </div>
+      <div class="shots">
+        <figure class="shot">
+          <div class="shot-frame"><img src="{{img}}duplicates.webp" width="720" height="1563" loading="lazy" alt="{{shot_dup_alt|attr}}"></div>
+          <h3>{{shot_dup_title}}</h3>
+          <p>{{shot_dup_body}}</p>
+        </figure>
+        <figure class="shot">
+          <div class="shot-frame"><img src="{{img}}scan-results.webp" width="720" height="1563" loading="lazy" alt="{{shot_scan_alt|attr}}"></div>
+          <h3>{{shot_scan_title}}</h3>
+          <p>{{shot_scan_body}}</p>
+        </figure>
+        <figure class="shot">
+          <div class="shot-frame"><img src="{{img}}large-files.webp" width="720" height="1563" loading="lazy" alt="{{shot_large_alt|attr}}"></div>
+          <h3>{{shot_large_title}}</h3>
+          <p>{{shot_large_body}}</p>
+        </figure>
+      </div>
+      <p class="fine">{{screens_note}}</p>
+    </section>
+
+    <section class="storage-section" aria-labelledby="storage-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="storage-title">{{storage_title}}</h2>
+          <p>{{storage_sub}}</p>
+        </div>
+
+        <div class="storage-bar-card">
+          <div class="storage-bar" aria-hidden="true">
+            <div class="seg-photos"></div>
+            <div class="seg-apps"></div>
+            <div class="seg-system"></div>
+            <div class="seg-docs"></div>
+            <div class="seg-free"></div>
+          </div>
+          <div class="storage-legend">
+            <div class="legend-item"><span class="legend-dot" style="background:#60a5fa"></span><span>{{bar_photos}}</span></div>
+            <div class="legend-item"><span class="legend-dot" style="background:#c084fc"></span><span>{{bar_apps}}</span></div>
+            <div class="legend-item"><span class="legend-dot" style="background:#94a3b8"></span><span>{{bar_system}}</span></div>
+            <div class="legend-item"><span class="legend-dot" style="background:#38bdf8"></span><span>{{bar_docs}}</span></div>
+            <div class="legend-item"><span class="legend-dot" style="background:var(--brand)"></span><span>{{bar_free}}</span></div>
+          </div>
+        </div>
+
+        <div class="facts-grid">
+          <div class="fact-card">
+            <h3>{{storage_fact_1_title}}</h3>
+            <p>{{storage_fact_1_desc}}</p>
+          </div>
+          <div class="fact-card">
+            <h3>{{storage_fact_2_title}}</h3>
+            <p>{{storage_fact_2_desc}}</p>
+          </div>
+          <div class="fact-card">
+            <h3>{{storage_fact_3_title}}</h3>
+            <p>{{storage_fact_3_desc}}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tools-section wrap" aria-labelledby="tools-title">
+      <div class="section-head">
+        <h2 id="tools-title">{{tools_title}}</h2>
+        <p>{{tools_sub}}</p>
+      </div>
+      <div class="tools-grid">
+        <div class="tool-item-card">
+          <h3>{{tool_changes_title}}</h3>
+          <p>{{tool_changes_desc}}</p>
+        </div>
+        <div class="tool-item-card">
+          <h3>{{tool_apps_title}}</h3>
+          <p>{{tool_apps_desc}}</p>
+        </div>
+        <div class="tool-item-card">
+          <h3>{{tool_compress_title}}</h3>
+          <p>{{tool_compress_desc}}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="honest wrap" aria-labelledby="honest-title">
+      <h2 id="honest-title">{{honest_title}}</h2>
+      <div class="honest-copy">
+        <ul class="nots">
+          <li>{{nots_0}}</li>
+          <li>{{nots_1}}</li>
+          <li>{{nots_2}}</li>
+          <li>{{nots_3}}</li>
+        </ul>
+        <p>{{honest_body}}</p>
+      </div>
+      <div class="pro">
+        <h3>{{pro_title}}</h3>
+        <p>{{pro_body}}</p>
+        <a class="play" href="{{play_pro}}"><img src="{{badge}}" width="{{badge_w}}" height="{{badge_h}}" loading="lazy" alt="{{badge_alt|attr}}"></a>
+      </div>
+    </section>
+
+    <section class="more wrap" aria-labelledby="more-title">
+      <h2 id="more-title">{{more_title}}</h2>
+      <ul class="apps">
+{{more_apps}}
+      </ul>
+    </section>
+  </main>
+
+{{footer}}
+
+  <script>
+    (() => {
+      // Live duplicate checkbox calculation & safety guard
+      const consoleEl = document.getElementById("angoraConsole");
+      const summaryChip = document.getElementById("summaryChip");
+      const reclaimVal = document.getElementById("reclaimVal");
+      const checkboxes = [...consoleEl.querySelectorAll(".dup-check")];
+
+      function updateCalculator() {
+        let totalMb = 0;
+        const groups = {};
+
+        checkboxes.forEach((cb) => {
+          const grp = cb.dataset.group;
+          if (!groups[grp]) groups[grp] = [];
+          groups[grp].push(cb);
+        });
+
+        // Safety enforcement: If user tries to check ALL copies in a group, uncheck the last one
+        for (const grp in groups) {
+          const allChecked = groups[grp].every((cb) => cb.checked);
+          if (allChecked) {
+            // Keep at least one unchecked (preserved)
+            groups[grp][0].checked = false;
+          }
+        }
+
+        checkboxes.forEach((cb) => {
+          const row = cb.closest(".dup-copy-row");
+          const badge = row.querySelector(".dup-badge");
+          if (cb.checked) {
+            totalMb += parseFloat(cb.dataset.mb);
+            badge.className = "dup-badge badge-remove";
+            badge.textContent = "{{badge_remove}}";
+          } else {
+            badge.className = "dup-badge badge-keep";
+            badge.textContent = "{{badge_keep}}";
+          }
+        });
+
+        const formatted = totalMb.toFixed(1) + " MB";
+        reclaimVal.textContent = formatted;
+        summaryChip.textContent = `+${formatted} {{stat_reclaimable}}`;
+      }
+
+      checkboxes.forEach((cb) => {
+        cb.addEventListener("change", updateCalculator);
+      });
+    })();
+  </script>
+  <script>{{menu_script}}</script>
+</body>
+</html>

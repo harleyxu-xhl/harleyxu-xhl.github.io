@@ -45,6 +45,7 @@ def load_module(name, path):
 wattlab_parts = load_module('wattlab_parts', SRC / 'wattlab/parts.py')
 somna_parts = load_module('somna_parts', SRC / 'somna/parts.py')
 pipit_parts = load_module('pipit_parts', SRC / 'pipit/parts.py')
+angora_parts = load_module('angora_parts', SRC / 'angora/parts.py')
 
 # code: (html lang, hreflang, og:locale, name in its own language, decimal comma, Cooldown's Play download count)
 # The count mirrors Google Play's public figure in Play's own wording; update every language when Play moves on.
@@ -75,6 +76,7 @@ PAGES = {
     'wattlab': {'langs': ['en', 'zh'], 'dir': 'wattlab/'},
     'somna': {'langs': ['en', 'zh'], 'dir': 'somna/'},
     'pipit': {'langs': ['en', 'zh'], 'dir': 'pipit/'},
+    'angora': {'langs': ['en', 'zh'], 'dir': 'angora/'},
 }
 
 PLAY = 'https://play.google.com/store/apps/details?id=com.harley.{app}&amp;referrer=utm_source%3Dwebsite%26utm_medium%3D{medium}%26utm_campaign%3D{campaign}'
@@ -435,6 +437,27 @@ def build_pipit(site):
         write('pipit', code, fill(template, values, f'pipit {code}'))
 
 
+def build_angora(site):
+    template = (SRC / 'angora/page.html').read_text()
+    codes = PAGES['angora']['langs']
+    own = load(SRC / 'angora/i18n', codes, lists=('nots',))
+    for code in codes:
+        text = own[code]
+        img = '/assets/img/angora/' if code == 'en' else f'/assets/img/angora/{code}/'
+        values = {
+            **{k: site[code][k] for k in ('skip', 'language', 'more_title')},
+            **flatten(text),
+            **shared('angora', code, {**site[code], **text}, 'angora'),
+            'og_image': f'{ORIGIN}{img}og.png',
+            'img': img,
+            'play_hero': play('angora', 'angora', 'hero'),
+            'play_pro': play('angora', 'angora', 'pro'),
+            'groups_html': angora_parts.groups_html(text),
+            'groups_json': angora_parts.groups_json(text),
+        }
+        write('angora', code, fill(template, values, f'angora {code}'))
+
+
 def sitemap():
     urls = []
     for app, page in PAGES.items():
@@ -453,6 +476,7 @@ def main():
     build_wattlab(site)
     build_somna(site)
     build_pipit(site)
+    build_angora(site)
     sitemap()
 
 

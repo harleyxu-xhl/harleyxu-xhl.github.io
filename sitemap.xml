@@ -201,4 +201,16 @@
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://harleyxu-xhl.github.io/pipit/zh/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://harleyxu-xhl.github.io/pipit/"/>
   </url>
+  <url>
+    <loc>https://harleyxu-xhl.github.io/angora/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harleyxu-xhl.github.io/angora/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://harleyxu-xhl.github.io/angora/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://harleyxu-xhl.github.io/angora/"/>
+  </url>
+  <url>
+    <loc>https://harleyxu-xhl.github.io/angora/zh/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harleyxu-xhl.github.io/angora/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://harleyxu-xhl.github.io/angora/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://harleyxu-xhl.github.io/angora/"/>
+  </url>
 </urlset>

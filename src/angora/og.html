@@ -1,0 +1,115 @@
+<!doctype html>
+<html class="angora">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/angora.css">
+<style>
+  html { font-size: 16px; }
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; background: #0b182b; color: #faf4e7; }
+  .card {
+    position: relative;
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+    background:
+      radial-gradient(900px 500px at 75% 30%, rgb(33 71 117 / 0.45), transparent 70%),
+      radial-gradient(1000px 600px at 15% 0%, rgb(18 44 77 / 0.35), transparent 75%),
+      #0b182b;
+  }
+  .id { position: absolute; left: 84px; top: 80px; display: flex; align-items: center; gap: 18px; }
+  .id img { width: 72px; height: 72px; border-radius: 17px; outline: 1px solid var(--icon-edge); }
+  .id b { display: block; font-size: 28px; line-height: 1.2; font-weight: 600; font-stretch: 108%; }
+  .id small { display: block; font-size: 19px; color: var(--ink-2); }
+  h1 {
+    position: absolute;
+    left: 84px;
+    top: 188px;
+    width: 580px;
+    font-size: 64px;
+    line-height: 1.05;
+    text-wrap: balance;
+    background: linear-gradient(180deg, #ffffff 40%, #e8dbbe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .free { position: absolute; left: 84px; font-size: 22px; color: var(--ink-2); }
+  .console-preview {
+    position: absolute;
+    right: 84px;
+    top: 96px;
+    width: 440px;
+    padding: 32px;
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgb(18 44 77 / 0.9) 0%, rgb(10 24 43 / 0.98) 100%);
+    border: 1px solid var(--line);
+    box-shadow: 0 0 60px -10px var(--glow-color);
+  }
+  .preview-file { font-size: 1.125rem; font-weight: 700; color: #ffffff; margin-bottom: 6px; }
+  .preview-reason { font-size: 0.8125rem; color: var(--ink-3); margin-bottom: 18px; }
+  .preview-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: rgb(0 0 0 / 0.3);
+    margin-bottom: 10px;
+    font-size: 0.875rem;
+  }
+  .badge { font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; }
+  .badge-k { background: rgb(52 211 153 / 0.15); border: 1px solid rgb(52 211 153 / 0.4); color: #6ee7b7; }
+  .badge-r { background: rgb(251 113 133 / 0.15); border: 1px solid rgb(251 113 133 / 0.4); color: #fda4af; }
+  .preview-sum {
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+  .preview-sum b { color: var(--brand); }
+</style>
+</head>
+<body class="dark">
+<div class="card">
+  <div class="id">
+    <img src="/assets/img/icon-angora.webp" alt="">
+    <span><b>Angora</b><small id="tagline"></small></span>
+  </div>
+  <h1 id="h1"></h1>
+  <p class="free" id="free"></p>
+  <div class="console-preview">
+    <div class="preview-file" id="fileName">VID_20250705_172210.mp4</div>
+    <div class="preview-reason" id="fileReason"></div>
+    <div class="preview-row">
+      <span>/DCIM/Camera/...</span>
+      <span class="badge badge-k" id="badgeKeep"></span>
+    </div>
+    <div class="preview-row">
+      <span>/Download/...</span>
+      <span class="badge badge-r" id="badgeRemove"></span>
+    </div>
+    <div class="preview-sum">
+      <span id="sumLabel"></span>
+      <b id="sumVal">+209.4 MB</b>
+    </div>
+  </div>
+</div>
+<script>
+  document.documentElement.lang = OG.lang;
+  for (const key of ["tagline", "free", "fileReason", "badgeKeep", "badgeRemove", "sumLabel"]) document.getElementById(key).textContent = OG[key];
+  document.getElementById("h1").innerHTML = OG.h1;
+
+  const h1 = document.getElementById("h1"), free = document.getElementById("free");
+  document.fonts.ready.then(() => {
+    let size = 64;
+    const lines = () => h1.offsetHeight / (parseFloat(getComputedStyle(h1).lineHeight) || size);
+    while (size > 40 && (lines() > 4.2 || h1.scrollWidth > h1.clientWidth || h1.offsetTop + h1.offsetHeight > 480)) h1.style.fontSize = (size -= 2) + "px";
+    free.style.top = h1.offsetTop + h1.offsetHeight + 28 + "px";
+    document.body.dataset.ready = "1";
+  });
+</script>
+</body>
+</html>
